@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The legacy codebase has basic routing and controller logic but lacks modern security and maintainability practices.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 55,
+    "testability": 40
+  },
+  "hotspots": [
+    {
+      "scope": "routes/routes.php",
+      "reason": "Direct file access prevention is implemented but lacks comprehensive security measures.",
+      "severity": "medium",
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 3,
+          "evidence": "defined('BASE_PATH')"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Risk",
+      "description": "Direct file access prevention is basic and may not cover all attack vectors.",
+      "severity": "high",
+      "confidence": 0.8
+    }
+  ]
+}
