@@ -1,0 +1,205 @@
+{
+  "header": {
+    "artifact_id": "870f65f596f9435abdc7ddbe0fb28e85",
+    "artifact_type": "health_assessment_bundle",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-07T11:56:57.146967+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-analyst_US00",
+      "branch": "feature-analyst_US00",
+      "commit_sha": "f9bf26c2ecfb10688c77517a953196fb1a88d606",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260407_172635_c8b2b08b",
+      "stage_id": "context_layer",
+      "task_id": "82671a539ec2423c91f44b4a0decac80"
+    },
+    "parents": [],
+    "digest": "sha256:43a3edbadcfb983928a5b68fcd05e64cda7c10a3852ec799e22d46fcba3e6a20",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260407_172635_c8b2b08b",
+      "bundle_version": "20260407T115657Z_20260407_172635_c8b2b08b"
+    }
+  },
+  "summary": {
+    "overall_risk": {
+      "likelihood": 4,
+      "impact": 4,
+      "score": 16,
+      "tier": "high",
+      "rationale": "elevated risk posture"
+    },
+    "key_themes": [
+      "The legacy codebase has basic routing and controller logic but lacks modern security and maintainability practices."
+    ],
+    "recommendation": "Prioritize P0/P1 remediation items and enforce convention gates in CI",
+    "notes": "Generated from SIL health assessment and remediation backlog"
+  },
+  "signals": {
+    "scores": {
+      "maintainability": 60,
+      "security": 50,
+      "reliability": 55,
+      "testability": 40
+    },
+    "finding_count": 2,
+    "backlog_count": 1
+  },
+  "findings": [
+    {
+      "id": "F-HOT-001",
+      "type": "hotspot",
+      "severity": "medium",
+      "title": "Hotspot: routes/routes.php",
+      "description": "Direct file access prevention is implemented but lacks comprehensive security measures.",
+      "risk": {
+        "likelihood": 3,
+        "impact": 3,
+        "score": 9,
+        "tier": "medium",
+        "rationale": "hotspot severity"
+      },
+      "affected": {
+        "scm_node_ids": [
+          "routes/routes.php"
+        ],
+        "paths": [
+          "routes/routes.php"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "routes/routes.php"
+        }
+      ],
+      "suggested_remediation": "Prioritize stabilization and targeted tests",
+      "effort": {
+        "tshirt": "M",
+        "hours_range": [
+          16,
+          40
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from hotspot analysis",
+        "signals": []
+      }
+    },
+    {
+      "id": "F-RSK-001",
+      "type": "operational_risk",
+      "severity": "high",
+      "title": "Security Risk",
+      "description": "Direct file access prevention is basic and may not cover all attack vectors.",
+      "risk": {
+        "likelihood": 4,
+        "impact": 4,
+        "score": 16,
+        "tier": "high",
+        "rationale": "risk item severity"
+      },
+      "affected": {
+        "scm_node_ids": [],
+        "paths": []
+      },
+      "evidence": [],
+      "suggested_remediation": "Mitigate through targeted remediation plan",
+      "effort": {
+        "tshirt": "S",
+        "hours_range": [
+          6,
+          16
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from risk analysis",
+        "signals": []
+      }
+    }
+  ],
+  "backlog": [
+    {
+      "id": "rem-1",
+      "title": "Refactor Routing Logic",
+      "priority": "P2",
+      "business_value": "Continued difficulty in maintaining and scaling the application.",
+      "risk": {
+        "likelihood": 3,
+        "impact": 3,
+        "score": 9,
+        "tier": "medium",
+        "rationale": "derived from backlog severity"
+      },
+      "effort": {
+        "tshirt": "M",
+        "hours_range": [
+          16,
+          40
+        ],
+        "confidence": {
+          "score": 0.9,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "linked_findings": [
+        "F-HOT-001"
+      ],
+      "scm_impact": {
+        "scm_node_ids": [
+          "node-1",
+          "node-2",
+          "node-3",
+          "node-4",
+          "node-5"
+        ],
+        "expected_edges_touched": []
+      },
+      "dependencies": [],
+      "plan": [
+        "Refactor routes to use Express",
+        "js with TypeScript for better modularity and maintainability"
+      ],
+      "acceptance_criteria": [
+        "All routes are defined in Express.js with TypeScript.",
+        "Routing logic is decoupled from business logic."
+      ],
+      "owner_role": "Tech Lead",
+      "suggested_agent_roles": []
+    }
+  ],
+  "roadmap_options": {
+    "quick_wins": [],
+    "stabilization": [
+      "rem-1"
+    ],
+    "modernization": [
+      "rem-1"
+    ]
+  }
+}
