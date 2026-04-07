@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The codebase is functional but lacks modern security practices and modularity.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 70,
+    "testability": 40
+  },
+  "hotspots": [
+    {
+      "scope": "routes/routes.php",
+      "reason": "Lack of input validation and error handling.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 5,
+          "evidence": "AuthController"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Vulnerabilities",
+      "description": "Potential for SQL injection and XSS due to lack of input validation.",
+      "severity": "high",
+      "confidence": 0.9
+    }
+  ]
+}
