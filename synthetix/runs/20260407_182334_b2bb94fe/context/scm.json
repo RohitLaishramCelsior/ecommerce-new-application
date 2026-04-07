@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "summary": "Legacy PHP application with defined routes for authentication, product management, cart operations, and admin dashboard.",
+  "nodes": [
+    {
+      "id": "node-auth-controller",
+      "type": "Component",
+      "name": "AuthController",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 5,
+          "evidence": "AuthController"
+        }
+      ]
+    },
+    {
+      "id": "node-product-controller",
+      "type": "Component",
+      "name": "ProductController",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 12,
+          "evidence": "ProductController"
+        }
+      ]
+    },
+    {
+      "id": "node-cart-controller",
+      "type": "Component",
+      "name": "CartController",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 20,
+          "evidence": "CartController"
+        }
+      ]
+    },
+    {
+      "id": "node-order-controller",
+      "type": "Component",
+      "name": "OrderController",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 27,
+          "evidence": "OrderController"
+        }
+      ]
+    },
+    {
+      "id": "node-admin-controller",
+      "type": "Component",
+      "name": "AdminController",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 33,
+          "evidence": "AdminController"
+        }
+      ]
+    },
+    {
+      "id": "node-admin-view",
+      "type": "Component",
+      "name": "Admin Dashboard View",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "views/admin/index.php",
+          "line": 1,
+          "evidence": "Admin Dashboard"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-auth-controller",
+      "to": "node-product-controller",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 12,
+          "evidence": "ProductController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-product-controller",
+      "to": "node-cart-controller",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 20,
+          "evidence": "CartController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-cart-controller",
+      "to": "node-order-controller",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 27,
+          "evidence": "OrderController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-order-controller",
+      "to": "node-admin-controller",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 33,
+          "evidence": "AdminController"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
