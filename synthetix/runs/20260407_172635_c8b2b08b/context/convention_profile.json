@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "PHP application with basic routing and controller conventions. Target modernization to TypeScript with Docker support.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for function names.",
+      "confidence": 0.8,
+      "examples": [
+        "showLogin"
+      ],
+      "counterexamples": [
+        "show_login"
+      ],
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 6,
+          "evidence": "showLogin"
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "security",
+      "rule": "Prevent direct file access using defined constants.",
+      "confidence": 0.9,
+      "examples": [
+        "defined('BASE_PATH')"
+      ],
+      "counterexamples": [
+        ""
+      ],
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 3,
+          "evidence": "defined('BASE_PATH')"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor to use TypeScript naming conventions.",
+    "Ensure all routes are secured with middleware."
+  ],
+  "scaffold_templates": [
+    "Express.js route templates",
+    "TypeScript controller templates"
+  ]
+}
