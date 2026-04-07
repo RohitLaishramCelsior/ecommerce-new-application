@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "summary": "Legacy PHP application with defined routes for authentication, product management, cart operations, and admin functionalities. Target modernization to TypeScript with Docker support.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "AuthController",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 6,
+          "evidence": "AuthController"
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "ProductController",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 13,
+          "evidence": "ProductController"
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "Component",
+      "name": "CartController",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 20,
+          "evidence": "CartController"
+        }
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "Component",
+      "name": "OrderController",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 27,
+          "evidence": "OrderController"
+        }
+      ]
+    },
+    {
+      "id": "node-5",
+      "type": "Component",
+      "name": "AdminController",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 31,
+          "evidence": "AdminController"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-1",
+      "to": "node-2",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 13,
+          "evidence": "ProductController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-1",
+      "to": "node-3",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 20,
+          "evidence": "CartController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-1",
+      "to": "node-4",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 27,
+          "evidence": "OrderController"
+        }
+      ]
+    },
+    {
+      "type": "CALLS_HTTP",
+      "from": "node-1",
+      "to": "node-5",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "routes/routes.php",
+          "line": 31,
+          "evidence": "AdminController"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
