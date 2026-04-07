@@ -1,0 +1,308 @@
+{
+  "header": {
+    "artifact_id": "a32889cd7caf4d4cbb4e8d2290517560",
+    "artifact_type": "system_context_model",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-07T12:54:05.752893+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-analyst_US00",
+      "branch": "feature-analyst_US00",
+      "commit_sha": "f9bf26c2ecfb10688c77517a953196fb1a88d606",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260407_182334_b2bb94fe",
+      "stage_id": "context_layer",
+      "task_id": "cebb07826bd64faa9fc4387559ddbd38"
+    },
+    "parents": [],
+    "digest": "sha256:9a8331a3a0d8192c7aca912e47c34d8fa27a5bad57de9e46b105210e8b262f4c",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260407_182334_b2bb94fe",
+      "bundle_version": "20260407T125405Z_20260407_182334_b2bb94fe"
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "node-auth-controller",
+        "type": "component",
+        "name": "AuthController",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "routes/routes.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-product-controller",
+        "type": "component",
+        "name": "ProductController",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "routes/routes.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-cart-controller",
+        "type": "component",
+        "name": "CartController",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "routes/routes.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-order-controller",
+        "type": "component",
+        "name": "OrderController",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "routes/routes.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-admin-controller",
+        "type": "component",
+        "name": "AdminController",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "routes/routes.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-admin-view",
+        "type": "component",
+        "name": "Admin Dashboard View",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "views/admin/index.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "views/admin/index.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:1",
+        "type": "calls_http",
+        "from": "node-auth-controller",
+        "to": "node-product-controller",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "edge:2",
+        "type": "calls_http",
+        "from": "node-product-controller",
+        "to": "node-cart-controller",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "edge:3",
+        "type": "calls_http",
+        "from": "node-cart-controller",
+        "to": "node-order-controller",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "edge:4",
+        "type": "calls_http",
+        "from": "node-order-controller",
+        "to": "node-admin-controller",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "routes/routes.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      }
+    ],
+    "statistics": {
+      "node_count": 6,
+      "edge_count": 4,
+      "languages": []
+    }
+  },
+  "views": {
+    "c4": {
+      "context": [],
+      "container": [],
+      "component": [],
+      "code": []
+    }
+  },
+  "unknowns": []
+}
