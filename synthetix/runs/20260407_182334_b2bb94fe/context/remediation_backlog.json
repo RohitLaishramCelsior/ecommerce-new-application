@@ -1,0 +1,28 @@
+[
+  {
+    "id": "rb-001",
+    "title": "Implement Input Validation",
+    "problem_statement": "The application lacks comprehensive input validation, leading to potential security vulnerabilities.",
+    "scope": [
+      "routes/routes.php",
+      "views/admin/index.php"
+    ],
+    "risk_if_unaddressed": "Increased risk of SQL injection and XSS attacks.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [],
+    "suggested_approach": "Introduce a validation library and apply it to all user inputs.",
+    "success_criteria": [
+      "All inputs are validated against expected formats.",
+      "No SQL injection vulnerabilities are present."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "routes/routes.php",
+        "line": 5,
+        "evidence": "AuthController"
+      }
+    ]
+  }
+]
