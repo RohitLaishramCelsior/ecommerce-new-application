@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows basic PHP conventions with some custom routing logic.",
+  "rules": [
+    {
+      "id": "rule-php-naming",
+      "category": "naming",
+      "rule": "Use PascalCase for class names and camelCase for method names.",
+      "confidence": 0.9,
+      "examples": [
+        "AuthController",
+        "processLogin"
+      ],
+      "counterexamples": [
+        "authcontroller",
+        "ProcessLogin"
+      ],
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 5,
+          "evidence": "AuthController"
+        }
+      ]
+    },
+    {
+      "id": "rule-php-security",
+      "category": "security",
+      "rule": "Prevent direct file access using defined constants.",
+      "confidence": 0.95,
+      "examples": [
+        "if (!defined('BASE_PATH')) { die('Direct access not allowed'); }"
+      ],
+      "counterexamples": [
+        "die('Direct access not allowed');"
+      ],
+      "provenance": [
+        {
+          "file": "routes/routes.php",
+          "line": 2,
+          "evidence": "BASE_PATH"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Ensure all routes are protected against unauthorized access.",
+    "Validate all inputs to prevent SQL injection."
+  ],
+  "scaffold_templates": [
+    "Basic MVC structure for PHP applications."
+  ]
+}
