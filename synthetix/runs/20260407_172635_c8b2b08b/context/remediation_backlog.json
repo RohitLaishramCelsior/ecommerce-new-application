@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rem-1",
+    "title": "Refactor Routing Logic",
+    "problem_statement": "The current routing logic is tightly coupled with PHP and lacks modularity.",
+    "scope": [
+      "routes/routes.php"
+    ],
+    "risk_if_unaddressed": "Continued difficulty in maintaining and scaling the application.",
+    "effort": "M",
+    "severity": "medium",
+    "dependencies": [],
+    "suggested_approach": "Refactor routes to use Express.js with TypeScript for better modularity and maintainability.",
+    "success_criteria": [
+      "All routes are defined in Express.js with TypeScript.",
+      "Routing logic is decoupled from business logic."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "routes/routes.php",
+        "line": 6,
+        "evidence": "Route definitions"
+      }
+    ]
+  }
+]
