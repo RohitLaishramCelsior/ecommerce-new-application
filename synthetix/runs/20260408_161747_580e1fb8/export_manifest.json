@@ -1,0 +1,50 @@
+{
+  "run_id": "20260408_161747_580e1fb8",
+  "generated_at": "2026-04-08T10:58:49.998046+00:00",
+  "run_status": "failed",
+  "base_path": "synthetix/runs/20260408_161747_580e1fb8",
+  "owner": "RohitLaishramCelsior",
+  "repository": "ecommerce-new-application",
+  "branch": "main",
+  "artifact_roots": [
+    "context",
+    "deploy",
+    "pipeline",
+    "qa"
+  ],
+  "attempted_files": 26,
+  "exported_files": 18,
+  "failed_files": 0,
+  "skipped_files": 7,
+  "failed_samples": [],
+  "skipped_samples": [
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/context/contract_bundle/system_context_model.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/pipeline/stage_0.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/pipeline/state.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/pipeline/state.json.07c0070c3fd94f3696ed940269e16650.tmp",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/qa/analyst/analyst_output.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/qa/analyst/analyst_report_v2.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_161747_580e1fb8/qa/analyst/raw_artifact_set_v1.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    }
+  ]
+}
