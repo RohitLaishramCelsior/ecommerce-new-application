@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The health assessment of the legacy codebase highlights areas of concern and potential risks.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 55,
+    "testability": 45
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Use of global variables and lack of error handling.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Global variable usage without encapsulation."
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Vulnerabilities",
+      "description": "Potential SQL injection risks due to dynamic query construction.",
+      "severity": "critical",
+      "confidence": 0.95
+    }
+  ]
+}
