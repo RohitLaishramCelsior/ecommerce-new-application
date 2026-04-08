@@ -1,0 +1,25 @@
+{
+  "run_id": "20260408_151201_90d2c74a",
+  "generated_at": "2026-04-08T09:43:08.570516+00:00",
+  "run_status": "failed",
+  "base_path": "synthetix/runs/20260408_151201_90d2c74a",
+  "owner": "RohitLaishramCelsior",
+  "repository": "ecommerce-new-application",
+  "branch": "main",
+  "artifact_roots": [
+    "deploy",
+    "pipeline",
+    "qa"
+  ],
+  "attempted_files": 5,
+  "exported_files": 3,
+  "failed_files": 0,
+  "skipped_files": 1,
+  "failed_samples": [],
+  "skipped_samples": [
+    {
+      "repo_path": "synthetix/runs/20260408_151201_90d2c74a/pipeline/state.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    }
+  ]
+}
