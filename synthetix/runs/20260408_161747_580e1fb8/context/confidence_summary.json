@@ -1,0 +1,18 @@
+{
+  "claim_count": 1672,
+  "average_confidence": 0.8711,
+  "min_confidence": 0.45,
+  "max_confidence": 0.95,
+  "below_0_6_count": 61,
+  "provenance_coverage": {
+    "nodes_total": 472,
+    "nodes_with_provenance": 472,
+    "edges_total": 1200,
+    "edges_with_evidence": 1200,
+    "rules_total": 0,
+    "rules_with_provenance": 0,
+    "backlog_total": 0,
+    "backlog_with_provenance": 0
+  },
+  "generated_at": "2026-04-08T10:51:12.321072+00:00"
+}
