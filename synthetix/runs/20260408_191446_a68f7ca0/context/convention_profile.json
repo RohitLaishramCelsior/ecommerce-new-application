@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "This profile outlines the coding conventions and standards observed in the legacy codebase.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.9,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Variable naming convention observed."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use die() to terminate script execution upon error.",
+      "confidence": 0.8,
+      "examples": [
+        "die();"
+      ],
+      "counterexamples": [
+        "exit();"
+      ],
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 20,
+          "evidence": "Error handling using die()."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Consider using consistent naming conventions across all files.",
+    "Ensure all scripts have proper error handling mechanisms."
+  ],
+  "scaffold_templates": [
+    "Use TypeScript interfaces for type safety.",
+    "Implement modular structure for better maintainability."
+  ]
+}
