@@ -1,0 +1,197 @@
+{
+  "artifact": "brd_appendices_v1",
+  "dependencies_and_integrations": [
+    "custom_php_mvc",
+    "File upload / export handling",
+    "Legacy include/require dependencies"
+  ],
+  "issue_log": [
+    "DEC-SESSION-001: Session behavior must be mapped to the target authentication/session model.",
+    "DEC-BDD-001 resolution plan: capture golden flows for the onboarding, contractor placement, and portal upload workflows before sprint planning is approved.",
+    "DEC-FILEIO-001: Upload and export workflows require target-state storage and validation design.",
+    "DEC-DATA-FUNC-001: Reimplement custom MySQL functions recentProfile(), alignRate() before target-state data access is approved."
+  ],
+  "process_map_inventory": [],
+  "data_entities": [
+    {
+      "entity": "ap_approval_team_map",
+      "business_meaning": "Maps ap approval team relationships used by operational workflows, approvals, or reporting.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ap_approval_team",
+      "business_meaning": "Stores ap approval team records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "candidate_onboarding",
+      "business_meaning": "Stores candidate onboarding records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "jobreq_foreign_map",
+      "business_meaning": "Maps jobreq foreign relationships used by operational workflows, approvals, or reporting.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "jobreq",
+      "business_meaning": "Stores jobreq records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "states",
+      "business_meaning": "Stores states records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "office_oms_map",
+      "business_meaning": "Maps office oms relationships used by operational workflows, approvals, or reporting.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "contractor_placement",
+      "business_meaning": "Stores contractor placement records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "profile",
+      "business_meaning": "Stores profile records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ts_portal_map",
+      "business_meaning": "Maps ts portal relationships used by operational workflows, approvals, or reporting.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "finance_calendar",
+      "business_meaning": "Stores finance calendar records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "office",
+      "business_meaning": "Stores office records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "forecasting_growth",
+      "business_meaning": "Stores forecasting growth records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "forecasting_hours",
+      "business_meaning": "Stores forecasting hours records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "factweekly",
+      "business_meaning": "Stores factweekly records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "tmp_distinct_ts_id",
+      "business_meaning": "Stores tmp distinct ts id records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ts_daily",
+      "business_meaning": "Stores ts daily records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ts_daily_pay",
+      "business_meaning": "Stores ts daily pay records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ts_daily_bill",
+      "business_meaning": "Stores ts daily bill records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    },
+    {
+      "entity": "ts_weekly",
+      "business_meaning": "Stores ts weekly records used by staffing, compliance, finance, or operational workflows across the legacy platform.",
+      "column_count": 0,
+      "primary_key_type": "No explicit primary key inferred",
+      "fk_dependency_count": 0
+    }
+  ],
+  "data_entities_note": "Data entities are derived from the available schema model and SQL touchpoints and should be confirmed against the target-state schema design.",
+  "inferred_roles": [
+    "Admin (66%)",
+    "CCA (90%)",
+    "HRA (90%)",
+    "Recruiter (90%)",
+    "Finance / AP (90%)",
+    "Operations (66%)",
+    "Manager (82%)"
+  ],
+  "glossary": [
+    {
+      "term": "EOP",
+      "definition": "Operational workflow used to review pending, on-bench, and head-office processing items."
+    },
+    {
+      "term": "CCA",
+      "definition": "Compliance or credentialing review role referenced across staffing workflows."
+    },
+    {
+      "term": "HRA",
+      "definition": "Human-resources or onboarding review role involved in worker setup and validation."
+    },
+    {
+      "term": "AMCompliance",
+      "definition": "Compliance review context referenced by the legacy staffing platform."
+    },
+    {
+      "term": "Contractor Placement",
+      "definition": "Lifecycle workflow for creating, updating, reviewing, and comparing placement records."
+    },
+    {
+      "term": "Profile",
+      "definition": "Worker or placement profile data used in headcount, margin, and operational workflows."
+    },
+    {
+      "term": "Onb_replacement",
+      "definition": "Legacy onboarding replacement workflow coordinating compliance, checklist, and notification behavior."
+    }
+  ]
+}
