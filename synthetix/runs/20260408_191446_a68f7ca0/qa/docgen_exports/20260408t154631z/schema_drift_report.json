@@ -1,0 +1,62 @@
+{
+  "artifact_type": "schema_drift_report",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "status": "WARN",
+  "drift_summary": {
+    "source_tables": 86,
+    "target_tables": 86,
+    "table_delta": 0,
+    "source_columns": 879,
+    "target_columns": 1051,
+    "column_delta": 172
+  },
+  "notes": [
+    "Drift report compares source reconstruction vs target proposal.",
+    "Large deltas require explicit ADR and migration justification."
+  ],
+  "artifact_id": "art_schema_drift_report_9de3df6066bf4206",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
