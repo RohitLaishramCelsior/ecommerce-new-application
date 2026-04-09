@@ -1,0 +1,478 @@
+{
+  "artifact": "brd_qa_report_v1",
+  "status": "WARN",
+  "blocking_errors": [],
+  "warnings": [
+    "Expected PHP modernization decision is missing from the issue log: DEC-INTEGRATION-GP-001.",
+    "Expected PHP modernization decision is missing from the issue log: DEC-INTEGRATION-SP-001.",
+    "Expected PHP modernization decision is missing from the issue log: DEC-SESSION-COUNTRY-001."
+  ],
+  "auto_fixes_applied": [],
+  "module_completeness_scores": [
+    {
+      "module_id": "MOD-001",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-002",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-003",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-004",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-005",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-006",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-007",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-008",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-009",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-010",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-011",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-012",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-013",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-014",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-015",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-016",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-017",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-018",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-019",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-020",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-021",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-022",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-023",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-024",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-025",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-026",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-027",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-028",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-029",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-030",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-031",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-032",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-033",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-034",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-035",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-036",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-037",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-038",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-039",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-040",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-041",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-042",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-043",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-044",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-045",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-046",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-047",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-048",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-049",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-050",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-051",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-052",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-053",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-054",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-055",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-056",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-057",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-058",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-059",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-060",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-061",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-062",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-063",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-064",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-065",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-066",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-067",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-068",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-069",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-070",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-071",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-072",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-073",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-074",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-075",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-076",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-077",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-078",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-079",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-080",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-081",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-082",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-083",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-084",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-085",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-086",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-087",
+      "score": 110,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-088",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-089",
+      "score": 95,
+      "status": "PASS"
+    },
+    {
+      "module_id": "MOD-090",
+      "score": 110,
+      "status": "PASS"
+    }
+  ],
+  "render_checks": [
+    {
+      "check": "module_inventory_vs_sections",
+      "expected": 90,
+      "actual": 90,
+      "status": "PASS"
+    },
+    {
+      "check": "required_tables_present",
+      "expected": 90,
+      "actual": 90,
+      "status": "PASS"
+    }
+  ],
+  "approval_readiness": "REVIEW_REQUIRED"
+}
