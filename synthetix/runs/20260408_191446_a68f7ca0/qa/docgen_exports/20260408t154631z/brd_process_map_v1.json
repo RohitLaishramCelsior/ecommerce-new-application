@@ -1,0 +1,1198 @@
+[
+  {
+    "module_id": "MOD-001",
+    "ref": "PM-MOD-001",
+    "flow_summary": "Ap Approval Team Search Workflow is implemented by Ap_approval_teamSearchController and remains an in-scope PHP workflow during modernization. Primary data touchpoints include ap_approval_team_map, ap_approval_team, hours_type, jobreq, candidate_activity. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/ap_approval_team/new and dispatch it into Ap_approval_teamSearchController.",
+      "Generate related document or notification outputs such as extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Ap Approval Team Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-002",
+    "ref": "PM-MOD-002",
+    "flow_summary": "Ap Invoice Entity Workflow is implemented by Ap_invoiceEntityController and remains an in-scope PHP workflow during modernization. Primary data touchpoints include hours_type, jobreq, candidate_activity, candidate_note, onb_demographic. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/ap_invoice and dispatch it into Ap_invoiceEntityController.",
+      "Generate related document or notification outputs such as extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Ap Invoice Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-003",
+    "ref": "PM-MOD-003",
+    "flow_summary": "Ap Invoice Search Workflow is implemented by Ap_invoiceSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include downloadFile, links, search, label. Primary data touchpoints include candidate_onboarding, jobreq_foreign_map, jobreq, states, office_oms_map. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Handle downloadFile request path",
+      "Handle links request path",
+      "Handle search request path",
+      "Handle label request path",
+      "Read/write operational tables: candidate_onboarding, jobreq_foreign_map, jobreq",
+      "Mutate workflow state through PHP session"
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Ap Invoice Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-004",
+    "ref": "PM-MOD-004",
+    "flow_summary": "Archcontractor Entity Workflow is implemented by ArchcontractorEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include archcontractor.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/archcontractor and dispatch it into ArchcontractorEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Archcontractor Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-005",
+    "ref": "PM-MOD-005",
+    "flow_summary": "Archcontractor Search Workflow is implemented by ArchcontractorSearchController and remains an in-scope PHP workflow during modernization. Primary data touchpoints include archcontractor.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/archcontractor and dispatch it into ArchcontractorSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Archcontractor Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-006",
+    "ref": "PM-MOD-006",
+    "flow_summary": "Asset Entity Workflow is implemented by AssetEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, links, onNew, onExists, validate.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/asset and dispatch it into AssetEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, links, onNew."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Asset Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-007",
+    "ref": "PM-MOD-007",
+    "flow_summary": "Credential Entity Workflow is implemented by CredentialEntityController and remains an in-scope PHP workflow during modernization. Primary data touchpoints include credential.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/credential/new and dispatch it into CredentialEntityController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Credential Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-008",
+    "ref": "PM-MOD-008",
+    "flow_summary": "Credential Search Workflow is implemented by CredentialSearchController and remains an in-scope PHP workflow during modernization. Primary data touchpoints include credential.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/credential/new and dispatch it into CredentialSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Credential Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-009",
+    "ref": "PM-MOD-009",
+    "flow_summary": "Cross Selling Lead Entity Workflow is implemented by Cross_selling_leadEntityController and remains an in-scope PHP workflow during modernization.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/cross_selling_lead and dispatch it into Cross_selling_leadEntityController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cross Selling Lead Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-010",
+    "ref": "PM-MOD-010",
+    "flow_summary": "Cross Selling Lead Search Workflow is implemented by Cross_selling_leadSearchController and remains an in-scope PHP workflow during modernization.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/cross_selling_lead/new and dispatch it into Cross_selling_leadSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cross Selling Lead Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.046Z"
+  },
+  {
+    "module_id": "MOD-011",
+    "ref": "PM-MOD-011",
+    "flow_summary": "Currency Type Search Workflow is implemented by Currency_typeSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include currency_exchange.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/currency_type and dispatch it into Currency_typeSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Currency Type Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-012",
+    "ref": "PM-MOD-012",
+    "flow_summary": "Custcontactmaster Entity Workflow is implemented by CustcontactmasterEntityController and remains an in-scope PHP workflow during modernization.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/custcontactmaster and dispatch it into CustcontactmasterEntityController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Custcontactmaster Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-013",
+    "ref": "PM-MOD-013",
+    "flow_summary": "Custcontactmaster Search Workflow is implemented by CustcontactmasterSearchController and remains an in-scope PHP workflow during modernization.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/custcontactmaster/new and dispatch it into CustcontactmasterSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Custcontactmaster Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-014",
+    "ref": "PM-MOD-014",
+    "flow_summary": "Custmaster Entity Workflow is implemented by CustmasterEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, create, read, links.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/custmaster and dispatch it into CustmasterEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, create."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Custmaster Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-015",
+    "ref": "PM-MOD-015",
+    "flow_summary": "Custmaster Search Workflow is implemented by CustmasterSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/custmaster and dispatch it into CustmasterSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Custmaster Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-016",
+    "ref": "PM-MOD-016",
+    "flow_summary": "Customer Contact Entity Workflow is implemented by Customer_contactEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, onExists, getModels, postSave, create. Primary data touchpoints include contact_foreign_map, account, customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/customer_contact and dispatch it into Customer_contactEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, onExists, getModels."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Contact Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-017",
+    "ref": "PM-MOD-017",
+    "flow_summary": "Customer Contact Search Workflow is implemented by Customer_contactSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, run, links, search, label. Primary data touchpoints include contact_foreign_map, account, customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/customer_contact/new and dispatch it into Customer_contactSearchController.",
+      "Execute core workflow actions such as __construct, run, links, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Contact Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-018",
+    "ref": "PM-MOD-018",
+    "flow_summary": "Customer Endclient Entity Workflow is implemented by Customer_endclientEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/customer_endclient and dispatch it into Customer_endclientEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Endclient Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-019",
+    "ref": "PM-MOD-019",
+    "flow_summary": "Customer Endclient Search Workflow is implemented by Customer_endclientSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label, run. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/customer_endclient/new and dispatch it into Customer_endclientSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Endclient Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-020",
+    "ref": "PM-MOD-020",
+    "flow_summary": "Customer Entity Workflow is implemented by CustomerEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, onNew, onExists, getModels. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/customer and dispatch it into CustomerEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, onNew."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-021",
+    "ref": "PM-MOD-021",
+    "flow_summary": "Customer Search Workflow is implemented by CustomerSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/report/markupcustomer and dispatch it into CustomerSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customer Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-022",
+    "ref": "PM-MOD-022",
+    "flow_summary": "Customertarget Search Workflow is implemented by CustomertargetSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/customertarget and dispatch it into CustomertargetSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Customertarget Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-023",
+    "ref": "PM-MOD-023",
+    "flow_summary": "Delivery Center Entity Workflow is implemented by Delivery_centerEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, create, links, onNew, getLocation, onExists. Primary data touchpoints include submittal_log, delivery_team.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/delivery_center and dispatch it into Delivery_centerEntityController.",
+      "Execute core workflow actions such as __construct, create, links, onNew."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Delivery Center Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-024",
+    "ref": "PM-MOD-024",
+    "flow_summary": "Delivery Center Search Workflow is implemented by Delivery_centerSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include submittal_log, delivery_team.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/delivery_center/new and dispatch it into Delivery_centerSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Delivery Center Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-025",
+    "ref": "PM-MOD-025",
+    "flow_summary": "Delivery Team Entity Workflow is implemented by Delivery_teamEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include submittal_log, hours_type, jobreq, candidate_activity, candidate_note. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/delivery_team and dispatch it into Delivery_teamEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links.",
+      "Generate related document or notification outputs such as extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Delivery Team Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-026",
+    "ref": "PM-MOD-026",
+    "flow_summary": "Delivery Team Search Workflow is implemented by Delivery_teamSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include delivery_team, hours_type, jobreq, candidate_activity, candidate_note. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/delivery_team/new and dispatch it into Delivery_teamSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search.",
+      "Generate related document or notification outputs such as extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Delivery Team Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-027",
+    "ref": "PM-MOD-027",
+    "flow_summary": "Employee Meeting Notes Entity Workflow is implemented by Employee_meeting_notesEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, postSave, getFormLabel, getHeadline, read, links. Primary data touchpoints include Employee, office, employee_meeting_notes.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/employee_meeting_notes and dispatch it into Employee_meeting_notesEntityController.",
+      "Execute core workflow actions such as __construct, postSave, getFormLabel, getHeadline."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee Meeting Notes Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-028",
+    "ref": "PM-MOD-028",
+    "flow_summary": "Employee Meeting Notes Search Workflow is implemented by Employee_meeting_notesSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, preSearch, search, transpose_notes, label. Primary data touchpoints include employee_meeting_notes, office, employee.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/employee_meeting_notes and dispatch it into Employee_meeting_notesSearchController.",
+      "Execute core workflow actions such as __construct, preSearch, search, transpose_notes."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee Meeting Notes Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-029",
+    "ref": "PM-MOD-029",
+    "flow_summary": "Employee One Time Bonus Commission Entity Workflow is implemented by Employee_one_time_bonus_commissionEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, create, del, links, validate. Primary data touchpoints include office, employee, employee_meeting_notes.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/employee_one_time_bonus_commission and dispatch it into Employee_one_time_bonus_commissionEntityController.",
+      "Execute core workflow actions such as __construct, create, del, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee One Time Bonus Commission Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-030",
+    "ref": "PM-MOD-030",
+    "flow_summary": "Employee One Time Bonus Commission Search Workflow is implemented by Employee_one_time_bonus_commissionSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include office, employee, employee_meeting_notes.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/employee_one_time_bonus_commission/new and dispatch it into Employee_one_time_bonus_commissionSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee One Time Bonus Commission Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-031",
+    "ref": "PM-MOD-031",
+    "flow_summary": "Employee Entity Workflow is implemented by EmployeeEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getHeadline, getFormLabel, links, resetPassword, resetPwd. Primary data touchpoints include office, employee, employee_meeting_notes.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/report/orgchart and dispatch it into EmployeeEntityController.",
+      "Execute core workflow actions such as __construct, getHeadline, getFormLabel, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-032",
+    "ref": "PM-MOD-032",
+    "flow_summary": "Employee Search Workflow is implemented by EmployeeSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, presearch, search, label. Primary data touchpoints include office, employee, employee_meeting_notes.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/report/orgchart and dispatch it into EmployeeSearchController.",
+      "Execute core workflow actions such as __construct, links, presearch, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Employee Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-033",
+    "ref": "PM-MOD-033",
+    "flow_summary": "Endclient Entity Workflow is implemented by EndclientEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, postSave, create, links, validate. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/endclient and dispatch it into EndclientEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, postSave, create."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Endclient Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-034",
+    "ref": "PM-MOD-034",
+    "flow_summary": "Endclient Search Workflow is implemented by EndclientSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include customer_endclient, customer_endclient_assignment_map, assignment_type.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/endclient and dispatch it into EndclientSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Endclient Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-035",
+    "ref": "PM-MOD-035",
+    "flow_summary": "Entity Workflow is implemented by EntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getSaveLabel, hasApprovalRights, handle, links, method. Primary data touchpoints include entity_audit_log.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity and dispatch it into EntityController.",
+      "Execute core workflow actions such as __construct, getSaveLabel, hasApprovalRights, handle."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-036",
+    "ref": "PM-MOD-036",
+    "flow_summary": "Eop Dashboard Search Workflow is implemented by Eop_dashboardSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, downloadFile, searchPendingList, searchOnBenchList, searchHoListQuery, getEOPDelayReviewDetails. Primary data touchpoints include eop_processed, states, eop_workflow_status_type, equipment_tracking, onb_office_coapprover_map. Downstream templates or notifications include ViewEop_dashboardSearch.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contractor_placement.json and dispatch it into Eop_dashboardSearchController.",
+      "Execute core workflow actions such as __construct, downloadFile, searchPendingList, searchOnBenchList.",
+      "Generate related document or notification outputs such as ViewEop_dashboardSearch.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Eop Dashboard Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-037",
+    "ref": "PM-MOD-037",
+    "flow_summary": "Academy Batch Entity Workflow is implemented by Academy_batchEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include academy_batch.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/academy_batch and dispatch it into Academy_batchEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Academy Batch Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-038",
+    "ref": "PM-MOD-038",
+    "flow_summary": "Academy Batch Search Workflow is implemented by Academy_batchSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include academy_batch.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/academy_batch/new and dispatch it into Academy_batchSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Academy Batch Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-039",
+    "ref": "PM-MOD-039",
+    "flow_summary": "Account List Entity Workflow is implemented by Account_listEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, onNew, onExists, validate. Primary data touchpoints include account_foreign_map, contact, custmaster_customer_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/account_list and dispatch it into Account_listEntityController.",
+      "Execute core workflow actions such as __construct, links, onNew, onExists."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Account List Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-040",
+    "ref": "PM-MOD-040",
+    "flow_summary": "Account List Search Workflow is implemented by Account_listSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, label. Primary data touchpoints include account_foreign_map, contact, custmaster_customer_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/account_list and dispatch it into Account_listSearchController.",
+      "Execute core workflow actions such as __construct, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Account List Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-041",
+    "ref": "PM-MOD-041",
+    "flow_summary": "Account Entity Workflow is implemented by AccountEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, links, create, onNew. Primary data touchpoints include account_foreign_map, contact, custmaster_customer_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/account and dispatch it into AccountEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Account Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-042",
+    "ref": "PM-MOD-042",
+    "flow_summary": "Account Search Workflow is implemented by AccountSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include account_foreign_map, contact, custmaster_customer_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/account and dispatch it into AccountSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Account Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-043",
+    "ref": "PM-MOD-043",
+    "flow_summary": "Action Items Entity Workflow is implemented by Action_itemsEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, postSave, validate.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/action_items and dispatch it into Action_itemsEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Action Items Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.047Z"
+  },
+  {
+    "module_id": "MOD-044",
+    "ref": "PM-MOD-044",
+    "flow_summary": "Action Items Search Workflow is implemented by Action_itemsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, downloadFile, run, preSearch, search.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/action_items/new and dispatch it into Action_itemsSearchController.",
+      "Execute core workflow actions such as __construct, links, downloadFile, run."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Action Items Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-045",
+    "ref": "PM-MOD-045",
+    "flow_summary": "Address Entity Workflow is implemented by AddressEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, create, onNew, onExists. Primary data touchpoints include country.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/address and dispatch it into AddressEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, create."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Address Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-046",
+    "ref": "PM-MOD-046",
+    "flow_summary": "Address Search Workflow is implemented by AddressSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include country.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/address/new and dispatch it into AddressSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Address Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-047",
+    "ref": "PM-MOD-047",
+    "flow_summary": "Addrmaster Entity Workflow is implemented by AddrmasterEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getSaveLabel, getHeadline, create, onNew. Primary data touchpoints include country.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/addrmaster and dispatch it into AddrmasterEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getSaveLabel, getHeadline."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Addrmaster Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-048",
+    "ref": "PM-MOD-048",
+    "flow_summary": "Addrmaster Search Workflow is implemented by AddrmasterSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include country.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/addrmaster/new and dispatch it into AddrmasterSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Addrmaster Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-049",
+    "ref": "PM-MOD-049",
+    "flow_summary": "Adpcompare Entity Workflow is implemented by AdpcompareEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, links, create, read. Primary data touchpoints include adhoc_adp_compare.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/adpcompare and dispatch it into AdpcompareEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Adpcompare Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-050",
+    "ref": "PM-MOD-050",
+    "flow_summary": "Adpcompare Search Workflow is implemented by AdpcompareSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, eachTd, run, search, label. Primary data touchpoints include adhoc_adp_compare.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/adpcompare/new and dispatch it into AdpcompareSearchController.",
+      "Execute core workflow actions such as __construct, links, eachTd, run."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Adpcompare Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-051",
+    "ref": "PM-MOD-051",
+    "flow_summary": "Amcompliance Metrics Search Workflow is implemented by Amcompliance_metricsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getHeadline, run, search, pre_format, sort. Primary data touchpoints include delivery_center.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/i and dispatch it into Amcompliance_metricsSearchController.",
+      "Execute core workflow actions such as __construct, getHeadline, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Amcompliance Metrics Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-052",
+    "ref": "PM-MOD-052",
+    "flow_summary": "Amcompliance Entity Workflow is implemented by AmcomplianceEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include delivery_center.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/amcompliance and dispatch it into AmcomplianceEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Amcompliance Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-053",
+    "ref": "PM-MOD-053",
+    "flow_summary": "Amcompliance Search Workflow is implemented by AmcomplianceSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, searchCounts, label, label_count. Primary data touchpoints include delivery_center.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/amcompliance and dispatch it into AmcomplianceSearchController.",
+      "Execute core workflow actions such as __construct, search, searchCounts, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Amcompliance Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-054",
+    "ref": "PM-MOD-054",
+    "flow_summary": "Ap Approval Team Entity Workflow is implemented by Ap_approval_teamEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include hours_type, jobreq, candidate_activity, candidate_note, onb_demographic. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php.",
+    "flow_steps": [
+      "Initialize controller with model and base URL",
+      "Handle form label generation and entity creation",
+      "Manage links and model retrieval for new and existing entities",
+      "Save employee mappings for approval teams",
+      "Receive the documented route ANY /pci/search/ap_approval_team and dispatch it into Ap_approval_teamEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Ap Approval Team Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-055",
+    "ref": "PM-MOD-055",
+    "flow_summary": "Portal Extern Workflow is implemented by PortalExternController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, localCurlGET, setSessionInfo, menuDefinition, unsetSessionInfo, createLabelString. Downstream templates or notifications include extern_main_page.php, extern_login_new.php, extern_login.php, extern_login_reset.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/portalextern and dispatch it into PortalExternController.",
+      "Execute core workflow actions such as __construct, localCurlGET, setSessionInfo, menuDefinition.",
+      "Generate related document or notification outputs such as extern_main_page.php, extern_login_new.php, extern_login.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Portal Extern Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-056",
+    "ref": "PM-MOD-056",
+    "flow_summary": "Portal Onb Data Entry Workflow is implemented by PortalOnbDataEntryController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, handle, menuDefinition, handleHomePage, handleConfirmationPage, handleSavePage. Downstream templates or notifications include extern_view_data_entry.php, extern_view_data_confirmation.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/portalonbdataentry and dispatch it into PortalOnbDataEntryController.",
+      "Execute core workflow actions such as __construct, handle, menuDefinition, handleHomePage.",
+      "Generate related document or notification outputs such as extern_view_data_entry.php, extern_view_data_confirmation.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Portal Onb Data Entry Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-057",
+    "ref": "PM-MOD-057",
+    "flow_summary": "Portal Vaccination Workflow is implemented by PortalVaccinationController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, handle, handleHomePage, handleEntry, setSessionInfo, validateDetails. Downstream templates or notifications include extern_vaccination_entry.php, extern_remote_page.php, extern_already_update.php, extern_vaccination_data.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/portalvaccination and dispatch it into PortalVaccinationController.",
+      "Execute core workflow actions such as __construct, handle, handleHomePage, handleEntry.",
+      "Generate related document or notification outputs such as extern_vaccination_entry.php, extern_remote_page.php, extern_already_update.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Portal Vaccination Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-058",
+    "ref": "PM-MOD-058",
+    "flow_summary": "Portal Vendor Onb Workflow is implemented by PortalVendorOnbController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, handle, menuDefinition, sideMenuDefinition, handleHomePage, handleDocDownload. Downstream templates or notifications include extern_onb_vendor_landing.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/portalvendoronb and dispatch it into PortalVendorOnbController.",
+      "Execute core workflow actions such as __construct, handle, menuDefinition, sideMenuDefinition.",
+      "Generate related document or notification outputs such as extern_onb_vendor_landing.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Portal Vendor Onb Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-059",
+    "ref": "PM-MOD-059",
+    "flow_summary": "Po Search Workflow is implemented by PoSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include po.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/po/new and dispatch it into PoSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Po Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-060",
+    "ref": "PM-MOD-060",
+    "flow_summary": "Prospect Entity Workflow is implemented by ProspectEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getSaveLabel, getHeadline, links, read. Primary data touchpoints include prospect.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/prospect and dispatch it into ProspectEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getSaveLabel, getHeadline."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Prospect Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.048Z"
+  },
+  {
+    "module_id": "MOD-061",
+    "ref": "PM-MOD-061",
+    "flow_summary": "Prospect Search Workflow is implemented by ProspectSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, label. Primary data touchpoints include prospect.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/prospect and dispatch it into ProspectSearchController.",
+      "Execute core workflow actions such as __construct, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Prospect Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-062",
+    "ref": "PM-MOD-062",
+    "flow_summary": "Recruiteraction Search Workflow is implemented by RecruiteractionSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getHeadline, search. Primary data touchpoints include candidate_activity, cdrout, employee_ijp_usage, crinteltech_recruiter_activity.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/report/listcandidatenotes and dispatch it into RecruiteractionSearchController.",
+      "Execute core workflow actions such as __construct, getHeadline, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Recruiteraction Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-063",
+    "ref": "PM-MOD-063",
+    "flow_summary": "Recruitermetrics Search Workflow is implemented by RecruitermetricsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, getHeadline, preSearch, search. Primary data touchpoints include delivery_center, employee, eop_data, candidate_foreign_map, candidate_placement_map.",
+    "flow_steps": [
+      "Initialize controller with model and base URL",
+      "Define header for metrics display",
+      "Execute SQL queries to gather recruiter metrics",
+      "Receive the documented route ANY /pci/entity/contractor_placement and dispatch it into RecruitermetricsSearchController.",
+      "Execute core workflow actions such as __construct, links, getHeadline, preSearch.",
+      "Primary strangler seam: Abstract metric calculations into a service layer"
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Recruitermetrics Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-064",
+    "ref": "PM-MOD-064",
+    "flow_summary": "Contractor Entity Workflow is implemented by ContractorEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getSaveLabel, getHeadline, onNew, preSave. Primary data touchpoints include employee_usertype_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/contractor and dispatch it into ContractorEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getSaveLabel, getHeadline."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contractor Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-065",
+    "ref": "PM-MOD-065",
+    "flow_summary": "Contractor Search Workflow is implemented by ContractorSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, searchMap, label. Primary data touchpoints include employee_usertype_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contractor and dispatch it into ContractorSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contractor Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-066",
+    "ref": "PM-MOD-066",
+    "flow_summary": "Web Workflow is implemented by Controller and remains an in-scope PHP workflow during modernization. Key controller actions include getMessage, resetMessage, transformLinkGeneric, __construct, getServer, getHeadline.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci and dispatch it into Controller.",
+      "Execute core workflow actions such as getMessage, resetMessage, transformLinkGeneric, __construct."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Web Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-067",
+    "ref": "PM-MOD-067",
+    "flow_summary": "Cookbook Entity Workflow is implemented by CookbookEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getSaveLabel, links, postSave, create, validate.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/report/cookbook and dispatch it into CookbookEntityController.",
+      "Execute core workflow actions such as __construct, getSaveLabel, links, postSave."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cookbook Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-068",
+    "ref": "PM-MOD-068",
+    "flow_summary": "Costcompare Entity Workflow is implemented by CostcompareEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, links, create, read. Primary data touchpoints include cost_compare_data.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/costcompare and dispatch it into CostcompareEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Costcompare Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-069",
+    "ref": "PM-MOD-069",
+    "flow_summary": "Costcompare Search Workflow is implemented by CostcompareSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include cost_compare_data.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/costcompare/new and dispatch it into CostcompareSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Costcompare Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-070",
+    "ref": "PM-MOD-070",
+    "flow_summary": "Equipment Tracking Entity Workflow is implemented by Equipment_trackingEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, validate. Primary data touchpoints include contractor_placement_demographic_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/equipment_tracking and dispatch it into Equipment_trackingEntityController.",
+      "Execute core workflow actions such as __construct, validate."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Equipment Tracking Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-071",
+    "ref": "PM-MOD-071",
+    "flow_summary": "Equipment Tracking Search Workflow is implemented by Equipment_trackingSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, run, cellClass, preSearch, search, label. Primary data touchpoints include contractor_placement_demographic_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/equipment_tracking.json and dispatch it into Equipment_trackingSearchController.",
+      "Execute core workflow actions such as __construct, run, cellClass, preSearch."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Equipment Tracking Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-072",
+    "ref": "PM-MOD-072",
+    "flow_summary": "Factcommission Entity Workflow is implemented by FactcommissionEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, validate.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/factcommission and dispatch it into FactcommissionEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, create, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Factcommission Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-073",
+    "ref": "PM-MOD-073",
+    "flow_summary": "Faq Search Workflow is implemented by FaqSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, run, search. Primary data touchpoints include faq, usertype_operation_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/faq and dispatch it into FaqSearchController.",
+      "Execute core workflow actions such as __construct, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Faq Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-074",
+    "ref": "PM-MOD-074",
+    "flow_summary": "Glider Entity Workflow is implemented by GliderEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getSaveLabel, links, validate, preSave. Primary data touchpoints include gld_test_invite.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/glider and dispatch it into GliderEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getSaveLabel, links."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Glider Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-075",
+    "ref": "PM-MOD-075",
+    "flow_summary": "Glider Search Workflow is implemented by GliderSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, run, presearch, search, label, createApproverLink. Primary data touchpoints include gld_test_invite.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/glider/new and dispatch it into GliderSearchController.",
+      "Execute core workflow actions such as __construct, run, presearch, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Glider Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-076",
+    "ref": "PM-MOD-076",
+    "flow_summary": "Gp Compare Search Workflow is implemented by Gp_compareSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include gp_compare, onb_assignment_type_map, address, onb_project_details, onb_finance_details. Downstream templates or notifications include ViewHo_dashboardSearch.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contractor_placement and dispatch it into Gp_compareSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label.",
+      "Generate related document or notification outputs such as ViewHo_dashboardSearch.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Gp Compare Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-077",
+    "ref": "PM-MOD-077",
+    "flow_summary": "Homeoffice Leave Details Search Workflow is implemented by Homeoffice_leave_detailsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, preSearch, search, label. Primary data touchpoints include ts_daily, employee_usertype_map.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/homeoffice_leave_details and dispatch it into Homeoffice_leave_detailsSearchController.",
+      "Execute core workflow actions such as __construct, preSearch, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Homeoffice Leave Details Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-078",
+    "ref": "PM-MOD-078",
+    "flow_summary": "Homeofficetimesheet Search Workflow is implemented by HomeofficetimesheetSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, label. Downstream templates or notifications include ViewHomeofficetimesheetSearch.php.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/homeofficetimesheet and dispatch it into HomeofficetimesheetSearchController.",
+      "Execute core workflow actions such as __construct, search, label.",
+      "Generate related document or notification outputs such as ViewHomeofficetimesheetSearch.php."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Homeofficetimesheet Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-079",
+    "ref": "PM-MOD-079",
+    "flow_summary": "Hourlyaction Search Workflow is implemented by HourlyactionSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, getHeadline, getTableExplanation, links, setDefaultFilters.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/i and dispatch it into HourlyactionSearchController.",
+      "Execute core workflow actions such as __construct, getFormLabel, getHeadline, getTableExplanation."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Hourlyaction Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-080",
+    "ref": "PM-MOD-080",
+    "flow_summary": "Joblisting Search Workflow is implemented by JoblistingSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, label. Primary data touchpoints include customer_oms_map, custmaster_customer_map, country, onb_assignment_type_map, onb_onbexterndata_map. Downstream templates or notifications include ViewOnbdashboardSearch.php, Controller/Onb_replacement.php, extern_onb_save_success.php, {$syspath}/src/onb_mail_templates/confirmation_of_paperwork_completion_html.php.",
+    "flow_steps": [
+      "Initialize controller with model and base URL",
+      "Check user permissions and gather report data",
+      "Retrieve OMS ID and prepare access token",
+      "Register user token for authentication",
+      "Execute SQL query to fetch job listing data",
+      "Receive the documented route ANY /pci/entity/onb_demographic.json and dispatch it into JoblistingSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Joblisting Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-081",
+    "ref": "PM-MOD-081",
+    "flow_summary": "Candidate Note Type Search Workflow is implemented by Candidate_note_typeSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include currency_exchange.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/candidate_note_type/new and dispatch it into Candidate_note_typeSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Candidate Note Type Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-082",
+    "ref": "PM-MOD-082",
+    "flow_summary": "Cca Social Media Reviews Entity Workflow is implemented by Cca_social_media_reviewsEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, validate. Primary data touchpoints include states, timezone_type, vendormaster_insurance_coverage_type_map, ccp_request.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/cca_social_media_reviews and dispatch it into Cca_social_media_reviewsEntityController.",
+      "Execute core workflow actions such as __construct, validate."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cca Social Media Reviews Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-083",
+    "ref": "PM-MOD-083",
+    "flow_summary": "Cca Transfer Entity Workflow is implemented by Cca_transferEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, create, update, postSave, validate. Primary data touchpoints include states, timezone_type, vendormaster_insurance_coverage_type_map, ccp_request.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/ts_update and dispatch it into Cca_transferEntityController.",
+      "Execute core workflow actions such as __construct, create, update, postSave."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cca Transfer Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-084",
+    "ref": "PM-MOD-084",
+    "flow_summary": "Cca Transfer Search Workflow is implemented by Cca_transferSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include states, timezone_type, vendormaster_insurance_coverage_type_map, ccp_request.",
+    "flow_steps": [
+      "Initialize controller with model and base URL",
+      "Validate and extract request data",
+      "Execute SQL query to fetch CCA transfer data",
+      "Receive the documented route ANY /pci/entity/cca_transfer and dispatch it into Cca_transferSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search.",
+      "Primary strangler seam: Move validation logic to a form request class"
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cca Transfer Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-085",
+    "ref": "PM-MOD-085",
+    "flow_summary": "Cdrout Entity Workflow is implemented by CdroutEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, create, validate, validFormat.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/cdrout and dispatch it into CdroutEntityController.",
+      "Execute core workflow actions such as __construct, links, create, validate."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Cdrout Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-086",
+    "ref": "PM-MOD-086",
+    "flow_summary": "Contact Note Type Search Workflow is implemented by Contact_note_typeSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include contact_foreign_map, account, currency_exchange.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contact_note_type/new and dispatch it into Contact_note_typeSearchController.",
+      "Execute core workflow actions such as __construct, links, run, search."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contact Note Type Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-087",
+    "ref": "PM-MOD-087",
+    "flow_summary": "Contact Search Workflow is implemented by ContactSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, search, label. Primary data touchpoints include contact_foreign_map, account.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/search/contact and dispatch it into ContactSearchController.",
+      "Execute core workflow actions such as __construct, getFormLabel, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contact Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-088",
+    "ref": "PM-MOD-088",
+    "flow_summary": "Contract Perm Conversion Search Workflow is implemented by Contract_perm_conversionSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, search, label. Primary data touchpoints include adhoc_oms_eop_report.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contractor_placement and dispatch it into Contract_perm_conversionSearchController.",
+      "Execute core workflow actions such as __construct, links, search, label."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contract Perm Conversion Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-089",
+    "ref": "PM-MOD-089",
+    "flow_summary": "Contractor Placement Hr Checklist Details Entity Workflow is implemented by Contractor_placement_hr_checklist_detailsEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, read, create, update, links. Primary data touchpoints include employee_usertype_map, ts_daily.",
+    "flow_steps": [
+      "Receive the documented route ANY /pci/entity/contractor_placement_hr_checklist_details and dispatch it into Contractor_placement_hr_checklist_detailsEntityController.",
+      "Execute core workflow actions such as __construct, getFormLabel, read, create."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contractor Placement Hr Checklist Details Entity Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.050Z"
+  },
+  {
+    "module_id": "MOD-090",
+    "ref": "PM-MOD-090",
+    "flow_summary": "Contractor Placement Hr Checklist Details Search Workflow is implemented by Contractor_placement_hr_checklist_detailsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include employee_usertype_map, ts_daily.",
+    "flow_steps": [
+      "Handle links request path",
+      "Handle run request path",
+      "Handle search request path",
+      "Handle label request path",
+      "Read/write operational tables: employee_usertype_map",
+      "Receive the documented route ANY /pci/entity/contractor_placement_hr_checklist_details and dispatch it into Contractor_placement_hr_checklist_detailsSearchController."
+    ],
+    "diagram_source_type": "mermaid",
+    "diagram_source": "flowchart LR\n  A[Request] --> B[Contractor Placement Hr Checklist Details Search Workflow]\n  B --> C[Validated outcome]",
+    "image_ref": "",
+    "generated_at": "2026-04-08T15:46:27.051Z"
+  }
+]
