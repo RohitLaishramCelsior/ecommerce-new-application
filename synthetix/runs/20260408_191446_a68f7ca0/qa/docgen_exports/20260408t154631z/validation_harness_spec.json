@@ -1,0 +1,79 @@
+{
+  "artifact_type": "validation_harness_spec",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "VAL-001",
+      "name": "Row count reconciliation",
+      "description": "Validate source/target row counts per migrated table within accepted threshold."
+    },
+    {
+      "id": "VAL-002",
+      "name": "Critical aggregate parity",
+      "description": "Validate key financial aggregates (balance, debit, credit, transaction totals)."
+    },
+    {
+      "id": "VAL-003",
+      "name": "Column-level checksum",
+      "description": "Compute deterministic checksums for mapped columns in sampled ranges."
+    },
+    {
+      "id": "VAL-004",
+      "name": "Workflow-level equivalence",
+      "description": "Replay golden legacy workflows and confirm target side effects are equivalent."
+    }
+  ],
+  "coverage": {
+    "mapped_columns": 879,
+    "unmapped_columns": 0,
+    "high_blast_tables": 1
+  },
+  "focus_tables": [
+    "ts_daily"
+  ],
+  "artifact_id": "art_validation_harness_spec_9099c90e6e3347b2",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
