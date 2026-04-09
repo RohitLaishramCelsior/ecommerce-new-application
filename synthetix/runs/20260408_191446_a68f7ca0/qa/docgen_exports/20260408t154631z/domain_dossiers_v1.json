@@ -1,0 +1,534 @@
+[
+  {
+    "dossier_id": "DOM-001",
+    "domain_name": "Shared Services",
+    "module_count": 72,
+    "route_count": 169,
+    "scope_summary": "Initializes the AP Approval Team search functionality within shared platform services. Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence. Asset Entity manages asset creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during moderniza...",
+    "top_modules": [
+      {
+        "module_id": "MOD-001",
+        "title": "Ap Approval Team Search Workflow",
+        "source_path": "Controller/Ap_approval_teamSearchController.php",
+        "summary": "Initializes the AP Approval Team search functionality within shared platform services."
+      },
+      {
+        "module_id": "MOD-002",
+        "title": "Ap Invoice Entity Workflow",
+        "source_path": "Controller/Ap_invoiceEntityController.php",
+        "summary": "Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence."
+      },
+      {
+        "module_id": "MOD-006",
+        "title": "Asset Entity Workflow",
+        "source_path": "Controller/AssetEntityController.php",
+        "summary": "Asset Entity manages asset creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization."
+      },
+      {
+        "module_id": "MOD-007",
+        "title": "Credential Entity Workflow",
+        "source_path": "Controller/CredentialEntityController.php",
+        "summary": "Manages credential entities within shared platform services."
+      },
+      {
+        "module_id": "MOD-008",
+        "title": "Credential Search Workflow",
+        "source_path": "Controller/CredentialSearchController.php",
+        "summary": "Credential Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-009",
+        "title": "Cross Selling Lead Entity Workflow",
+        "source_path": "Controller/Cross_selling_leadEntityController.php",
+        "summary": "Cross Selling Lead Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-010",
+        "title": "Cross Selling Lead Search Workflow",
+        "source_path": "Controller/Cross_selling_leadSearchController.php",
+        "summary": "Cross Selling Lead Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-011",
+        "title": "Currency Type Search Workflow",
+        "source_path": "Controller/Currency_typeSearchController.php",
+        "summary": "Currency Type Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-012",
+        "title": "Custcontactmaster Entity Workflow",
+        "source_path": "Controller/CustcontactmasterEntityController.php",
+        "summary": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate."
+      },
+      {
+        "module_id": "MOD-013",
+        "title": "Custcontactmaster Search Workflow",
+        "source_path": "Controller/CustcontactmasterSearchController.php",
+        "summary": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate."
+      },
+      {
+        "module_id": "MOD-014",
+        "title": "Custmaster Entity Workflow",
+        "source_path": "Controller/CustmasterEntityController.php",
+        "summary": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate."
+      },
+      {
+        "module_id": "MOD-015",
+        "title": "Custmaster Search Workflow",
+        "source_path": "Controller/CustmasterSearchController.php",
+        "summary": "Custmaster Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      }
+    ],
+    "key_risks": [
+      "Shared Services: 73 SQL statements carry injection-style or unsafe-query signals",
+      "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/Ap_approval_teamSearchController.php",
+      "Controller/Ap_invoiceEntityController.php",
+      "Controller/AssetEntityController.php",
+      "Controller/CredentialEntityController.php",
+      "Controller/CredentialSearchController.php",
+      "Controller/Cross_selling_leadEntityController.php",
+      "Controller/Cross_selling_leadSearchController.php",
+      "Controller/Currency_typeSearchController.php",
+      "Controller/CustcontactmasterEntityController.php",
+      "Controller/CustcontactmasterSearchController.php",
+      "Controller/CustmasterEntityController.php",
+      "Controller/CustmasterSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Establish shared authentication, session, and base-controller compatibility first.",
+      "Treat this domain as Sprint 0 foundation work before higher-order workflow extraction begins."
+    ]
+  },
+  {
+    "dossier_id": "DOM-002",
+    "domain_name": "Contractor Placement",
+    "module_count": 7,
+    "route_count": 14,
+    "scope_summary": "Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence. Archcontractor Entity manages contractor placement creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization. Manages archived contractor data within contractor placem...",
+    "top_modules": [
+      {
+        "module_id": "MOD-003",
+        "title": "Ap Invoice Search Workflow",
+        "source_path": "Controller/Ap_invoiceSearchController.php",
+        "summary": "Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence."
+      },
+      {
+        "module_id": "MOD-004",
+        "title": "Archcontractor Entity Workflow",
+        "source_path": "Controller/ArchcontractorEntityController.php",
+        "summary": "Archcontractor Entity manages contractor placement creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization."
+      },
+      {
+        "module_id": "MOD-005",
+        "title": "Archcontractor Search Workflow",
+        "source_path": "Controller/ArchcontractorSearchController.php",
+        "summary": "Manages archived contractor data within contractor placement workflows."
+      },
+      {
+        "module_id": "MOD-064",
+        "title": "Contractor Entity Workflow",
+        "source_path": "Controller/ContractorEntityController.php",
+        "summary": "Contractor Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-065",
+        "title": "Contractor Search Workflow",
+        "source_path": "Controller/ContractorSearchController.php",
+        "summary": "Contractor Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-089",
+        "title": "Contractor Placement Hr Checklist Details Entity Workflow",
+        "source_path": "Controller/Contractor_placement_hr_checklist_detailsEntityController.php",
+        "summary": "Manages contractor placement creation, update, review, and comparison workflows so placement records, rates, and approval-sensitive changes remain consistent across the staffing platform."
+      },
+      {
+        "module_id": "MOD-090",
+        "title": "Contractor Placement Hr Checklist Details Search Workflow",
+        "source_path": "Controller/Contractor_placement_hr_checklist_detailsSearchController.php",
+        "summary": "Manages contractor placement creation, update, review, and comparison workflows so placement records, rates, and approval-sensitive changes remain consistent across the staffing platform."
+      }
+    ],
+    "key_risks": [
+      "Contractor Placement: 33 SQL statements carry injection-style or unsafe-query signals",
+      "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. SQL risk flags detected: string_concatenation.",
+      "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
+      "Session-coupled workflow state may hide business invariants.",
+      "SQL risk flags detected: string_concatenation."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/Ap_invoiceSearchController.php",
+      "Controller/ArchcontractorEntityController.php",
+      "Controller/ArchcontractorSearchController.php",
+      "Controller/ContractorEntityController.php",
+      "Controller/ContractorSearchController.php",
+      "Controller/Contractor_placement_hr_checklist_detailsEntityController.php",
+      "Controller/Contractor_placement_hr_checklist_detailsSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Build after shared session/auth foundations are in place so recruiter and account-management roles can be preserved.",
+      "Preserve placement state transitions and EOP notification handoffs before slicing downstream modules."
+    ]
+  },
+  {
+    "dossier_id": "DOM-004",
+    "domain_name": "Onboarding",
+    "module_count": 4,
+    "route_count": 10,
+    "scope_summary": "Supports EOP operational review and status management so pending, on-bench, and head-office processing queues can be searched, actioned, and recorded consistently. Portal Onb Data Entry supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects. Portal Vendor Onb supports portal-facing staffing workflows so users ca...",
+    "top_modules": [
+      {
+        "module_id": "MOD-036",
+        "title": "Eop Dashboard Search Workflow",
+        "source_path": "Controller/Eop_dashboardSearchController.php",
+        "summary": "Supports EOP operational review and status management so pending, on-bench, and head-office processing queues can be searched, actioned, and recorded consistently."
+      },
+      {
+        "module_id": "MOD-056",
+        "title": "Portal Onb Data Entry Workflow",
+        "source_path": "Controller/PortalOnbDataEntryController.php",
+        "summary": "Portal Onb Data Entry supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects."
+      },
+      {
+        "module_id": "MOD-058",
+        "title": "Portal Vendor Onb Workflow",
+        "source_path": "Controller/PortalVendorOnbController.php",
+        "summary": "Portal Vendor Onb supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects."
+      },
+      {
+        "module_id": "MOD-081",
+        "title": "Candidate Note Type Search Workflow",
+        "source_path": "Controller/Candidate_note_typeSearchController.php",
+        "summary": "Candidate Note Type Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      }
+    ],
+    "key_risks": [
+      "Onboarding: 5 SQL statements carry injection-style or unsafe-query signals",
+      "Portal-facing attack surface requires early security remediation. Parameterize queries and preserve domain data contracts before workflow migration."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/Eop_dashboardSearchController.php",
+      "Controller/PortalOnbDataEntryController.php",
+      "Controller/PortalVendorOnbController.php",
+      "Controller/Candidate_note_typeSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Start with the Onb_replacement strangler seam before broad onboarding route migration.",
+      "Sequence document/email and WOTC-adjacent behavior before replacing user-facing onboarding forms."
+    ]
+  },
+  {
+    "dossier_id": "DOM-003",
+    "domain_name": "Identity and Access",
+    "module_count": 3,
+    "route_count": 5,
+    "scope_summary": "Employee Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action. Portal Extern supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects. Portal Vaccination supports portal-facing staffing workflows so users can submit...",
+    "top_modules": [
+      {
+        "module_id": "MOD-031",
+        "title": "Employee Entity Workflow",
+        "source_path": "Controller/EmployeeEntityController.php",
+        "summary": "Employee Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action."
+      },
+      {
+        "module_id": "MOD-055",
+        "title": "Portal Extern Workflow",
+        "source_path": "Controller/PortalExternController.php",
+        "summary": "Portal Extern supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects."
+      },
+      {
+        "module_id": "MOD-057",
+        "title": "Portal Vaccination Workflow",
+        "source_path": "Controller/PortalVaccinationController.php",
+        "summary": "Portal Vaccination supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects."
+      }
+    ],
+    "key_risks": [
+      "Identity and Access: 3 SQL statements carry injection-style or unsafe-query signals",
+      "Portal-facing attack surface requires early security remediation. Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/EmployeeEntityController.php",
+      "Controller/PortalExternController.php",
+      "Controller/PortalVaccinationController.php"
+    ],
+    "sequencing_notes": [
+      "Employee Entity Workflow is implemented by EmployeeEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getHeadline, getFormLabel, links, resetPassword, resetPwd. Primary data touchpoints include office, employee, employee_meeting_notes.",
+      "Portal Extern Workflow is implemented by PortalExternController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, localCurlGET, setSessionInfo, menuDefinition, unsetSessionInfo, createLabelString. Downstream templates or notifications include extern_main_page.php, extern_login_new.php, extern_login.php, extern_login_reset.php.",
+      "Portal Vaccination Workflow is implemented by PortalVaccinationController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, handle, handleHomePage, handleEntry, setSessionInfo, validateDetails. Downstream templates or notifications include extern_vaccination_entry.php, extern_remote_page.php, extern_already_update.php, extern_vaccination_data.php."
+    ]
+  },
+  {
+    "dossier_id": "DOM-005",
+    "domain_name": "ApApprovalTeam",
+    "module_count": 1,
+    "route_count": 2,
+    "scope_summary": "Manages AP approval teams, including creation and modification of team entities.",
+    "top_modules": [
+      {
+        "module_id": "MOD-054",
+        "title": "Ap Approval Team Entity Workflow",
+        "source_path": "Controller/Ap_approval_teamEntityController.php",
+        "summary": "Manages AP approval teams, including creation and modification of team entities."
+      }
+    ],
+    "key_risks": [
+      "ApApprovalTeam: 19 SQL statements carry injection-style or unsafe-query signals",
+      "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. Complex entity management within controller, potential for data inconsistency.",
+      "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
+      "Session-coupled workflow state may hide business invariants.",
+      "Complex entity management within controller, potential for data inconsistency."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/Ap_approval_teamEntityController.php"
+    ],
+    "sequencing_notes": [
+      "Ap Approval Team Entity Workflow is implemented by Ap_approval_teamEntityController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, getFormLabel, create, links, onNew, onExists. Primary data touchpoints include hours_type, jobreq, candidate_activity, candidate_note, onb_demographic. Downstream templates or notifications include extern_edit_timesheet.php, extern_edit_leave.php, extern_list_contractor_timesheet.php, extern_report_contractor_timesheet.php."
+    ]
+  },
+  {
+    "dossier_id": "DOM-006",
+    "domain_name": "RecruiterMetrics",
+    "module_count": 1,
+    "route_count": 2,
+    "scope_summary": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+    "top_modules": [
+      {
+        "module_id": "MOD-063",
+        "title": "Recruitermetrics Search Workflow",
+        "source_path": "Controller/RecruitermetricsSearchController.php",
+        "summary": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes."
+      }
+    ],
+    "key_risks": [
+      "RecruiterMetrics: 5 SQL statements carry injection-style or unsafe-query signals",
+      "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation. Complex SQL queries embedded in controller, potential for performance bottlenecks.",
+      "SQL risk flags detected: string_concatenation.",
+      "Complex SQL queries embedded in controller, potential for performance bottlenecks."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/RecruitermetricsSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Recruitermetrics Search Workflow is implemented by RecruitermetricsSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, getHeadline, preSearch, search. Primary data touchpoints include delivery_center, employee, eop_data, candidate_foreign_map, candidate_placement_map."
+    ]
+  },
+  {
+    "dossier_id": "DOM-007",
+    "domain_name": "JobListing",
+    "module_count": 1,
+    "route_count": 5,
+    "scope_summary": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+    "top_modules": [
+      {
+        "module_id": "MOD-080",
+        "title": "Joblisting Search Workflow",
+        "source_path": "Controller/JoblistingSearchController.php",
+        "summary": "Handles job listing searches, focusing on pre-placement activities for contractors."
+      }
+    ],
+    "key_risks": [
+      "JobListing: 12 SQL statements carry injection-style or unsafe-query signals",
+      "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. High coupling with database and OMS system, potential security risks with token handling.",
+      "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
+      "High coupling with database and OMS system, potential security risks with token handling."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/JoblistingSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Joblisting Search Workflow is implemented by JoblistingSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, search, label. Primary data touchpoints include customer_oms_map, custmaster_customer_map, country, onb_assignment_type_map, onb_onbexterndata_map. Downstream templates or notifications include ViewOnbdashboardSearch.php, Controller/Onb_replacement.php, extern_onb_save_success.php, {$syspath}/src/onb_mail_templates/confirmation_of_paperwork_completion_html.php."
+    ]
+  },
+  {
+    "dossier_id": "DOM-008",
+    "domain_name": "CcaTransfer",
+    "module_count": 1,
+    "route_count": 5,
+    "scope_summary": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+    "top_modules": [
+      {
+        "module_id": "MOD-084",
+        "title": "Cca Transfer Search Workflow",
+        "source_path": "Controller/Cca_transferSearchController.php",
+        "summary": "Facilitates CCA transfer operations, including searching and filtering based on CCA details."
+      }
+    ],
+    "key_risks": [
+      "CcaTransfer: 3 SQL statements carry injection-style or unsafe-query signals",
+      "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. Direct database access in controller, limited input validation.",
+      "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
+      "Session-coupled workflow state may hide business invariants.",
+      "Direct database access in controller, limited input validation."
+    ],
+    "roles": [
+      "Admin",
+      "CCA",
+      "HRA",
+      "Recruiter",
+      "Finance / AP",
+      "Operations",
+      "Manager"
+    ],
+    "session_keys": [
+      "PAGE_START_TIME",
+      "PREVREQUEST",
+      "dashcount",
+      "dashcrumb",
+      "document search highlights",
+      "has_navigation",
+      "quarter_num",
+      "username",
+      "year_num"
+    ],
+    "dependencies": [
+      "Controller/Cca_transferSearchController.php"
+    ],
+    "sequencing_notes": [
+      "Cca Transfer Search Workflow is implemented by Cca_transferSearchController and remains an in-scope PHP workflow during modernization. Key controller actions include __construct, links, run, search, label. Primary data touchpoints include states, timezone_type, vendormaster_insurance_coverage_type_map, ccp_request."
+    ]
+  }
+]
