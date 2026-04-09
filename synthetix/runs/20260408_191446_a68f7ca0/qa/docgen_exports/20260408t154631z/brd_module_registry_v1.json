@@ -1,0 +1,1474 @@
+[
+  {
+    "module_id": "MOD-001",
+    "module_name_from_code": "Ap_approval_teamSearchController",
+    "state_key_name": "AP_APPROVAL_TEAMSEARCHCONTROLLER",
+    "business_name": "Ap Approval Team Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Initializes the AP Approval Team search functionality within shared platform services.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/ap_approval_team/new",
+      "ANY /pci/entity/ap_approval_team",
+      "ANY /pci/search/ap_approval_team"
+    ],
+    "source_path": "Controller/Ap_approval_teamSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-002",
+    "module_name_from_code": "Ap_invoiceEntityController",
+    "state_key_name": "AP_INVOICEENTITYCONTROLLER",
+    "business_name": "Ap Invoice Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/ap_invoice",
+      "ANY /pci/entity/ap_invoice"
+    ],
+    "source_path": "Controller/Ap_invoiceEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-003",
+    "module_name_from_code": "Ap_invoiceSearchController",
+    "state_key_name": "AP_INVOICESEARCHCONTROLLER",
+    "business_name": "Ap Invoice Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages the AP invoice lifecycle for contractor placements, including approval routing, notification dispatch on state changes, and invoice record persistence.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/ap_invoice/new",
+      "ANY /pci/entity/ap_invoice",
+      "ANY /pci/search/ap_invoice"
+    ],
+    "source_path": "Controller/Ap_invoiceSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-004",
+    "module_name_from_code": "ArchcontractorEntityController",
+    "state_key_name": "ARCHCONTRACTORENTITYCONTROLLER",
+    "business_name": "Archcontractor Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Archcontractor Entity manages contractor placement creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/archcontractor"
+    ],
+    "source_path": "Controller/ArchcontractorEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-005",
+    "module_name_from_code": "ArchcontractorSearchController",
+    "state_key_name": "ARCHCONTRACTORSEARCHCONTROLLER",
+    "business_name": "Archcontractor Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages archived contractor data within contractor placement workflows.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/archcontractor",
+      "ANY /pci/search/archcontractor"
+    ],
+    "source_path": "Controller/ArchcontractorSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-006",
+    "module_name_from_code": "AssetEntityController",
+    "state_key_name": "ASSETENTITYCONTROLLER",
+    "business_name": "Asset Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Asset Entity manages asset creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/asset"
+    ],
+    "source_path": "Controller/AssetEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-007",
+    "module_name_from_code": "CredentialEntityController",
+    "state_key_name": "CREDENTIALENTITYCONTROLLER",
+    "business_name": "Credential Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages credential entities within shared platform services.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/credential/new",
+      "ANY /pci/entity/credential"
+    ],
+    "source_path": "Controller/CredentialEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-008",
+    "module_name_from_code": "CredentialSearchController",
+    "state_key_name": "CREDENTIALSEARCHCONTROLLER",
+    "business_name": "Credential Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Credential Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/credential/new",
+      "ANY /pci/entity/credential",
+      "ANY /pci/search/credential"
+    ],
+    "source_path": "Controller/CredentialSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-009",
+    "module_name_from_code": "Cross_selling_leadEntityController",
+    "state_key_name": "CROSS_SELLING_LEADENTITYCONTROLLER",
+    "business_name": "Cross Selling Lead Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cross Selling Lead Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/cross_selling_lead",
+      "ANY /pci/entity/cross_selling_lead"
+    ],
+    "source_path": "Controller/Cross_selling_leadEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-010",
+    "module_name_from_code": "Cross_selling_leadSearchController",
+    "state_key_name": "CROSS_SELLING_LEADSEARCHCONTROLLER",
+    "business_name": "Cross Selling Lead Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cross Selling Lead Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/cross_selling_lead/new",
+      "ANY /pci/entity/cross_selling_lead",
+      "ANY /pci/search/cross_selling_lead"
+    ],
+    "source_path": "Controller/Cross_selling_leadSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-011",
+    "module_name_from_code": "Currency_typeSearchController",
+    "state_key_name": "CURRENCY_TYPESEARCHCONTROLLER",
+    "business_name": "Currency Type Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Currency Type Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/currency_type"
+    ],
+    "source_path": "Controller/Currency_typeSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-012",
+    "module_name_from_code": "CustcontactmasterEntityController",
+    "state_key_name": "CUSTCONTACTMASTERENTITYCONTROLLER",
+    "business_name": "Custcontactmaster Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/custcontactmaster",
+      "ANY /pci/entity/custmaster",
+      "ANY /pci/entity/vendormaster",
+      "ANY /pci/entity/custcontactmaster"
+    ],
+    "source_path": "Controller/CustcontactmasterEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-013",
+    "module_name_from_code": "CustcontactmasterSearchController",
+    "state_key_name": "CUSTCONTACTMASTERSEARCHCONTROLLER",
+    "business_name": "Custcontactmaster Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/custcontactmaster/new",
+      "ANY /pci/entity/custcontactmaster",
+      "ANY /pci/search/custcontactmaster"
+    ],
+    "source_path": "Controller/CustcontactmasterSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-014",
+    "module_name_from_code": "CustmasterEntityController",
+    "state_key_name": "CUSTMASTERENTITYCONTROLLER",
+    "business_name": "Custmaster Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/custmaster",
+      "ANY /pci/search/custcontactmaster",
+      "ANY /pci/entity/custmaster/new",
+      "ANY /pci/entity/custmaster"
+    ],
+    "source_path": "Controller/CustmasterEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-015",
+    "module_name_from_code": "CustmasterSearchController",
+    "state_key_name": "CUSTMASTERSEARCHCONTROLLER",
+    "business_name": "Custmaster Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Custmaster Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/custmaster",
+      "ANY /pci/search/custmaster"
+    ],
+    "source_path": "Controller/CustmasterSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-016",
+    "module_name_from_code": "Customer_contactEntityController",
+    "state_key_name": "CUSTOMER_CONTACTENTITYCONTROLLER",
+    "business_name": "Customer Contact Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/customer_contact",
+      "ANY /pci/entity/customer_contact"
+    ],
+    "source_path": "Controller/Customer_contactEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-017",
+    "module_name_from_code": "Customer_contactSearchController",
+    "state_key_name": "CUSTOMER_CONTACTSEARCHCONTROLLER",
+    "business_name": "Customer Contact Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains customer contact master records so contact details, account relationships, and downstream communication workflows remain accurate.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/customer_contact/new",
+      "ANY /pci/entity/customer_contact",
+      "ANY /pci/entity/customer",
+      "ANY /pci/search/customer_contact"
+    ],
+    "source_path": "Controller/Customer_contactSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-018",
+    "module_name_from_code": "Customer_endclientEntityController",
+    "state_key_name": "CUSTOMER_ENDCLIENTENTITYCONTROLLER",
+    "business_name": "Customer Endclient Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Customer Endclient Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/customer_endclient",
+      "ANY /pci/entity/customer_endclient/new",
+      "ANY /pci/entity/customer_endclient"
+    ],
+    "source_path": "Controller/Customer_endclientEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-019",
+    "module_name_from_code": "Customer_endclientSearchController",
+    "state_key_name": "CUSTOMER_ENDCLIENTSEARCHCONTROLLER",
+    "business_name": "Customer Endclient Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Customer Endclient Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/customer_endclient/new",
+      "ANY /pci/entity/customer_endclient",
+      "ANY /pci/entity/customer",
+      "ANY /pci/search/customer_endclient"
+    ],
+    "source_path": "Controller/Customer_endclientSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-020",
+    "module_name_from_code": "CustomerEntityController",
+    "state_key_name": "CUSTOMERENTITYCONTROLLER",
+    "business_name": "Customer Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Customer Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/customer",
+      "ANY /pci/search/customer"
+    ],
+    "source_path": "Controller/CustomerEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-021",
+    "module_name_from_code": "CustomerSearchController",
+    "state_key_name": "CUSTOMERSEARCHCONTROLLER",
+    "business_name": "Customer Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Customer Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/report/markupcustomer",
+      "ANY /pci/entity/customer",
+      "ANY /pci/entity/custmaster",
+      "ANY /pci/search/customer"
+    ],
+    "source_path": "Controller/CustomerSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-022",
+    "module_name_from_code": "CustomertargetSearchController",
+    "state_key_name": "CUSTOMERTARGETSEARCHCONTROLLER",
+    "business_name": "Customertarget Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Customertarget Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/customertarget"
+    ],
+    "source_path": "Controller/CustomertargetSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-023",
+    "module_name_from_code": "Delivery_centerEntityController",
+    "state_key_name": "DELIVERY_CENTERENTITYCONTROLLER",
+    "business_name": "Delivery Center Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Delivery Center Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/delivery_center",
+      "ANY /pci/entity/delivery_center"
+    ],
+    "source_path": "Controller/Delivery_centerEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-024",
+    "module_name_from_code": "Delivery_centerSearchController",
+    "state_key_name": "DELIVERY_CENTERSEARCHCONTROLLER",
+    "business_name": "Delivery Center Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Delivery Center Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/delivery_center/new",
+      "ANY /pci/entity/delivery_center",
+      "ANY /pci/search/delivery_center"
+    ],
+    "source_path": "Controller/Delivery_centerSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-025",
+    "module_name_from_code": "Delivery_teamEntityController",
+    "state_key_name": "DELIVERY_TEAMENTITYCONTROLLER",
+    "business_name": "Delivery Team Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains onboarding demographic details required for worker setup, compliance review, and downstream onboarding documentation.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/delivery_team",
+      "ANY /pci/entity/delivery_team"
+    ],
+    "source_path": "Controller/Delivery_teamEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-026",
+    "module_name_from_code": "Delivery_teamSearchController",
+    "state_key_name": "DELIVERY_TEAMSEARCHCONTROLLER",
+    "business_name": "Delivery Team Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains onboarding demographic details required for worker setup, compliance review, and downstream onboarding documentation.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/delivery_team/new",
+      "ANY /pci/entity/delivery_team",
+      "ANY /pci/search/delivery_team"
+    ],
+    "source_path": "Controller/Delivery_teamSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-027",
+    "module_name_from_code": "Employee_meeting_notesEntityController",
+    "state_key_name": "EMPLOYEE_MEETING_NOTESENTITYCONTROLLER",
+    "business_name": "Employee Meeting Notes Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee Meeting Notes Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/employee_meeting_notes",
+      "ANY /pci/entity/employee_meeting_notes"
+    ],
+    "source_path": "Controller/Employee_meeting_notesEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-028",
+    "module_name_from_code": "Employee_meeting_notesSearchController",
+    "state_key_name": "EMPLOYEE_MEETING_NOTESSEARCHCONTROLLER",
+    "business_name": "Employee Meeting Notes Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee Meeting Notes Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/employee_meeting_notes",
+      "ANY /pci/entity/employee_meeting_notes/new",
+      "ANY /pci/search/employee_meeting_notes"
+    ],
+    "source_path": "Controller/Employee_meeting_notesSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-029",
+    "module_name_from_code": "Employee_one_time_bonus_commissionEntityController",
+    "state_key_name": "EMPLOYEE_ONE_TIME_BONUS_COMMISSIONENTITYCONTROLLER",
+    "business_name": "Employee One Time Bonus Commission Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee One Time Bonus Commission Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/employee_one_time_bonus_commission",
+      "ANY /pci/entity/employee_one_time_bonus_commission"
+    ],
+    "source_path": "Controller/Employee_one_time_bonus_commissionEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-030",
+    "module_name_from_code": "Employee_one_time_bonus_commissionSearchController",
+    "state_key_name": "EMPLOYEE_ONE_TIME_BONUS_COMMISSIONSEARCHCONTROLLER",
+    "business_name": "Employee One Time Bonus Commission Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee One Time Bonus Commission Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/employee_one_time_bonus_commission/new",
+      "ANY /pci/entity/employee_one_time_bonus_commission",
+      "ANY /pci/search/employee_one_time_bonus_commission"
+    ],
+    "source_path": "Controller/Employee_one_time_bonus_commissionSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-031",
+    "module_name_from_code": "EmployeeEntityController",
+    "state_key_name": "EMPLOYEEENTITYCONTROLLER",
+    "business_name": "Employee Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/report/orgchart",
+      "ANY /pci/search/employee",
+      "ANY /pci/entity/employee"
+    ],
+    "source_path": "Controller/EmployeeEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-032",
+    "module_name_from_code": "EmployeeSearchController",
+    "state_key_name": "EMPLOYEESEARCHCONTROLLER",
+    "business_name": "Employee Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Employee Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/report/orgchart",
+      "ANY /pci/entity/employee/becomeuser",
+      "ANY /pci/entity/employee",
+      "ANY /pci/entity/usertype",
+      "ANY /pci/search/employee"
+    ],
+    "source_path": "Controller/EmployeeSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-033",
+    "module_name_from_code": "EndclientEntityController",
+    "state_key_name": "ENDCLIENTENTITYCONTROLLER",
+    "business_name": "Endclient Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Endclient Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/endclient",
+      "ANY /pci/search/endclient",
+      "ANY /pci/entity/endclient/new"
+    ],
+    "source_path": "Controller/EndclientEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-034",
+    "module_name_from_code": "EndclientSearchController",
+    "state_key_name": "ENDCLIENTSEARCHCONTROLLER",
+    "business_name": "Endclient Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Endclient Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/endclient",
+      "ANY /pci/search/endclient"
+    ],
+    "source_path": "Controller/EndclientSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-035",
+    "module_name_from_code": "EntityController",
+    "state_key_name": "ENTITYCONTROLLER",
+    "business_name": "Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Entity manages entity creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity"
+    ],
+    "source_path": "Controller/EntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-036",
+    "module_name_from_code": "Eop_dashboardSearchController",
+    "state_key_name": "EOP_DASHBOARDSEARCHCONTROLLER",
+    "business_name": "Eop Dashboard Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Supports EOP operational review and status management so pending, on-bench, and head-office processing queues can be searched, actioned, and recorded consistently.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement.json",
+      "ANY /pci/search/eop_dashboard.json",
+      "ANY /pci/search/onb_demographic",
+      "ANY /pci/entity/onb_demographic",
+      "ANY /pci/search/eop_dashboard"
+    ],
+    "source_path": "Controller/Eop_dashboardSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-037",
+    "module_name_from_code": "Academy_batchEntityController",
+    "state_key_name": "ACADEMY_BATCHENTITYCONTROLLER",
+    "business_name": "Academy Batch Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages academy batch setup and maintenance so cohort records, participant progress, and downstream operational reporting remain consistent.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/academy_batch",
+      "ANY /pci/entity/academy_batch"
+    ],
+    "source_path": "Controller/Academy_batchEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-038",
+    "module_name_from_code": "Academy_batchSearchController",
+    "state_key_name": "ACADEMY_BATCHSEARCHCONTROLLER",
+    "business_name": "Academy Batch Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages academy batch setup and maintenance so cohort records, participant progress, and downstream operational reporting remain consistent.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/academy_batch/new",
+      "ANY /pci/entity/academy_batch",
+      "ANY /pci/search/academy_batch"
+    ],
+    "source_path": "Controller/Academy_batchSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-039",
+    "module_name_from_code": "Account_listEntityController",
+    "state_key_name": "ACCOUNT_LISTENTITYCONTROLLER",
+    "business_name": "Account List Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Account List Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/account_list"
+    ],
+    "source_path": "Controller/Account_listEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-040",
+    "module_name_from_code": "Account_listSearchController",
+    "state_key_name": "ACCOUNT_LISTSEARCHCONTROLLER",
+    "business_name": "Account List Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Account List Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/account_list",
+      "ANY /pci/search/account_list"
+    ],
+    "source_path": "Controller/Account_listSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-041",
+    "module_name_from_code": "AccountEntityController",
+    "state_key_name": "ACCOUNTENTITYCONTROLLER",
+    "business_name": "Account Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Account Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/account",
+      "ANY /pci/entity/account"
+    ],
+    "source_path": "Controller/AccountEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-042",
+    "module_name_from_code": "AccountSearchController",
+    "state_key_name": "ACCOUNTSEARCHCONTROLLER",
+    "business_name": "Account Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Account Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/account",
+      "ANY /pci/entity/customer",
+      "ANY /pci/entity/custmaster",
+      "ANY /pci/search/contact",
+      "ANY /pci/search/account"
+    ],
+    "source_path": "Controller/AccountSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-043",
+    "module_name_from_code": "Action_itemsEntityController",
+    "state_key_name": "ACTION_ITEMSENTITYCONTROLLER",
+    "business_name": "Action Items Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Action Items Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/action_items",
+      "ANY /pci/entity/action_items"
+    ],
+    "source_path": "Controller/Action_itemsEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-044",
+    "module_name_from_code": "Action_itemsSearchController",
+    "state_key_name": "ACTION_ITEMSSEARCHCONTROLLER",
+    "business_name": "Action Items Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Action Items Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/action_items/new",
+      "ANY /pci/entity/action_items",
+      "ANY /pci/search/action_items"
+    ],
+    "source_path": "Controller/Action_itemsSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-045",
+    "module_name_from_code": "AddressEntityController",
+    "state_key_name": "ADDRESSENTITYCONTROLLER",
+    "business_name": "Address Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Address Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/address",
+      "ANY /pci/entity/address"
+    ],
+    "source_path": "Controller/AddressEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-046",
+    "module_name_from_code": "AddressSearchController",
+    "state_key_name": "ADDRESSSEARCHCONTROLLER",
+    "business_name": "Address Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Address Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/address/new",
+      "ANY /pci/entity/address",
+      "ANY /pci/search/address"
+    ],
+    "source_path": "Controller/AddressSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-047",
+    "module_name_from_code": "AddrmasterEntityController",
+    "state_key_name": "ADDRMASTERENTITYCONTROLLER",
+    "business_name": "Addrmaster Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Addrmaster Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/addrmaster",
+      "ANY /pci/entity/addrmaster"
+    ],
+    "source_path": "Controller/AddrmasterEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-048",
+    "module_name_from_code": "AddrmasterSearchController",
+    "state_key_name": "ADDRMASTERSEARCHCONTROLLER",
+    "business_name": "Addrmaster Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Addrmaster Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/addrmaster/new",
+      "ANY /pci/entity/addrmaster",
+      "ANY /pci/search/addrmaster"
+    ],
+    "source_path": "Controller/AddrmasterSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-049",
+    "module_name_from_code": "AdpcompareEntityController",
+    "state_key_name": "ADPCOMPAREENTITYCONTROLLER",
+    "business_name": "Adpcompare Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Adpcompare Entity manages adpcompare creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/adpcompare"
+    ],
+    "source_path": "Controller/AdpcompareEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-050",
+    "module_name_from_code": "AdpcompareSearchController",
+    "state_key_name": "ADPCOMPARESEARCHCONTROLLER",
+    "business_name": "Adpcompare Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Adpcompare Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/adpcompare/new",
+      "ANY /pci/entity/adpcompare/update",
+      "ANY /pci/search/adpcompare"
+    ],
+    "source_path": "Controller/AdpcompareSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-051",
+    "module_name_from_code": "Amcompliance_metricsSearchController",
+    "state_key_name": "AMCOMPLIANCE_METRICSSEARCHCONTROLLER",
+    "business_name": "Amcompliance Metrics Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Amcompliance Metrics Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/i",
+      "ANY /pci/search/amcompliance",
+      "ANY /pci/report/financegm",
+      "ANY /pci/search/amcompliance_metrics"
+    ],
+    "source_path": "Controller/Amcompliance_metricsSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-052",
+    "module_name_from_code": "AmcomplianceEntityController",
+    "state_key_name": "AMCOMPLIANCEENTITYCONTROLLER",
+    "business_name": "Amcompliance Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Amcompliance Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/amcompliance",
+      "ANY /pci/entity/amcompliance"
+    ],
+    "source_path": "Controller/AmcomplianceEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-053",
+    "module_name_from_code": "AmcomplianceSearchController",
+    "state_key_name": "AMCOMPLIANCESEARCHCONTROLLER",
+    "business_name": "Amcompliance Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Amcompliance Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/amcompliance",
+      "ANY /pci/report/gm",
+      "ANY /pci/search/amcompliance"
+    ],
+    "source_path": "Controller/AmcomplianceSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-054",
+    "module_name_from_code": "Ap_approval_teamEntityController",
+    "state_key_name": "AP_APPROVAL_TEAMENTITYCONTROLLER",
+    "business_name": "Ap Approval Team Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages AP approval teams, including creation and modification of team entities.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/ap_approval_team",
+      "ANY /pci/entity/ap_approval_team"
+    ],
+    "source_path": "Controller/Ap_approval_teamEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-055",
+    "module_name_from_code": "PortalExternController",
+    "state_key_name": "PORTALEXTERNCONTROLLER",
+    "business_name": "Portal Extern Workflow",
+    "module_kind": "workflow",
+    "short_description": "Portal Extern supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/portalextern"
+    ],
+    "source_path": "Controller/PortalExternController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-056",
+    "module_name_from_code": "PortalOnbDataEntryController",
+    "state_key_name": "PORTALONBDATAENTRYCONTROLLER",
+    "business_name": "Portal Onb Data Entry Workflow",
+    "module_kind": "workflow",
+    "short_description": "Portal Onb Data Entry supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/portalonbdataentry"
+    ],
+    "source_path": "Controller/PortalOnbDataEntryController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-057",
+    "module_name_from_code": "PortalVaccinationController",
+    "state_key_name": "PORTALVACCINATIONCONTROLLER",
+    "business_name": "Portal Vaccination Workflow",
+    "module_kind": "workflow",
+    "short_description": "Portal Vaccination supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/portalvaccination"
+    ],
+    "source_path": "Controller/PortalVaccinationController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-058",
+    "module_name_from_code": "PortalVendorOnbController",
+    "state_key_name": "PORTALVENDORONBCONTROLLER",
+    "business_name": "Portal Vendor Onb Workflow",
+    "module_kind": "workflow",
+    "short_description": "Portal Vendor Onb supports portal-facing staffing workflows so users can submit, review, and progress the required business tasks with the expected validations and side effects.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/portalvendoronb"
+    ],
+    "source_path": "Controller/PortalVendorOnbController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-059",
+    "module_name_from_code": "PoSearchController",
+    "state_key_name": "POSEARCHCONTROLLER",
+    "business_name": "Po Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Po Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/po/new",
+      "ANY /pci/entity/po",
+      "ANY /pci/search/po"
+    ],
+    "source_path": "Controller/PoSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-060",
+    "module_name_from_code": "ProspectEntityController",
+    "state_key_name": "PROSPECTENTITYCONTROLLER",
+    "business_name": "Prospect Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Prospect Entity manages prospect creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/prospect"
+    ],
+    "source_path": "Controller/ProspectEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-061",
+    "module_name_from_code": "ProspectSearchController",
+    "state_key_name": "PROSPECTSEARCHCONTROLLER",
+    "business_name": "Prospect Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Prospect Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/prospect",
+      "ANY /pci/search/prospect"
+    ],
+    "source_path": "Controller/ProspectSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-062",
+    "module_name_from_code": "RecruiteractionSearchController",
+    "state_key_name": "RECRUITERACTIONSEARCHCONTROLLER",
+    "business_name": "Recruiteraction Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Recruiteraction Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/report/listcandidatenotes",
+      "ANY /pci/report/crinteltechrecruiteractivity",
+      "ANY /pci/search/recruiteraction"
+    ],
+    "source_path": "Controller/RecruiteractionSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-063",
+    "module_name_from_code": "RecruitermetricsSearchController",
+    "state_key_name": "RECRUITERMETRICSSEARCHCONTROLLER",
+    "business_name": "Recruitermetrics Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement",
+      "ANY /pci/search/recruitermetrics"
+    ],
+    "source_path": "Controller/RecruitermetricsSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-064",
+    "module_name_from_code": "ContractorEntityController",
+    "state_key_name": "CONTRACTORENTITYCONTROLLER",
+    "business_name": "Contractor Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Contractor Entity supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/contractor",
+      "ANY /pci/entity/contractor"
+    ],
+    "source_path": "Controller/ContractorEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-065",
+    "module_name_from_code": "ContractorSearchController",
+    "state_key_name": "CONTRACTORSEARCHCONTROLLER",
+    "business_name": "Contractor Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Contractor Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor",
+      "ANY /pci/entity/contractor_placement",
+      "ANY /pci/search/contractor"
+    ],
+    "source_path": "Controller/ContractorSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-066",
+    "module_name_from_code": "Controller",
+    "state_key_name": "CONTROLLER",
+    "business_name": "Web Workflow",
+    "module_kind": "workflow",
+    "short_description": "Web supports shared platform services workflows so the target solution preserves the documented business outcome, validations, and downstream side effects.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci"
+    ],
+    "source_path": "Controller/Controller.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-067",
+    "module_name_from_code": "CookbookEntityController",
+    "state_key_name": "COOKBOOKENTITYCONTROLLER",
+    "business_name": "Cookbook Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cookbook Entity produces operational reports, exports, or document outputs so downstream business users receive the expected information and audit views.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/report/cookbook",
+      "ANY /pci/entity/cookbook"
+    ],
+    "source_path": "Controller/CookbookEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-068",
+    "module_name_from_code": "CostcompareEntityController",
+    "state_key_name": "COSTCOMPAREENTITYCONTROLLER",
+    "business_name": "Costcompare Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Costcompare Entity manages costcompare creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/costcompare"
+    ],
+    "source_path": "Controller/CostcompareEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-069",
+    "module_name_from_code": "CostcompareSearchController",
+    "state_key_name": "COSTCOMPARESEARCHCONTROLLER",
+    "business_name": "Costcompare Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Costcompare Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/costcompare/new",
+      "ANY /pci/entity/costcompare/update",
+      "ANY /pci/search/costcompare"
+    ],
+    "source_path": "Controller/CostcompareSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-070",
+    "module_name_from_code": "Equipment_trackingEntityController",
+    "state_key_name": "EQUIPMENT_TRACKINGENTITYCONTROLLER",
+    "business_name": "Equipment Tracking Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Equipment Tracking Entity manages equipment tracking creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/equipment_tracking"
+    ],
+    "source_path": "Controller/Equipment_trackingEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-071",
+    "module_name_from_code": "Equipment_trackingSearchController",
+    "state_key_name": "EQUIPMENT_TRACKINGSEARCHCONTROLLER",
+    "business_name": "Equipment Tracking Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Equipment Tracking Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/equipment_tracking.json",
+      "ANY /pci/search/equipment_tracking"
+    ],
+    "source_path": "Controller/Equipment_trackingSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-072",
+    "module_name_from_code": "FactcommissionEntityController",
+    "state_key_name": "FACTCOMMISSIONENTITYCONTROLLER",
+    "business_name": "Factcommission Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Factcommission Entity manages factcommission creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/factcommission"
+    ],
+    "source_path": "Controller/FactcommissionEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-073",
+    "module_name_from_code": "FaqSearchController",
+    "state_key_name": "FAQSEARCHCONTROLLER",
+    "business_name": "Faq Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Faq Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/faq"
+    ],
+    "source_path": "Controller/FaqSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-074",
+    "module_name_from_code": "GliderEntityController",
+    "state_key_name": "GLIDERENTITYCONTROLLER",
+    "business_name": "Glider Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Glider Entity manages glider creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/glider"
+    ],
+    "source_path": "Controller/GliderEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-075",
+    "module_name_from_code": "GliderSearchController",
+    "state_key_name": "GLIDERSEARCHCONTROLLER",
+    "business_name": "Glider Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Glider Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/glider/new",
+      "ANY /pci/entity/glider",
+      "ANY /pci/search/glider"
+    ],
+    "source_path": "Controller/GliderSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-076",
+    "module_name_from_code": "Gp_compareSearchController",
+    "state_key_name": "GP_COMPARESEARCHCONTROLLER",
+    "business_name": "Gp Compare Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Maintains onboarding demographic details required for worker setup, compliance review, and downstream onboarding documentation.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement",
+      "ANY /pci/entity/onb_demographic.json",
+      "ANY /pci/search/ho_dashboard.json",
+      "ANY /pci/search/ho_dashboard",
+      "ANY /pci/entity/onb_demographic",
+      "ANY /pci/search/gp_compare"
+    ],
+    "source_path": "Controller/Gp_compareSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-077",
+    "module_name_from_code": "Homeoffice_leave_detailsSearchController",
+    "state_key_name": "HOMEOFFICE_LEAVE_DETAILSSEARCHCONTROLLER",
+    "business_name": "Homeoffice Leave Details Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Homeoffice Leave Details Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/homeoffice_leave_details"
+    ],
+    "source_path": "Controller/Homeoffice_leave_detailsSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-078",
+    "module_name_from_code": "HomeofficetimesheetSearchController",
+    "state_key_name": "HOMEOFFICETIMESHEETSEARCHCONTROLLER",
+    "business_name": "Homeofficetimesheet Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Homeofficetimesheet Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/homeofficetimesheet"
+    ],
+    "source_path": "Controller/HomeofficetimesheetSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-079",
+    "module_name_from_code": "HourlyactionSearchController",
+    "state_key_name": "HOURLYACTIONSEARCHCONTROLLER",
+    "business_name": "Hourlyaction Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Hourlyaction Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/i",
+      "ANY /pci/search/hourlyaction"
+    ],
+    "source_path": "Controller/HourlyactionSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-080",
+    "module_name_from_code": "JoblistingSearchController",
+    "state_key_name": "JOBLISTINGSEARCHCONTROLLER",
+    "business_name": "Joblisting Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/onb_demographic.json",
+      "ANY /pci/search/onb_demographic.json",
+      "ANY /pci/search/onb_demographic",
+      "ANY /pci/entity/onb_demographic",
+      "ANY /pci/search/joblisting"
+    ],
+    "source_path": "Controller/JoblistingSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-081",
+    "module_name_from_code": "Candidate_note_typeSearchController",
+    "state_key_name": "CANDIDATE_NOTE_TYPESEARCHCONTROLLER",
+    "business_name": "Candidate Note Type Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Candidate Note Type Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/candidate_note_type/new",
+      "ANY /pci/entity/candidate_note_type",
+      "ANY /pci/search/candidate_note_type"
+    ],
+    "source_path": "Controller/Candidate_note_typeSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-082",
+    "module_name_from_code": "Cca_social_media_reviewsEntityController",
+    "state_key_name": "CCA_SOCIAL_MEDIA_REVIEWSENTITYCONTROLLER",
+    "business_name": "Cca Social Media Reviews Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cca Social Media Reviews Entity manages cca social media reviews creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/cca_social_media_reviews"
+    ],
+    "source_path": "Controller/Cca_social_media_reviewsEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-083",
+    "module_name_from_code": "Cca_transferEntityController",
+    "state_key_name": "CCA_TRANSFERENTITYCONTROLLER",
+    "business_name": "Cca Transfer Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cca Transfer Entity manages cca transfer creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/ts_update",
+      "ANY /pci/entity/cca_transfer"
+    ],
+    "source_path": "Controller/Cca_transferEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-084",
+    "module_name_from_code": "Cca_transferSearchController",
+    "state_key_name": "CCA_TRANSFERSEARCHCONTROLLER",
+    "business_name": "Cca Transfer Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/cca_transfer",
+      "ANY /pci/search/ccp_request",
+      "ANY /pci/entity/contractor_placement",
+      "ANY /pci/entity/ccp_request",
+      "ANY /pci/search/cca_transfer"
+    ],
+    "source_path": "Controller/Cca_transferSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-085",
+    "module_name_from_code": "CdroutEntityController",
+    "state_key_name": "CDROUTENTITYCONTROLLER",
+    "business_name": "Cdrout Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Cdrout Entity manages cdrout creation, update, approval, and lifecycle activity so validations, data changes, and downstream side effects remain consistent during modernization.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/cdrout"
+    ],
+    "source_path": "Controller/CdroutEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-086",
+    "module_name_from_code": "Contact_note_typeSearchController",
+    "state_key_name": "CONTACT_NOTE_TYPESEARCHCONTROLLER",
+    "business_name": "Contact Note Type Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Contact Note Type Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contact_note_type/new",
+      "ANY /pci/entity/contact_note_type",
+      "ANY /pci/search/contact_note_type"
+    ],
+    "source_path": "Controller/Contact_note_typeSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-087",
+    "module_name_from_code": "ContactSearchController",
+    "state_key_name": "CONTACTSEARCHCONTROLLER",
+    "business_name": "Contact Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Contact Search supports operational search, review, and queue-management activity so users can locate records, inspect status, and take the next approved action.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/search/contact"
+    ],
+    "source_path": "Controller/ContactSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-088",
+    "module_name_from_code": "Contract_perm_conversionSearchController",
+    "state_key_name": "CONTRACT_PERM_CONVERSIONSEARCHCONTROLLER",
+    "business_name": "Contract Perm Conversion Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Supports EOP operational review and status management so pending, on-bench, and head-office processing queues can be searched, actioned, and recorded consistently.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement",
+      "ANY /pci/search/contract_perm_conversion"
+    ],
+    "source_path": "Controller/Contract_perm_conversionSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-089",
+    "module_name_from_code": "Contractor_placement_hr_checklist_detailsEntityController",
+    "state_key_name": "CONTRACTOR_PLACEMENT_HR_CHECKLIST_DETAILSENTITYCONTROLLER",
+    "business_name": "Contractor Placement Hr Checklist Details Entity Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages contractor placement creation, update, review, and comparison workflows so placement records, rates, and approval-sensitive changes remain consistent across the staffing platform.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement_hr_checklist_details"
+    ],
+    "source_path": "Controller/Contractor_placement_hr_checklist_detailsEntityController.php",
+    "hotspot_workflow_spec_id": ""
+  },
+  {
+    "module_id": "MOD-090",
+    "module_name_from_code": "Contractor_placement_hr_checklist_detailsSearchController",
+    "state_key_name": "CONTRACTOR_PLACEMENT_HR_CHECKLIST_DETAILSSEARCHCONTROLLER",
+    "business_name": "Contractor Placement Hr Checklist Details Search Workflow",
+    "module_kind": "workflow",
+    "short_description": "Manages contractor placement creation, update, review, and comparison workflows so placement records, rates, and approval-sensitive changes remain consistent across the staffing platform.",
+    "confidence": 0.78,
+    "include_in_brd": true,
+    "source_forms": [
+      "ANY /pci/entity/contractor_placement_hr_checklist_details",
+      "ANY /pci/search/contractor_placement_hr_checklist_details"
+    ],
+    "source_path": "Controller/Contractor_placement_hr_checklist_detailsSearchController.php",
+    "hotspot_workflow_spec_id": ""
+  }
+]
