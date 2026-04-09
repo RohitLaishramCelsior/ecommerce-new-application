@@ -1,6 +1,6 @@
 {
   "run_id": "20260408_191446_a68f7ca0",
-  "generated_at": "2026-04-08T13:59:23.777518+00:00",
+  "generated_at": "2026-04-09T09:50:16.708799+00:00",
   "run_status": "failed",
   "base_path": "synthetix/runs/20260408_191446_a68f7ca0",
   "owner": "RohitLaishramCelsior",
@@ -12,10 +12,10 @@
     "pipeline",
     "qa"
   ],
-  "attempted_files": 27,
-  "exported_files": 19,
+  "attempted_files": 71,
+  "exported_files": 62,
   "failed_files": 0,
-  "skipped_files": 7,
+  "skipped_files": 8,
   "failed_samples": [],
   "skipped_samples": [
     {
@@ -44,6 +44,10 @@
     },
     {
       "repo_path": "synthetix/runs/20260408_191446_a68f7ca0/qa/analyst/raw_artifact_set_v1.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/20260408_191446_a68f7ca0/qa/docgen_exports/20260408t154631z/data.json",
       "reason": "skipped: file exceeds 950000 bytes"
     }
   ]
