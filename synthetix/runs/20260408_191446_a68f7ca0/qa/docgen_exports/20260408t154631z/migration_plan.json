@@ -1,0 +1,162 @@
+{
+  "artifact_type": "migration_plan",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "strategy": {
+    "cutover": "phased",
+    "backfill": "table_by_table_with_reconciliation",
+    "rollback": "retain_source_snapshot_per_batch"
+  },
+  "sequence": [
+    {
+      "step": 1,
+      "title": "Create target schema and constraints in staging environment."
+    },
+    {
+      "step": 2,
+      "title": "Backfill reference/master tables, then transaction/history tables."
+    },
+    {
+      "step": 3,
+      "title": "Run reconciliation checks (row counts, financial aggregates, spot checks)."
+    },
+    {
+      "step": 4,
+      "title": "Perform controlled cutover and monitor verification dashboard."
+    }
+  ],
+  "target_tables": [
+    "academy_batch",
+    "account",
+    "account_foreign_map",
+    "address",
+    "adhoc_adp_compare",
+    "adhoc_oms_eop_pending",
+    "adhoc_oms_eop_report",
+    "ap_approval_team",
+    "ap_approval_team_map",
+    "archcontractor",
+    "assignment_type",
+    "candidate",
+    "candidate_activity",
+    "candidate_foreign_map",
+    "candidate_note",
+    "candidate_onboarding",
+    "candidate_placement_map",
+    "ccp_request",
+    "cdrout",
+    "contact",
+    "contact_foreign_map",
+    "contractor_placement",
+    "contractor_placement_cost",
+    "contractor_placement_demographic_map",
+    "cost_compare_data",
+    "country",
+    "credential",
+    "crinteltech_recruiter_activity",
+    "currency_exchange",
+    "custmaster_customer_map",
+    "customer_endclient",
+    "customer_endclient_assignment_map",
+    "customer_oms_map",
+    "delivery_center",
+    "delivery_team",
+    "employee",
+    "employee_ijp_usage",
+    "employee_meeting_notes",
+    "employee_usertype_map",
+    "entity_audit_log",
+    "eop_data",
+    "eop_processed",
+    "eop_reason_type",
+    "eop_termination_type",
+    "eop_workflow_status_type",
+    "equipment_tracking",
+    "factweekly",
+    "faq",
+    "finance_calendar",
+    "forecasting_growth",
+    "forecasting_hours",
+    "gld_test_invite",
+    "gld_test_result",
+    "gp_compare",
+    "hours_type",
+    "hrs_worked_type",
+    "jobreq",
+    "jobreq_foreign_map",
+    "office",
+    "office_oms_map",
+    "onb_assignment_type_map",
+    "onb_conditional_clearance_hr_checklist",
+    "onb_demographic",
+    "onb_finance_details",
+    "onb_office_coapprover_map",
+    "onb_onbexterndata_map",
+    "onb_project_details",
+    "onb_workflow_status_history",
+    "over_time_eligibility_type",
+    "po",
+    "profile",
+    "prospect",
+    "skills",
+    "states",
+    "submittal_log",
+    "timezone_type",
+    "tmp_distinct_ts_id",
+    "ts_daily",
+    "ts_daily_bill",
+    "ts_daily_pay",
+    "ts_portal_map",
+    "ts_weekly",
+    "usertype_operation_map",
+    "v_contractor_skill",
+    "vendormaster_insurance_coverage_type_map",
+    "visa_status_type"
+  ],
+  "unresolved_mappings": 0,
+  "blocking_items": [],
+  "artifact_id": "art_migration_plan_cad0cf8e5a2449c4",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
