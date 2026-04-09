@@ -1,0 +1,34 @@
+{
+  "artifact": "brd_render_manifest_v1",
+  "template_ref": "JHA_PHP_BRD_v4",
+  "template_anchor_map_id": "jha_openanywhere_v1",
+  "rendered_sections": [
+    "cover",
+    "version_history",
+    "module_inventory",
+    "context",
+    "project_description",
+    "general_requirements",
+    "modules",
+    "appendices"
+  ],
+  "table_counts": [
+    {
+      "name": "module_inventory",
+      "rows": 90
+    },
+    {
+      "name": "module_dossiers",
+      "rows": 90
+    },
+    {
+      "name": "version_history",
+      "rows": 1
+    }
+  ],
+  "image_refs": [],
+  "placeholder_fill_status": "ok",
+  "docx_ref": "C:\\Users\\ROHITL~1.PYR\\AppData\\Local\\Temp\\docgen-20260408_191446_a68f7ca0-j0k8gxmm\\output\\brd.docx",
+  "pdf_ref": "",
+  "checksum": ""
+}
