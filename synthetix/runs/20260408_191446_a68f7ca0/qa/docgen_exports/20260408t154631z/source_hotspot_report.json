@@ -1,0 +1,739 @@
+{
+  "artifact_type": "source_hotspot_report",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "hotspots": [
+    {
+      "table": "ts_daily",
+      "reads": 2,
+      "writes": 1,
+      "risk_signals": 6,
+      "hotspot_score": 14.2,
+      "blast_radius": "high"
+    },
+    {
+      "table": "country",
+      "reads": 4,
+      "writes": 0,
+      "risk_signals": 4,
+      "hotspot_score": 11.2,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "onb_demographic",
+      "reads": 7,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 10.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "hours_type",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 4,
+      "hotspot_score": 10.2,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "ts_daily_bill",
+      "reads": 1,
+      "writes": 1,
+      "risk_signals": 4,
+      "hotspot_score": 9.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "ts_daily_pay",
+      "reads": 1,
+      "writes": 1,
+      "risk_signals": 4,
+      "hotspot_score": 9.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "ts_weekly",
+      "reads": 1,
+      "writes": 1,
+      "risk_signals": 4,
+      "hotspot_score": 9.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "submittal_log",
+      "reads": 0,
+      "writes": 1,
+      "risk_signals": 3,
+      "hotspot_score": 6.8,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "candidate_activity",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 6.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "employee_meeting_notes",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 6.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "office",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 6.6,
+      "blast_radius": "medium"
+    },
+    {
+      "table": "delivery_center",
+      "reads": 2,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 5.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "jobreq",
+      "reads": 2,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 5.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "states",
+      "reads": 2,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 5.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "tmp_distinct_ts_id",
+      "reads": 0,
+      "writes": 1,
+      "risk_signals": 2,
+      "hotspot_score": 5.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "account_foreign_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "adhoc_oms_eop_pending",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "candidate",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "candidate_foreign_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "candidate_onboarding",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "candidate_placement_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "cdrout",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "crinteltech_recruiter_activity",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "custmaster_customer_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "employee_ijp_usage",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "eop_processed",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "eop_workflow_status_type",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "equipment_tracking",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "factweekly",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "finance_calendar",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "forecasting_growth",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "forecasting_hours",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "gld_test_invite",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "gld_test_result",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "profile",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "ts_portal_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 2,
+      "hotspot_score": 4.6,
+      "blast_radius": "low"
+    },
+    {
+      "table": "candidate_note",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 3.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "Employee",
+      "reads": 3,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 3.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "adhoc_adp_compare",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 1,
+      "hotspot_score": 2.8,
+      "blast_radius": "low"
+    },
+    {
+      "table": "credential",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 1,
+      "hotspot_score": 2.8,
+      "blast_radius": "low"
+    },
+    {
+      "table": "academy_batch",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "ap_approval_team",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "ap_approval_team_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "archcontractor",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "assignment_type",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "cost_compare_data",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "currency_exchange",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "customer_endclient",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "customer_endclient_assignment_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "delivery_team",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "entity_audit_log",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "eop_data",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "jobreq_foreign_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "office_oms_map",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "prospect",
+      "reads": 1,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 1.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "account",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "address",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "adhoc_oms_eop_report",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "ccp_request",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "contact",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "contact_foreign_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "contractor_placement",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "contractor_placement_cost",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "contractor_placement_demographic_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "customer_oms_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "employee_usertype_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "eop_reason_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "eop_termination_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "faq",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "gp_compare",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "hrs_worked_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_assignment_type_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_conditional_clearance_hr_checklist",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_finance_details",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_office_coapprover_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_onbexterndata_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_project_details",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "onb_workflow_status_history",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "over_time_eligibility_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "po",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "skills",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "timezone_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "usertype_operation_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "vContractorSkill",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "vendormaster_insurance_coverage_type_map",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    },
+    {
+      "table": "visa_status_type",
+      "reads": 0,
+      "writes": 0,
+      "risk_signals": 0,
+      "hotspot_score": 0.0,
+      "blast_radius": "low"
+    }
+  ],
+  "artifact_id": "art_source_hotspot_report_907b4807b47943c5",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
