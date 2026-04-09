@@ -1,0 +1,2210 @@
+{
+  "artifact_type": "source_query_catalog",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "queries": [
+    {
+      "query_id": "sql:1",
+      "kind": "select",
+      "raw": "select",
+      "normalized": "select",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_001",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:2",
+      "kind": "insert",
+      "raw": "INSERT INTO $tab VALUES",
+      "normalized": "INSERT INTO $tab VALUES",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_002",
+          "operation": "insert"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:3",
+      "kind": "select",
+      "raw": "SELECT apt.id id, apt.name name, apt.is_active is_active, (SELECT COUNT(employee_id) FROM ap_approval_team_map WHERE ap_approval_team_id = apt.id) emp_count FROM ap_approval_team apt update",
+      "normalized": "SELECT apt.id id, apt.name name, apt.is_active is_active, (SELECT COUNT(employee_id) FROM ap_approval_team_map WHERE ap_approval_team_id = apt.id) emp_count FROM ap_approval_team apt update",
+      "tables": [
+        "ap_approval_team_map",
+        "ap_approval_team"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_003",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:4",
+      "kind": "select",
+      "raw": "SELECT ap.id id, LPAD(ap.id, 6, 0) show_id, ap.ap_approval_status_type_id approval_status_id, aps.name status, ap.ap_approval_team_id approval_team_id, aat.name team, ap.amount amount, ap.due_date due_date, ap.invoice_date invoice_date, ap.invoice_number invoice_number, ap.created_by_id created_by_id, ap.vendor vendor, ap.allocation allocation, CONCAT(e.firstname, ' ', e.lastname) created_by FROM (ap_invoice ap, ap_approval_status_type aps, ap_approval_team aat, employee e) WHERE ap.ap_approval_status_type_id = aps.id AND ap.ap_approval_team_id = aat.id AND ap.created_by_id = e.id",
+      "normalized": "SELECT ap.id id, LPAD(ap.id, :num, :num) show_id, ap.ap_approval_status_type_id approval_status_id, aps.name status, ap.ap_approval_team_id approval_team_id, aat.name team, ap.amount amount, ap.due_date due_date, ap.invoice_date invoice_date, ap.invoice_number invoice_number, ap.created_by_id created_by_id, ap.vendor vendor, ap.allocation allocation, CONCAT(e.firstname, ':value', e.lastname) created_by FROM (ap_invoice ap, ap_approval_status_type aps, ap_approval_team aat, employee e) WHERE ap.ap_approval_status_type_id = aps.id AND ap.ap_approval_team_id = aat.id AND ap.created_by_id = e.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_004",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:5",
+      "kind": "select",
+      "raw": "SELECT * FROM",
+      "normalized": "SELECT * FROM",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "select_star"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_005",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:6",
+      "kind": "select",
+      "raw": "SELECT f.contractor_placement_id contractor_placement_id, cp.start_date start_date, cp.end_date est_end_date, IF(cp.deactivation_date <= '2000-01-01 00:00:00', '', cp.deactivation_date) actual_end_date, cp.jobreq_id jobreq_id, IFNULL((SELECT IF(candidate_id < 3, NULL, candidate_id) FROM candidate_onboarding WHERE ConsultantDemographicID = aow.ConsultantDemographicID LIMIT 1), '') candidate_id, SUM(f.hours) hours, SUM(f.hours_pay) hours_pay, SUM(f.hours_bill) hours_bill, AVG(f.hr_payrate_st) hr_payrate_st, AVG(f.hr_payrate_ot) hr_payrate_ot, AVG(f.hr_payrate_dt) hr_payrate_dt, AVG(f.hr_vendorrate_st) hr_vendorrate_st, AVG(f.hr_vendorrate_ot) hr_vendorrate_ot, AVG(f.hr_vendorrate_dt) hr_vendorrate_dt, AVG(f.hr_billrate_st) hr_billrate_st, AVG(f.hr_billrate_ot) hr_billrate_ot, AVG(f.hr_billrate_dt) hr_billrate_dt, AVG(f.hr_endrate_st) hr_endrate_st, AVG(f.hr_endrate_ot) hr_endrate_ot, AVG(f.hr_endrate_dt) hr_endrate_dt, SUM(f.spread_gross) spread_gross, SUM(f.revenue_gross) revenue_gross, f.last_updated last_updated FROM (factdaily f, contractor_placement cp, contractor_placement_oms_map com, adhoc_oms_workorder aow) WHERE f.last_updated >= '",
+      "normalized": "SELECT f.contractor_placement_id contractor_placement_id, cp.start_date start_date, cp.end_date est_end_date, IF(cp.deactivation_date <= ':value', ':value', cp.deactivation_date) actual_end_date, cp.jobreq_id jobreq_id, IFNULL((SELECT IF(candidate_id < :num, NULL, candidate_id) FROM candidate_onboarding WHERE ConsultantDemographicID = aow.ConsultantDemographicID LIMIT :num), ':value') candidate_id, SUM(f.hours) hours, SUM(f.hours_pay) hours_pay, SUM(f.hours_bill) hours_bill, AVG(f.hr_payrate_st) hr_payrate_st, AVG(f.hr_payrate_ot) hr_payrate_ot, AVG(f.hr_payrate_dt) hr_payrate_dt, AVG(f.hr_vendorrate_st) hr_vendorrate_st, AVG(f.hr_vendorrate_ot) hr_vendorrate_ot, AVG(f.hr_vendorrate_dt) hr_vendorrate_dt, AVG(f.hr_billrate_st) hr_billrate_st, AVG(f.hr_billrate_ot) hr_billrate_ot, AVG(f.hr_billrate_dt) hr_billrate_dt, AVG(f.hr_endrate_st) hr_endrate_st, AVG(f.hr_endrate_ot) hr_endrate_ot, AVG(f.hr_endrate_dt) hr_endrate_dt, SUM(f.spread_gross) spread_gross, SUM(f.revenue_gross) revenue_gross, f.last_updated last_updated FROM (factdaily f, contractor_placement cp, contractor_placement_oms_map com, adhoc_oms_workorder aow) WHERE f.last_updated >= '",
+      "tables": [
+        "candidate_onboarding"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_006",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:7",
+      "kind": "select",
+      "raw": "SELECT jobreq_id value FROM jobreq_foreign_map WHERE foreign_id = $id",
+      "normalized": "SELECT jobreq_id value FROM jobreq_foreign_map WHERE foreign_id = $id",
+      "tables": [
+        "jobreq_foreign_map"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_007",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:8",
+      "kind": "select",
+      "raw": "SELECT reference_num value FROM jobreq WHERE id = $jobreq_id",
+      "normalized": "SELECT reference_num value FROM jobreq WHERE id = $jobreq_id",
+      "tables": [
+        "jobreq"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_008",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:9",
+      "kind": "update",
+      "raw": "UPDATE ### FILE CHUNK: Controller/ApiController.php [2/5] chars=20001-40000 contractor_placement SET jobreq_id = $jobreq_id WHERE id = $placement_id",
+      "normalized": "UPDATE ### FILE CHUNK: Controller/ApiController.php [:num/:num] chars=:num-:num contractor_placement SET jobreq_id = $jobreq_id WHERE id = $placement_id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_009",
+          "operation": "update"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:10",
+      "kind": "select",
+      "raw": "SELECT c.firstname first_name, c.lastname last_name, c.email email, com.oms_id customer_id, oom.oms_id location_id, j.reference_num jd_reference_num, IF(TRIM(c.phone_c) = '', IF(TRIM(c.phone_h) = '', c.phone_o, c.phone_h), c.phone_c) phone, IF(TRIM(ct.phone_c) = '', IF(TRIM(ct.phone_o) = '', ct.phone_h, ct.phone_o), ct.phone_c) contact_phone, ad.st1 candidate_street, ad.city candidate_city, (SELECT DISTINCT description FROM states WHERE UCASE(TRIM(ad.state)) = name OR UCASE(TRIM(ad.state)) = description LIMIT 1) candidate_state, ad.zip candidate_zip, j.title job_title, 0 bill_rate, 0 pay_rate FROM (candidate c, jobreq j, account a, contact ct, address ad) LEFT OUTER JOIN (customer_oms_map com) ON (a.customer_id = com.customer_id) LEFT OUTER JOIN (office_oms_map oom) ON (j.office_id = oom.office_id AND oom.last_updated = (SELECT MAX(last_updated) FROM office_oms_map WHERE oom.office_id = office_id)) WHERE j.id = $jobreq_id AND ct.id = j.contact_id AND c.id = $candidate_id AND a.id = j.account_id AND ad.id = c.address_id",
+      "normalized": "SELECT c.firstname first_name, c.lastname last_name, c.email email, com.oms_id customer_id, oom.oms_id location_id, j.reference_num jd_reference_num, IF(TRIM(c.phone_c) = ':value', IF(TRIM(c.phone_h) = ':value', c.phone_o, c.phone_h), c.phone_c) phone, IF(TRIM(ct.phone_c) = ':value', IF(TRIM(ct.phone_o) = ':value', ct.phone_h, ct.phone_o), ct.phone_c) contact_phone, ad.st1 candidate_street, ad.city candidate_city, (SELECT DISTINCT description FROM states WHERE UCASE(TRIM(ad.state)) = name OR UCASE(TRIM(ad.state)) = description LIMIT :num) candidate_state, ad.zip candidate_zip, j.title job_title, :num bill_rate, :num pay_rate FROM (candidate c, jobreq j, account a, contact ct, address ad) LEFT OUTER JOIN (customer_oms_map com) ON (a.customer_id = com.customer_id) LEFT OUTER JOIN (office_oms_map oom) ON (j.office_id = oom.office_id AND oom.last_updated = (SELECT MAX(last_updated) FROM office_oms_map WHERE oom.office_id = office_id)) WHERE j.id = $jobreq_id AND ct.id = j.contact_id AND c.id = $candidate_id AND a.id = j.account_id AND ad.id = c.address_id",
+      "tables": [
+        "states",
+        "office_oms_map"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_010",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:11",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id placement_id, cp.name name, cp.start_date start_date, cp.end_date end_date, cp.deactivation_date deactivation_date, cp.is_sow is_sow, cp.is_nonexempt is_nonexempt, c.file_num file_num, c.comp_code comp_code, cpom.oms_id oms_id, p.id profile_id, p.hr_payrate_st payrate_st, p.hr_payrate_ot payrate_ot, b.hr_billrate_st billrate_st, b.hr_billrate_ot billrate_ot, p.hr_burden hr_burden, p.hr_burden_ot hr_burden_ot, p.hr_per_diem hr_per_diem, p.day_per_diem day_per_diem, p.burden burden, p.burden_sick burden_sick, p.referal_fee referal_fee, p.waiver_fee waiver_fee, p.pct_vms_fee pct_vms_fee, pty.name pay_freq_type_name, bty.name bill_freq_type_name, p.pct_discount_vol pct_discount_vol, (p.pct_discount) pct_discount, p.pct_discount_inv pct_discount_inv, p.pct_vendor_discount pct_vendor_discount, p.valid_from valid_from, p.valid_to valid_to, a.state state FROM contractor_placement cp, contractor c, profile p, pay_freq_type pty, billprofile b, pay_freq_type bty, contractor_placement_oms_map cpom, address a WHERE cp.id = p.contractor_placement_id AND cp.contractor_id = c.id AND b.profile_id = p.id AND bty.id = b.bill_unit_type_id AND pty.id = p.pay_freq_type_id AND cpom.contractor_placement_id = cp.id AND p.worksite_addr_id = a.id AND p.id = (SELECT IFNULL(MAX(id), recentProfile(cp.id)) FROM profile WHERE valid_from <= valid_to AND contractor_placement_id = cp.id AND '",
+      "normalized": "SELECT DISTINCT cp.id placement_id, cp.name name, cp.start_date start_date, cp.end_date end_date, cp.deactivation_date deactivation_date, cp.is_sow is_sow, cp.is_nonexempt is_nonexempt, c.file_num file_num, c.comp_code comp_code, cpom.oms_id oms_id, p.id profile_id, p.hr_payrate_st payrate_st, p.hr_payrate_ot payrate_ot, b.hr_billrate_st billrate_st, b.hr_billrate_ot billrate_ot, p.hr_burden hr_burden, p.hr_burden_ot hr_burden_ot, p.hr_per_diem hr_per_diem, p.day_per_diem day_per_diem, p.burden burden, p.burden_sick burden_sick, p.referal_fee referal_fee, p.waiver_fee waiver_fee, p.pct_vms_fee pct_vms_fee, pty.name pay_freq_type_name, bty.name bill_freq_type_name, p.pct_discount_vol pct_discount_vol, (p.pct_discount) pct_discount, p.pct_discount_inv pct_discount_inv, p.pct_vendor_discount pct_vendor_discount, p.valid_from valid_from, p.valid_to valid_to, a.state state FROM contractor_placement cp, contractor c, profile p, pay_freq_type pty, billprofile b, pay_freq_type bty, contractor_placement_oms_map cpom, address a WHERE cp.id = p.contractor_placement_id AND cp.contractor_id = c.id AND b.profile_id = p.id AND bty.id = b.bill_unit_type_id AND pty.id = p.pay_freq_type_id AND cpom.contractor_placement_id = cp.id AND p.worksite_addr_id = a.id AND p.id = (SELECT IFNULL(MAX(id), recentProfile(cp.id)) FROM profile WHERE valid_from <= valid_to AND contractor_placement_id = cp.id AND '",
+      "tables": [
+        "profile"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_011",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:12",
+      "kind": "select",
+      "raw": "SELECT DISTINCT e.id employee_id, CONCAT(e.firstname, ' ', e.lastname) employee_name, e.email employee_email, e.birthday birthday, e.join_date join_date, e.title title, dc.location_city location_city, dc.location_country location_country, dt.name department_type, m.id manager_id, CONCAT(m.firstname, ' ', m.lastname) manager_name, m.email manager_email, GROUP_CONCAT(DISTINCT ea.email_alias) email_alias FROM (org_chart o, employee e, employee m, employee_oms_attributes eoa, department_type dt, delivery_center dc) LEFT OUTER JOIN (employee_email_alias ea) ON (ea.employee_id = o.employee_id) WHERE o.employee_id = e.id AND eoa.employee_id = e.id AND o.manager_id = m.id AND eoa.department_type_id = dt.id AND e.delivery_center_id = dc.id AND e.is_active = 'Y' AND e.term_date = '2000-01-01' AND ((e.usertype_id = 6 AND e.signature_title != 'Consultant') OR (e.usertype_id != 6 AND e.signature_title = 'Consultant') OR (e.usertype_id != 6 AND e.signature_title != 'Consultant')) AND e.id != 1 GROUP BY employee_id",
+      "normalized": "SELECT DISTINCT e.id employee_id, CONCAT(e.firstname, ':value', e.lastname) employee_name, e.email employee_email, e.birthday birthday, e.join_date join_date, e.title title, dc.location_city location_city, dc.location_country location_country, dt.name department_type, m.id manager_id, CONCAT(m.firstname, ':value', m.lastname) manager_name, m.email manager_email, GROUP_CONCAT(DISTINCT ea.email_alias) email_alias FROM (org_chart o, employee e, employee m, employee_oms_attributes eoa, department_type dt, delivery_center dc) LEFT OUTER JOIN (employee_email_alias ea) ON (ea.employee_id = o.employee_id) WHERE o.employee_id = e.id AND eoa.employee_id = e.id AND o.manager_id = m.id AND eoa.department_type_id = dt.id AND e.delivery_center_id = dc.id AND e.is_active = ':value' AND e.term_date = ':value' AND ((e.usertype_id = :num AND e.signature_title != ':value') OR (e.usertype_id != :num AND e.signature_title = ':value') OR (e.usertype_id != :num AND e.signature_title != ':value')) AND e.id != :num GROUP BY employee_id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_012",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:13",
+      "kind": "select",
+      "raw": "SELECT c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ' ', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor_placement_demographic_map cdm, onbcandidate c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = 'CCA' AND p.employment_type_id IN (3, 4) -- W2H, FT S AND p.job_title_id = j.id AND cp.is_active = 'Y' AND cp.country_id = 1 -- US AND cdm.contractor_placement_id = cp.id AND c.demographic_id = cdm.demographic_id AND (c.username = '",
+      "normalized": "SELECT c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ':value', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor_placement_demographic_map cdm, onbcandidate c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = ':value' AND p.employment_type_id IN (:num, :num) -- W2H, FT S AND p.job_title_id = j.id AND cp.is_active = ':value' AND cp.country_id = :num -- US AND cdm.contractor_placement_id = cp.id AND c.demographic_id = cdm.demographic_id AND (c.username = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_013",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:14",
+      "kind": "select",
+      "raw": "SELECT c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ' ', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND p.employment_type_id IN (3, 4) -- W2H, FT S AND p.job_title_id = j.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = 'CCA' AND cp.contractor_id = c.id AND cp.is_ts_direct = 'Y' AND cp.is_active = 'Y' AND cp.country_id = 1 -- US AND (c.username = '",
+      "normalized": "SELECT c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ':value', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND p.employment_type_id IN (:num, :num) -- W2H, FT S AND p.job_title_id = j.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = ':value' AND cp.contractor_id = c.id AND cp.is_ts_direct = ':value' AND cp.is_active = ':value' AND cp.country_id = :num -- US AND (c.username = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_014",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:15",
+      "kind": "select",
+      "raw": "SELECT ### FILE CHUNK: Controller/ApiController.php [3/5] chars=40001-60000 c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ' ', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor c, contractor_placement_oms_map cpm) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = 'CCA' AND p.employment_type_id IN (3, 4) -- W2H, FT S AND p.job_title_id = j.id AND cp.contractor_id = c.id AND cpm.contractor_placement_id = cp.id AND cp.is_active = 'Y' AND cp.country_id = 1 -- US AND (c.username = '",
+      "normalized": "SELECT ### FILE CHUNK: Controller/ApiController.php [:num/:num] chars=:num-:num c.firstname firstname, c.lastname lastname, c.email email, et.name employment_type, j.name job_title, CONCAT(e.firstname, ':value', e.lastname) cca_name, e.email cca_email, e.signature_title signature_title, e.phone_o cca_phone FROM (contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, jobtitles j, contractor c, contractor_placement_oms_map cpm) WHERE p.id = cp.recent_profile_id AND p.employment_type_id = et.id AND epm.profile_id = p.id AND epm.employee_id = e.id AND epm.description = ':value' AND p.employment_type_id IN (:num, :num) -- W2H, FT S AND p.job_title_id = j.id AND cp.contractor_id = c.id AND cpm.contractor_placement_id = cp.id AND cp.is_active = ':value' AND cp.country_id = :num -- US AND (c.username = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_015",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:16",
+      "kind": "select",
+      "raw": "SELECT cp.id as contractor_placement_id, cp.contractor_id as contractor_id, cp.recent_profile_id as recent_profile_id, c.firstname as first_name, c.lastname as last_name, c.username as user_name, c.email as email, et.name as employment_type, p.is_nonexempt as is_nonexempt, w.name as week_plan, cp.start_date as start_date, cp.end_date as anticipated_end_date, LEAST('$today', IF(DATE(cp.deactivation_date) = '2000-01-02', '2023-03-03', DATE(cp.deactivation_date))) as actual_end_date FROM (contractor_placement cp, contractor c, profile p, employment_type et, weekplan w) WHERE p.id = cp.recent_profile_id AND cp.weekplan_id = w.id AND cp.contractor_id = c.id AND p.employment_type_id = et.id AND cp.customer_id = 1033 -- Centene Management Company LLC",
+      "normalized": "SELECT cp.id as contractor_placement_id, cp.contractor_id as contractor_id, cp.recent_profile_id as recent_profile_id, c.firstname as first_name, c.lastname as last_name, c.username as user_name, c.email as email, et.name as employment_type, p.is_nonexempt as is_nonexempt, w.name as week_plan, cp.start_date as start_date, cp.end_date as anticipated_end_date, LEAST(':value', IF(DATE(cp.deactivation_date) = ':value', ':value', DATE(cp.deactivation_date))) as actual_end_date FROM (contractor_placement cp, contractor c, profile p, employment_type et, weekplan w) WHERE p.id = cp.recent_profile_id AND cp.weekplan_id = w.id AND cp.contractor_id = c.id AND p.employment_type_id = et.id AND cp.customer_id = :num -- Centene Management Company LLC",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_016",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:17",
+      "kind": "select",
+      "raw": "SELECT cp.id as contractor_placement_id, cp.name as cp_name, ts.project_name as project_name, IF(tpm.vms_foreign_str != ' ',tpm.vms_foreign_str, 0) as vms_foreign_str, IF(tpm.vms_secret_key != ' ',tpm.vms_secret_key, '') as vms_secret_key, cp.is_active as is_active, cp.start_date as start_date, DAYNAME(cp.start_date) as start_day, IF(cp.is_active = 'N', DAYNAME(cp.deactivation_date), '') as last_working_day, DATE(cp.deactivation_date) as deactivation_date, IF(cp.start_date BETWEEN ts.week_start AND DATE_ADD(ts.week_start, INTERVAL 6 DAY) , 'Y', 'N') as is_started_this_week, IF(cca.id != 1, cca.email, 'manish.giri@pyramidci.com') as cca_email, ts.week_start as Week_Start, ROUND(SUM(IF(WEEKDAY(ts.date) = 6,ts.total_minutes,0))/60, 2) as Sunhours, ROUND(SUM(IF(WEEKDAY(ts.date) = 0,ts.total_minutes,0))/60, 2) as Monhours, ROUND(SUM(IF(WEEKDAY(ts.date) = 1,ts.total_minutes,0))/60, 2) as Tuehours, ROUND(SUM(IF(WEEKDAY(ts.date) = 2,ts.total_minutes,0))/60, 2) as Wedhours, ROUND(SUM(IF(WEEKDAY(ts.date) = 3,ts.total_minutes,0))/60, 2) as Thuhours, ROUND(SUM(IF(WEEKDAY(ts.date) = 4,ts.total_minutes,0))/60, 2) as Frihours, ROUND(SUM(IF(WEEKDAY(ts.date) = 5,ts.total_minutes,0))/60, 2) as Sathours, modified_ts as modified_ts FROM (api_ts_details ts, contractor_placement cp, profile p, employee_profile_map epm, employee cca, weekplan w) LEFT JOIN ts_portal_map tpm ON (tpm.contractor_placement_id = cp.id) WHERE ts.mb_placement_id = cp.id AND cp.weekplan_id = w.id AND cp.recent_profile_id = p.id AND epm.profile_id = p.id AND epm.description = 'CCA' AND epm.employee_id = cca.id -- AND ts.mb_placement_id = 37118 AND ts.project_code != 'MEALBRK' -- EXCLUDE MEALBREAK AND ts.mb_status_id = 4 -- APPROVED AND ts.is_deleted = 'N' -- NOT DELETED ONLY AND ts.is_resubmitted = 'N' -- NOT RESUBMITTED ONLY AND cp.customer_id = 1033 -- Centene Management Company LLC",
+      "normalized": "SELECT cp.id as contractor_placement_id, cp.name as cp_name, ts.project_name as project_name, IF(tpm.vms_foreign_str != ':value',tpm.vms_foreign_str, :num) as vms_foreign_str, IF(tpm.vms_secret_key != ':value',tpm.vms_secret_key, ':value') as vms_secret_key, cp.is_active as is_active, cp.start_date as start_date, DAYNAME(cp.start_date) as start_day, IF(cp.is_active = ':value', DAYNAME(cp.deactivation_date), ':value') as last_working_day, DATE(cp.deactivation_date) as deactivation_date, IF(cp.start_date BETWEEN ts.week_start AND DATE_ADD(ts.week_start, INTERVAL :num DAY) , ':value', ':value') as is_started_this_week, IF(cca.id != :num, cca.email, ':value') as cca_email, ts.week_start as Week_Start, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Sunhours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Monhours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Tuehours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Wedhours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Thuhours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Frihours, ROUND(SUM(IF(WEEKDAY(ts.date) = :num,ts.total_minutes,:num))/:num, :num) as Sathours, modified_ts as modified_ts FROM (api_ts_details ts, contractor_placement cp, profile p, employee_profile_map epm, employee cca, weekplan w) LEFT JOIN ts_portal_map tpm ON (tpm.contractor_placement_id = cp.id) WHERE ts.mb_placement_id = cp.id AND cp.weekplan_id = w.id AND cp.recent_profile_id = p.id AND epm.profile_id = p.id AND epm.description = ':value' AND epm.employee_id = cca.id -- AND ts.mb_placement_id = :num AND ts.project_code != ':value' -- EXCLUDE MEALBREAK AND ts.mb_status_id = :num -- APPROVED AND ts.is_deleted = ':value' -- NOT DELETED ONLY AND ts.is_resubmitted = ':value' -- NOT RESUBMITTED ONLY AND cp.customer_id = :num -- Centene Management Company LLC",
+      "tables": [
+        "ts_portal_map"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_017",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:18",
+      "kind": "select",
+      "raw": "SELECT DISTINCT onb.id demographic_id, onb.suffix_type_id suffix_type_id, onb.firstname consultant_first_name, onb.mi consultant_middle_name, onb.lastname consultant_last_name, onb.ssn consultant_ssn, onb.email consultant_email, onb.phone_c consultant_phone_cell, onb.phone_c_alt consultant_phone_cell_alt, onb.date_of_birth consultant_date_of_birth, onb.job_description job_description, onb.adp_file_num adp_file_num, IF(onb.is_sow_staffing = 'Y', 'Yes', 'No') is_sow_staffing, IF(onb.is_rehire = 'Y', 'Yes', 'No') is_rehire, onb.not_joined_remarks not_joined_remarks, wst.name workflow_status, onb.hr_clearance_date hr_clearance_date, onb.is_ot_approved is_ot_approved, onb.is_con_doc_submitted is_con_doc_submitted, onb.is_ven_doc_submitted is_ven_doc_submitted, jst.name join_status, onb.is_welcome_email_sent is_welcome_email_sent, njrt.name not_joined_reason, jreq.reference_num job_diva_reference_num, onb.jobreq_id jobreq_id, onb.timesheet_type_id timesheet_type_id, onb.candidate_id candidate_id, aidt.name adp_internal_dep, aidt.code adp_internal_dep_code, abt.name adp_business, abt.code adp_business_code, ahdt.name adp_home_dep, ahdt.code adp_home_dep_code, jt.name job_title, onb.primary_office_id primary_office_id, onb.secondary_office_id secondary_office_id, con_addr.st1 consultant_st1, con_addr.st2 consultant_st2, con_addr.st3 consultant_st3, con_addr.city consultant_city, con_addr.state consultant_state, con_addr.zip consultant_zip, con_country.name consultant_country, gt.name gender_type, eadst.name ead_status, src.name job_source, onb.create_ts create_ts FROM (onb_demographic onb) -- ONB JOINS LEFT JOIN (onb_workflow_status_type wst) ON (onb.workflow_status_id = wst.id) LEFT JOIN (jobreq jreq) ON (onb.jobreq_id = jreq.id) LEFT JOIN (onb_join_status_type jst) ON (onb.join_status_id = jst.id) LEFT JOIN (onb_notjoin_reason_type njrt) ON (onb.not_joined_reason_id = njrt.id) LEFT JOIN (adp_internal_dep_type aidt) ON (onb.adp_internal_dep_id = aidt.id) LEFT JOIN (adp_bus",
+      "normalized": "SELECT DISTINCT onb.id demographic_id, onb.suffix_type_id suffix_type_id, onb.firstname consultant_first_name, onb.mi consultant_middle_name, onb.lastname consultant_last_name, onb.ssn consultant_ssn, onb.email consultant_email, onb.phone_c consultant_phone_cell, onb.phone_c_alt consultant_phone_cell_alt, onb.date_of_birth consultant_date_of_birth, onb.job_description job_description, onb.adp_file_num adp_file_num, IF(onb.is_sow_staffing = ':value', ':value', ':value') is_sow_staffing, IF(onb.is_rehire = ':value', ':value', ':value') is_rehire, onb.not_joined_remarks not_joined_remarks, wst.name workflow_status, onb.hr_clearance_date hr_clearance_date, onb.is_ot_approved is_ot_approved, onb.is_con_doc_submitted is_con_doc_submitted, onb.is_ven_doc_submitted is_ven_doc_submitted, jst.name join_status, onb.is_welcome_email_sent is_welcome_email_sent, njrt.name not_joined_reason, jreq.reference_num job_diva_reference_num, onb.jobreq_id jobreq_id, onb.timesheet_type_id timesheet_type_id, onb.candidate_id candidate_id, aidt.name adp_internal_dep, aidt.code adp_internal_dep_code, abt.name adp_business, abt.code adp_business_code, ahdt.name adp_home_dep, ahdt.code adp_home_dep_code, jt.name job_title, onb.primary_office_id primary_office_id, onb.secondary_office_id secondary_office_id, con_addr.st1 consultant_st1, con_addr.st2 consultant_st2, con_addr.st3 consultant_st3, con_addr.city consultant_city, con_addr.state consultant_state, con_addr.zip consultant_zip, con_country.name consultant_country, gt.name gender_type, eadst.name ead_status, src.name job_source, onb.create_ts create_ts FROM (onb_demographic onb) -- ONB JOINS LEFT JOIN (onb_workflow_status_type wst) ON (onb.workflow_status_id = wst.id) LEFT JOIN (jobreq jreq) ON (onb.jobreq_id = jreq.id) LEFT JOIN (onb_join_status_type jst) ON (onb.join_status_id = jst.id) LEFT JOIN (onb_notjoin_reason_type njrt) ON (onb.not_joined_reason_id = njrt.id) LEFT JOIN (adp_internal_dep_type aidt) ON (onb.adp_internal_dep_id = aidt.id) LEFT JOIN (adp_bus",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_018",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:19",
+      "kind": "select",
+      "raw": "SELECT MONTHNAME(STR_TO_DATE(fc.month_num, '%m')) month_name, o.name office, ROUND(SUM(spread),2) GM FROM (factsummary fs,office o) LEFT JOIN finance_calendar fc ON fs.week_start = fc.from_date WHERE fs.office_id = o.id AND fc.year_num = 2022 AND fc.month_num <= 9 AND o.is_active = 'Y' AND o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) GROUP BY o.id, month_num UNION ALL SELECT DISTINCT MONTHNAME(STR_TO_DATE(fc.month_num, '%m') )month_name, o.name office_name, 0 GM FROM finance_calendar fc, office o WHERE year_num = 2022 AND fc.month_num > 9 AND o.is_active = 'Y' AND o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) UNION ALL SELECT 'Base_Month', o.name office, 1 FROM office o WHERE o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) UNION All SELECT 'GP' month_name, o.name office, est_growth_per fct_value FROM forecasting_growth fg ,office o WHERE fg.office_id = o.id AND fg.year_num = 2022 AND o.is_active = 'Y' AND o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) UNION ALL SELECT DISTINCT CONCAT(MONTHNAME(STR_TO_DATE(fc.month_num, '%m')),'_WH') data_header, o.name office, est_hours fct_value FROM forecasting_hours fh ,office o,finance_calendar fc WHERE fh.month_num = fc.month_num AND fh.year_num = fc.year_num AND fc.year_num = 2022 AND o.is_active = 'Y' AND o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) UNION ALL SELECT 'WeeklyGM' WeeklyGM, o.name office, ROUND((SUM(spread) / 36.5),2) GM FROM (factsummary fs,office o) LEFT JOIN finance_calendar fc ON fs.week_start = fc.from_date WHERE fs.office_id = o.id AND fs.week_start = '2022-08-22' AND o.is_active = 'Y' AND o.id in(3,4,6,7,10,11,14,18,23,24,28,37,38,43,45,49,52) GROUP BY o.id",
+      "normalized": "SELECT MONTHNAME(STR_TO_DATE(fc.month_num, ':value')) month_name, o.name office, ROUND(SUM(spread),:num) GM FROM (factsummary fs,office o) LEFT JOIN finance_calendar fc ON fs.week_start = fc.from_date WHERE fs.office_id = o.id AND fc.year_num = :num AND fc.month_num <= :num AND o.is_active = ':value' AND o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) GROUP BY o.id, month_num UNION ALL SELECT DISTINCT MONTHNAME(STR_TO_DATE(fc.month_num, ':value') )month_name, o.name office_name, :num GM FROM finance_calendar fc, office o WHERE year_num = :num AND fc.month_num > :num AND o.is_active = ':value' AND o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) UNION ALL SELECT ':value', o.name office, :num FROM office o WHERE o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) UNION All SELECT ':value' month_name, o.name office, est_growth_per fct_value FROM forecasting_growth fg ,office o WHERE fg.office_id = o.id AND fg.year_num = :num AND o.is_active = ':value' AND o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) UNION ALL SELECT DISTINCT CONCAT(MONTHNAME(STR_TO_DATE(fc.month_num, ':value')),':value') data_header, o.name office, est_hours fct_value FROM forecasting_hours fh ,office o,finance_calendar fc WHERE fh.month_num = fc.month_num AND fh.year_num = fc.year_num AND fc.year_num = :num AND o.is_active = ':value' AND o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) UNION ALL SELECT ':value' WeeklyGM, o.name office, ROUND((SUM(spread) / :num.:num),:num) GM FROM (factsummary fs,office o) LEFT JOIN finance_calendar fc ON fs.week_start = fc.from_date WHERE fs.office_id = o.id AND fs.week_start = ':value' AND o.is_active = ':value' AND o.id in(:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num,:num) GROUP BY o.id",
+      "tables": [
+        "finance_calendar",
+        "office",
+        "forecasting_growth",
+        "forecasting_hours"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_019",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:20",
+      "kind": "select",
+      "raw": "SELECT cpm.oms_id WorkOrderId, cp.id PlacementId, am.compliance_level / 100.0 MultiplicationFactor, am.last_updated ModifiedDate FROM contractor_placement cp, contractor_placement_oms_map cpm, amcompliance am WHERE cp.id = am.contractor_placement_id AND cp.id = cpm.contractor_placement_id AND am.is_reviewed = 'Y' AND cpm.oms_id NOT LIKE 'P%' -- AND am.last_updated >= '$modified_date'",
+      "normalized": "SELECT cpm.oms_id WorkOrderId, cp.id PlacementId, am.compliance_level / :num.:num MultiplicationFactor, am.last_updated ModifiedDate FROM contractor_placement cp, contractor_placement_oms_map cpm, amcompliance am WHERE cp.id = am.contractor_placement_id AND cp.id = cpm.contractor_placement_id AND am.is_reviewed = ':value' AND cpm.oms_id NOT LIKE ':value' -- AND am.last_updated >= ':value'",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_020",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:21",
+      "kind": "select",
+      "raw": "SELECT tsw.contractor_placement_id placement_id, cpm.oms_id oms_id, tsw.image_path image_path, tsd.hours time_worked, tsd.hours_type_id ts_daily_hours_type_id, tsd.modified_ts ts_daily_modified_ts, tsd.date date, tsd.week_start_internal week_start, tsp.hours pay_time_worked, tsp.hours_type_id ts_pay_hours_type_id, tsp.modified_ts ts_pay_modified_ts, tsp.date pay_date, tsp.week_start_internal pay_week_start, tsb.hours bill_time_worked, tsb.hours_type_id ts_bill_hours_type_id, tsb.modified_ts ts_bill_modified_ts, tsb.date bill_date, tsb.week_start_internal bill_week_start, ht.description ts_daily_hour_type, ht_pay.description ts_pay_hour_type, ht_bill.description ts_bill_hour_type FROM (ts_weekly tsw, ts_daily tsd, ts_daily_bill tsb, ts_daily_pay tsp, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht, hours_type ht_pay, hours_type ht_bill) LEFT JOIN (employee e1) ON (e1.id = tsw.created_by) LEFT JOIN (employee e2) ON (e2.id = tsw.approved_by) WHERE tsw.week_start = '",
+      "normalized": "SELECT tsw.contractor_placement_id placement_id, cpm.oms_id oms_id, tsw.image_path image_path, tsd.hours time_worked, tsd.hours_type_id ts_daily_hours_type_id, tsd.modified_ts ts_daily_modified_ts, tsd.date date, tsd.week_start_internal week_start, tsp.hours pay_time_worked, tsp.hours_type_id ts_pay_hours_type_id, tsp.modified_ts ts_pay_modified_ts, tsp.date pay_date, tsp.week_start_internal pay_week_start, tsb.hours bill_time_worked, tsb.hours_type_id ts_bill_hours_type_id, tsb.modified_ts ts_bill_modified_ts, tsb.date bill_date, tsb.week_start_internal bill_week_start, ht.description ts_daily_hour_type, ht_pay.description ts_pay_hour_type, ht_bill.description ts_bill_hour_type FROM (ts_weekly tsw, ts_daily tsd, ts_daily_bill tsb, ts_daily_pay tsp, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht, hours_type ht_pay, hours_type ht_bill) LEFT JOIN (employee e1) ON (e1.id = tsw.created_by) LEFT JOIN (employee e2) ON (e2.id = tsw.approved_by) WHERE tsw.week_start = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_021",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:22",
+      "kind": "select",
+      "raw": "SELECT tsw.contractor_placement_id placement_id, cpm.oms_id oms_id, tsd.week_start_internal week_start, SUM(tsd.hours) hours FROM (ts_weekly tsw, ts_daily tsd, contractor_placement cp, contractor_placement_oms_map cpm ) WHERE tsw.week_start = '",
+      "normalized": "SELECT tsw.contractor_placement_id placement_id, cpm.oms_id oms_id, tsd.week_start_internal week_start, SUM(tsd.hours) hours FROM (ts_weekly tsw, ts_daily tsd, contractor_placement cp, contractor_placement_oms_map cpm ) WHERE tsw.week_start = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_022",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:23",
+      "kind": "select",
+      "raw": "SELECT tsw.contractor_placement_id placement_id, tsd.week_start_internal week_start, SUM(tsd.hours) hours, tsws.name status, ROUND(IFNULL(f.spread, 0.00), 2) gm FROM (ts_weekly tsw, ts_daily tsd, contractor_placement cp, profile p, office_profile_map opm, ts_weekly_status tsws) LEFT JOIN factweekly f ON f.ts_weekly_id = tsw.id WHERE tsw.week_start = '",
+      "normalized": "SELECT tsw.contractor_placement_id placement_id, tsd.week_start_internal week_start, SUM(tsd.hours) hours, tsws.name status, ROUND(IFNULL(f.spread, :num.:num), :num) gm FROM (ts_weekly tsw, ts_daily tsd, contractor_placement cp, profile p, office_profile_map opm, ts_weekly_status tsws) LEFT JOIN factweekly f ON f.ts_weekly_id = tsw.id WHERE tsw.week_start = '",
+      "tables": [
+        "factweekly"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_023",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:24",
+      "kind": "select",
+      "raw": "SELECT tsm.contractor_placement_id placement_id, tsm.week_start week_start, tsm.hours hours, tws.name status, ROUND(SUM(tsm.spread), 2) gm FROM (ts_missing tsm, contractor_placement cp, profile p, office_profile_map opm, ts_weekly_status tws) WHERE tsm.week_start = '",
+      "normalized": "SELECT tsm.contractor_placement_id placement_id, tsm.week_start week_start, tsm.hours hours, tws.name status, ROUND(SUM(tsm.spread), :num) gm FROM (ts_missing tsm, contractor_placement cp, profile p, office_profile_map opm, ts_weekly_status tws) WHERE tsm.week_start = '",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_024",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:25",
+      "kind": "select",
+      "raw": "SELECT cp.id placement_id, ppst.description status, TRUNCATE(SUM(f.revenue), 2) revenue FROM (perm_placement pp, contractor_placement cp, profile p, office_profile_map opm, perm_placement_status_type ppst, factperm f) WHERE pp.contractor_placement_id = cp.id AND f.contractor_placement_id = cp.id AND p.id = cp.recent_profile_id AND p.contractor_placement_id = cp.id AND opm.profile_id = p.id AND pp.status_id = ppst.id AND opm.office_id = $office_id GROUP BY cp.id",
+      "normalized": "SELECT cp.id placement_id, ppst.description status, TRUNCATE(SUM(f.revenue), :num) revenue FROM (perm_placement pp, contractor_placement cp, profile p, office_profile_map opm, perm_placement_status_type ppst, factperm f) WHERE pp.contractor_placement_id = cp.id AND f.contractor_placement_id = cp.id AND p.id = cp.recent_profile_id AND p.contractor_placement_id = cp.id AND opm.profile_id = p.id AND pp.status_id = ppst.id AND opm.office_id = $office_id GROUP BY cp.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_025",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:26",
+      "kind": "insert",
+      "raw": "INSERT INTO tmp_distinct_ts_id SELECT distinct ts_weekly_id id FROM ts_daily WHERE last_updated >= '$modified_date' UNION SELECT distinct ts_weekly_id id FROM ts_daily_pay WHERE last_updated >= '$modified_date' UNION SELECT distinct ts_weekly_id id FROM ts_daily_bill WHERE last_updated >= '$modified_date' UNION SELECT distinct id FROM ts_weekly WHERE last_updated >= '$modified_date'",
+      "normalized": "INSERT INTO tmp_distinct_ts_id SELECT distinct ts_weekly_id id FROM ts_daily WHERE last_updated >= ':value' UNION SELECT distinct ts_weekly_id id FROM ts_daily_pay WHERE last_updated >= ':value' UNION SELECT distinct ts_weekly_id id FROM ts_daily_bill WHERE last_updated >= ':value' UNION SELECT distinct id FROM ts_weekly WHERE last_updated >= ':value'",
+      "tables": [
+        "tmp_distinct_ts_id",
+        "ts_daily",
+        "ts_daily_pay",
+        "ts_daily_bill",
+        "ts_weekly"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_026",
+          "operation": "insert"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:27",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.name hour_type, IF(tsw.is_payable_only='Y', 'Payable Only', ts.name) status, tsw.received_date received_date, tsd.modified_ts modified_ts, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, hours_type ht, tmp_distinct_ts_id tdti) WHERE tsw.id = tdti.ts_weekly_id AND (tsw.ts_weekly_status_id IN(3,4,8,7) OR tsw.is_payable_only = 'Y') AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.customer_id != 178 -- AND cp.is_ts_direct = 'Y' AND tsd.ts_weekly_id = tsw.id AND tsd.hours_type_id IN(1,2,7) AND cpm.oms_id NOT LIKE 'P%' AND tsd.hours_type_id = ht.id AND tsd.modified_ts = (SELECT MAX(modified_ts) FROM ts_daily WHERE tsd.ts_weekly_id = ts_daily.ts_weekly_id) ORDER BY tsd.week_start_internal ASC, tsw.id, tsd.date, tsd.hours_type_id",
+      "normalized": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.name hour_type, IF(tsw.is_payable_only=':value', ':value', ts.name) status, tsw.received_date received_date, tsd.modified_ts modified_ts, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, hours_type ht, tmp_distinct_ts_id tdti) WHERE tsw.id = tdti.ts_weekly_id AND (tsw.ts_weekly_status_id IN(:num,:num,:num,:num) OR tsw.is_payable_only = ':value') AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.customer_id != :num -- AND cp.is_ts_direct = ':value' AND tsd.ts_weekly_id = tsw.id AND tsd.hours_type_id IN(:num,:num,:num) AND cpm.oms_id NOT LIKE ':value' AND tsd.hours_type_id = ht.id AND tsd.modified_ts = (SELECT MAX(modified_ts) FROM ts_daily WHERE tsd.ts_weekly_id = ts_daily.ts_weekly_id) ORDER BY tsd.week_start_internal ASC, tsw.id, tsd.date, tsd.hours_type_id",
+      "tables": [
+        "ts_daily"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_027",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:28",
+      "kind": "select",
+      "raw": "SELECT distinct ts_weekly_id id FROM ts_daily WHERE last_updated >= '$modified_date' UNION SELECT distinct ts_weekly_id id FROM ts_daily_pay WHERE last_updated >= '$modified_date' UNION SELECT distinct ts_weekly_id id FROM ts_daily_bill WHERE last_updated >= '$modified_date' UNION SELECT distinct id FROM ts_weekly WHERE last_updated >= '$modified_date'",
+      "normalized": "SELECT distinct ts_weekly_id id FROM ts_daily WHERE last_updated >= ':value' UNION SELECT distinct ts_weekly_id id FROM ts_daily_pay WHERE last_updated >= ':value' UNION SELECT distinct ts_weekly_id id FROM ts_daily_bill WHERE last_updated >= ':value' UNION SELECT distinct id FROM ts_weekly WHERE last_updated >= ':value'",
+      "tables": [
+        "ts_daily",
+        "ts_daily_pay",
+        "ts_daily_bill",
+        "ts_weekly"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_028",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:29",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.name hour_type, ts.name status, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht) WHERE tsd.ts_weekly_id = tsw.id AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.is_ts_direct = 'Y' AND (tsw.ts_weekly_status_id IN(3,4) OR tsw.is_payable_only = 'Y') AND tsd.hours_type_id IN(1,2)",
+      "normalized": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.name hour_type, ts.name status, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht) WHERE tsd.ts_weekly_id = tsw.id AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.is_ts_direct = ':value' AND (tsw.ts_weekly_status_id IN(:num,:num) OR tsw.is_payable_only = ':value') AND tsd.hours_type_id IN(:num,:num)",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_029",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:30",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.description hour_type, ts.name status, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht) WHERE tsd.ts_weekly_id = tsw.id AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.is_ts_direct = 'Y' AND tsw.ts_weekly_status_id IN(3,4) AND tsd.hours_type_id IN(1,2)",
+      "normalized": "SELECT DISTINCT cpm.oms_id oms_id, tsd.week_start_internal week_start, tsd.date date, tsd.hours time_worked, ht.description hour_type, ts.name status, tsd.last_updated last_updated FROM (ts_daily tsd, ts_weekly tsw, ts_weekly_status ts, contractor_placement cp, contractor_placement_oms_map cpm, customer c, hours_type ht) WHERE tsd.ts_weekly_id = tsw.id AND tsw.ts_weekly_status_id = ts.id AND tsw.contractor_placement_id = cp.id AND cpm.contractor_placement_id = cp.id AND cp.is_ts_direct = ':value' AND tsw.ts_weekly_status_id IN(:num,:num) AND tsd.hours_type_id IN(:num,:num)",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_030",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:31",
+      "kind": "select",
+      "raw": "SELECT cpc.contractor_placement_id placement_id, cpm.oms_id oms_id, cpc.modified_date modified_date, cpc.costs costs, cpc.is_applied is_applied, cpc.description description FROM contractor_placement_cost cpc, contractor_placement_oms_map cpm WHERE cpc.contractor_placement_id = cpm.contractor_placement_id -- GROUP BY",
+      "normalized": "SELECT cpc.contractor_placement_id placement_id, cpm.oms_id oms_id, cpc.modified_date modified_date, cpc.costs costs, cpc.is_applied is_applied, cpc.description description FROM contractor_placement_cost cpc, contractor_placement_oms_map cpm WHERE cpc.contractor_placement_id = cpm.contractor_placement_id -- GROUP BY",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_031",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:32",
+      "kind": "select",
+      "raw": "SELECT a.id id, CONCAT(a.firstname, ' ', a.lastname) name, a.email email FROM archcontractor a",
+      "normalized": "SELECT a.id id, CONCAT(a.firstname, ':value', a.lastname) name, a.email email FROM archcontractor a",
+      "tables": [
+        "archcontractor"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_032",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:33",
+      "kind": "select",
+      "raw": "SELECT c.id id, c.vendor_name vendor_name, c.vendor_description vendor_description, c.vendor_contact vendor_contact, c.site_url site_url, c.login_url login_url, c.additional_url_1 additional_url_1, c.additional_url_2 additional_url_2, c.username username, c.password password, c.email email, c.main_phone main_phone, c.information information, c.create_ts create_ts, c.created_by created_by_id, CONCAT(e.firstname,' ',e.lastname) created_by, c.is_active is_active FROM credential c, employee e WHERE c.created_by = e.id",
+      "normalized": "SELECT c.id id, c.vendor_name vendor_name, c.vendor_description vendor_description, c.vendor_contact vendor_contact, c.site_url site_url, c.login_url login_url, c.additional_url_1 additional_url_1, c.additional_url_2 additional_url_2, c.username username, c.password password, c.email email, c.main_phone main_phone, c.information information, c.create_ts create_ts, c.created_by created_by_id, CONCAT(e.firstname,':value',e.lastname) created_by, c.is_active is_active FROM credential c, employee e WHERE c.created_by = e.id",
+      "tables": [
+        "credential"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "sensitive_credential_query"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_033",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:34",
+      "kind": "select",
+      "raw": "SELECT csl.id id, csl.lead_id lead_id, csl.lead_desc lead_desc, csl.anticipated_within anticipated_within, csl.anticipated_value anticipated_value, csl.is_active is_active, csl.customer customer, CONCAT(e.firstname, ' ', e.lastname) salesrep, e.id salesrep_id, IF(at.id = 1, '', CONCAT(at.firstname, ' ', at.lastname)) assign_to, at.id assign_to_id, IF(sat.id = 1, '', CONCAT(sat.firstname, ' ', sat.lastname)) secondary_assign_to, sat.id secondary_assign_to_id, o.name office, o.id office_id, lst.name status, csl.lead_status_type_id lead_status_type_id, lt.name lead_type, lat.name lead_accountability_type, csl.lead_accountability_type_id lead_accountability_type_id, CONCAT(cr.firstname,' ',cr.lastname) created_by, csl.create_ts create_ts, '' lead_with, csl.is_lead_win is_lead_win, csl.is_catalyst is_catalyst FROM (cross_selling_lead csl, lead_status_type lst, lead_type lt, lead_accountability_type lat, office o, employee e, employee cr, employee at, employee sat) WHERE csl.lead_status_type_id = lst.id AND csl.identified_emp_office_id = o.id AND csl.identified_emp_id = e.id AND csl.lead_type_id = lt.id AND csl.lead_accountability_type_id = lat.id AND csl.created_by_id = cr.id AND csl.assign_to_id = at.id AND csl.secondary_assign_to_id = sat.id AND csl.id > 2 AND csl.is_active = 'Y'",
+      "normalized": "SELECT csl.id id, csl.lead_id lead_id, csl.lead_desc lead_desc, csl.anticipated_within anticipated_within, csl.anticipated_value anticipated_value, csl.is_active is_active, csl.customer customer, CONCAT(e.firstname, ':value', e.lastname) salesrep, e.id salesrep_id, IF(at.id = :num, ':value', CONCAT(at.firstname, ':value', at.lastname)) assign_to, at.id assign_to_id, IF(sat.id = :num, ':value', CONCAT(sat.firstname, ':value', sat.lastname)) secondary_assign_to, sat.id secondary_assign_to_id, o.name office, o.id office_id, lst.name status, csl.lead_status_type_id lead_status_type_id, lt.name lead_type, lat.name lead_accountability_type, csl.lead_accountability_type_id lead_accountability_type_id, CONCAT(cr.firstname,':value',cr.lastname) created_by, csl.create_ts create_ts, ':value' lead_with, csl.is_lead_win is_lead_win, csl.is_catalyst is_catalyst FROM (cross_selling_lead csl, lead_status_type lst, lead_type lt, lead_accountability_type lat, office o, employee e, employee cr, employee at, employee sat) WHERE csl.lead_status_type_id = lst.id AND csl.identified_emp_office_id = o.id AND csl.identified_emp_id = e.id AND csl.lead_type_id = lt.id AND csl.lead_accountability_type_id = lat.id AND csl.created_by_id = cr.id AND csl.assign_to_id = at.id AND csl.secondary_assign_to_id = sat.id AND csl.id > :num AND csl.is_active = ':value'",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_034",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:35",
+      "kind": "select",
+      "raw": "SELECT ct.id currency_type_id, ct.name currency_name, ct.description currency_description, ct.symbol symbol, AVG(rate) rate, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year FROM currency_exchange ce, currency_type ct, finance_calendar fc WHERE ce.currency_type_id = ct.id AND ce.week_start = fc.from_date",
+      "normalized": "SELECT ct.id currency_type_id, ct.name currency_name, ct.description currency_description, ct.symbol symbol, AVG(rate) rate, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year FROM currency_exchange ce, currency_type ct, finance_calendar fc WHERE ce.currency_type_id = ct.id AND ce.week_start = fc.from_date",
+      "tables": [
+        "currency_exchange"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_035",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:36",
+      "kind": "select",
+      "raw": "SELECT custcontactmaster.id as id, custcontactmaster.firstname as firstname, custcontactmaster.lastname as lastname, custmaster.name as customer_name, custmaster.id as customer_master_id, custcontactmaster.title as title, custcontactmaster.department as department, custcontactmaster.email as email, custcontactmaster.phone_o as phone_o, GROUP_CONCAT( CONCAT_WS(' ', NULLIF(adrmstr.st1, ''), NULLIF(adrmstr.st2, ''), NULLIF(adrmstr.st3, ''), NULLIF(adrmstr.city, ''), NULLIF(adrmstr.state, ''), NULLIF(adrmstr.zip, '') ) ) as worksite_address, custcontactmaster.is_active as is_active, custcontactmaster.assistant_name as assistant_name, custcontactmaster.assistant_phone as assistant_phone, custcontactmaster.is_approver as is_approver, custcontactmaster.is_billing as is_billing, custcontactmaster.is_hiring as is_hiring, custcontactmaster.is_changeable as is_changeable FROM (custcontactmaster as custcontactmaster) LEFT OUTER JOIN (addrmaster adrmstr) ON (adrmstr.id = custcontactmaster.worksite_addr_id) LEFT OUTER JOIN (custmaster_custcontactmaster_map custcontactmaster_map) ON (custcontactmaster_map.custcontactmaster_id = custcontactmaster.id) LEFT OUTER JOIN (custmaster custmaster) ON (custmaster.id = custcontactmaster_map.custmaster_id) WHERE",
+      "normalized": "SELECT custcontactmaster.id as id, custcontactmaster.firstname as firstname, custcontactmaster.lastname as lastname, custmaster.name as customer_name, custmaster.id as customer_master_id, custcontactmaster.title as title, custcontactmaster.department as department, custcontactmaster.email as email, custcontactmaster.phone_o as phone_o, GROUP_CONCAT( CONCAT_WS(':value', NULLIF(adrmstr.st1, ':value'), NULLIF(adrmstr.st2, ':value'), NULLIF(adrmstr.st3, ':value'), NULLIF(adrmstr.city, ':value'), NULLIF(adrmstr.state, ':value'), NULLIF(adrmstr.zip, ':value') ) ) as worksite_address, custcontactmaster.is_active as is_active, custcontactmaster.assistant_name as assistant_name, custcontactmaster.assistant_phone as assistant_phone, custcontactmaster.is_approver as is_approver, custcontactmaster.is_billing as is_billing, custcontactmaster.is_hiring as is_hiring, custcontactmaster.is_changeable as is_changeable FROM (custcontactmaster as custcontactmaster) LEFT OUTER JOIN (addrmaster adrmstr) ON (adrmstr.id = custcontactmaster.worksite_addr_id) LEFT OUTER JOIN (custmaster_custcontactmaster_map custcontactmaster_map) ON (custcontactmaster_map.custcontactmaster_id = custcontactmaster.id) LEFT OUTER JOIN (custmaster custmaster) ON (custmaster.id = custcontactmaster_map.custmaster_id) WHERE",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_036",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:37",
+      "kind": "select",
+      "raw": "SELECT c.id as id, c.code as code, c.dayforce_xrefcode as dayforce_xrefcode, c.name as name, c.phone_main as phone_main, c.start_year as start_year, c.is_active as is_active, invfmt.name as invfmt, invt.name as invterm, invf.name as invfreq, invd.name as invdelivery, wkpl.name as week_plan, indmstr.name as indus_name, credmstr.name as creditrate, custclsmstr.name as custclass, c.credit_limit as credit_limit, c.vms_fee_discount as vms_fee_discount, c.volume_discount as volume_discount, c.volume_discount_inv as volume_discount_inv, c.is_approved as is_approved, c.is_vendor_only as is_vendor_only, c.has_msa as has_msa, ct.description as country_name, c.is_bgv_billable as is_bgv_billable, c.is_vac_hrs_billable as is_vac_hrs_billable, c.is_sick_hrs_billable as is_sick_hrs_billable, tst.name as ts_type, bt.name as billing_type, c.is_pci_portal_customer as is_pci_portal_customer, cct.name as contract_type, IF(c.parent_id = 1, '(Not Mapped)', msp.name) as msp_name, IF(c.ts_team_employee_id = 1, '(Not Mapped)', CONCAT(tse.firstname, ' ', tse.lastname)) as ts_team_emp, IF(c.inv_team_employee_id = 1, '(Not Mapped)', CONCAT(ivtse.firstname, ' ', ivtse.lastname)) as inv_team_emp, IF(c.pay_team_employee_id = 1, '(Not Mapped)', CONCAT(ptse.firstname, ' ', ptse.lastname)) as pay_team_emp, GROUP_CONCAT( CONCAT_WS(' ', NULLIF(adrmstr.st1, ''), NULLIF(adrmstr.st2, ''), NULLIF(adrmstr.st3, ''), NULLIF(adrmstr.city, ''), NULLIF(adrmstr.state, ''), NULLIF(adrmstr.zip, '') ) ) as billing_address FROM (custmaster c, country ct, invfmt invfmt, invterm invt, invfreq invf, invdelivery invd, custmaster msp, billing_type bt, custmaster_ts_type tst, employee tse, employee ivtse, employee ptse, customer_contract_type cct) LEFT OUTER JOIN (weekplan wkpl) ON (wkpl.id = c.weekplan_id) LEFT OUTER JOIN (addrmaster adrmstr) ON (adrmstr.id = c.billing_addr_id) LEFT OUTER JOIN (addrmaster adrmstr2) ON (adrmstr2.id = c.worksite_addr_id) LEFT OUTER JOIN (industrymaster indmstr) ON (indmstr.id = c.industrym",
+      "normalized": "SELECT c.id as id, c.code as code, c.dayforce_xrefcode as dayforce_xrefcode, c.name as name, c.phone_main as phone_main, c.start_year as start_year, c.is_active as is_active, invfmt.name as invfmt, invt.name as invterm, invf.name as invfreq, invd.name as invdelivery, wkpl.name as week_plan, indmstr.name as indus_name, credmstr.name as creditrate, custclsmstr.name as custclass, c.credit_limit as credit_limit, c.vms_fee_discount as vms_fee_discount, c.volume_discount as volume_discount, c.volume_discount_inv as volume_discount_inv, c.is_approved as is_approved, c.is_vendor_only as is_vendor_only, c.has_msa as has_msa, ct.description as country_name, c.is_bgv_billable as is_bgv_billable, c.is_vac_hrs_billable as is_vac_hrs_billable, c.is_sick_hrs_billable as is_sick_hrs_billable, tst.name as ts_type, bt.name as billing_type, c.is_pci_portal_customer as is_pci_portal_customer, cct.name as contract_type, IF(c.parent_id = :num, ':value', msp.name) as msp_name, IF(c.ts_team_employee_id = :num, ':value', CONCAT(tse.firstname, ':value', tse.lastname)) as ts_team_emp, IF(c.inv_team_employee_id = :num, ':value', CONCAT(ivtse.firstname, ':value', ivtse.lastname)) as inv_team_emp, IF(c.pay_team_employee_id = :num, ':value', CONCAT(ptse.firstname, ':value', ptse.lastname)) as pay_team_emp, GROUP_CONCAT( CONCAT_WS(':value', NULLIF(adrmstr.st1, ':value'), NULLIF(adrmstr.st2, ':value'), NULLIF(adrmstr.st3, ':value'), NULLIF(adrmstr.city, ':value'), NULLIF(adrmstr.state, ':value'), NULLIF(adrmstr.zip, ':value') ) ) as billing_address FROM (custmaster c, country ct, invfmt invfmt, invterm invt, invfreq invf, invdelivery invd, custmaster msp, billing_type bt, custmaster_ts_type tst, employee tse, employee ivtse, employee ptse, customer_contract_type cct) LEFT OUTER JOIN (weekplan wkpl) ON (wkpl.id = c.weekplan_id) LEFT OUTER JOIN (addrmaster adrmstr) ON (adrmstr.id = c.billing_addr_id) LEFT OUTER JOIN (addrmaster adrmstr2) ON (adrmstr2.id = c.worksite_addr_id) LEFT OUTER JOIN (industrymaster indmstr) ON (indmstr.id = c.industrym",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_037",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:38",
+      "kind": "select",
+      "raw": "SELECT cc.id id, cc.is_active is_active, cc.is_approver is_approver, cc.is_ts_email is_ts_email, CONCAT(cc.firstname,' ',cc.lastname) name, cc.lastwelcomeemail welcomets, c.name customer, c.id customer_id, IF(cc.is_active = 'Y' AND cc.is_approver = 'Y',1,0) show_checkbox, cc.email email FROM (customer_contact cc, customer c) WHERE cc.customer_id = c.id AND cc.id != 1",
+      "normalized": "SELECT cc.id id, cc.is_active is_active, cc.is_approver is_approver, cc.is_ts_email is_ts_email, CONCAT(cc.firstname,':value',cc.lastname) name, cc.lastwelcomeemail welcomets, c.name customer, c.id customer_id, IF(cc.is_active = ':value' AND cc.is_approver = ':value',:num,:num) show_checkbox, cc.email email FROM (customer_contact cc, customer c) WHERE cc.customer_id = c.id AND cc.id != :num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_038",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:39",
+      "kind": "select",
+      "raw": "Select for Action",
+      "normalized": "Select for Action",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_039",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:40",
+      "kind": "select",
+      "raw": "SELECT ce.id id, ce.is_active is_active, ce.is_approved is_approved, c1.name customer_name, c1.id customer_id, c2.name endclient_name, c2.id endclient_id, ce.change_effective_date effective_date, 100.0 * ce.apply_pct_prim_office apply_pct_prim_office, 100.0 * ce.apply_pct_sec_office apply_pct_sec_office FROM customer_endclient ce, customer c1, endclient c2 WHERE ce.customer_id = c1.id AND ce.endclient_id = c2.id",
+      "normalized": "SELECT ce.id id, ce.is_active is_active, ce.is_approved is_approved, c1.name customer_name, c1.id customer_id, c2.name endclient_name, c2.id endclient_id, ce.change_effective_date effective_date, :num.:num * ce.apply_pct_prim_office apply_pct_prim_office, :num.:num * ce.apply_pct_sec_office apply_pct_sec_office FROM customer_endclient ce, customer c1, endclient c2 WHERE ce.customer_id = c1.id AND ce.endclient_id = c2.id",
+      "tables": [
+        "customer_endclient"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_040",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:41",
+      "kind": "select",
+      "raw": "SELECT at.name id, 100.0 * ceam.apply_pct value FROM customer_endclient_assignment_map ceam, assignment_type at WHERE ceam.customer_endclient_id = {$row['id']} AND ceam.assignment_type_id = at.id ORDER BY at.sort_order ASC",
+      "normalized": "SELECT at.name id, :num.:num * ceam.apply_pct value FROM customer_endclient_assignment_map ceam, assignment_type at WHERE ceam.customer_endclient_id = {$row[':value']} AND ceam.assignment_type_id = at.id ORDER BY at.sort_order ASC",
+      "tables": [
+        "customer_endclient_assignment_map"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_041",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:42",
+      "kind": "select",
+      "raw": "SELECT at.name id, at.description value FROM assignment_type at ORDER BY at.sort_order ASC",
+      "normalized": "SELECT at.name id, at.description value FROM assignment_type at ORDER BY at.sort_order ASC",
+      "tables": [
+        "assignment_type"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_042",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:43",
+      "kind": "select",
+      "raw": "SELECT c.id id, custmaster.id custmaster_id, IF(c.name = '', '(no name)', c.name) name, IF(custmaster.name = '', '(no name)', custmaster.name) custmaster_name, CONCAT(nam.firstname, ' ', nam.lastname) natacctmgr, CONCAT(bd_mgr.firstname, ' ', bd_mgr.lastname) bd_mgr, CONCAT(bd_offshore_mgr.firstname, ' ', bd_offshore_mgr.lastname) bd_offshore_mgr, CONCAT(cp.firstname, ' ', cp.lastname) client_partner, CONCAT(cam.firstname, ' ', cam.lastname) customer_am, CONCAT(bdm.firstname, ' ', bdm.lastname) bdm, c.is_active is_active, c.is_bd is_bd, c.bd_date bd_date, IF(MAX(cetm.gm_pct_min) > 0, 'Y', 'N') is_gm_pct, IF(MAX(cetm.markup_pct_max) > 0, 'Y', 'N') is_markup_pct, cct.name contract_type FROM (customer c, employee bd_offshore_mgr, employee bd_mgr, employee cp, employee cam, employee bdm) LEFT OUTER JOIN (employee nam) ON (nam.id = c.nam_id) LEFT OUTER JOIN (custmaster_customer_map custmaster_customer) ON (custmaster_customer.customer_id = c.id) LEFT OUTER JOIN (custmaster custmaster) ON (custmaster.id = custmaster_customer.custmaster_id) LEFT OUTER JOIN (customer_employment_type_map cetm) ON (cetm.customer_id = c.id) LEFT OUTER JOIN (customer_contract_type cct) ON (cct.id = custmaster.contract_type_id) WHERE 1=1",
+      "normalized": "SELECT c.id id, custmaster.id custmaster_id, IF(c.name = ':value', ':value', c.name) name, IF(custmaster.name = ':value', ':value', custmaster.name) custmaster_name, CONCAT(nam.firstname, ':value', nam.lastname) natacctmgr, CONCAT(bd_mgr.firstname, ':value', bd_mgr.lastname) bd_mgr, CONCAT(bd_offshore_mgr.firstname, ':value', bd_offshore_mgr.lastname) bd_offshore_mgr, CONCAT(cp.firstname, ':value', cp.lastname) client_partner, CONCAT(cam.firstname, ':value', cam.lastname) customer_am, CONCAT(bdm.firstname, ':value', bdm.lastname) bdm, c.is_active is_active, c.is_bd is_bd, c.bd_date bd_date, IF(MAX(cetm.gm_pct_min) > :num, ':value', ':value') is_gm_pct, IF(MAX(cetm.markup_pct_max) > :num, ':value', ':value') is_markup_pct, cct.name contract_type FROM (customer c, employee bd_offshore_mgr, employee bd_mgr, employee cp, employee cam, employee bdm) LEFT OUTER JOIN (employee nam) ON (nam.id = c.nam_id) LEFT OUTER JOIN (custmaster_customer_map custmaster_customer) ON (custmaster_customer.customer_id = c.id) LEFT OUTER JOIN (custmaster custmaster) ON (custmaster.id = custmaster_customer.custmaster_id) LEFT OUTER JOIN (customer_employment_type_map cetm) ON (cetm.customer_id = c.id) LEFT OUTER JOIN (customer_contract_type cct) ON (cct.id = custmaster.contract_type_id) WHERE :num=:num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_043",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:44",
+      "kind": "select",
+      "raw": "SELECT c.name customer, c.id customer_id, o.name office, o.id office_id, IFNULL(AVG(cmp.markup_pct_max), 0) target_markup, 'Default' markup_category, '' gm_class_type, IFNULL(AVG(cmp.gm_pct_min), 0) gm_pct_target, 'GM' target_type FROM (customer_employment_type_map cmp, customer c, office o, employment_type et) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE cmp.customer_id = c.id AND cmp.employment_type_id = et.id AND cmp.office_id = o.id",
+      "normalized": "SELECT c.name customer, c.id customer_id, o.name office, o.id office_id, IFNULL(AVG(cmp.markup_pct_max), :num) target_markup, ':value' markup_category, ':value' gm_class_type, IFNULL(AVG(cmp.gm_pct_min), :num) gm_pct_target, ':value' target_type FROM (customer_employment_type_map cmp, customer c, office o, employment_type et) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE cmp.customer_id = c.id AND cmp.employment_type_id = et.id AND cmp.office_id = o.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_044",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:45",
+      "kind": "select",
+      "raw": "SELECT c.name customer, c.id customer_id, 'All' office, o.id office_id, 0 target_markup, 'Default' markup_category, gct.name gm_class_type, IFNULL(AVG(cgtm.gm_pct_min), 0) gm_pct_target, 'GM' target_type FROM (customer_office_gm_class_type_map cgtm, customer c, employment_type et, gm_class_type gct, office o) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE cgtm.customer_id = c.id AND cgtm.employment_type_id = et.id AND cgtm.office_id = o.id AND cgtm.gm_class_type_id = gct.id AND cgtm.office_id = o.id",
+      "normalized": "SELECT c.name customer, c.id customer_id, ':value' office, o.id office_id, :num target_markup, ':value' markup_category, gct.name gm_class_type, IFNULL(AVG(cgtm.gm_pct_min), :num) gm_pct_target, ':value' target_type FROM (customer_office_gm_class_type_map cgtm, customer c, employment_type et, gm_class_type gct, office o) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE cgtm.customer_id = c.id AND cgtm.employment_type_id = et.id AND cgtm.office_id = o.id AND cgtm.gm_class_type_id = gct.id AND cgtm.office_id = o.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_045",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:46",
+      "kind": "select",
+      "raw": "SELECT c.name customer, c.id customer_id, 'All' office, o.id office_id, IFNULL(AVG(codctm.gm_pct_max), 0) target_markup, IFNULL(mtc.name, 'Default') markup_category, '' gm_class_type, 0 gm_pct_target, 'Markup' target_type FROM (customer_office_markup_category_type_markup_map codctm, customer c, office o, employment_type et) LEFT OUTER JOIN (markup_category_type mtc) ON (codctm.markup_category_type_id = mtc.id) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE codctm.customer_id = c.id AND codctm.employment_type_id = et.id AND codctm.office_id = o.id",
+      "normalized": "SELECT c.name customer, c.id customer_id, ':value' office, o.id office_id, IFNULL(AVG(codctm.gm_pct_max), :num) target_markup, IFNULL(mtc.name, ':value') markup_category, ':value' gm_class_type, :num gm_pct_target, ':value' target_type FROM (customer_office_markup_category_type_markup_map codctm, customer c, office o, employment_type et) LEFT OUTER JOIN (markup_category_type mtc) ON (codctm.markup_category_type_id = mtc.id) LEFT OUTER JOIN (custmaster_customer_map ccm) ON (ccm.customer_id = c.id) LEFT OUTER JOIN (custmaster cum) ON (ccm.custmaster_id = cum.id) LEFT OUTER JOIN (custmaster custm) ON (cum.parent_id = custm.id) WHERE codctm.customer_id = c.id AND codctm.employment_type_id = et.id AND codctm.office_id = o.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_046",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:47",
+      "kind": "select",
+      "raw": "SELECT dc.id id, CONCAT(dc.location_city, ', ', dc.location_country) name, dc.is_active is_active, dc.manager_id manager_id, CONCAT(e.firstname,' ',e.lastname) manager FROM (delivery_center dc, employee e) WHERE dc.manager_id = e.id ORDER BY dc.location_city",
+      "normalized": "SELECT dc.id id, CONCAT(dc.location_city, ':value', dc.location_country) name, dc.is_active is_active, dc.manager_id manager_id, CONCAT(e.firstname,':value',e.lastname) manager FROM (delivery_center dc, employee e) WHERE dc.manager_id = e.id ORDER BY dc.location_city",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_047",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:48",
+      "kind": "update",
+      "raw": "UPDATE submittal_log SET team_lead_id = {$this->model->team_lead_id}, team_name = '",
+      "normalized": "UPDATE submittal_log SET team_lead_id = {$this->model->team_lead_id}, team_name = '",
+      "tables": [
+        "submittal_log"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection",
+        "missing_where_clause"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_048",
+          "operation": "update"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:49",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname,' ',e.lastname) name, dt.is_active is_active, u.name usertype, dt.name team, dt.description description, dt.id id FROM delivery_team dt, employee e, usertype u WHERE dt.team_lead_id = e.id AND e.usertype_id = u.id Update Employee Meeting Note",
+      "normalized": "SELECT CONCAT(e.firstname,':value',e.lastname) name, dt.is_active is_active, u.name usertype, dt.name team, dt.description description, dt.id id FROM delivery_team dt, employee e, usertype u WHERE dt.team_lead_id = e.id AND e.usertype_id = u.id Update Employee Meeting Note",
+      "tables": [
+        "delivery_team",
+        "Employee"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_049",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:50",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname, ' ', e.lastname) name, CONCAT(u.firstname, ' ', u.lastname) user, CONCAT(m.firstname, ' ', m.lastname) manager_name, u.id user_id, e.id id, o.name office_name, IFNULL(emst.name, '') subject, IFNULL(emn.notes, '') note, IFNULL(emn.date, '') date, IFNULL(fc.from_date, '') week, IFNULL(emn.id, 1) note_id FROM (employee e, employee u, org_chart oc, employee m, office o) LEFT JOIN (employee_meeting_notes emn) ON (emn.employee_id = e.id AND emn.user_id = $this->client_partner_id) LEFT JOIN (finance_calendar_full fc) ON (emn.`date` = fc.`date`) LEFT JOIN (employee_meeting_notes_subject_type emst) ON (emst.id = emn.employee_meeting_notes_subject_type_id",
+      "normalized": "SELECT CONCAT(e.firstname, ':value', e.lastname) name, CONCAT(u.firstname, ':value', u.lastname) user, CONCAT(m.firstname, ':value', m.lastname) manager_name, u.id user_id, e.id id, o.name office_name, IFNULL(emst.name, ':value') subject, IFNULL(emn.notes, ':value') note, IFNULL(emn.date, ':value') date, IFNULL(fc.from_date, ':value') week, IFNULL(emn.id, :num) note_id FROM (employee e, employee u, org_chart oc, employee m, office o) LEFT JOIN (employee_meeting_notes emn) ON (emn.employee_id = e.id AND emn.user_id = $this->client_partner_id) LEFT JOIN (finance_calendar_full fc) ON (emn.`date` = fc.`date`) LEFT JOIN (employee_meeting_notes_subject_type emst) ON (emst.id = emn.employee_meeting_notes_subject_type_id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_050",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:51",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname,' ',e.lastname) name, CONCAT(u.firstname,' ',u.lastname) user, emn.employee_id employee_id, emst.name subject, emn.notes note, emn.date date, emn.id note_id FROM employee_meeting_notes emn, employee_meeting_notes_subject_type emst, employee e, employee u WHERE emn.user_id = u.id AND emn.employee_id = e.id AND emst.id = emn.employee_meeting_notes_subject_type_id AND e.id = $this->employee_id",
+      "normalized": "SELECT CONCAT(e.firstname,':value',e.lastname) name, CONCAT(u.firstname,':value',u.lastname) user, emn.employee_id employee_id, emst.name subject, emn.notes note, emn.date date, emn.id note_id FROM employee_meeting_notes emn, employee_meeting_notes_subject_type emst, employee e, employee u WHERE emn.user_id = u.id AND emn.employee_id = e.id AND emst.id = emn.employee_meeting_notes_subject_type_id AND e.id = $this->employee_id",
+      "tables": [
+        "employee_meeting_notes"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_051",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:52",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname,' ',e.lastname) name, CONCAT(u.firstname,' ',u.lastname) user, emn.employee_id employee_id, emst.name subject, emn.notes note, emn.date date, emn.id note_id FROM employee_meeting_notes emn, employee_meeting_notes_subject_type emst, employee e, employee u WHERE emn.user_id = u.id AND emn.employee_id = e.id AND emst.id = emn.employee_meeting_notes_subject_type_id AND e.id IN (",
+      "normalized": "SELECT CONCAT(e.firstname,':value',e.lastname) name, CONCAT(u.firstname,':value',u.lastname) user, emn.employee_id employee_id, emst.name subject, emn.notes note, emn.date date, emn.id note_id FROM employee_meeting_notes emn, employee_meeting_notes_subject_type emst, employee e, employee u WHERE emn.user_id = u.id AND emn.employee_id = e.id AND emst.id = emn.employee_meeting_notes_subject_type_id AND e.id IN (",
+      "tables": [
+        "employee_meeting_notes"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_052",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:53",
+      "kind": "select",
+      "raw": "SELECT e.id id, CONCAT(e.firstname,' ',e.lastname) name, e2.id manager_id, CONCAT(e2.firstname,' ',e2.lastname) manager_name, o.name office_name, 'Show' action, 'Show' action2, u.name usertype_name, emn.id note_id, emst.name subject, emst.id subject_id, emn.notes notes, emn.date date, weekStart(emn.date) week FROM (employee e, employee e2, org_chart oc, office o, usertype u) LEFT OUTER JOIN employee_meeting_notes emn ON (emn.employee_id = e.id AND emn.date >= ' delete",
+      "normalized": "SELECT e.id id, CONCAT(e.firstname,':value',e.lastname) name, e2.id manager_id, CONCAT(e2.firstname,':value',e2.lastname) manager_name, o.name office_name, ':value' action, ':value' action2, u.name usertype_name, emn.id note_id, emst.name subject, emst.id subject_id, emn.notes notes, emn.date date, weekStart(emn.date) week FROM (employee e, employee e2, org_chart oc, office o, usertype u) LEFT OUTER JOIN employee_meeting_notes emn ON (emn.employee_id = e.id AND emn.date >= ' delete",
+      "tables": [
+        "employee_meeting_notes"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_053",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:54",
+      "kind": "select",
+      "raw": "SELECT eotbc.id id, CONCAT(e.firstname, ' ', e.lastname) employee, tr.name role, bct.name bonus_type, eotbc.month_start commission_month, eotbc.effective_date effective_date, eotbc.amount_in amount_in, eotbc.amount_ph amount_ph, eotbc.amount_us amount_us, eotbc.description description, eotbc.create_ts create_ts, eotbc.last_updated last_updated, IFNULL(CONCAT('Paid by ', cse.firstname, ' ', cse.lastname, ' on ', DATE_FORMAT(cs.processed_time, '%m/%d/%Y %r')), 'Unpaid') paid FROM (employee_one_time_bonus_commission eotbc, target_role_type tr, employee e, bonus_commission_type bct) LEFT JOIN (commission_snapshot cs) ON (cs.id = eotbc.commission_snapshot_id) LEFT JOIN (employee cse) ON (cs.processed_by = cse.id) WHERE eotbc.employee_id = e.id AND eotbc.target_role_type_id = tr.id AND eotbc.bonus_commission_type_id = bct.id AND eotbc.month_start BETWEEN '$from_date' AND '$to_date'",
+      "normalized": "SELECT eotbc.id id, CONCAT(e.firstname, ':value', e.lastname) employee, tr.name role, bct.name bonus_type, eotbc.month_start commission_month, eotbc.effective_date effective_date, eotbc.amount_in amount_in, eotbc.amount_ph amount_ph, eotbc.amount_us amount_us, eotbc.description description, eotbc.create_ts create_ts, eotbc.last_updated last_updated, IFNULL(CONCAT(':value', cse.firstname, ':value', cse.lastname, ':value', DATE_FORMAT(cs.processed_time, ':value')), ':value') paid FROM (employee_one_time_bonus_commission eotbc, target_role_type tr, employee e, bonus_commission_type bct) LEFT JOIN (commission_snapshot cs) ON (cs.id = eotbc.commission_snapshot_id) LEFT JOIN (employee cse) ON (cs.processed_by = cse.id) WHERE eotbc.employee_id = e.id AND eotbc.target_role_type_id = tr.id AND eotbc.bonus_commission_type_id = bct.id AND eotbc.month_start BETWEEN ':value' AND ':value'",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_054",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:55",
+      "kind": "select",
+      "raw": "SELECT id,name,\"N\" checked FROM office WHERE id != 2 ORDER BY name",
+      "normalized": "SELECT id,name,\"N\" checked FROM office WHERE id != :num ORDER BY name",
+      "tables": [
+        "office"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_055",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:56",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname,' ',e.lastname) name, e.id id, dc.location_city delivery_center, dc.location_country location_country, e.email email, e.is_active active, u.name usertype, o.name office, r.name region, e.join_date join_date, e.term_date term_date, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year, (SUM(a.fraction) / ((DATEDIFF(MAX(fc.from_date), MIN(fc.from_date))+7)/7)) allocation FROM (",
+      "normalized": "SELECT CONCAT(e.firstname,':value',e.lastname) name, e.id id, dc.location_city delivery_center, dc.location_country location_country, e.email email, e.is_active active, u.name usertype, o.name office, r.name region, e.join_date join_date, e.term_date term_date, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year, (SUM(a.fraction) / ((DATEDIFF(MAX(fc.from_date), MIN(fc.from_date))+:num)/:num)) allocation FROM (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_056",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:57",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname,' ',e.lastname) name, e.id id, dc.location_city location_city, dc.location_country location_country, eom.oms_id PcoreID, eom.omstx_id OmsID, efm.foreign_id JDID, eom.empssn EmployeeID, eom.alt_empssn NewEmployeeID, 'Y' becomeuser, u.id usertype_id, st.code seniority_brief, e.email email, e.is_active active, e.is_wfh wfh, e.is_furlough furlough, e.is_ebuddy is_ebuddy, e.ebuddy_id buddy_id, IF(e.ebuddy_id = 1, '(Not Assigned)', CONCAT(b.firstname,' ',b.lastname)) buddy_name, u.name usertype, ct.name company_unit_type, u.is_active uactive, e.mentor_id mentor_id, e.mentor_effective_date mentor_effective_date, e.mentor_deactivation_date mentor_deactivation_date, GROUP_CONCAT(DISTINCT f.name ORDER BY f.name SEPARATOR '/') area, CONCAT(o.name, ' (', (SELECT IFNULL(GROUP_CONCAT(DISTINCT IF(o.name='', '(blank)', o.name) ORDER BY o.name SEPARATOR '/'), '') FROM office o, employee_office_map eom WHERE eom.office_id = o.id AND eom.employee_id = e.id ), ')') office, '' mentor_name, e.signature_title signature_title, e.join_date join_date, e.term_date term_date, est.name shift FROM (employee e, seniority_type st, org_chart ogc, delivery_center dc) LEFT OUTER JOIN (office o) ON (o.id = e.office_id) LEFT OUTER JOIN (company_unit_type ct) ON (ct.id = e.company_unit_type_id) LEFT OUTER JOIN (employee b) ON (b.id = e.ebuddy_id) LEFT OUTER JOIN (usertype u) ON (u.id = e.usertype_id) LEFT OUTER JOIN (usertype_fn_area_map ufm) ON (u.id = ufm.usertype_id) LEFT OUTER JOIN (fn_area f) ON (f.id = ufm.fn_area_id) LEFT OUTER JOIN (employee_oms_map eom) ON (eom.employee_id = e.id) LEFT OUTER JOIN (employee_foreign_map efm) ON (efm.employee_id = e.id) LEFT OUTER JOIN (employee_shift_type est) ON (e.employee_shift_type_id = est.id) WHERE 1 = 1",
+      "normalized": "SELECT CONCAT(e.firstname,':value',e.lastname) name, e.id id, dc.location_city location_city, dc.location_country location_country, eom.oms_id PcoreID, eom.omstx_id OmsID, efm.foreign_id JDID, eom.empssn EmployeeID, eom.alt_empssn NewEmployeeID, ':value' becomeuser, u.id usertype_id, st.code seniority_brief, e.email email, e.is_active active, e.is_wfh wfh, e.is_furlough furlough, e.is_ebuddy is_ebuddy, e.ebuddy_id buddy_id, IF(e.ebuddy_id = :num, ':value', CONCAT(b.firstname,':value',b.lastname)) buddy_name, u.name usertype, ct.name company_unit_type, u.is_active uactive, e.mentor_id mentor_id, e.mentor_effective_date mentor_effective_date, e.mentor_deactivation_date mentor_deactivation_date, GROUP_CONCAT(DISTINCT f.name ORDER BY f.name SEPARATOR ':value') area, CONCAT(o.name, ':value', (SELECT IFNULL(GROUP_CONCAT(DISTINCT IF(o.name=':value', ':value', o.name) ORDER BY o.name SEPARATOR ':value'), ':value') FROM office o, employee_office_map eom WHERE eom.office_id = o.id AND eom.employee_id = e.id ), ':value') office, ':value' mentor_name, e.signature_title signature_title, e.join_date join_date, e.term_date term_date, est.name shift FROM (employee e, seniority_type st, org_chart ogc, delivery_center dc) LEFT OUTER JOIN (office o) ON (o.id = e.office_id) LEFT OUTER JOIN (company_unit_type ct) ON (ct.id = e.company_unit_type_id) LEFT OUTER JOIN (employee b) ON (b.id = e.ebuddy_id) LEFT OUTER JOIN (usertype u) ON (u.id = e.usertype_id) LEFT OUTER JOIN (usertype_fn_area_map ufm) ON (u.id = ufm.usertype_id) LEFT OUTER JOIN (fn_area f) ON (f.id = ufm.fn_area_id) LEFT OUTER JOIN (employee_oms_map eom) ON (eom.employee_id = e.id) LEFT OUTER JOIN (employee_foreign_map efm) ON (efm.employee_id = e.id) LEFT OUTER JOIN (employee_shift_type est) ON (e.employee_shift_type_id = est.id) WHERE :num = :num",
+      "tables": [
+        "office"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_057",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:58",
+      "kind": "select",
+      "raw": "SELECT employee_id mentor_id, CONCAT(e.firstname, ' ', e.lastname) name, eomap.empssn empssn FROM employee e, employee_oms_map eomap WHERE e.id = $mentor_id AND e.id = eomap.employee_id AND e.is_active = 'Y'",
+      "normalized": "SELECT employee_id mentor_id, CONCAT(e.firstname, ':value', e.lastname) name, eomap.empssn empssn FROM employee e, employee_oms_map eomap WHERE e.id = $mentor_id AND e.id = eomap.employee_id AND e.is_active = ':value'",
+      "tables": [
+        "employee"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_058",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:59",
+      "kind": "select",
+      "raw": "SELECT c.id id, IF(c.name='','(no name)',c.name) name, c.is_active is_active FROM (endclient c) WHERE 1=1",
+      "normalized": "SELECT c.id id, IF(c.name=':value',':value',c.name) name, c.is_active is_active FROM (endclient c) WHERE :num=:num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_059",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:60",
+      "kind": "select",
+      "raw": "SELECT entity_id,entity_name,create_ts,created_by,UNCOMPRESS(json_text) json_text FROM entity_audit_log WHERE entity_id = $entity_id ORDER BY last_updated DESC",
+      "normalized": "SELECT entity_id,entity_name,create_ts,created_by,UNCOMPRESS(json_text) json_text FROM entity_audit_log WHERE entity_id = $entity_id ORDER BY last_updated DESC",
+      "tables": [
+        "entity_audit_log"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_060",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:61",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,' ', con.lastname) name, cp.end_date end_date, IFNULL(eps.name, 0) eop_state, st.description work_state, et.name contract_type, cust.name customer_name, cust.id client_id, '' Sales_Team, 'NA' CCA, 'NA' AM, 'NA' DM, 'NA' BDM, 'NA' BH, (CASE cp.country_id WHEN 2 THEN 'Y' ELSE 'N' END) is_canadian, 0 day_diff, GROUP_CONCAT(DISTINCT CONCAT(epm.description, ':', e.firstname, ' ', e.lastname)) employee, IFNULL(ep.eop_workflow_status_id, 5) eop_workflow_status_id, IFNULL(ewf.name,'') eop_status, IFNULL(is_extension, 'N') is_extension, IFNULL(ep.create_ts,'') initiated_on, IFNULL(ep.eop_reason_type_id,0) reason_id, IFNULL(ep.eop_termination_type_id,0) termination_id, IFNULL(proposed_date,'') proposed_date, IFNULL(notice_date,'') notice_date, cp.is_academy is_academy, (CASE '$is_shra' WHEN 'Y' THEN 'SHRA' ELSE epma.description END) emp_role, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, IFNULL(eqt.equipment_issued_by, '') equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, address ad, employment_type et, customer cust, employee_profile_map epm, employee e, employee_profile_map epma, office_profile_map opm, visa_status_type vst) LEFT JOIN eop_processed ep ON cp.id = ep.contractor_placement_id LEFT JOIN states eps ON ep.work_state_id = eps.id LEFT JOIN eop_workflow_status_type ewf ON ep.eop_workflow_status_id = ewf.id LEFT JOIN states st ON st.name = ad.state LEFT JOIN equipment_tracking eqt ON cp.id = eqt.contractor_placement_id WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND cp.recent_profile_id = pf.id AND pf.worksite_addr_id = ad.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND cp.is_active = 'Y' AND cp.is_ref_only = 'N' AND cp.country_id IN(1,2) AND cust.id NOT IN ($pci_id, $pci_bench_id) AND et.id IN (2,3,4,5,9,14,15,16) -- AND et.id IN (9,14,15,16) AND pf.is_active = 'Y' AND epm.profile_id = pf.id AND opm.profile_id = pf.id A",
+      "normalized": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,':value', con.lastname) name, cp.end_date end_date, IFNULL(eps.name, :num) eop_state, st.description work_state, et.name contract_type, cust.name customer_name, cust.id client_id, ':value' Sales_Team, ':value' CCA, ':value' AM, ':value' DM, ':value' BDM, ':value' BH, (CASE cp.country_id WHEN :num THEN ':value' ELSE ':value' END) is_canadian, :num day_diff, GROUP_CONCAT(DISTINCT CONCAT(epm.description, ':value', e.firstname, ':value', e.lastname)) employee, IFNULL(ep.eop_workflow_status_id, :num) eop_workflow_status_id, IFNULL(ewf.name,':value') eop_status, IFNULL(is_extension, ':value') is_extension, IFNULL(ep.create_ts,':value') initiated_on, IFNULL(ep.eop_reason_type_id,:num) reason_id, IFNULL(ep.eop_termination_type_id,:num) termination_id, IFNULL(proposed_date,':value') proposed_date, IFNULL(notice_date,':value') notice_date, cp.is_academy is_academy, (CASE ':value' WHEN ':value' THEN ':value' ELSE epma.description END) emp_role, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, IFNULL(eqt.equipment_issued_by, ':value') equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, address ad, employment_type et, customer cust, employee_profile_map epm, employee e, employee_profile_map epma, office_profile_map opm, visa_status_type vst) LEFT JOIN eop_processed ep ON cp.id = ep.contractor_placement_id LEFT JOIN states eps ON ep.work_state_id = eps.id LEFT JOIN eop_workflow_status_type ewf ON ep.eop_workflow_status_id = ewf.id LEFT JOIN states st ON st.name = ad.state LEFT JOIN equipment_tracking eqt ON cp.id = eqt.contractor_placement_id WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND cp.recent_profile_id = pf.id AND pf.worksite_addr_id = ad.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND cp.is_active = ':value' AND cp.is_ref_only = ':value' AND cp.country_id IN(:num,:num) AND cust.id NOT IN ($pci_id, $pci_bench_id) AND et.id IN (:num,:num,:num,:num,:num,:num,:num,:num) -- AND et.id IN (:num,:num,:num,:num) AND pf.is_active = ':value' AND epm.profile_id = pf.id AND opm.profile_id = pf.id A",
+      "tables": [
+        "eop_processed",
+        "states",
+        "eop_workflow_status_type",
+        "equipment_tracking"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_061",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:62",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,' ', con.lastname) name, cp.start_date start_date, cp.end_date end_date, et.name contract_type, cust.name customer_name, pf.hr_payrate_st salary, ptf.name salary_unit, (CASE cp.country_id WHEN 2 THEN 'Y' ELSE 'N' END) is_canadian, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, '' equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, employment_type et, customer cust, pay_freq_type ptf, employee_profile_map epma, visa_status_type vst) WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND epma.profile_id = pf.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND pf.pay_freq_type_id = ptf.id AND cust.id IN ($pci_bench_id) AND cp.is_active = 'Y' AND cp.country_id IN(1,2) AND pf.is_active = 'Y' AND vst.id = pf.visa_status_type_id AND ('$is_shra' = 'Y' OR (epma.employee_id = $employee_id AND epma.description IN ('CCA')))",
+      "normalized": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,':value', con.lastname) name, cp.start_date start_date, cp.end_date end_date, et.name contract_type, cust.name customer_name, pf.hr_payrate_st salary, ptf.name salary_unit, (CASE cp.country_id WHEN :num THEN ':value' ELSE ':value' END) is_canadian, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, ':value' equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, employment_type et, customer cust, pay_freq_type ptf, employee_profile_map epma, visa_status_type vst) WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND epma.profile_id = pf.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND pf.pay_freq_type_id = ptf.id AND cust.id IN ($pci_bench_id) AND cp.is_active = ':value' AND cp.country_id IN(:num,:num) AND pf.is_active = ':value' AND vst.id = pf.visa_status_type_id AND (':value' = ':value' OR (epma.employee_id = $employee_id AND epma.description IN (':value')))",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_062",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:63",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,' ', con.lastname) name, cp.start_date start_date, cp.end_date end_date, et.name contract_type, cust.name customer_name, pf.hr_payrate_st salary, ptf.name salary_unit, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, '' equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, employment_type et, customer cust, pay_freq_type ptf, visa_status_type vst) WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND pf.pay_freq_type_id = ptf.id AND cust.id IN ($pci_id) AND cp.is_active = 'Y' AND vst.id = pf.visa_status_type_id AND cp.country_id IN(1,2)",
+      "normalized": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,':value', con.lastname) name, cp.start_date start_date, cp.end_date end_date, et.name contract_type, cust.name customer_name, pf.hr_payrate_st salary, ptf.name salary_unit, pf.visa_status_type_id visa_status_type_id, vst.name visa_status_type, ':value' equipment_issued_by FROM (contractor_placement cp, contractor con, profile pf, employment_type et, customer cust, pay_freq_type ptf, visa_status_type vst) WHERE cp.id = pf.contractor_placement_id AND cp.contractor_id = con.id AND pf.employment_type_id = et.id AND cp.customer_id = cust.id AND pf.pay_freq_type_id = ptf.id AND cust.id IN ($pci_id) AND cp.is_active = ':value' AND vst.id = pf.visa_status_type_id AND cp.country_id IN(:num,:num)",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_063",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:64",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,' ', con.lastname) name, cp.start_date start_date, DATE_FORMAT(ed.update_ts, '%m/%d/%Y') eop_process_date, DATE(cp.deactivation_date) eop_date, IF(ed.eop_delay_type_id = 1, 2, ed.eop_delay_type_id) delay_type_id, DATE_FORMAT(ed.correct_update_date, '%m/%d/%Y') correct_update_date FROM (contractor_placement cp, contractor con, eop_data ed, eop_delay_type edt) WHERE cp.contractor_id = con.id AND cp.id = ed.contractor_placement_id AND ed.eop_delay_type_id = edt.id",
+      "normalized": "SELECT DISTINCT cp.id id, CONCAT(con.firstname,':value', con.lastname) name, cp.start_date start_date, DATE_FORMAT(ed.update_ts, ':value') eop_process_date, DATE(cp.deactivation_date) eop_date, IF(ed.eop_delay_type_id = :num, :num, ed.eop_delay_type_id) delay_type_id, DATE_FORMAT(ed.correct_update_date, ':value') correct_update_date FROM (contractor_placement cp, contractor con, eop_data ed, eop_delay_type edt) WHERE cp.contractor_id = con.id AND cp.id = ed.contractor_placement_id AND ed.eop_delay_type_id = edt.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_064",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:65",
+      "kind": "select",
+      "raw": "SELECT ab.id id, ab.name name, ab.description description, atpt.name agreement_type, ab.is_certification_required is_certification_required, ab.start_date start_date, ab.end_date end_date, ab.certification_date certification_date FROM academy_batch ab, academy_training_program_type atpt WHERE atpt.id = ab.academy_training_program_type_id insert",
+      "normalized": "SELECT ab.id id, ab.name name, ab.description description, atpt.name agreement_type, ab.is_certification_required is_certification_required, ab.start_date start_date, ab.end_date end_date, ab.certification_date certification_date FROM academy_batch ab, academy_training_program_type atpt WHERE atpt.id = ab.academy_training_program_type_id insert",
+      "tables": [
+        "academy_batch"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_065",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:66",
+      "kind": "select",
+      "raw": "SELECT at.name name, at.id id, at.is_active active FROM (account_list_type at) WHERE at.is_active = 'Y'",
+      "normalized": "SELECT at.name name, at.id id, at.is_active active FROM (account_list_type at) WHERE at.is_active = ':value'",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_066",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:67",
+      "kind": "select",
+      "raw": "SELECT a.id id, (SELECT foreign_id FROM account_foreign_map WHERE account_id = a.id) foreign_id, a.name name, a.is_system_integrator is_system_integrator, a.is_coddler is_coddler, vt.name vms, mt.name msp, a.url url, CONCAT(e.firstname,' ',e.lastname) owner, CONCAT(nam.firstname,' ',nam.lastname) natacctmgr, a.phone phone, adr.st1 st1, adr.st2 st2, adr.city city, adr.state state, adr.zip zip, IF(c.name='','(No name)',c.name) customer, c.id customer_id, cm.name customer_master, cm.id custmaster_id, 'Request Deletion' action, (SELECT COUNT(*) FROM contact WHERE account_id = a.id) contacts, GROUP_CONCAT(DISTINCT at.name ORDER BY at.name ASC SEPARATOR ' / ') industry FROM (account a, account_type at, account_type_map atm, address adr, employee e, customer c, vms_type vt, msp_type mt, custmaster cm) LEFT OUTER JOIN (employee nam) ON (nam.id = a.nam_id) WHERE atm.account_id = a.id AND atm.account_type_id = at.id AND a.billing_addr_id = adr.id AND a.customer_id = c.id AND cm.id = (SELECT custmaster_id FROM custmaster_customer_map WHERE customer_id = c.id) AND a.owner_id = e.id AND a.vms_id = vt.id AND a.msp_id = mt.id AND a.is_active = 'Y' AND a.name LIKE '",
+      "normalized": "SELECT a.id id, (SELECT foreign_id FROM account_foreign_map WHERE account_id = a.id) foreign_id, a.name name, a.is_system_integrator is_system_integrator, a.is_coddler is_coddler, vt.name vms, mt.name msp, a.url url, CONCAT(e.firstname,':value',e.lastname) owner, CONCAT(nam.firstname,':value',nam.lastname) natacctmgr, a.phone phone, adr.st1 st1, adr.st2 st2, adr.city city, adr.state state, adr.zip zip, IF(c.name=':value',':value',c.name) customer, c.id customer_id, cm.name customer_master, cm.id custmaster_id, ':value' action, (SELECT COUNT(*) FROM contact WHERE account_id = a.id) contacts, GROUP_CONCAT(DISTINCT at.name ORDER BY at.name ASC SEPARATOR ':value') industry FROM (account a, account_type at, account_type_map atm, address adr, employee e, customer c, vms_type vt, msp_type mt, custmaster cm) LEFT OUTER JOIN (employee nam) ON (nam.id = a.nam_id) WHERE atm.account_id = a.id AND atm.account_type_id = at.id AND a.billing_addr_id = adr.id AND a.customer_id = c.id AND cm.id = (SELECT custmaster_id FROM custmaster_customer_map WHERE customer_id = c.id) AND a.owner_id = e.id AND a.vms_id = vt.id AND a.msp_id = mt.id AND a.is_active = ':value' AND a.name LIKE '",
+      "tables": [
+        "account_foreign_map",
+        "custmaster_customer_map"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_067",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:68",
+      "kind": "select",
+      "raw": "SELECT DISTINCT a.id id, CONCAT(a.st1,' ',a.st2,' ',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN ('1','2'), c.firstname, '') associated, CONCAT(CONCAT(a.st1,' ',a.st2,' ',a.st3),' ', a.city,' ',a.state,' ',a.zip,' - ',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_valid is_valid, a.is_active is_active, CONCAT( '<span dd-id=\\",
+      "normalized": "SELECT DISTINCT a.id id, CONCAT(a.st1,':value',a.st2,':value',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN (':value',':value'), c.firstname, ':value') associated, CONCAT(CONCAT(a.st1,':value',a.st2,':value',a.st3),':value', a.city,':value',a.state,':value',a.zip,':value',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_valid is_valid, a.is_active is_active, CONCAT( '<span dd-id=\\",
+      "tables": [
+        "country"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_068",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:69",
+      "kind": "select",
+      "raw": "SELECT DISTINCT a.id id, CONCAT(a.st1,' ',a.st2,' ',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN ('1','2'), c.firstname, '') associated, CONCAT(CONCAT(a.st1,' ',a.st2,' ',a.st3),' ', a.city,' ',a.state,' ',a.zip,' - ',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_valid is_valid, a.is_active is_active, CONCAT( '<span dd-id=\"',a.id,'\" class=\"actionlink\" id=\"edit_',a.id,'\">Edit</span>&nbsp;|&nbsp;', '<span dd-id=\"',a.id,'\" class=\"actionlink\" id=\"sel_',a.id,'\">Select</span>') action FROM (address a, address_type at) LEFT OUTER JOIN (contractor c) ON (c.address_id = a.id) WHERE 1=1 AND a.address_type_id = at.id",
+      "normalized": "SELECT DISTINCT a.id id, CONCAT(a.st1,':value',a.st2,':value',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN (':value',':value'), c.firstname, ':value') associated, CONCAT(CONCAT(a.st1,':value',a.st2,':value',a.st3),':value', a.city,':value',a.state,':value',a.zip,':value',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_valid is_valid, a.is_active is_active, CONCAT( ':value',a.id,':value',a.id,':value', ':value',a.id,':value',a.id,':value') action FROM (address a, address_type at) LEFT OUTER JOIN (contractor c) ON (c.address_id = a.id) WHERE :num=:num AND a.address_type_id = at.id",
+      "tables": [
+        "country"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_069",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:70",
+      "kind": "select",
+      "raw": "SELECT a.id id, CONCAT(a.st1,' ',a.st2,' ',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN ('1','2'), c.name, '') associated, CONCAT(CONCAT(a.st1,' ',a.st2,' ',a.st3),' ', a.city,' ',a.state,' ',a.zip,' - ',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_active is_active, a.is_valid is_valid, CONCAT( '<span dd-id=\\",
+      "normalized": "SELECT a.id id, CONCAT(a.st1,':value',a.st2,':value',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN (':value',':value'), c.name, ':value') associated, CONCAT(CONCAT(a.st1,':value',a.st2,':value',a.st3),':value', a.city,':value',a.state,':value',a.zip,':value',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_active is_active, a.is_valid is_valid, CONCAT( '<span dd-id=\\",
+      "tables": [
+        "country"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_070",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:71",
+      "kind": "select",
+      "raw": "SELECT a.id id, CONCAT(a.st1,' ',a.st2,' ',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN ('1','2'), c.name, '') associated, CONCAT(CONCAT(a.st1,' ',a.st2,' ',a.st3),' ', a.city,' ',a.state,' ',a.zip,' - ',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_active is_active, a.is_valid is_valid, CONCAT( '<span dd-id=\"',a.id,'\" class=\"actionlink\" id=\"edit_',a.id,'\">Edit</span>&nbsp;|&nbsp;', '<span dd-id=\"',a.id,'\" class=\"actionlink\" id=\"sel_',a.id,'\">Select</span>') action FROM (addrmaster a, address_type at) LEFT OUTER JOIN (custmaster_addrmaster_map cam) ON (cam.addrmaster_id = a.id) LEFT OUTER JOIN (custmaster c) ON (cam.custmaster_id = c.id) WHERE 1=1 AND a.address_type_id = at.id",
+      "normalized": "SELECT a.id id, CONCAT(a.st1,':value',a.st2,':value',a.st3) st, a.city city, a.state state, a.zip zip, (SELECT name FROM country WHERE id = a.country_id) country, IF(at.name IN (':value',':value'), c.name, ':value') associated, CONCAT(CONCAT(a.st1,':value',a.st2,':value',a.st3),':value', a.city,':value',a.state,':value',a.zip,':value',(SELECT name FROM country WHERE id = a.country_id)) condensed, at.description type, a.is_active is_active, a.is_valid is_valid, CONCAT( ':value',a.id,':value',a.id,':value', ':value',a.id,':value',a.id,':value') action FROM (addrmaster a, address_type at) LEFT OUTER JOIN (custmaster_addrmaster_map cam) ON (cam.addrmaster_id = a.id) LEFT OUTER JOIN (custmaster c) ON (cam.custmaster_id = c.id) WHERE :num=:num AND a.address_type_id = at.id",
+      "tables": [
+        "country"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_071",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:72",
+      "kind": "select",
+      "raw": "SELECT * FROM adhoc_adp_compare WHERE date_loaded = (SELECT MAX(date_loaded) FROM adhoc_adp_compare)",
+      "normalized": "SELECT * FROM adhoc_adp_compare WHERE date_loaded = (SELECT MAX(date_loaded) FROM adhoc_adp_compare)",
+      "tables": [
+        "adhoc_adp_compare"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "select_star"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_072",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:73",
+      "kind": "select",
+      "raw": "SELECT c.comp_code company_code, IF(c.id = 1, '', CONCAT(c.firstname,' ',c.lastname)) name, CONCAT(c.comp_code,c.file_num) position_id, cp.id placement_id, pft.name rate_type, alignRate(p.hr_payrate_st, p.pay_freq_type_id) mbpay, alignRate(p.hr_payrate_ot, p.pay_freq_type_id) mbpay_ot FROM (contractor_placement cp, contractor c, profile p, pay_freq_type pft) WHERE cp.contractor_id = c.id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND p.pay_freq_type_id = pft.id AND cp.is_active = 'Y' AND cp.is_ref_only = 'N' AND c.id != 1 AND c.comp_code !='XXX' AND CONCAT(c.comp_code,c.file_num) != '' AND cp.name NOT LIKE 'PERM %' AND c.id NOT IN (",
+      "normalized": "SELECT c.comp_code company_code, IF(c.id = :num, ':value', CONCAT(c.firstname,':value',c.lastname)) name, CONCAT(c.comp_code,c.file_num) position_id, cp.id placement_id, pft.name rate_type, alignRate(p.hr_payrate_st, p.pay_freq_type_id) mbpay, alignRate(p.hr_payrate_ot, p.pay_freq_type_id) mbpay_ot FROM (contractor_placement cp, contractor c, profile p, pay_freq_type pft) WHERE cp.contractor_id = c.id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND p.pay_freq_type_id = pft.id AND cp.is_active = ':value' AND cp.is_ref_only = ':value' AND c.id != :num AND c.comp_code !=':value' AND CONCAT(c.comp_code,c.file_num) != ':value' AND cp.name NOT LIKE ':value' AND c.id NOT IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_073",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:74",
+      "kind": "select",
+      "raw": "SELECT DISTINCT COUNT(DISTINCT amc.contractor_placement_id) placements, cp.id id, CONCAT(am.firstname, ' ', am.lastname) acctmgr, am.id acctmgr_id, cp.start_date start_date, cu.name customer, cu.id customer_id, amc.compliance_level compliance_level, o.name office, o.id office_id, r.name region, r.id region_id, fc.date day, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year FROM (amcompliance amc, contractor_placement cp, profile p, employee_profile_map epm, employee am, customer cu, office_profile_map opm, office o, finance_calendar_full fc, region r) WHERE amc.contractor_placement_id = cp.id AND cp.customer_id = cu.id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND epm.profile_id = p.id AND epm.employee_id = am.id AND opm.profile_id = p.id AND opm.description = 'PRIMARY' AND opm.office_id = o.id AND o.region_id = r.id AND am.id != 1 AND am.delivery_center_id = (SELECT id FROM delivery_center WHERE location_country='United States') AND ((epm.description = 'AccountManager1' AND epm.employee_id > 1) OR epm.description = 'TAM') AND fc.date = cp.start_date AND cp.start_date >= '{$this->model->from_date}' AND cp.start_date <= '{$this->model->to_date}'",
+      "normalized": "SELECT DISTINCT COUNT(DISTINCT amc.contractor_placement_id) placements, cp.id id, CONCAT(am.firstname, ':value', am.lastname) acctmgr, am.id acctmgr_id, cp.start_date start_date, cu.name customer, cu.id customer_id, amc.compliance_level compliance_level, o.name office, o.id office_id, r.name region, r.id region_id, fc.date day, fc.from_date week, fc.month_start month, fc.quarter_start quarter, fc.year_start year FROM (amcompliance amc, contractor_placement cp, profile p, employee_profile_map epm, employee am, customer cu, office_profile_map opm, office o, finance_calendar_full fc, region r) WHERE amc.contractor_placement_id = cp.id AND cp.customer_id = cu.id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND epm.profile_id = p.id AND epm.employee_id = am.id AND opm.profile_id = p.id AND opm.description = ':value' AND opm.office_id = o.id AND o.region_id = r.id AND am.id != :num AND am.delivery_center_id = (SELECT id FROM delivery_center WHERE location_country=':value') AND ((epm.description = ':value' AND epm.employee_id > :num) OR epm.description = ':value') AND fc.date = cp.start_date AND cp.start_date >= ':value' AND cp.start_date <= ':value'",
+      "tables": [
+        "delivery_center"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_074",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:75",
+      "kind": "select",
+      "raw": "SELECT COUNT(*) value, hs.week_start week, hs.month_start month, hs.quarter_start quarter, hs.year_start year, o.name office, o.id office_id, cu.name customer, r.name region, r.id region_id, cu.id customer_id, CONCAT(am.firstname, ' ', am.lastname) acctmgr, am.id acctmgr_id FROM (headcount_summary hs, office o, region r, customer cu, employee_profile_map epm, employee am) WHERE week_start >= '{$this->model->from_date}' AND week_start <= '{$this->model->to_date}' AND status = 'added' AND hs.office_id = o.id AND hs.customer_id = cu.id AND o.region_id = r.id AND hs.profile_id = epm.profile_id AND epm.employee_id = am.id AND epm.employee_id > 1 AND (epm.description = 'AccountManager1' OR epm.description = 'TAM')",
+      "normalized": "SELECT COUNT(*) value, hs.week_start week, hs.month_start month, hs.quarter_start quarter, hs.year_start year, o.name office, o.id office_id, cu.name customer, r.name region, r.id region_id, cu.id customer_id, CONCAT(am.firstname, ':value', am.lastname) acctmgr, am.id acctmgr_id FROM (headcount_summary hs, office o, region r, customer cu, employee_profile_map epm, employee am) WHERE week_start >= ':value' AND week_start <= ':value' AND status = ':value' AND hs.office_id = o.id AND hs.customer_id = cu.id AND o.region_id = r.id AND hs.profile_id = epm.profile_id AND epm.employee_id = am.id AND epm.employee_id > :num AND (epm.description = ':value' OR epm.description = ':value')",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_075",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:76",
+      "kind": "select",
+      "raw": "SELECT DISTINCT CONCAT(cp.id,' / ', p.id) placement_id, cp.id id, cp.start_date start_date, IF(c.id = 1, '', CONCAT(c.firstname,' ',c.lastname)) contractor, cu.name customer, amc.compliance_level compliance_level, jpt.name jobpriority_type, pt.name position_type, IF(am.id = 1, '', CONCAT(am.firstname,' ',am.lastname)) primary_am, IF(am2.id = 1, '', CONCAT(am2.firstname, ' ', am2.lastname)) secondary_am, o.name office, IF(amc.is_expired = 'Y', IF(e.id = 1, 'Admin', CONCAT(e.firstname,' ',e.lastname)) , IF(e.id = 1, 'Not Checked', CONCAT(e.firstname,' ',e.lastname))) reviewed_by, DATE(amc.review_ts) review, DATE(amc.expired_ts) expired_ts, amc.is_reviewed is_reviewed, IF(amc.is_expired = 'Y', IF(echk.id = 1, 'Admin', CONCAT(echk.firstname,' ',echk.lastname)) , IF(echk.id = 1, 'Not Checked', CONCAT(echk.firstname,' ',echk.lastname))) checked_by, DATE(amc.check_ts) checkdt, amc.is_checked is_checked, amc.is_expired is_expired, amc.checker_notes checker_notes FROM (amcompliance amc, contractor_placement cp, jobreq j, position_type pt, jobpriority jp, jobpriority_type jpt, profile p, employee_profile_map epm, employee am, employee_profile_map epm2, employee am2, contractor c, customer cu, employee e, office_profile_map opm, office o, employee echk, delivery_center dc) WHERE amc.contractor_placement_id = cp.id AND cp.contractor_id = c.id AND cp.jobreq_id = j.id AND j.id = jp.jobreq_id AND j.position_type_id = pt.id AND jp.override_priority_id = jpt.id AND cp.customer_id = cu.id AND amc.reviewed_by_id = e.id AND amc.checked_by_id = echk.id AND p.id = cp.recent_profile_id AND epm.profile_id = p.id AND ((epm.description = 'AccountManager1' AND epm.employee_id > 1) OR epm.description = 'TAM') AND epm2.profile_id = p.id AND ((epm2.description = 'AccountManager2') OR epm.description = 'TAM2') AND epm.employee_id = am.id AND epm2.employee_id = am2.id AND opm.profile_id = p.id AND opm.description = 'PRIMARY' AND opm.office_id = o.id AND cp.customer_id NOT IN (",
+      "normalized": "SELECT DISTINCT CONCAT(cp.id,':value', p.id) placement_id, cp.id id, cp.start_date start_date, IF(c.id = :num, ':value', CONCAT(c.firstname,':value',c.lastname)) contractor, cu.name customer, amc.compliance_level compliance_level, jpt.name jobpriority_type, pt.name position_type, IF(am.id = :num, ':value', CONCAT(am.firstname,':value',am.lastname)) primary_am, IF(am2.id = :num, ':value', CONCAT(am2.firstname, ':value', am2.lastname)) secondary_am, o.name office, IF(amc.is_expired = ':value', IF(e.id = :num, ':value', CONCAT(e.firstname,':value',e.lastname)) , IF(e.id = :num, ':value', CONCAT(e.firstname,':value',e.lastname))) reviewed_by, DATE(amc.review_ts) review, DATE(amc.expired_ts) expired_ts, amc.is_reviewed is_reviewed, IF(amc.is_expired = ':value', IF(echk.id = :num, ':value', CONCAT(echk.firstname,':value',echk.lastname)) , IF(echk.id = :num, ':value', CONCAT(echk.firstname,':value',echk.lastname))) checked_by, DATE(amc.check_ts) checkdt, amc.is_checked is_checked, amc.is_expired is_expired, amc.checker_notes checker_notes FROM (amcompliance amc, contractor_placement cp, jobreq j, position_type pt, jobpriority jp, jobpriority_type jpt, profile p, employee_profile_map epm, employee am, employee_profile_map epm2, employee am2, contractor c, customer cu, employee e, office_profile_map opm, office o, employee echk, delivery_center dc) WHERE amc.contractor_placement_id = cp.id AND cp.contractor_id = c.id AND cp.jobreq_id = j.id AND j.id = jp.jobreq_id AND j.position_type_id = pt.id AND jp.override_priority_id = jpt.id AND cp.customer_id = cu.id AND amc.reviewed_by_id = e.id AND amc.checked_by_id = echk.id AND p.id = cp.recent_profile_id AND epm.profile_id = p.id AND ((epm.description = ':value' AND epm.employee_id > :num) OR epm.description = ':value') AND epm2.profile_id = p.id AND ((epm2.description = ':value') OR epm.description = ':value') AND epm.employee_id = am.id AND epm2.employee_id = am2.id AND opm.profile_id = p.id AND opm.description = ':value' AND opm.office_id = o.id AND cp.customer_id NOT IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_076",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:77",
+      "kind": "select",
+      "raw": "SELECT id, description value FROM hours_type WHERE is_active = 'Y'",
+      "normalized": "SELECT id, description value FROM hours_type WHERE is_active = ':value'",
+      "tables": [
+        "hours_type"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_077",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:78",
+      "kind": "select",
+      "raw": "SELECT id, description value FROM hours_type WHERE is_active = 'Y' AND is_billable = 'Y'",
+      "normalized": "SELECT id, description value FROM hours_type WHERE is_active = ':value' AND is_billable = ':value'",
+      "tables": [
+        "hours_type"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_078",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:79",
+      "kind": "select",
+      "raw": "SELECT id, description value FROM hours_type WHERE id IN(1,2)",
+      "normalized": "SELECT id, description value FROM hours_type WHERE id IN(:num,:num)",
+      "tables": [
+        "hours_type"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_079",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:80",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Issue Date' date, 'Current Status' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(j.issue_date) date, jst.name candidate, '' candidate_id FROM jobreq j, jobreq_status_type jst, account a WHERE j.issue_date >= '{$this->model->from_date} 00:00:00' AND j.issue_date <= '{$this->model->to_date} 23:59:59' AND (j.reference_num LIKE '%{$this->model->jobnumber}%' OR j.reference_opt LIKE '%{$this->model->jobnumber}%') AND j.reference_num != j.reference_opt AND j.jobreq_status_type_id = jst.id AND j.account_id = a.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(j.issue_date) date, jst.name candidate, ':value' candidate_id FROM jobreq j, jobreq_status_type jst, account a WHERE j.issue_date >= ':value' AND j.issue_date <= ':value' AND (j.reference_num LIKE ':value' OR j.reference_opt LIKE ':value') AND j.reference_num != j.reference_opt AND j.jobreq_status_type_id = jst.id AND j.account_id = a.id AND a.customer_id IN (",
+      "tables": [
+        "jobreq"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_080",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:81",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Submitted Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, MAX(DATE(ts)) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM candidate_activity cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, MAX(DATE(ts)) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM candidate_activity cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "tables": [
+        "candidate_activity"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_081",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:82",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Interview Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM candidate_activity cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM candidate_activity cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "tables": [
+        "candidate_activity"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_082",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:83",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Submittal Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "tables": [
+        "candidate_note"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_083",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:84",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Accepted Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "tables": [
+        "candidate_note"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_084",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:85",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id != 8 AND onb.join_status_id NOT IN (2,3) AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id != :num AND onb.join_status_id NOT IN (:num,:num) AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_085",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:86",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Completion Date' ### FILE CHUNK: Controller/PortalCustomerController.php [2/5] chars=20001-40000 date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(oad.completion_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, onb_hr_checklist_details oad, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND oad.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id != 8 -- Process Completed AND onb.join_status_id NOT IN (2,3) -- Joined / Not Joined AND oad.onb_hr_checklist_type_id = $background_check_id AND oad.completion_date != '2000-01-01' AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' ### FILE CHUNK: Controller/PortalCustomerController.php [:num/:num] chars=:num-:num date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(oad.completion_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, onb_hr_checklist_details oad, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND oad.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id != :num -- Process Completed AND onb.join_status_id NOT IN (:num,:num) -- Joined / Not Joined AND oad.onb_hr_checklist_type_id = $background_check_id AND oad.completion_date != ':value' AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_086",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:87",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id IN(2,3) -- Pending Approval/Pending with HR AND onb.workflow_status_id != 8 -- Process Completed AND onb.join_status_id NOT IN (2,3) -- Joined / Not Joined AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id IN(:num,:num) -- Pending Approval/Pending with HR AND onb.workflow_status_id != :num -- Process Completed AND onb.join_status_id NOT IN (:num,:num) -- Joined / Not Joined AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_087",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:88",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = 4 -- In Progress with Consultant/In Progress with Vendor AND onb.workflow_status_id != 8 -- Process Completed AND onb.join_status_id NOT IN (2,3) -- Joined / Not Joined AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = :num -- In Progress with Consultant/In Progress with Vendor AND onb.workflow_status_id != :num -- Process Completed AND onb.join_status_id NOT IN (:num,:num) -- Joined / Not Joined AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_088",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:89",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = 5 -- In Progress with HR AND onb.workflow_status_id != 8 -- Process Completed AND onb.join_status_id NOT IN (2,3) -- Joined / Not Joined AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = :num -- In Progress with HR AND onb.workflow_status_id != :num -- Process Completed AND onb.join_status_id NOT IN (:num,:num) -- Joined / Not Joined AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_089",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:90",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id IN(6,7) -- Cleared for Placement / Placement Pending Approval AND onb.workflow_status_id != 8 -- Process Completed AND onb.join_status_id NOT IN (2,3) -- Joined / Not Joined AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id IN(:num,:num) -- Cleared for Placement / Placement Pending Approval AND onb.workflow_status_id != :num -- Process Completed AND onb.join_status_id NOT IN (:num,:num) -- Joined / Not Joined AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_090",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:91",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = 8 -- Process Completed AND onb.join_status_id IN (3) -- Not Joined AND onb.not_joined_reason_id != 0 -- there should be some reason AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(opd.start_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM onb_demographic onb, onb_project_details opd, jobreq j, candidate can, customer c WHERE onb.jobreq_id = j.id AND can.id = onb.candidate_id AND opd.demographic_id = onb.id AND opd.customer_id = c.id AND onb.workflow_status_id = :num -- Process Completed AND onb.join_status_id IN (:num) -- Not Joined AND onb.not_joined_reason_id != :num -- there should be some reason AND c.id IN (",
+      "tables": [
+        "onb_demographic"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_091",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:92",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Start Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(pp.start_date) date, CONCAT(can.firstname,' ',can.lastname, ' (Perm)') candidate, can.id candidate_id FROM (perm_placement pp, perm_placement_map ppm, jobreq j, candidate can, customer c) WHERE pp.id = ppm.perm_placement_id AND ppm.jobreq_id = j.id AND ppm.candidate_id = can.id AND pp.customer_id = c.id AND pp.is_active = 'Y' AND pp.is_approved = 'Y' AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(pp.start_date) date, CONCAT(can.firstname,':value',can.lastname, ':value') candidate, can.id candidate_id FROM (perm_placement pp, perm_placement_map ppm, jobreq j, candidate can, customer c) WHERE pp.id = ppm.perm_placement_id AND ppm.jobreq_id = j.id AND ppm.candidate_id = can.id AND pp.customer_id = c.id AND pp.is_active = ':value' AND pp.is_approved = ':value' AND c.id IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_092",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:93",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Deactivation Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(cp.deactivation_date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM contractor_placement cp, jobreq j, candidate_onboarding c_onb, candidate can, profile p, customer c WHERE cp.id = p.contractor_placement_id AND p.id = recentProfile(cp.id) AND cp.jobreq_id = j.id AND cp.is_active = 'N' AND cp.deactivation_date != '2000-01-01 00:00:00' AND cp.is_pending = 'N' AND is_ref_only = 'N' AND country_id = 1 AND c_onb.jobreq_id = cp.jobreq_id AND can.id = c_onb.candidate_id AND c.id = cp.customer_id ### FILE CHUNK: Controller/PortalCustomerController.php [3/5] chars=40001-60000 AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(cp.deactivation_date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM contractor_placement cp, jobreq j, candidate_onboarding c_onb, candidate can, profile p, customer c WHERE cp.id = p.contractor_placement_id AND p.id = recentProfile(cp.id) AND cp.jobreq_id = j.id AND cp.is_active = ':value' AND cp.deactivation_date != ':value' AND cp.is_pending = ':value' AND is_ref_only = ':value' AND country_id = :num AND c_onb.jobreq_id = cp.jobreq_id AND can.id = c_onb.candidate_id AND c.id = cp.customer_id ### FILE CHUNK: Controller/PortalCustomerController.php [:num/:num] chars=:num-:num AND c.id IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_093",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:94",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Expected EOP Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(fc.date) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM adhoc_oms_eop_pending aoep, contractor_placement_oms_map cpom, candidate_onboarding c_onb, contractor_placement cp, jobreq j, candidate can, profile p, customer c, finance_calendar_full fc WHERE cpom.oms_id = aoep.WorkOrderID AND cp.id = cpom.contractor_placement_id AND cp.id = p.contractor_placement_id -- AND p.is_active = 'Y' AND cp.is_active = 'Y' AND cp.jobreq_id = j.id AND c_onb.jobreq_id = cp.jobreq_id AND can.id = c_onb.candidate_id AND c.id = cp.customer_id AND c.id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT DISTINCT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(fc.date) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM adhoc_oms_eop_pending aoep, contractor_placement_oms_map cpom, candidate_onboarding c_onb, contractor_placement cp, jobreq j, candidate can, profile p, customer c, finance_calendar_full fc WHERE cpom.oms_id = aoep.WorkOrderID AND cp.id = cpom.contractor_placement_id AND cp.id = p.contractor_placement_id -- AND p.is_active = ':value' AND cp.is_active = ':value' AND cp.jobreq_id = j.id AND c_onb.jobreq_id = cp.jobreq_id AND can.id = c_onb.candidate_id AND c.id = cp.customer_id AND c.id IN (",
+      "tables": [
+        "adhoc_oms_eop_pending"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_094",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:95",
+      "kind": "select",
+      "raw": "SELECT 'Pyramid Job#' internal_job_num, 'Customer Job#' customer_job_num, 'Job Title' job_title, 'Backout Date' date, 'Candidate Name' candidate, '' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,' ',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "normalized": "SELECT ':value' internal_job_num, ':value' customer_job_num, ':value' job_title, ':value' date, ':value' candidate, ':value' candidate_id UNION SELECT j.reference_num internal_job_num, j.reference_opt customer_job_num, j.title job_title, DATE(ts) date, CONCAT(can.firstname,':value',can.lastname) candidate, can.id candidate_id FROM candidate_note cn, jobreq j, account a, candidate can WHERE j.account_id = a.id AND cn.jobreq_id = j.id AND a.customer_id IN (",
+      "tables": [
+        "candidate_note"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_095",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:96",
+      "kind": "select",
+      "raw": "SELECT c.id value FROM (contractor_placement cp, profile p, contractor_placement_demographic_map cdm, onbcandidate c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id IN (3, 4) -- W2H, FT S AND cp.is_active = 'Y' AND cp.country_id = 1 -- US AND cdm.contractor_placement_id = cp.id AND c.demographic_id = cdm.demographic_id AND (c.username = '$username ' OR c.email = '$username') ORDER BY cp.id DESC LIMIT 1",
+      "normalized": "SELECT c.id value FROM (contractor_placement cp, profile p, contractor_placement_demographic_map cdm, onbcandidate c) WHERE p.id = cp.recent_profile_id AND p.employment_type_id IN (:num, :num) -- W2H, FT S AND cp.is_active = ':value' AND cp.country_id = :num -- US AND cdm.contractor_placement_id = cp.id AND c.demographic_id = cdm.demographic_id AND (c.username = ':value' OR c.email = ':value') ORDER BY cp.id DESC LIMIT :num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_096",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:97",
+      "kind": "select",
+      "raw": "SELECT c.id value FROM (contractor_placement cp, contractor c, profile p) WHERE p.id = cp.recent_profile_id AND p.employment_type_id IN (3, 4) -- W2H, FT S AND cp.contractor_id = c.id AND cp.is_active = 'Y' AND cp.country_id = 1 -- US AND (c.username = '$username ' OR c.email = '$username') ORDER BY cp.id DESC LIMIT 1",
+      "normalized": "SELECT c.id value FROM (contractor_placement cp, contractor c, profile p) WHERE p.id = cp.recent_profile_id AND p.employment_type_id IN (:num, :num) -- W2H, FT S AND cp.contractor_id = c.id AND cp.is_active = ':value' AND cp.country_id = :num -- US AND (c.username = ':value' OR c.email = ':value') ORDER BY cp.id DESC LIMIT :num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_097",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:98",
+      "kind": "select",
+      "raw": "SELECT po.id id, po.is_active is_active, po.date date, po.cost cost, po.vendor vendor, po.vendor_contact vendor_contact, po.department department, po.description description, po.recurrence recurrence, po.invoice_num invoice_num, SUBSTRING(po.create_ts,1,10) create_date, po.create_ts create_ts, CONCAT(e.firstname,' ',e.lastname) employee, o.name office FROM po po, office o, employee e WHERE po.office_id = o.id AND po.created_by = e.id",
+      "normalized": "SELECT po.id id, po.is_active is_active, po.date date, po.cost cost, po.vendor vendor, po.vendor_contact vendor_contact, po.department department, po.description description, po.recurrence recurrence, po.invoice_num invoice_num, SUBSTRING(po.create_ts,:num,:num) create_date, po.create_ts create_ts, CONCAT(e.firstname,':value',e.lastname) employee, o.name office FROM po po, office o, employee e WHERE po.office_id = o.id AND po.created_by = e.id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_098",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:99",
+      "kind": "select",
+      "raw": "SELECT prospect.*, CONCAT(firstname,' ',lastname) name FROM prospect WHERE",
+      "normalized": "SELECT prospect.*, CONCAT(firstname,':value',lastname) name FROM prospect WHERE",
+      "tables": [
+        "prospect"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_099",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:100",
+      "kind": "select",
+      "raw": "SELECT COUNT(*) cnt, cat.name activity, CONCAT(e.firstname,' ',e.lastname) employee, IF( {$this->model->grpday}=1,'Day', IF({$this->model->grpwk}=1,'Week', CONCAT( IF(HOUR(TIME(IFNULL(ca.ts,'0{$this->minHr}:00:00'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(ca.ts,'0{$this->minHr}:00:00'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(ca.ts,'0{$this->minHr}:00:00'))), 0), ':00' ) )) hrs FROM (SELECT user_id, candidate_activity_type_id, candidate_id, jobreq_id, MAX(ts) ts FROM candidate_activity WHERE ts >= '{$this->date} 00:00:00' AND ts <= '{$this->to_date} 23:59:59' GROUP BY user_id, candidate_activity_type_id, candidate_id, jobreq_id) ca, employee e, candidate_activity_type cat WHERE ca.user_id = e.id AND ca.candidate_activity_type_id = cat.id AND cat.id IN (2,4,6) AND ca.ts >= '{$this->date} 00:00:00' AND ca.ts <= '{$this->to_date} 23:59:59'",
+      "normalized": "SELECT COUNT(*) cnt, cat.name activity, CONCAT(e.firstname,':value',e.lastname) employee, IF( {$this->model->grpday}=:num,':value', IF({$this->model->grpwk}=:num,':value', CONCAT( IF(HOUR(TIME(IFNULL(ca.ts,':value'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(ca.ts,':value'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(ca.ts,':value'))), :num), ':value' ) )) hrs FROM (SELECT user_id, candidate_activity_type_id, candidate_id, jobreq_id, MAX(ts) ts FROM candidate_activity WHERE ts >= ':value' AND ts <= ':value' GROUP BY user_id, candidate_activity_type_id, candidate_id, jobreq_id) ca, employee e, candidate_activity_type cat WHERE ca.user_id = e.id AND ca.candidate_activity_type_id = cat.id AND cat.id IN (:num,:num,:num) AND ca.ts >= ':value' AND ca.ts <= ':value'",
+      "tables": [
+        "candidate_activity"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_100",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:101",
+      "kind": "select",
+      "raw": "SELECT COUNT(*) cnt, 'Calls Made' activity, CONCAT(e.firstname,' ',e.lastname) employee, IF( {$this->model->grpday}=1,'Day', IF({$this->model->grpwk}=1,'Week', CONCAT( IF(HOUR(TIME(IFNULL(cdr.ts,'0{$this->minHr}:00:00'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(cdr.ts,'0{$this->minHr}:00:00'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(cdr.ts,'0{$this->minHr}:00:00'))), 0), ':00' ) )) hrs FROM cdrout cdr, employee e WHERE cdr.employee_id = e.id AND cdr.ts >= '{$this->date} 00:00:00' AND cdr.ts <= '{$this->to_date} 23:59:59' AND cdr.call_type = 'Out'",
+      "normalized": "SELECT COUNT(*) cnt, ':value' activity, CONCAT(e.firstname,':value',e.lastname) employee, IF( {$this->model->grpday}=:num,':value', IF({$this->model->grpwk}=:num,':value', CONCAT( IF(HOUR(TIME(IFNULL(cdr.ts,':value'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(cdr.ts,':value'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(cdr.ts,':value'))), :num), ':value' ) )) hrs FROM cdrout cdr, employee e WHERE cdr.employee_id = e.id AND cdr.ts >= ':value' AND cdr.ts <= ':value' AND cdr.call_type = ':value'",
+      "tables": [
+        "cdrout"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_101",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:102",
+      "kind": "select",
+      "raw": "SELECT SUM(eiu.minutes) cnt, 'Time on IJP' activity, CONCAT(e.firstname,' ',e.lastname) employee, IF( {$this->model->grpday}=1,'Day', IF({$this->model->grpwk}=1,'Week', CONCAT( IF(HOUR(TIME(IFNULL(eiu.ts,'0{$this->minHr}:00:00'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(eiu.ts,'0{$this->minHr}:00:00'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(eiu.ts,'0{$this->minHr}:00:00'))), 0), ':00' ) )) hrs FROM employee_ijp_usage eiu, employee e WHERE eiu.employee_id = e.id AND eiu.ts >= '{$this->date} 00:00:00' AND eiu.ts <= '{$this->to_date} 23:59:59'",
+      "normalized": "SELECT SUM(eiu.minutes) cnt, ':value' activity, CONCAT(e.firstname,':value',e.lastname) employee, IF( {$this->model->grpday}=:num,':value', IF({$this->model->grpwk}=:num,':value', CONCAT( IF(HOUR(TIME(IFNULL(eiu.ts,':value'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(eiu.ts,':value'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(eiu.ts,':value'))), :num), ':value' ) )) hrs FROM employee_ijp_usage eiu, employee e WHERE eiu.employee_id = e.id AND eiu.ts >= ':value' AND eiu.ts <= ':value'",
+      "tables": [
+        "employee_ijp_usage"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_102",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:103",
+      "kind": "select",
+      "raw": "SELECT SUM(TIMESTAMPDIFF(SECOND, start_ts, end_ts)) cnt, 'Active Time on JD' activity, CONCAT(e.firstname,' ',e.lastname) employee,",
+      "normalized": "SELECT SUM(TIMESTAMPDIFF(SECOND, start_ts, end_ts)) cnt, ':value' activity, CONCAT(e.firstname,':value',e.lastname) employee,",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_103",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:104",
+      "kind": "select",
+      "raw": "SELECT TIMESTAMPDIFF(SECOND, MIN(al.start_ts), MAX(al.end_ts)) cnt, 'Total Time on JD' activity, CONCAT(e.firstname,' ',e.lastname) employee, DATE(start_ts) act_date,",
+      "normalized": "SELECT TIMESTAMPDIFF(SECOND, MIN(al.start_ts), MAX(al.end_ts)) cnt, ':value' activity, CONCAT(e.firstname,':value',e.lastname) employee, DATE(start_ts) act_date,",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_104",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:105",
+      "kind": "select",
+      "raw": "SELECT COUNT(cra.crinteltech_candidate_id) cnt, COUNT(DISTINCT(cra.crinteltech_candidate_id)) unique_cnt, 'Crinteltech Activity' activity, 'Crinteltech Activity Actual' actual_activity, CONCAT(e.firstname,' ',e.lastname) employee, IF({$this->model->grpday}=1,'Day', 'Week') hrs FROM crinteltech_recruiter_activity cra, employee e WHERE cra.recruiter_id = e.id AND cra.activity_date >= '{$this->date}' AND cra.activity_date <= '{$this->to_date}'",
+      "normalized": "SELECT COUNT(cra.crinteltech_candidate_id) cnt, COUNT(DISTINCT(cra.crinteltech_candidate_id)) unique_cnt, ':value' activity, ':value' actual_activity, CONCAT(e.firstname,':value',e.lastname) employee, IF({$this->model->grpday}=:num,':value', ':value') hrs FROM crinteltech_recruiter_activity cra, employee e WHERE cra.recruiter_id = e.id AND cra.activity_date >= ':value' AND cra.activity_date <= ':value'",
+      "tables": [
+        "crinteltech_recruiter_activity"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_105",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:106",
+      "kind": "select",
+      "raw": "SELECT r.name region, r.id region_id, o.name office, o.id office_id, CONCAT(e.firstname,' ',e.lastname) employee, e.id employee_id, CONCAT(mgr.firstname,' ',mgr.lastname) manager, mgr.id manager_id, IF(fn.name IN ('Recruiting'),1,0) is_role, SUM(al.activitycount) cnt, IF( {$this->model->grpday}=1,'Day', IF({$this->model->grpwk}=1,'Week', CONCAT( IF(HOUR(TIME(IFNULL(al.start_ts,'0{$this->minHr}:00:00'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(al.start_ts,'0{$this->minHr}:00:00'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(al.start_ts,'0{$this->minHr}:00:00'))), 0), ':00' ) )) hrs, IFNULL(al.activitytype,'xxx') activity FROM (employee e, employee mgr, employee_manager_map emm, office o, region r, usertype_fn_area_map ufam, fn_area fn) LEFT OUTER JOIN (access_log al) ON (al.user_id = e.id AND al.activitytype IN (",
+      "normalized": "SELECT r.name region, r.id region_id, o.name office, o.id office_id, CONCAT(e.firstname,':value',e.lastname) employee, e.id employee_id, CONCAT(mgr.firstname,':value',mgr.lastname) manager, mgr.id manager_id, IF(fn.name IN (':value'),:num,:num) is_role, SUM(al.activitycount) cnt, IF( {$this->model->grpday}=:num,':value', IF({$this->model->grpwk}=:num,':value', CONCAT( IF(HOUR(TIME(IFNULL(al.start_ts,':value'))) >= {$this->minHr} AND HOUR(TIME(IFNULL(al.start_ts,':value'))) <= {$this->maxHr}, HOUR(TIME(IFNULL(al.start_ts,':value'))), :num), ':value' ) )) hrs, IFNULL(al.activitytype,':value') activity FROM (employee e, employee mgr, employee_manager_map emm, office o, region r, usertype_fn_area_map ufam, fn_area fn) LEFT OUTER JOIN (access_log al) ON (al.user_id = e.id AND al.activitytype IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_106",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:107",
+      "kind": "select",
+      "raw": "SELECT 0 id, \"All\" value UNION SELECT id, location_city value FROM delivery_center WHERE id != 1",
+      "normalized": "SELECT :num id, \"All\" value UNION SELECT id, location_city value FROM delivery_center WHERE id != :num",
+      "tables": [
+        "delivery_center"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_107",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:108",
+      "kind": "select",
+      "raw": "SELECT ed.contractor_placement_id id, ed.user_id eop_user_id, 'Y' eop_can_redeploy, IF(ed.user_id = 0, 'None', CONCAT(e.firstname, ' ', e.lastname)) eop_user, ed.reason_id eop_reason_id, ed.status_id eop_status_id, ed.update_ts eop_update_ts, ed.eop_date eop_date, ed.eop_remarks eop_remarks, est.name eop_status_name, ert.name eop_reason_name FROM (eop_data ed, eop_status_type est, eop_reason_type ert) LEFT OUTER JOIN employee e ON e.id = ed.user_id WHERE ed.update_ts = ( SELECT MAX(ed2.update_ts) FROM eop_data ed2 WHERE ed2.contractor_placement_id = ed.contractor_placement_id ) AND ed.reason_id = ert.id AND ed.status_id = est.id ORDER BY ed.contractor_placement_id",
+      "normalized": "SELECT ed.contractor_placement_id id, ed.user_id eop_user_id, ':value' eop_can_redeploy, IF(ed.user_id = :num, ':value', CONCAT(e.firstname, ':value', e.lastname)) eop_user, ed.reason_id eop_reason_id, ed.status_id eop_status_id, ed.update_ts eop_update_ts, ed.eop_date eop_date, ed.eop_remarks eop_remarks, est.name eop_status_name, ert.name eop_reason_name FROM (eop_data ed, eop_status_type est, eop_reason_type ert) LEFT OUTER JOIN employee e ON e.id = ed.user_id WHERE ed.update_ts = ( SELECT MAX(ed2.update_ts) FROM eop_data ed2 WHERE ed2.contractor_placement_id = ed.contractor_placement_id ) AND ed.reason_id = ert.id AND ed.status_id = est.id ORDER BY ed.contractor_placement_id",
+      "tables": [
+        "employee",
+        "eop_data"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_108",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:109",
+      "kind": "select",
+      "raw": "SELECT ra.contractor_placement_id id, ra.marked_redeploy red_marked_redeploy, ra.has_updated red_has_updated, ra.created_by_id red_created_by_id, ra.duedate red_duedate, CONCAT(e.firstname,' ',e.lastname) red_created_by, ra.create_ts red_create_ts, ra.notes red_notes FROM (redeployment_action ra, employee e) WHERE ra.created_by_id = e.id ORDER BY contractor_placement_id",
+      "normalized": "SELECT ra.contractor_placement_id id, ra.marked_redeploy red_marked_redeploy, ra.has_updated red_has_updated, ra.created_by_id red_created_by_id, ra.duedate red_duedate, CONCAT(e.firstname,':value',e.lastname) red_created_by, ra.create_ts red_create_ts, ra.notes red_notes FROM (redeployment_action ra, employee e) WHERE ra.created_by_id = e.id ORDER BY contractor_placement_id",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_109",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:110",
+      "kind": "select",
+      "raw": "SELECT IF(c.unavailableindef='Y', 'N', IF(availablenow='Y', 'Y', IF(c.unavailableuntildate < '$today', 'Y', 'N'))) available, IF(c.unavailableuntil='Y', DATE_ADD(c.unavailableuntildate,INTERVAL 1 DAY), '') date_available, IF(c.id IS NULL,'N','Y') candidate_mapped, CONCAT(ct.firstname,' ',ct.lastname) candidate, ct.email email, c.email_alt email_alt, c.preferredsalary desired_pay, c.id candidate_id, CONCAT(ct.firstname,' ',ct.lastname) contractor, ct.id contractor_id, ct.email contractor_email, IF(e.id != 1,CONCAT(e.firstname,' ',e.lastname, ' / ',e.email),'(Not Set)') cca, cp.is_active is_placement_active, cp.start_date start_date, IF(cp.is_active = 'Y', cp.end_date, cp.deactivation_date) end_date, cc.name customer, ec.name endclient, CONCAT(a.city,', ', a.state, ' ' , a.zip) work_location, p.hr_payrate_st payrate, bp.hr_billrate_st billrate, ofd.gm gm, o.name pri_office, (SELECT foreign_id FROM candidate_foreign_map WHERE candidate_id = c.id) jd_candidate_id, UPPER(GROUP_CONCAT(DISTINCT s.name SEPARATOR ', ')) skills, cp.id contractor_placement_id, cp.id id, cc.id customer_id, ec.id endclient_id, IF(gtr.partner_status = 'complete', COUNT(DISTINCT gtr.partner_interview_id), 0) total_completed_test, '' test_name, 0 score_percentage, 0 test_taken, '' eop_status, '' eop_reason, '' eop_remarks, ep.eop_workflow_status_id eop_workflow_status_id, ewf.name eop_workflow_status, IF(ed.contractor_placement_id IS NULL, ert.name, '') eop_reason_name, ett.name termination_type, et.name employment_type, v.name visa_status_type FROM ( contractor ct, contractor_placement cp, profile p, billprofile bp, office_profile_map opm, office o, employee_profile_map epm, employee e, address a, customer cc, customer ec, employment_type et ) LEFT OUTER JOIN candidate_placement_map cpm ON cp.id = cpm.contractor_placement_id LEFT OUTER JOIN candidate c ON c.id = cpm.candidate_id LEFT OUTER JOIN gld_test_invite gti ON c.id = gti.candidate_id LEFT OUTER JOIN gld_test_result gtr ON gtr.partner_interv",
+      "normalized": "SELECT IF(c.unavailableindef=':value', ':value', IF(availablenow=':value', ':value', IF(c.unavailableuntildate < ':value', ':value', ':value'))) available, IF(c.unavailableuntil=':value', DATE_ADD(c.unavailableuntildate,INTERVAL :num DAY), ':value') date_available, IF(c.id IS NULL,':value',':value') candidate_mapped, CONCAT(ct.firstname,':value',ct.lastname) candidate, ct.email email, c.email_alt email_alt, c.preferredsalary desired_pay, c.id candidate_id, CONCAT(ct.firstname,':value',ct.lastname) contractor, ct.id contractor_id, ct.email contractor_email, IF(e.id != :num,CONCAT(e.firstname,':value',e.lastname, ':value',e.email),':value') cca, cp.is_active is_placement_active, cp.start_date start_date, IF(cp.is_active = ':value', cp.end_date, cp.deactivation_date) end_date, cc.name customer, ec.name endclient, CONCAT(a.city,':value', a.state, ':value' , a.zip) work_location, p.hr_payrate_st payrate, bp.hr_billrate_st billrate, ofd.gm gm, o.name pri_office, (SELECT foreign_id FROM candidate_foreign_map WHERE candidate_id = c.id) jd_candidate_id, UPPER(GROUP_CONCAT(DISTINCT s.name SEPARATOR ':value')) skills, cp.id contractor_placement_id, cp.id id, cc.id customer_id, ec.id endclient_id, IF(gtr.partner_status = ':value', COUNT(DISTINCT gtr.partner_interview_id), :num) total_completed_test, ':value' test_name, :num score_percentage, :num test_taken, ':value' eop_status, ':value' eop_reason, ':value' eop_remarks, ep.eop_workflow_status_id eop_workflow_status_id, ewf.name eop_workflow_status, IF(ed.contractor_placement_id IS NULL, ert.name, ':value') eop_reason_name, ett.name termination_type, et.name employment_type, v.name visa_status_type FROM ( contractor ct, contractor_placement cp, profile p, billprofile bp, office_profile_map opm, office o, employee_profile_map epm, employee e, address a, customer cc, customer ec, employment_type et ) LEFT OUTER JOIN candidate_placement_map cpm ON cp.id = cpm.contractor_placement_id LEFT OUTER JOIN candidate c ON c.id = cpm.candidate_id LEFT OUTER JOIN gld_test_invite gti ON c.id = gti.candidate_id LEFT OUTER JOIN gld_test_result gtr ON gtr.partner_interv",
+      "tables": [
+        "candidate_foreign_map",
+        "candidate_placement_map",
+        "candidate",
+        "gld_test_invite",
+        "gld_test_result"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_110",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:111",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id id, p.id profile_id, cp.is_active is_active, cp.is_discount_freeze is_discount_freeze, cp.name placement_name, cp.refered_by refered_by,",
+      "normalized": "SELECT DISTINCT cp.id id, p.id profile_id, cp.is_active is_active, cp.is_discount_freeze is_discount_freeze, cp.name placement_name, cp.refered_by refered_by,",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_111",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:112",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id placement_id,CONCAT(c.firstname,' ',c.lastname, ' (', IF(cp.is_active = 'Y', 'Active','In-active'),' / ' , cp.id , ')' ) name, et.name employment_type, c.id id, c.lastwelcomeemail welcomets, cc.name customer, cc.id customer_id, cp.name placement, cp.deactivation_date deactivation_date, cp.is_active active, IF(ccn.id != 1,CONCAT(ccn.firstname,' ',ccn.lastname, ' / ',ccn.email),'(Not Set)') approver, IF(e.id != 1,CONCAT(e.firstname,' ',e.lastname, ' / ',e.email),'(Not Set)') cca, IF((ccn.id != 1),1,0) show_checkbox, cp.is_ts_direct is_ts_direct, cp.start_date start_date FROM (contractor c, contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, customer cc, customer_contact ccn) WHERE cp.contractor_id = c.id AND cp.customer_id = cc.id AND ccn.id = cp.approver_id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND p.employment_type_id != 1 AND cp.is_ref_only = 'N' AND epm.profile_id = p.id AND epm.description = 'CCA' AND epm.employee_id = e.id AND p.employment_type_id = et.id AND c.id != 1",
+      "normalized": "SELECT DISTINCT cp.id placement_id,CONCAT(c.firstname,':value',c.lastname, ':value', IF(cp.is_active = ':value', ':value',':value'),':value' , cp.id , ':value' ) name, et.name employment_type, c.id id, c.lastwelcomeemail welcomets, cc.name customer, cc.id customer_id, cp.name placement, cp.deactivation_date deactivation_date, cp.is_active active, IF(ccn.id != :num,CONCAT(ccn.firstname,':value',ccn.lastname, ':value',ccn.email),':value') approver, IF(e.id != :num,CONCAT(e.firstname,':value',e.lastname, ':value',e.email),':value') cca, IF((ccn.id != :num),:num,:num) show_checkbox, cp.is_ts_direct is_ts_direct, cp.start_date start_date FROM (contractor c, contractor_placement cp, profile p, employee_profile_map epm, employee e, employment_type et, customer cc, customer_contact ccn) WHERE cp.contractor_id = c.id AND cp.customer_id = cc.id AND ccn.id = cp.approver_id AND p.contractor_placement_id = cp.id AND p.id = recentProfile(cp.id) AND p.employment_type_id != :num AND cp.is_ref_only = ':value' AND epm.profile_id = p.id AND epm.description = ':value' AND epm.employee_id = e.id AND p.employment_type_id = et.id AND c.id != :num",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_112",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:113",
+      "kind": "select",
+      "raw": "SELECT DISTINCT cp.id placement_id,CONCAT(c.firstname,' ',c.lastname, ' (', IF(cp.is_active = 'Y', 'Active','In-active'), ')' ) name, c.id id, cc.name customer, cc.id customer_id, cp.name placement, cp.deactivation_date deactivation_date, tpm.vms_foreign_str vms_foreign_str, cp.id placement_id, c.is_active active, cp.start_date start_date FROM (contractor c, contractor_placement cp, customer cc) LEFT OUTER JOIN (ts_portal_map tpm) ON (tpm.contractor_placement_id = cp.id) WHERE cp.contractor_id = c.id AND cp.customer_id = cc.id AND (",
+      "normalized": "SELECT DISTINCT cp.id placement_id,CONCAT(c.firstname,':value',c.lastname, ':value', IF(cp.is_active = ':value', ':value',':value'), ':value' ) name, c.id id, cc.name customer, cc.id customer_id, cp.name placement, cp.deactivation_date deactivation_date, tpm.vms_foreign_str vms_foreign_str, cp.id placement_id, c.is_active active, cp.start_date start_date FROM (contractor c, contractor_placement cp, customer cc) LEFT OUTER JOIN (ts_portal_map tpm) ON (tpm.contractor_placement_id = cp.id) WHERE cp.contractor_id = c.id AND cp.customer_id = cc.id AND (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_113",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:114",
+      "kind": "select",
+      "raw": "SELECT CONCAT(e.firstname, ' ', e.lastname) employee, ccd.month_start month_start, ccd.total_cost total_costs FROM cost_compare_data ccd, employee_oms_map eom, employee e WHERE ccd.alt_empssn = eom.alt_empssn AND eom.employee_id = e.id",
+      "normalized": "SELECT CONCAT(e.firstname, ':value', e.lastname) employee, ccd.month_start month_start, ccd.total_cost total_costs FROM cost_compare_data ccd, employee_oms_map eom, employee e WHERE ccd.alt_empssn = eom.alt_empssn AND eom.employee_id = e.id",
+      "tables": [
+        "cost_compare_data"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_114",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:115",
+      "kind": "select",
+      "raw": "Select One",
+      "normalized": "Select One",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_115",
+          "operation": "select"
+        }
+      ]
+    },
+    {
+      "query_id": "sql:116",
+      "kind": "select",
+      "raw": "SELECT DISTINCT CONCAT(cc.firstname, ' ', cc.lastname) contractor, cp.id id, cp.id placement_id, onb_map.demographic_id demo_id, cc.email email, DATE(cp.deactivation_date) deactivation_date, IF(cp.is_active = 'N', DATEDIFF(CURDATE(), DATE(cp.deactivation_date)), 0) days, c.name customer, et.name emp_type, CONCAT(cca_e.firstname, ' ', cca_e.lastname) cca_name, eqt.id tracking_id, eqt.equipment_issued_by equipment_issued_by, eqt.equipment_returned_type_id is_equipment_returned, ers.name is_equipment_received, 'See Details' see_details, eqt.note note, eqt.return_date return_date FROM (contractor_placement cp, profile p, employee_profile_map epm, contractor cc, customer c, employment_type et, employee cca_e, office_profile_map opm, office_profile_map opm2, equipment_tracking eqt, equipment_received_status ers) LEFT OUTER JOIN contractor_placement_demographic_map onb_map ON (onb_map.contractor_placement_id = cp.id) WHERE cp.recent_profile_id = p.id AND cp.contractor_id = cc.id AND cp.customer_id = c.id AND cp.is_ref_only = 'N' AND p.id = epm.profile_id AND epm.description = 'CCA' AND cca_e.id = epm.employee_id AND et.id = p.employment_type_id AND opm.profile_id = p.id AND opm.description = 'PRIMARY' AND opm2.profile_id = p.id AND opm2.description = 'SECONDARY' AND cp.id = eqt.contractor_placement_id AND ers.id = eqt.equipment_received_status_id AND DATE(cp.start_date) != '2000-01-02' AND cp.is_active = '{$is_active}' AND p.employment_type_id NOT IN (",
+      "normalized": "SELECT DISTINCT CONCAT(cc.firstname, ':value', cc.lastname) contractor, cp.id id, cp.id placement_id, onb_map.demographic_id demo_id, cc.email email, DATE(cp.deactivation_date) deactivation_date, IF(cp.is_active = ':value', DATEDIFF(CURDATE(), DATE(cp.deactivation_date)), :num) days, c.name customer, et.name emp_type, CONCAT(cca_e.firstname, ':value', cca_e.lastname) cca_name, eqt.id tracking_id, eqt.equipment_issued_by equipment_issued_by, eqt.equipment_returned_type_id is_equipment_returned, ers.name is_equipment_received, ':value' see_details, eqt.note note, eqt.return_date return_date FROM (contractor_placement cp, profile p, employee_profile_map epm, contractor cc, customer c, employment_type et, employee cca_e, office_profile_map opm, office_profile_map opm2, equipment_tracking eqt, equipment_received_status ers) LEFT OUTER JOIN contractor_placement_demographic_map onb_map ON (onb_map.contractor_placement_id = cp.id) WHERE cp.recent_profile_id = p.id AND cp.contractor_id = cc.id AND cp.customer_id = c.id AND cp.is_ref_only = ':value' AND p.id = epm.profile_id AND epm.description = ':value' AND cca_e.id = epm.employee_id AND et.id = p.employment_type_id AND opm.profile_id = p.id AND opm.description = ':value' AND opm2.profile_id = p.id AND opm2.description = ':value' AND cp.id = eqt.contractor_placement_id AND ers.id = eqt.equipment_received_status_id AND DATE(cp.start_date) != ':value' AND cp.is_active = ':value' AND p.employment_type_id NOT IN (",
+      "tables": [],
+      "columns": [],
+      "risk_flags": [
+        "string_concatenation",
+        "possible_injection"
+      ],
+      "usage_sites": [
+        {
+          "form": "legacy-form",
+          "procedure": "inferred_sql_flow_116",
+          "operation": "select"
+        }
+      ]
+    }
+  ],
+  "artifact_id": "art_source_query_catalog_68bd72143ad9486c",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
