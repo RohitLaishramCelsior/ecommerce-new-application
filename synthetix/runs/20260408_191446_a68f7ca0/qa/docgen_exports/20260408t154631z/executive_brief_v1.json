@@ -1,0 +1,177 @@
+{
+  "artifact": "executive_brief_v1",
+  "document_title": "VB6 Modernization Analysis Executive Brief",
+  "client_name": "Client",
+  "project_name": "VB6 Modernization Analysis",
+  "generated_at": "2026-04-08",
+  "scope_summary": "The current BRD is grounded in 37,446 LOC across 103 files from the selected PHP scope. Unless the scope lock explicitly states full-repository coverage, this document should not be interpreted as claiming that every legacy workflow was analyzed.",
+  "current_state_summary": "Legacy PHP custom_php_mvc application with 212 routes, 90 controllers, 36 templates, 153 extracted SQL statements, and 0 detected background job workflows.",
+  "target_state_summary": "Deliver a TypeScript-based target architecture with explicit services, route handling, and hardened security/data access behavior.",
+  "readiness": {
+    "qa_status": "WARN",
+    "quality_gate_summary": "12/17 quality gates passing, 3 failing.",
+    "module_count": 90
+  },
+  "counts": {
+    "routes": 212,
+    "modules": 90,
+    "files": 103,
+    "loc": 37446
+  },
+  "scope_filter_applied": false,
+  "later_phase_summary": {
+    "deferred_module_count": 0,
+    "excluded_module_count": 0,
+    "current_phase_scope_summary": {}
+  },
+  "blocking_decisions": [
+    "DEC-SESSION-001: Session behavior must be mapped to the target authentication/session model.",
+    "DEC-BDD-001 resolution plan: capture golden flows for the onboarding, contractor placement, and portal upload workflows before sprint planning is approved.",
+    "DEC-FILEIO-001: Upload and export workflows require target-state storage and validation design.",
+    "DEC-DATA-FUNC-001: Reimplement custom MySQL functions recentProfile(), alignRate() before target-state data access is approved."
+  ],
+  "top_risks": [
+    {
+      "risk_id": "RISK-DOM-001",
+      "domain_name": "Shared Services",
+      "severity": "HIGH",
+      "statement_count": 73,
+      "risky_statement_count": 73,
+      "title": "Shared Services: 73 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration.",
+      "tables": [
+        "ap_approval_team_map",
+        "ap_approval_team",
+        "credential",
+        "currency_exchange",
+        "customer_endclient",
+        "customer_endclient_assignment_map",
+        "assignment_type",
+        "submittal_log"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-002",
+      "domain_name": "Contractor Placement",
+      "severity": "HIGH",
+      "statement_count": 33,
+      "risky_statement_count": 33,
+      "title": "Contractor Placement: 33 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. SQL risk flags detected: string_concatenation.",
+      "tables": [
+        "candidate_onboarding",
+        "jobreq_foreign_map",
+        "jobreq",
+        "states",
+        "office_oms_map",
+        "contractor_placement",
+        "profile",
+        "ts_portal_map"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-005",
+      "domain_name": "ApApprovalTeam",
+      "severity": "MEDIUM",
+      "statement_count": 19,
+      "risky_statement_count": 19,
+      "title": "ApApprovalTeam: 19 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. Complex entity management within controller, potential for data inconsistency.",
+      "tables": [
+        "hours_type",
+        "jobreq",
+        "candidate_activity",
+        "candidate_note",
+        "onb_demographic",
+        "contractor_placement",
+        "adhoc_oms_eop_pending"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-007",
+      "domain_name": "JobListing",
+      "severity": "MEDIUM",
+      "statement_count": 12,
+      "risky_statement_count": 12,
+      "title": "JobListing: 12 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. High coupling with database and OMS system, potential security risks with token handling.",
+      "tables": [
+        "customer_oms_map",
+        "custmaster_customer_map",
+        "country",
+        "onb_assignment_type_map",
+        "onb_onbexterndata_map",
+        "onb_conditional_clearance_hr_checklist",
+        "contractor_placement_demographic_map",
+        "onb_demographic"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-004",
+      "domain_name": "Onboarding",
+      "severity": "HIGH",
+      "statement_count": 5,
+      "risky_statement_count": 5,
+      "title": "Onboarding: 5 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Portal-facing attack surface requires early security remediation. Parameterize queries and preserve domain data contracts before workflow migration.",
+      "tables": [
+        "eop_processed",
+        "states",
+        "eop_workflow_status_type",
+        "equipment_tracking",
+        "onb_office_coapprover_map"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-006",
+      "domain_name": "RecruiterMetrics",
+      "severity": "MEDIUM",
+      "statement_count": 5,
+      "risky_statement_count": 5,
+      "title": "RecruiterMetrics: 5 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation. Complex SQL queries embedded in controller, potential for performance bottlenecks.",
+      "tables": [
+        "delivery_center",
+        "employee",
+        "eop_data",
+        "candidate_foreign_map",
+        "candidate_placement_map",
+        "candidate",
+        "gld_test_invite",
+        "gld_test_result"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-003",
+      "domain_name": "Identity and Access",
+      "severity": "HIGH",
+      "statement_count": 3,
+      "risky_statement_count": 3,
+      "title": "Identity and Access: 3 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Portal-facing attack surface requires early security remediation. Upload/export surface requires validation and storage hardening. Parameterize queries and preserve domain data contracts before workflow migration.",
+      "tables": [
+        "office"
+      ]
+    },
+    {
+      "risk_id": "RISK-DOM-008",
+      "domain_name": "CcaTransfer",
+      "severity": "MEDIUM",
+      "statement_count": 3,
+      "risky_statement_count": 3,
+      "title": "CcaTransfer: 3 SQL statements carry injection-style or unsafe-query signals",
+      "mitigation": "Parameterize queries and preserve domain data contracts before workflow migration. SQL risk flags detected: string_concatenation, possible_unparameterized_query. Session-coupled workflow state may hide business invariants. Direct database access in controller, limited input validation.",
+      "tables": [
+        "states",
+        "timezone_type",
+        "vendormaster_insurance_coverage_type_map",
+        "ccp_request"
+      ]
+    }
+  ],
+  "recommended_phasing": [
+    "Deliver a TypeScript-based target architecture with explicit services, route handling, and hardened security/data access behavior.",
+    "Close blocking decisions and scope-lock assumptions before Build.",
+    "Use domain dossiers for sprint planning and module cards for implementation handoff."
+  ]
+}
