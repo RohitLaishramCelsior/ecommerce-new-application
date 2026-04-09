@@ -1,0 +1,6575 @@
+{
+  "artifact_type": "source_relationship_candidates",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-08T13:46:34.837245+00:00",
+    "run_id": "run_e9d6c0150fc8",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "php_legacy",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "php_legacy",
+      "version": "1.0.0",
+      "confidence": 0.99
+    },
+    "context_reference": {
+      "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+      "branch": "codex-synthetix-ui-v2-claude",
+      "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+      "version_id": "20260408T134527Z_20260408_191446_a68f7ca0",
+      "target_stack": {
+        "language": "TypeScript",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "candidates": [
+    {
+      "relationship_id": "src_rel:1",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "customer_id",
+      "to_table": "com",
+      "to_column": "customer_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:10"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:2",
+      "kind": "soft_fk",
+      "from_table": "j",
+      "from_column": "office_id",
+      "to_table": "oom",
+      "to_column": "office_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:10"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:3",
+      "kind": "soft_fk",
+      "from_table": "ct",
+      "from_column": "id",
+      "to_table": "j",
+      "to_column": "contact_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:10"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:4",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "id",
+      "to_table": "j",
+      "to_column": "account_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:10"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:5",
+      "kind": "soft_fk",
+      "from_table": "ad",
+      "from_column": "id",
+      "to_table": "c",
+      "to_column": "address_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:10"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:6",
+      "kind": "soft_fk",
+      "from_table": "contractor_placement",
+      "from_column": "id",
+      "to_table": "p",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:7",
+      "kind": "soft_fk",
+      "from_table": "contractor_placement",
+      "from_column": "contractor_id",
+      "to_table": "c",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:8",
+      "kind": "soft_fk",
+      "from_table": "b",
+      "from_column": "profile_id",
+      "to_table": "p",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:9",
+      "kind": "soft_fk",
+      "from_table": "bty",
+      "from_column": "id",
+      "to_table": "b",
+      "to_column": "bill_unit_type_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:10",
+      "kind": "soft_fk",
+      "from_table": "pty",
+      "from_column": "id",
+      "to_table": "p",
+      "to_column": "pay_freq_type_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:11",
+      "kind": "soft_fk",
+      "from_table": "cpom",
+      "from_column": "contractor_placement_id",
+      "to_table": "contractor_placement",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:12",
+      "kind": "soft_fk",
+      "from_table": "p",
+      "from_column": "worksite_addr_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:11"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:13",
+      "kind": "soft_fk",
+      "from_table": "ts_portal_map",
+      "from_column": "contractor_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:14",
+      "kind": "soft_fk",
+      "from_table": "ts",
+      "from_column": "mb_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:15",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "weekplan_id",
+      "to_table": "w",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:16",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "recent_profile_id",
+      "to_table": "p",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:17",
+      "kind": "soft_fk",
+      "from_table": "epm",
+      "from_column": "profile_id",
+      "to_table": "p",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:18",
+      "kind": "soft_fk",
+      "from_table": "epm",
+      "from_column": "employee_id",
+      "to_table": "cca",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:17"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:19",
+      "kind": "soft_fk",
+      "from_table": "fs",
+      "from_column": "week_start",
+      "to_table": "finance_calendar",
+      "to_column": "from_date",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:19"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:20",
+      "kind": "soft_fk",
+      "from_table": "fs",
+      "from_column": "office_id",
+      "to_table": "office",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:19"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:21",
+      "kind": "soft_fk",
+      "from_table": "forecasting_growth",
+      "from_column": "office_id",
+      "to_table": "office",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:19"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:22",
+      "kind": "soft_fk",
+      "from_table": "forecasting_hours",
+      "from_column": "month_num",
+      "to_table": "finance_calendar",
+      "to_column": "month_num",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:19"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:23",
+      "kind": "soft_fk",
+      "from_table": "forecasting_hours",
+      "from_column": "year_num",
+      "to_table": "finance_calendar",
+      "to_column": "year_num",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:19"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:24",
+      "kind": "soft_fk",
+      "from_table": "factweekly",
+      "from_column": "ts_weekly_id",
+      "to_table": "tsw",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:23"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:25",
+      "kind": "soft_fk",
+      "from_table": "tsw",
+      "from_column": "id",
+      "to_table": "tdti",
+      "to_column": "ts_weekly_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:26",
+      "kind": "soft_fk",
+      "from_table": "tsw",
+      "from_column": "ts_weekly_status_id",
+      "to_table": "ts",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:27",
+      "kind": "soft_fk",
+      "from_table": "tsw",
+      "from_column": "contractor_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:28",
+      "kind": "soft_fk",
+      "from_table": "cpm",
+      "from_column": "contractor_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:29",
+      "kind": "soft_fk",
+      "from_table": "tsd",
+      "from_column": "ts_weekly_id",
+      "to_table": "tsw",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:30",
+      "kind": "soft_fk",
+      "from_table": "tsd",
+      "from_column": "hours_type_id",
+      "to_table": "ht",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:31",
+      "kind": "soft_fk",
+      "from_table": "tsd",
+      "from_column": "ts_weekly_id",
+      "to_table": "ts_daily",
+      "to_column": "ts_weekly_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:27"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:32",
+      "kind": "soft_fk",
+      "from_table": "credential",
+      "from_column": "created_by",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:33"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:33",
+      "kind": "soft_fk",
+      "from_table": "currency_exchange",
+      "from_column": "currency_type_id",
+      "to_table": "ct",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:35"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:34",
+      "kind": "soft_fk",
+      "from_table": "currency_exchange",
+      "from_column": "week_start",
+      "to_table": "fc",
+      "to_column": "from_date",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:35"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:35",
+      "kind": "soft_fk",
+      "from_table": "customer_endclient",
+      "from_column": "customer_id",
+      "to_table": "c1",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:40"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:36",
+      "kind": "soft_fk",
+      "from_table": "customer_endclient",
+      "from_column": "endclient_id",
+      "to_table": "c2",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:40"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:37",
+      "kind": "soft_fk",
+      "from_table": "customer_endclient_assignment_map",
+      "from_column": "assignment_type_id",
+      "to_table": "at",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:41"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:38",
+      "kind": "soft_fk",
+      "from_table": "delivery_team",
+      "from_column": "team_lead_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:49"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:39",
+      "kind": "soft_fk",
+      "from_table": "e",
+      "from_column": "usertype_id",
+      "to_table": "u",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:49"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:40",
+      "kind": "soft_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "user_id",
+      "to_table": "u",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:51"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:41",
+      "kind": "soft_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "employee_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:51"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:42",
+      "kind": "soft_fk",
+      "from_table": "emst",
+      "from_column": "id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "employee_meeting_notes_subject_type_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:51"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:43",
+      "kind": "soft_fk",
+      "from_table": "eom",
+      "from_column": "office_id",
+      "to_table": "office",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:44",
+      "kind": "soft_fk",
+      "from_table": "eom",
+      "from_column": "employee_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:45",
+      "kind": "soft_fk",
+      "from_table": "office",
+      "from_column": "id",
+      "to_table": "e",
+      "to_column": "office_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:46",
+      "kind": "soft_fk",
+      "from_table": "ct",
+      "from_column": "id",
+      "to_table": "e",
+      "to_column": "company_unit_type_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:47",
+      "kind": "soft_fk",
+      "from_table": "b",
+      "from_column": "id",
+      "to_table": "e",
+      "to_column": "ebuddy_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:48",
+      "kind": "soft_fk",
+      "from_table": "u",
+      "from_column": "id",
+      "to_table": "e",
+      "to_column": "usertype_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:49",
+      "kind": "soft_fk",
+      "from_table": "u",
+      "from_column": "id",
+      "to_table": "ufm",
+      "to_column": "usertype_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:50",
+      "kind": "soft_fk",
+      "from_table": "f",
+      "from_column": "id",
+      "to_table": "ufm",
+      "to_column": "fn_area_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:51",
+      "kind": "soft_fk",
+      "from_table": "efm",
+      "from_column": "employee_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:52",
+      "kind": "soft_fk",
+      "from_table": "e",
+      "from_column": "employee_shift_type_id",
+      "to_table": "est",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:57"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:53",
+      "kind": "soft_fk",
+      "from_table": "employee",
+      "from_column": "id",
+      "to_table": "eomap",
+      "to_column": "employee_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:58"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:54",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "eop_processed",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:55",
+      "kind": "soft_fk",
+      "from_table": "eop_processed",
+      "from_column": "work_state_id",
+      "to_table": "states",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:56",
+      "kind": "soft_fk",
+      "from_table": "eop_processed",
+      "from_column": "eop_workflow_status_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:57",
+      "kind": "soft_fk",
+      "from_table": "states",
+      "from_column": "name",
+      "to_table": "ad",
+      "to_column": "state",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:58",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "equipment_tracking",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:59",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "pf",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:60",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "contractor_id",
+      "to_table": "con",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:61",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "recent_profile_id",
+      "to_table": "pf",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:62",
+      "kind": "soft_fk",
+      "from_table": "pf",
+      "from_column": "worksite_addr_id",
+      "to_table": "ad",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:63",
+      "kind": "soft_fk",
+      "from_table": "pf",
+      "from_column": "employment_type_id",
+      "to_table": "et",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:64",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "customer_id",
+      "to_table": "cust",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:65",
+      "kind": "soft_fk",
+      "from_table": "epm",
+      "from_column": "profile_id",
+      "to_table": "pf",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:66",
+      "kind": "soft_fk",
+      "from_table": "opm",
+      "from_column": "profile_id",
+      "to_table": "pf",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:61"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:67",
+      "kind": "soft_fk",
+      "from_table": "atpt",
+      "from_column": "id",
+      "to_table": "academy_batch",
+      "to_column": "academy_training_program_type_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:65"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:68",
+      "kind": "soft_fk",
+      "from_table": "nam",
+      "from_column": "id",
+      "to_table": "a",
+      "to_column": "nam_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:69",
+      "kind": "soft_fk",
+      "from_table": "atm",
+      "from_column": "account_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:70",
+      "kind": "soft_fk",
+      "from_table": "atm",
+      "from_column": "account_type_id",
+      "to_table": "at",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:71",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "billing_addr_id",
+      "to_table": "adr",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:72",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "customer_id",
+      "to_table": "c",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:73",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "owner_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:74",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "vms_id",
+      "to_table": "vt",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:75",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "msp_id",
+      "to_table": "mt",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:67"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:76",
+      "kind": "soft_fk",
+      "from_table": "c",
+      "from_column": "address_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:69"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:77",
+      "kind": "soft_fk",
+      "from_table": "a",
+      "from_column": "address_type_id",
+      "to_table": "at",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:69"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:78",
+      "kind": "soft_fk",
+      "from_table": "cam",
+      "from_column": "addrmaster_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:71"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:79",
+      "kind": "soft_fk",
+      "from_table": "cam",
+      "from_column": "custmaster_id",
+      "to_table": "c",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:71"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:80",
+      "kind": "soft_fk",
+      "from_table": "amc",
+      "from_column": "contractor_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:81",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "customer_id",
+      "to_table": "cu",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:82",
+      "kind": "soft_fk",
+      "from_table": "p",
+      "from_column": "contractor_placement_id",
+      "to_table": "cp",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:83",
+      "kind": "soft_fk",
+      "from_table": "epm",
+      "from_column": "employee_id",
+      "to_table": "am",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:84",
+      "kind": "soft_fk",
+      "from_table": "opm",
+      "from_column": "profile_id",
+      "to_table": "p",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:85",
+      "kind": "soft_fk",
+      "from_table": "opm",
+      "from_column": "office_id",
+      "to_table": "o",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:86",
+      "kind": "soft_fk",
+      "from_table": "o",
+      "from_column": "region_id",
+      "to_table": "r",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:87",
+      "kind": "soft_fk",
+      "from_table": "fc",
+      "from_column": "date",
+      "to_table": "cp",
+      "to_column": "start_date",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:74"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:88",
+      "kind": "soft_fk",
+      "from_table": "jobreq",
+      "from_column": "jobreq_status_type_id",
+      "to_table": "jst",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:80"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:89",
+      "kind": "soft_fk",
+      "from_table": "jobreq",
+      "from_column": "account_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:80"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:90",
+      "kind": "soft_fk",
+      "from_table": "j",
+      "from_column": "account_id",
+      "to_table": "a",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:81"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:91",
+      "kind": "soft_fk",
+      "from_table": "candidate_activity",
+      "from_column": "jobreq_id",
+      "to_table": "j",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:81"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:92",
+      "kind": "soft_fk",
+      "from_table": "candidate_note",
+      "from_column": "jobreq_id",
+      "to_table": "j",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:83"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:93",
+      "kind": "soft_fk",
+      "from_table": "onb_demographic",
+      "from_column": "jobreq_id",
+      "to_table": "j",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:85"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:94",
+      "kind": "soft_fk",
+      "from_table": "can",
+      "from_column": "id",
+      "to_table": "onb_demographic",
+      "to_column": "candidate_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:85"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:95",
+      "kind": "soft_fk",
+      "from_table": "opd",
+      "from_column": "demographic_id",
+      "to_table": "onb_demographic",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:85"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:96",
+      "kind": "soft_fk",
+      "from_table": "opd",
+      "from_column": "customer_id",
+      "to_table": "c",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:85"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:97",
+      "kind": "soft_fk",
+      "from_table": "oad",
+      "from_column": "demographic_id",
+      "to_table": "onb_demographic",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:86"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:98",
+      "kind": "soft_fk",
+      "from_table": "cpom",
+      "from_column": "oms_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "WorkOrderID",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:99",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "cpom",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:100",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "p",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:101",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "jobreq_id",
+      "to_table": "j",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:102",
+      "kind": "soft_fk",
+      "from_table": "c_onb",
+      "from_column": "jobreq_id",
+      "to_table": "cp",
+      "to_column": "jobreq_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:103",
+      "kind": "soft_fk",
+      "from_table": "can",
+      "from_column": "id",
+      "to_table": "c_onb",
+      "to_column": "candidate_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:104",
+      "kind": "soft_fk",
+      "from_table": "c",
+      "from_column": "id",
+      "to_table": "cp",
+      "to_column": "customer_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:94"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:105",
+      "kind": "soft_fk",
+      "from_table": "ca",
+      "from_column": "user_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:100"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:106",
+      "kind": "soft_fk",
+      "from_table": "ca",
+      "from_column": "candidate_activity_type_id",
+      "to_table": "cat",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:100"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:107",
+      "kind": "soft_fk",
+      "from_table": "cdrout",
+      "from_column": "employee_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:101"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:108",
+      "kind": "soft_fk",
+      "from_table": "employee_ijp_usage",
+      "from_column": "employee_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:102"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:109",
+      "kind": "soft_fk",
+      "from_table": "crinteltech_recruiter_activity",
+      "from_column": "recruiter_id",
+      "to_table": "e",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:105"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:110",
+      "kind": "soft_fk",
+      "from_table": "employee",
+      "from_column": "id",
+      "to_table": "ed",
+      "to_column": "user_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:108"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:111",
+      "kind": "soft_fk",
+      "from_table": "eop_data",
+      "from_column": "contractor_placement_id",
+      "to_table": "ed",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:108"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:112",
+      "kind": "soft_fk",
+      "from_table": "ed",
+      "from_column": "reason_id",
+      "to_table": "ert",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:108"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:113",
+      "kind": "soft_fk",
+      "from_table": "ed",
+      "from_column": "status_id",
+      "to_table": "est",
+      "to_column": "id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:108"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:114",
+      "kind": "soft_fk",
+      "from_table": "cp",
+      "from_column": "id",
+      "to_table": "candidate_placement_map",
+      "to_column": "contractor_placement_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:110"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:115",
+      "kind": "soft_fk",
+      "from_table": "candidate",
+      "from_column": "id",
+      "to_table": "candidate_placement_map",
+      "to_column": "candidate_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:110"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:116",
+      "kind": "soft_fk",
+      "from_table": "candidate",
+      "from_column": "id",
+      "to_table": "gld_test_invite",
+      "to_column": "candidate_id",
+      "confidence": 0.86,
+      "evidence_sql_ids": [
+        "sql:110"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:117",
+      "kind": "soft_fk",
+      "from_table": "cost_compare_data",
+      "from_column": "alt_empssn",
+      "to_table": "eom",
+      "to_column": "alt_empssn",
+      "confidence": 0.68,
+      "evidence_sql_ids": [
+        "sql:114"
+      ]
+    },
+    {
+      "relationship_id": "src_rel:118",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:119",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:120",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:121",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:122",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:123",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:124",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:125",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:126",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:127",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:128",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:129",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:130",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "status_id eop_status_id",
+      "to_table": "eop_data",
+      "to_column": "status_id eop_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:131",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "user_id eop_user_id",
+      "to_table": "eop_data",
+      "to_column": "user_id eop_user_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:132",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "reason_id eop_reason_id",
+      "to_table": "eop_data",
+      "to_column": "reason_id eop_reason_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:133",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "contractor_placement_id id",
+      "to_table": "eop_data",
+      "to_column": "contractor_placement_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:134",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:135",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:136",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:137",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:138",
+      "kind": "candidate_fk",
+      "from_table": "Employee",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:139",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:140",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:141",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:142",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:143",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:144",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:145",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:146",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:147",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:148",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:149",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:150",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:151",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:152",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:153",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:154",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:155",
+      "kind": "candidate_fk",
+      "from_table": "academy_batch",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:156",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:157",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:158",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:159",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:160",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:161",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:162",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:163",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:164",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:165",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:166",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:167",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:168",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:169",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:170",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:171",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:172",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:173",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:174",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:175",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:176",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:177",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:178",
+      "kind": "candidate_fk",
+      "from_table": "account_foreign_map",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:179",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:180",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:181",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:182",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:183",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:184",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:185",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:186",
+      "kind": "candidate_fk",
+      "from_table": "adhoc_oms_eop_pending",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:187",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:188",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:189",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:190",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:191",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:192",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:193",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:194",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:195",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:196",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:197",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:198",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:199",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:200",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:201",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:202",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:203",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:204",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:205",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:206",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:207",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:208",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:209",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:210",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:211",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:212",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:213",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:214",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:215",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:216",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:217",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:218",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:219",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:220",
+      "kind": "candidate_fk",
+      "from_table": "ap_approval_team_map",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:221",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:222",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:223",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:224",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:225",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:226",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:227",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:228",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:229",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:230",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:231",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:232",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:233",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:234",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:235",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:236",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:237",
+      "kind": "candidate_fk",
+      "from_table": "archcontractor",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:238",
+      "kind": "candidate_fk",
+      "from_table": "assignment_type",
+      "from_column": "name id",
+      "to_table": "customer_endclient_assignment_map",
+      "to_column": "name id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:239",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:240",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:241",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:242",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:243",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:244",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:245",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:246",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:247",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:248",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:249",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:250",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:251",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:252",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:253",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:254",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_result",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:255",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:256",
+      "kind": "candidate_fk",
+      "from_table": "candidate",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:257",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:258",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:259",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:260",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:261",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:262",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:263",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:264",
+      "kind": "candidate_fk",
+      "from_table": "candidate_activity",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:265",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:266",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:267",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:268",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id contractor_id",
+      "to_table": "candidate",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:269",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:270",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:271",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:272",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:273",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:274",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:275",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:276",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:277",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:278",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:279",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:280",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_result",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:281",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:282",
+      "kind": "candidate_fk",
+      "from_table": "candidate_foreign_map",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:283",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:284",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:285",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:286",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:287",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:288",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:289",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:290",
+      "kind": "candidate_fk",
+      "from_table": "candidate_note",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:291",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:292",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:293",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:294",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id contractor_id",
+      "to_table": "candidate",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:295",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:296",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:297",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:298",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:299",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:300",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:301",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:302",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:303",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:304",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:305",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:306",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_result",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:307",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:308",
+      "kind": "candidate_fk",
+      "from_table": "candidate_placement_map",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:309",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:310",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:311",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:312",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:313",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:314",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:315",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:316",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:317",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:318",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:319",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:320",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:321",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:322",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:323",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:324",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:325",
+      "kind": "candidate_fk",
+      "from_table": "country",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:326",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:327",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:328",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:329",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:330",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:331",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:332",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:333",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:334",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:335",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:336",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:337",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:338",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:339",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:340",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:341",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:342",
+      "kind": "candidate_fk",
+      "from_table": "credential",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:343",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:344",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:345",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:346",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:347",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:348",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:349",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:350",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:351",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:352",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:353",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:354",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:355",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:356",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:357",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:358",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:359",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:360",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:361",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:362",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:363",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:364",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:365",
+      "kind": "candidate_fk",
+      "from_table": "custmaster_customer_map",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:366",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:367",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:368",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:369",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:370",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:371",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:372",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:373",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:374",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:375",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id customer_id",
+      "to_table": "delivery_center",
+      "to_column": "id customer_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:376",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:377",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:378",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:379",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:380",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:381",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:382",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:383",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:384",
+      "kind": "candidate_fk",
+      "from_table": "customer_endclient_assignment_map",
+      "from_column": "name id",
+      "to_table": "assignment_type",
+      "to_column": "name id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:385",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:386",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:387",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:388",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:389",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:390",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:391",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:392",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:393",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:394",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id customer_id",
+      "to_table": "customer_endclient",
+      "to_column": "id customer_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:395",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:396",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:397",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:398",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:399",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:400",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:401",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:402",
+      "kind": "candidate_fk",
+      "from_table": "delivery_center",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:403",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:404",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:405",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:406",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:407",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:408",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:409",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:410",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:411",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:412",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:413",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:414",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:415",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:416",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:417",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:418",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:419",
+      "kind": "candidate_fk",
+      "from_table": "delivery_team",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:420",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:421",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:422",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:423",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:424",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:425",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:426",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:427",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:428",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:429",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:430",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:431",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:432",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:433",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:434",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:435",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:436",
+      "kind": "candidate_fk",
+      "from_table": "employee_meeting_notes",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:437",
+      "kind": "candidate_fk",
+      "from_table": "eop_data",
+      "from_column": "status_id eop_status_id",
+      "to_table": "Employee",
+      "to_column": "status_id eop_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:438",
+      "kind": "candidate_fk",
+      "from_table": "eop_data",
+      "from_column": "user_id eop_user_id",
+      "to_table": "Employee",
+      "to_column": "user_id eop_user_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:439",
+      "kind": "candidate_fk",
+      "from_table": "eop_data",
+      "from_column": "reason_id eop_reason_id",
+      "to_table": "Employee",
+      "to_column": "reason_id eop_reason_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:440",
+      "kind": "candidate_fk",
+      "from_table": "eop_data",
+      "from_column": "contractor_placement_id id",
+      "to_table": "Employee",
+      "to_column": "contractor_placement_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:441",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:442",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:443",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:444",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:445",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:446",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:447",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:448",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:449",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:450",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:451",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:452",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:453",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:454",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:455",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:456",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "0) termination_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:457",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id client_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:458",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "equipment_tracking",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:459",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "eop_reason_type_id",
+      "to_table": "equipment_tracking",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:460",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "0) termination_id",
+      "to_table": "equipment_tracking",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:461",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id client_id",
+      "to_table": "equipment_tracking",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:462",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:463",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "states",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:464",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "eop_reason_type_id",
+      "to_table": "states",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:465",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "0) termination_id",
+      "to_table": "states",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:466",
+      "kind": "candidate_fk",
+      "from_table": "eop_processed",
+      "from_column": "id client_id",
+      "to_table": "states",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:467",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:468",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:469",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:470",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:471",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:472",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:473",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:474",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:475",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:476",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:477",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:478",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:479",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:480",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_processed",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:481",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_processed",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:482",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "0) termination_id",
+      "to_table": "eop_processed",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:483",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id client_id",
+      "to_table": "eop_processed",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:484",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "equipment_tracking",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:485",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "eop_reason_type_id",
+      "to_table": "equipment_tracking",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:486",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "0) termination_id",
+      "to_table": "equipment_tracking",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:487",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id client_id",
+      "to_table": "equipment_tracking",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:488",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:489",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "states",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:490",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "eop_reason_type_id",
+      "to_table": "states",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:491",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "0) termination_id",
+      "to_table": "states",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:492",
+      "kind": "candidate_fk",
+      "from_table": "eop_workflow_status_type",
+      "from_column": "id client_id",
+      "to_table": "states",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:493",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:494",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:495",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:496",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:497",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:498",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:499",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:500",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:501",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:502",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:503",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:504",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:505",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:506",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_processed",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:507",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_processed",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:508",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "0) termination_id",
+      "to_table": "eop_processed",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:509",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id client_id",
+      "to_table": "eop_processed",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:510",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:511",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:512",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "0) termination_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:513",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id client_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:514",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:515",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "states",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:516",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "eop_reason_type_id",
+      "to_table": "states",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:517",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "0) termination_id",
+      "to_table": "states",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:518",
+      "kind": "candidate_fk",
+      "from_table": "equipment_tracking",
+      "from_column": "id client_id",
+      "to_table": "states",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:519",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:520",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:521",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:522",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id contractor_id",
+      "to_table": "candidate",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:523",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:524",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:525",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:526",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:527",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:528",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:529",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:530",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:531",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:532",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:533",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_result",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:534",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_result",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:535",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:536",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_invite",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:537",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "account_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:538",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:539",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:540",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id contractor_id",
+      "to_table": "candidate",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:541",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:542",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:543",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:544",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:545",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:546",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:547",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:548",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id contractor_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:549",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:550",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:551",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "(select foreign_id",
+      "to_table": "gld_test_invite",
+      "to_column": "(select foreign_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:552",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id contractor_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id contractor_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:553",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:554",
+      "kind": "candidate_fk",
+      "from_table": "gld_test_result",
+      "from_column": "id candidate_id",
+      "to_table": "onb_demographic",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:555",
+      "kind": "candidate_fk",
+      "from_table": "hours_type",
+      "from_column": "id",
+      "to_table": "office",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:556",
+      "kind": "candidate_fk",
+      "from_table": "hours_type",
+      "from_column": "id",
+      "to_table": "ts_portal_map",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:557",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:558",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:559",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:560",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:561",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:562",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:563",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:564",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:565",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:566",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:567",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:568",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:569",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:570",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "eop_processed",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:571",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:572",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "equipment_tracking",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:573",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id",
+      "to_table": "hours_type",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:574",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id id",
+      "to_table": "states",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:575",
+      "kind": "candidate_fk",
+      "from_table": "office",
+      "from_column": "id",
+      "to_table": "ts_portal_map",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:576",
+      "kind": "candidate_fk",
+      "from_table": "office_oms_map",
+      "from_column": "oms_id location_id",
+      "to_table": "states",
+      "to_column": "oms_id location_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:577",
+      "kind": "candidate_fk",
+      "from_table": "office_oms_map",
+      "from_column": "oms_id customer_id",
+      "to_table": "states",
+      "to_column": "oms_id customer_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:578",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "adhoc_oms_eop_pending",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:579",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "candidate",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:580",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_activity",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:581",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_foreign_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:582",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_note",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:583",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "candidate_placement_map",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:584",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_invite",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:585",
+      "kind": "candidate_fk",
+      "from_table": "onb_demographic",
+      "from_column": "id candidate_id",
+      "to_table": "gld_test_result",
+      "to_column": "id candidate_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:586",
+      "kind": "candidate_fk",
+      "from_table": "profile",
+      "from_column": "oms_id oms_id",
+      "to_table": "ts_daily",
+      "to_column": "oms_id oms_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:587",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "Employee",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:588",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "academy_batch",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:589",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "account_foreign_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:590",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "ap_approval_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:591",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "ap_approval_team_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:592",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "archcontractor",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:593",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "country",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:594",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "credential",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:595",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "custmaster_customer_map",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:596",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "customer_endclient",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:597",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "delivery_center",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:598",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "delivery_team",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:599",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "employee_meeting_notes",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:600",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_processed",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:601",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_processed",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:602",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "0) termination_id",
+      "to_table": "eop_processed",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:603",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id client_id",
+      "to_table": "eop_processed",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:604",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:605",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "eop_reason_type_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:606",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "0) termination_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:607",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id client_id",
+      "to_table": "eop_workflow_status_type",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:608",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "5) eop_workflow_status_id",
+      "to_table": "equipment_tracking",
+      "to_column": "5) eop_workflow_status_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:609",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "eop_reason_type_id",
+      "to_table": "equipment_tracking",
+      "to_column": "eop_reason_type_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:610",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "0) termination_id",
+      "to_table": "equipment_tracking",
+      "to_column": "0) termination_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:611",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id client_id",
+      "to_table": "equipment_tracking",
+      "to_column": "id client_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:612",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "id id",
+      "to_table": "office",
+      "to_column": "id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:613",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "oms_id location_id",
+      "to_table": "office_oms_map",
+      "to_column": "oms_id location_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:614",
+      "kind": "candidate_fk",
+      "from_table": "states",
+      "from_column": "oms_id customer_id",
+      "to_table": "office_oms_map",
+      "to_column": "oms_id customer_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:615",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily",
+      "from_column": "oms_id oms_id",
+      "to_table": "profile",
+      "to_column": "oms_id oms_id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:616",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_bill",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:617",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_pay",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:618",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_weekly",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:619",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_bill",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:620",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_bill",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_pay",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:621",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_bill",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_weekly",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:622",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_pay",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:623",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_pay",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_bill",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:624",
+      "kind": "candidate_fk",
+      "from_table": "ts_daily_pay",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_weekly",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:625",
+      "kind": "candidate_fk",
+      "from_table": "ts_portal_map",
+      "from_column": "id",
+      "to_table": "hours_type",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:626",
+      "kind": "candidate_fk",
+      "from_table": "ts_portal_map",
+      "from_column": "id",
+      "to_table": "office",
+      "to_column": "id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:627",
+      "kind": "candidate_fk",
+      "from_table": "ts_weekly",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:628",
+      "kind": "candidate_fk",
+      "from_table": "ts_weekly",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_bill",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    },
+    {
+      "relationship_id": "src_rel:629",
+      "kind": "candidate_fk",
+      "from_table": "ts_weekly",
+      "from_column": "distinct ts_weekly_id id",
+      "to_table": "ts_daily_pay",
+      "to_column": "distinct ts_weekly_id id",
+      "confidence": 0.58,
+      "evidence_sql_ids": []
+    }
+  ],
+  "artifact_id": "art_source_relationship_candidates_5fcd61670f7b435b",
+  "run_id": "run_e9d6c0150fc8",
+  "generated_at": "2026-04-08T13:46:34.837245+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "php_legacy",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "https://github.com/RohitLaishramCelsior/magicbox",
+    "branch": "codex-synthetix-ui-v2-claude",
+    "commit_sha": "704b91c5384d1a9a81ea9d37e228af71e928b45e",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_4a32a1a6971c4129",
+    "canonical_project": "Project 1",
+    "target_stack": {
+      "language": "TypeScript",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
