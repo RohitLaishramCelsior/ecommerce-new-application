@@ -1,0 +1,1169 @@
+erDiagram
+    academy_batch {
+        timestamp certification_date_certification_date
+        varchar_255 description_description
+        timestamp end_date_end_date
+        text id_id
+        boolean is_certification_required_is_certification_required
+        varchar_255 name_agreement_type
+        varchar_255 name_name
+        timestamp start_date_start_date
+    }
+    account {
+    }
+    account_foreign_map {
+        integer SELECT_foreign_id
+        text id_id
+    }
+    address {
+    }
+    adhoc_adp_compare {
+    }
+    adhoc_oms_eop_pending {
+        text column
+        timestamp Candidate_Name_candidate
+        text Customer_Job_customer_job_num
+        timestamp Expected_EOP_Date_date
+        text Job_Title_job_title
+        text Pyramid_Job_internal_job_num
+        timestamp date_date
+        varchar_255 firstname
+        integer id_candidate_id
+        timestamp lastname_candidate
+        text reference_num_internal_job_num
+        text reference_opt_customer_job_num
+        text title_job_title
+    }
+    adhoc_oms_eop_report {
+    }
+    ap_approval_team {
+        integer SELECT_COUNT_employee_id
+        text id_id
+        boolean is_active_is_active
+        varchar_255 name_name
+    }
+    ap_approval_team_map {
+        integer SELECT_COUNT_employee_id
+        text id_id
+        boolean is_active_is_active
+        varchar_255 name_name
+    }
+    archcontractor {
+        text column
+        varchar_255 email_email
+        varchar_255 firstname
+        text id_id
+        varchar_255 lastname_name
+    }
+    assignment_type {
+        varchar_255 description_value
+        varchar_255 name_id
+    }
+    candidate {
+        text column
+        text column
+        text column
+        timestamp date_available
+        integer Not_Set_cca
+        text N
+        text N_available
+        text Y
+        timestamp Y_candidate_mapped
+        integer SELECT_foreign_id
+        text city
+        timestamp deactivation_date_end_date
+        varchar_255 email_contractor_email
+        varchar_255 email_email
+        varchar_255 email
+        varchar_255 email_alt_email_alt
+        timestamp end_date
+        varchar_255 firstname
+        text gm_gm
+        numeric_18_2 hr_billrate_st_billrate
+        numeric_18_2 hr_payrate_st_payrate
+        text id_1
+        integer id_candidate_id
+        integer id_contractor_id
+        text id_IS_NULL
+        integer IF_availablenow_Y
+        text INTERVAL_1_DAY
+        boolean is_active_Y
+        boolean is_active_is_placement_active
+        varchar_255 lastname
+        timestamp lastname_candidate
+        varchar_255 lastname_contractor
+        varchar_255 name_customer
+        varchar_255 name_endclient
+        varchar_255 name_pri_office
+        text preferredsalary_desired_pay
+        timestamp start_date_start_date
+        text state
+        text unavailableindef_Y
+        text unavailableuntil_Y
+        timestamp unavailableuntildate
+        timestamp unavailableuntildate_today
+        text zip_work_location
+    }
+    candidate_activity {
+        text column
+        text n_0_this_minHr_00_00
+        text n_0_this_minHr_00_00_this_maxHr
+        text n_00_hrs
+        timestamp Candidate_Name_candidate
+        text Customer_Job_customer_job_num
+        text Day
+        timestamp Interview_Date_date
+        text Job_Title_job_title
+        text Pyramid_Job_internal_job_num
+        timestamp Submitted_Date_date
+        text Week
+        text n_0
+        integer COUNT_cnt
+        timestamp DATE_ts_date
+        varchar_255 firstname
+        integer id_candidate_id
+        varchar_255 IF_this_model_grpday_1
+        varchar_255 IF_this_model_grpwk_1
+        timestamp lastname_candidate
+        varchar_255 lastname_employee
+        timestamp MAX_DATE_ts_date
+        varchar_255 name_activity
+        text reference_num_internal_job_num
+        text reference_opt_customer_job_num
+        text title_job_title
+        text ts
+    }
+    candidate_foreign_map {
+        text column
+        text column
+        text column
+        timestamp date_available
+        integer Not_Set_cca
+        text N
+        text N_available
+        text Y
+        timestamp Y_candidate_mapped
+        integer SELECT_foreign_id
+        text city
+        timestamp deactivation_date_end_date
+        varchar_255 email_contractor_email
+        varchar_255 email_email
+        varchar_255 email
+        varchar_255 email_alt_email_alt
+        timestamp end_date
+        varchar_255 firstname
+        text gm_gm
+        numeric_18_2 hr_billrate_st_billrate
+        numeric_18_2 hr_payrate_st_payrate
+        text id_1
+        integer id_candidate_id
+        integer id_contractor_id
+        text id_IS_NULL
+        integer IF_availablenow_Y
+        text INTERVAL_1_DAY
+        boolean is_active_Y
+        boolean is_active_is_placement_active
+        varchar_255 lastname
+        timestamp lastname_candidate
+        varchar_255 lastname_contractor
+        varchar_255 name_customer
+        varchar_255 name_endclient
+        varchar_255 name_pri_office
+        text preferredsalary_desired_pay
+        timestamp start_date_start_date
+        text state
+        text unavailableindef_Y
+        text unavailableuntil_Y
+        timestamp unavailableuntildate
+        timestamp unavailableuntildate_today
+        text zip_work_location
+    }
+    candidate_note {
+        text column
+        timestamp Accepted_Date_date
+        timestamp Backout_Date_date
+        timestamp Candidate_Name_candidate
+        text Customer_Job_customer_job_num
+        text Job_Title_job_title
+        text Pyramid_Job_internal_job_num
+        timestamp Submittal_Date_date
+        timestamp DATE_ts_date
+        varchar_255 firstname
+        integer id_candidate_id
+        timestamp lastname_candidate
+        text reference_num_internal_job_num
+        text reference_opt_customer_job_num
+        text title_job_title
+    }
+    candidate_onboarding {
+        text column
+        timestamp candidate_id
+        integer contractor_placement_id_contractor_placement_id
+        timestamp deactivation_date_2000_01_01_00_00_00
+        timestamp deactivation_date_actual_end_date
+        timestamp end_date_est_end_date
+        timestamp IFNULL_SELECT_IF_candidate_id_3
+        integer jobreq_id_jobreq_id
+        text NULL
+        timestamp start_date_start_date
+    }
+    candidate_placement_map {
+        text column
+        text column
+        text column
+        timestamp date_available
+        integer Not_Set_cca
+        text N
+        text N_available
+        text Y
+        timestamp Y_candidate_mapped
+        integer SELECT_foreign_id
+        text city
+        timestamp deactivation_date_end_date
+        varchar_255 email_contractor_email
+        varchar_255 email_email
+        varchar_255 email
+        varchar_255 email_alt_email_alt
+        timestamp end_date
+        varchar_255 firstname
+        text gm_gm
+        numeric_18_2 hr_billrate_st_billrate
+        numeric_18_2 hr_payrate_st_payrate
+        text id_1
+        integer id_candidate_id
+        integer id_contractor_id
+        text id_IS_NULL
+        integer IF_availablenow_Y
+        text INTERVAL_1_DAY
+        boolean is_active_Y
+        boolean is_active_is_placement_active
+        varchar_255 lastname
+        timestamp lastname_candidate
+        varchar_255 lastname_contractor
+        varchar_255 name_customer
+        varchar_255 name_endclient
+        varchar_255 name_pri_office
+        text preferredsalary_desired_pay
+        timestamp start_date_start_date
+        text state
+        text unavailableindef_Y
+        text unavailableuntil_Y
+        timestamp unavailableuntildate
+        timestamp unavailableuntildate_today
+        text zip_work_location
+    }
+    ccp_request {
+    }
+    cdrout {
+        text column
+        text n_0_this_minHr_00_00
+        text n_0_this_minHr_00_00_this_maxHr
+        text n_00_hrs
+        text Calls_Made_activity
+        text Day
+        text Week
+        text n_0
+        integer COUNT_cnt
+        varchar_255 firstname
+        varchar_255 IF_this_model_grpday_1
+        varchar_255 IF_this_model_grpwk_1
+        varchar_255 lastname_employee
+        text ts
+    }
+    contact {
+    }
+    contact_foreign_map {
+    }
+    contractor_placement {
+    }
+    contractor_placement_cost {
+    }
+    contractor_placement_demographic_map {
+    }
+    cost_compare_data {
+        text column
+        varchar_255 firstname
+        varchar_255 lastname_employee
+        text month_start_month_start
+        numeric_18_2 total_cost_total_costs
+    }
+    country {
+        text column
+        varchar_255 SELECT_name
+        text city_city
+        text id_id
+        text st1
+        text st2
+        text st3_st
+        text state_state
+        text zip_zip
+    }
+    credential {
+        text column
+        text additional_url_1_additional_url_1
+        text additional_url_2_additional_url_2
+        text create_ts_create_ts
+        integer created_by_created_by_id
+        varchar_255 email_email
+        varchar_255 firstname
+        text id_id
+        text information_information
+        boolean is_active_is_active
+        timestamp lastname_created_by
+        text login_url_login_url
+        varchar_255 main_phone_main_phone
+        text password_password
+        text site_url_site_url
+        varchar_255 username_username
+        text vendor_contact_vendor_contact
+        varchar_255 vendor_description_vendor_description
+        varchar_255 vendor_name_vendor_name
+    }
+    crinteltech_recruiter_activity {
+        text column
+        text Crinteltech_Activity_Actual_actual_activity
+        text Crinteltech_Activity_activity
+        text Day
+        text Week_hrs
+        timestamp crinteltech_candidate_id_cnt
+        timestamp crinteltech_candidate_id_unique_cnt
+        varchar_255 firstname
+        varchar_255 IF_this_model_grpday_1
+        varchar_255 lastname_employee
+    }
+    currency_exchange {
+        numeric_18_2 AVG_rate_rate
+        varchar_255 description_currency_description
+        timestamp from_date_week
+        integer id_currency_type_id
+        text month_start_month
+        varchar_255 name_currency_name
+        text quarter_start_quarter
+        text symbol_symbol
+        text year_start_year
+    }
+    custmaster_customer_map {
+        integer SELECT_foreign_id
+        text id_id
+    }
+    customer_endclient {
+        text apply_pct_prim_office_apply_pct_prim_office
+        text apply_pct_sec_office_apply_pct_sec_office
+        timestamp change_effective_date_effective_date
+        integer id_customer_id
+        integer id_endclient_id
+        text id_id
+        boolean is_active_is_active
+        boolean is_approved_is_approved
+        varchar_255 name_customer_name
+        varchar_255 name_endclient_name
+    }
+    customer_endclient_assignment_map {
+        text apply_pct_value
+        varchar_255 name_id
+    }
+    customer_oms_map {
+    }
+    delivery_center {
+        text column
+        text n_0_id
+        text All_value_UNION_SELECT_id
+        text compliance_level_compliance_level
+        text contractor_placement_id_placements
+        timestamp date_day
+        varchar_255 firstname
+        timestamp from_date_week
+        integer id_acctmgr_id
+        integer id_customer_id
+        text id_id
+        integer id_office_id
+        integer id_region_id
+        varchar_255 lastname_acctmgr
+        text location_city_value
+        text month_start_month
+        varchar_255 name_customer
+        varchar_255 name_office
+        varchar_255 name_region
+        text quarter_start_quarter
+        timestamp start_date_start_date
+        text year_start_year
+    }
+    delivery_team {
+        text column
+        varchar_255 description_description
+        varchar_255 firstname
+        text id_id
+        boolean is_active_is_active
+        varchar_255 lastname_name
+        varchar_255 name_team
+        varchar_255 name_usertype
+    }
+    Employee {
+        text column
+        integer None
+        text Y_eop_can_redeploy
+        text contractor_placement_id_id
+        varchar_255 description_description
+        integer employee_id_mentor_id
+        text empssn_empssn
+        timestamp eop_date_eop_date
+        text eop_remarks_eop_remarks
+        varchar_255 firstname
+        text id_id
+        boolean is_active_is_active
+        varchar_255 lastname_name
+        varchar_255 lastname_eop_user
+        varchar_255 name_eop_reason_name
+        varchar_255 name_eop_status_name
+        varchar_255 name_team
+        varchar_255 name_usertype
+        integer reason_id_eop_reason_id
+        integer status_id_eop_status_id
+        timestamp update_ts_eop_update_ts
+        text user_id_0
+        integer user_id_eop_user_id
+    }
+    employee_ijp_usage {
+        text column
+        text n_0_this_minHr_00_00
+        text n_0_this_minHr_00_00_this_maxHr
+        text n_00_hrs
+        text Day
+        timestamp Time_on_IJP_activity
+        text Week
+        text n_0
+        varchar_255 firstname
+        varchar_255 IF_this_model_grpday_1
+        varchar_255 IF_this_model_grpwk_1
+        varchar_255 lastname_employee
+        text minutes_cnt
+        text ts
+    }
+    employee_meeting_notes {
+        text column
+        text Show_action
+        text Show_action2
+        timestamp date_date
+        timestamp date_week
+        integer employee_id_employee_id
+        varchar_255 firstname
+        text id_id
+        integer id_manager_id
+        integer id_note_id
+        integer id_subject_id
+        varchar_255 lastname_manager_name
+        varchar_255 lastname_name
+        varchar_255 lastname_user
+        varchar_255 name_office_name
+        varchar_255 name_subject
+        varchar_255 name_usertype_name
+        integer notes_note
+        integer notes_notes
+    }
+    employee_usertype_map {
+    }
+    entity_audit_log {
+        text create_ts
+        timestamp created_by
+        integer entity_id
+        varchar_255 entity_name
+        text UNCOMPRESS_json_text_json_text
+    }
+    eop_data {
+        text column
+        integer None
+        text Y_eop_can_redeploy
+        text contractor_placement_id_id
+        timestamp eop_date_eop_date
+        text eop_remarks_eop_remarks
+        varchar_255 firstname
+        varchar_255 lastname_eop_user
+        varchar_255 name_eop_reason_name
+        varchar_255 name_eop_status_name
+        integer reason_id_eop_reason_id
+        integer status_id_eop_status_id
+        timestamp update_ts_eop_update_ts
+        text user_id_0
+        integer user_id_eop_user_id
+    }
+    eop_processed {
+        text column
+        text Sales_Team
+        varchar_255 eop_status
+        text equipment_issued_by
+        text initiated_on
+        timestamp notice_date
+        timestamp proposed_date
+        text column
+        boolean N_is_extension
+        text NA_AM
+        text NA_BDM
+        text NA_BH
+        text NA_CCA
+        text NA_DM
+        text n_0_day_diff
+        text n_0_eop_state
+        integer n_0_reason_id
+        integer n_0_termination_id
+        integer n_5_eop_workflow_status_id
+        boolean country_id_WHEN_2_THEN_Y_ELSE_N_END_is_canadian
+        text create_ts
+        varchar_255 description
+        varchar_255 description_END_emp_role
+        varchar_255 description_work_state
+        timestamp end_date_end_date
+        integer eop_reason_type_id
+        integer eop_termination_type_id
+        integer eop_workflow_status_id
+        text equipment_issued_by
+        varchar_255 firstname
+        integer id_client_id
+        text id_id
+        boolean IFNULL_is_extension
+        timestamp IFNULL_notice_date
+        timestamp IFNULL_proposed_date
+        boolean is_academy_is_academy
+        varchar_255 lastname_name
+        varchar_255 lastname_employee
+        varchar_255 name
+        varchar_255 name_contract_type
+        varchar_255 name_customer_name
+        varchar_255 name_visa_status_type
+        integer visa_status_type_id_visa_status_type_id
+    }
+    eop_reason_type {
+    }
+    eop_termination_type {
+    }
+    eop_workflow_status_type {
+        text column
+        text Sales_Team
+        varchar_255 eop_status
+        text equipment_issued_by
+        text initiated_on
+        timestamp notice_date
+        timestamp proposed_date
+        text column
+        boolean N_is_extension
+        text NA_AM
+        text NA_BDM
+        text NA_BH
+        text NA_CCA
+        text NA_DM
+        text n_0_day_diff
+        text n_0_eop_state
+        integer n_0_reason_id
+        integer n_0_termination_id
+        integer n_5_eop_workflow_status_id
+        boolean country_id_WHEN_2_THEN_Y_ELSE_N_END_is_canadian
+        text create_ts
+        varchar_255 description
+        varchar_255 description_END_emp_role
+        varchar_255 description_work_state
+        timestamp end_date_end_date
+        integer eop_reason_type_id
+        integer eop_termination_type_id
+        integer eop_workflow_status_id
+        text equipment_issued_by
+        varchar_255 firstname
+        integer id_client_id
+        text id_id
+        boolean IFNULL_is_extension
+        timestamp IFNULL_notice_date
+        timestamp IFNULL_proposed_date
+        boolean is_academy_is_academy
+        varchar_255 lastname_name
+        varchar_255 lastname_employee
+        varchar_255 name
+        varchar_255 name_contract_type
+        varchar_255 name_customer_name
+        varchar_255 name_visa_status_type
+        integer visa_status_type_id_visa_status_type_id
+    }
+    equipment_tracking {
+        text column
+        text Sales_Team
+        varchar_255 eop_status
+        text equipment_issued_by
+        text initiated_on
+        timestamp notice_date
+        timestamp proposed_date
+        text column
+        boolean N_is_extension
+        text NA_AM
+        text NA_BDM
+        text NA_BH
+        text NA_CCA
+        text NA_DM
+        text n_0_day_diff
+        text n_0_eop_state
+        integer n_0_reason_id
+        integer n_0_termination_id
+        integer n_5_eop_workflow_status_id
+        boolean country_id_WHEN_2_THEN_Y_ELSE_N_END_is_canadian
+        text create_ts
+        varchar_255 description
+        varchar_255 description_END_emp_role
+        varchar_255 description_work_state
+        timestamp end_date_end_date
+        integer eop_reason_type_id
+        integer eop_termination_type_id
+        integer eop_workflow_status_id
+        text equipment_issued_by
+        varchar_255 firstname
+        integer id_client_id
+        text id_id
+        boolean IFNULL_is_extension
+        timestamp IFNULL_notice_date
+        timestamp IFNULL_proposed_date
+        boolean is_academy_is_academy
+        varchar_255 lastname_name
+        varchar_255 lastname_employee
+        varchar_255 name
+        varchar_255 name_contract_type
+        varchar_255 name_customer_name
+        varchar_255 name_visa_status_type
+        integer visa_status_type_id_visa_status_type_id
+    }
+    factweekly {
+        text n_00
+        text n_2_gm
+        integer contractor_placement_id_placement_id
+        text hours_hours
+        varchar_255 name_status
+        text spread
+        text week_start_internal_week_start
+    }
+    faq {
+    }
+    finance_calendar {
+        varchar_255 m_month_name
+        text n_2_GM
+        text month_num
+        varchar_255 name_office
+        text ROUND_SUM_spread
+    }
+    forecasting_growth {
+        varchar_255 m_month_name
+        text n_2_GM
+        text month_num
+        varchar_255 name_office
+        text ROUND_SUM_spread
+    }
+    forecasting_hours {
+        varchar_255 m_month_name
+        text n_2_GM
+        text month_num
+        varchar_255 name_office
+        text ROUND_SUM_spread
+    }
+    gld_test_invite {
+        text column
+        text column
+        text column
+        timestamp date_available
+        integer Not_Set_cca
+        text N
+        text N_available
+        text Y
+        timestamp Y_candidate_mapped
+        integer SELECT_foreign_id
+        text city
+        timestamp deactivation_date_end_date
+        varchar_255 email_contractor_email
+        varchar_255 email_email
+        varchar_255 email
+        varchar_255 email_alt_email_alt
+        timestamp end_date
+        varchar_255 firstname
+        text gm_gm
+        numeric_18_2 hr_billrate_st_billrate
+        numeric_18_2 hr_payrate_st_payrate
+        text id_1
+        integer id_candidate_id
+        integer id_contractor_id
+        text id_IS_NULL
+        integer IF_availablenow_Y
+        text INTERVAL_1_DAY
+        boolean is_active_Y
+        boolean is_active_is_placement_active
+        varchar_255 lastname
+        timestamp lastname_candidate
+        varchar_255 lastname_contractor
+        varchar_255 name_customer
+        varchar_255 name_endclient
+        varchar_255 name_pri_office
+        text preferredsalary_desired_pay
+        timestamp start_date_start_date
+        text state
+        text unavailableindef_Y
+        text unavailableuntil_Y
+        timestamp unavailableuntildate
+        timestamp unavailableuntildate_today
+        text zip_work_location
+    }
+    gld_test_result {
+        text column
+        text column
+        text column
+        timestamp date_available
+        integer Not_Set_cca
+        text N
+        text N_available
+        text Y
+        timestamp Y_candidate_mapped
+        integer SELECT_foreign_id
+        text city
+        timestamp deactivation_date_end_date
+        varchar_255 email_contractor_email
+        varchar_255 email_email
+        varchar_255 email
+        varchar_255 email_alt_email_alt
+        timestamp end_date
+        varchar_255 firstname
+        text gm_gm
+        numeric_18_2 hr_billrate_st_billrate
+        numeric_18_2 hr_payrate_st_payrate
+        text id_1
+        integer id_candidate_id
+        integer id_contractor_id
+        text id_IS_NULL
+        integer IF_availablenow_Y
+        text INTERVAL_1_DAY
+        boolean is_active_Y
+        boolean is_active_is_placement_active
+        varchar_255 lastname
+        timestamp lastname_candidate
+        varchar_255 lastname_contractor
+        varchar_255 name_customer
+        varchar_255 name_endclient
+        varchar_255 name_pri_office
+        text preferredsalary_desired_pay
+        timestamp start_date_start_date
+        text state
+        text unavailableindef_Y
+        text unavailableuntil_Y
+        timestamp unavailableuntildate
+        timestamp unavailableuntildate_today
+        text zip_work_location
+    }
+    gp_compare {
+    }
+    hours_type {
+        varchar_255 description_value
+        integer id
+    }
+    hrs_worked_type {
+    }
+    jobreq {
+        integer candidate_id
+        timestamp Current_Status_candidate
+        text Customer_Job_customer_job_num
+        timestamp Issue_Date_date
+        text Job_Title_job_title
+        text Pyramid_Job_internal_job_num
+        timestamp issue_date_date
+        timestamp name_candidate
+        text reference_num_internal_job_num
+        text reference_num_value
+        text reference_opt_customer_job_num
+        text title_job_title
+    }
+    jobreq_foreign_map {
+        text jobreq_id_value
+    }
+    office {
+        text column
+        text column
+        varchar_255 m_month_name
+        text column
+        text blank
+        integer Not_Assigned
+        text Y_becomeuser
+        text n_2_GM
+        text alt_empssn_NewEmployeeID
+        integer code_seniority_brief
+        text ebuddy_id_1
+        integer ebuddy_id_buddy_id
+        varchar_255 email_email
+        text empssn_EmployeeID
+        varchar_255 firstname
+        text foreign_id_JDID
+        integer id
+        text id_id
+        integer id_usertype_id
+        boolean is_active_active
+        boolean is_active_uactive
+        boolean is_ebuddy_is_ebuddy
+        boolean is_furlough_furlough
+        boolean is_wfh_wfh
+        varchar_255 lastname_name
+        varchar_255 lastname_buddy_name
+        text location_city_location_city
+        integer location_country_location_country
+        timestamp mentor_deactivation_date_mentor_deactivation_date
+        timestamp mentor_effective_date_mentor_effective_date
+        integer mentor_id_mentor_id
+        text month_num
+        text N_checked
+        varchar_255 name
+        varchar_255 name_company_unit_type
+        varchar_255 name_office
+        varchar_255 name_SEPARATOR
+        varchar_255 name_SEPARATOR_area
+        varchar_255 name_usertype
+        varchar_255 name
+        text oms_id_PcoreID
+        text omstx_id_OmsID
+        text ROUND_SUM_spread
+    }
+    office_oms_map {
+        varchar_255 SELECT_DISTINCT_description
+        timestamp city_candidate_city
+        varchar_255 email_email
+        varchar_255 firstname_first_name
+        varchar_255 lastname_last_name
+        integer oms_id_customer_id
+        integer oms_id_location_id
+        varchar_255 phone_c
+        varchar_255 phone_c_contact_phone
+        varchar_255 phone_c_phone
+        varchar_255 phone_h
+        varchar_255 phone_h
+        varchar_255 phone_h
+        varchar_255 phone_o
+        varchar_255 phone_o
+        varchar_255 phone_o
+        text reference_num_jd_reference_num
+        timestamp st1_candidate_street
+    }
+    onb_assignment_type_map {
+    }
+    onb_conditional_clearance_hr_checklist {
+    }
+    onb_demographic {
+        text column
+        timestamp Candidate_Name_candidate
+        text Customer_Job_customer_job_num
+        text Job_Title_job_title
+        text Pyramid_Job_internal_job_num
+        timestamp Start_Date_date
+        timestamp completion_date_date
+        varchar_255 firstname
+        integer id_candidate_id
+        timestamp lastname_candidate
+        timestamp php_2_5_chars_20001_40000_date
+        text reference_num_internal_job_num
+        text reference_opt_customer_job_num
+        timestamp start_date_date
+        text title_job_title
+    }
+    onb_finance_details {
+    }
+    onb_office_coapprover_map {
+    }
+    onb_onbexterndata_map {
+    }
+    onb_project_details {
+    }
+    onb_workflow_status_history {
+    }
+    over_time_eligibility_type {
+    }
+    po {
+    }
+    profile {
+        text burden_burden
+        text burden_sick_burden_sick
+        integer comp_code_comp_code
+        text day_per_diem_day_per_diem
+        timestamp deactivation_date_deactivation_date
+        timestamp end_date_end_date
+        text file_num_file_num
+        numeric_18_2 hr_billrate_ot_billrate_ot
+        numeric_18_2 hr_billrate_st_billrate_st
+        text hr_burden_hr_burden
+        text hr_burden_ot_hr_burden_ot
+        numeric_18_2 hr_payrate_ot_payrate_ot
+        numeric_18_2 hr_payrate_st_payrate_st
+        text hr_per_diem_hr_per_diem
+        integer id_placement_id
+        integer id_profile_id
+        boolean is_nonexempt_is_nonexempt
+        boolean is_sow_is_sow
+        varchar_255 name_bill_freq_type_name
+        varchar_255 name_name
+        varchar_255 name_pay_freq_type_name
+        integer oms_id_oms_id
+        integer pct_discount_pct_discount
+        integer pct_discount_inv_pct_discount_inv
+        integer pct_discount_vol_pct_discount_vol
+        integer pct_vendor_discount_pct_vendor_discount
+        text pct_vms_fee_pct_vms_fee
+        text referal_fee_referal_fee
+        timestamp start_date_start_date
+        text state_state
+        text valid_from_valid_from
+        text valid_to_valid_to
+        text waiver_fee_waiver_fee
+    }
+    prospect {
+        text column
+        varchar_255 CONCAT_firstname
+        varchar_255 lastname_name
+    }
+    skills {
+    }
+    states {
+        text column
+        text Sales_Team
+        varchar_255 eop_status
+        text equipment_issued_by
+        text initiated_on
+        timestamp notice_date
+        timestamp proposed_date
+        text column
+        boolean N_is_extension
+        text NA_AM
+        text NA_BDM
+        text NA_BH
+        text NA_CCA
+        text NA_DM
+        varchar_255 SELECT_DISTINCT_description
+        text n_0_day_diff
+        text n_0_eop_state
+        integer n_0_reason_id
+        integer n_0_termination_id
+        integer n_5_eop_workflow_status_id
+        timestamp city_candidate_city
+        boolean country_id_WHEN_2_THEN_Y_ELSE_N_END_is_canadian
+        text create_ts
+        varchar_255 description
+        varchar_255 description_END_emp_role
+        varchar_255 description_work_state
+        varchar_255 email_email
+        timestamp end_date_end_date
+        integer eop_reason_type_id
+        integer eop_termination_type_id
+        integer eop_workflow_status_id
+        text equipment_issued_by
+        varchar_255 firstname
+        varchar_255 firstname_first_name
+        integer id_client_id
+        text id_id
+        boolean IFNULL_is_extension
+        timestamp IFNULL_notice_date
+        timestamp IFNULL_proposed_date
+        boolean is_academy_is_academy
+        varchar_255 lastname_last_name
+        varchar_255 lastname_name
+        varchar_255 lastname_employee
+        varchar_255 name
+        varchar_255 name_contract_type
+        varchar_255 name_customer_name
+        varchar_255 name_visa_status_type
+        integer oms_id_customer_id
+        integer oms_id_location_id
+        varchar_255 phone_c
+        varchar_255 phone_c_contact_phone
+        varchar_255 phone_c_phone
+        varchar_255 phone_h
+        varchar_255 phone_h
+        varchar_255 phone_h
+        varchar_255 phone_o
+        varchar_255 phone_o
+        varchar_255 phone_o
+        text reference_num_jd_reference_num
+        timestamp st1_candidate_street
+        integer visa_status_type_id_visa_status_type_id
+    }
+    submittal_log {
+        integer team_lead_id
+        varchar_255 team_name
+    }
+    timezone_type {
+    }
+    tmp_distinct_ts_id {
+    }
+    ts_daily {
+        text Payable_Only
+        timestamp date_date
+        text distinct_ts_weekly_id_id
+        timestamp hours_time_worked
+        boolean is_payable_only_Y
+        timestamp last_updated_last_updated
+        text modified_ts_modified_ts
+        varchar_255 name_hour_type
+        varchar_255 name_status
+        integer oms_id_oms_id
+        timestamp received_date_received_date
+        text week_start_internal_week_start
+    }
+    ts_daily_bill {
+        text distinct_ts_weekly_id_id
+    }
+    ts_daily_pay {
+        text distinct_ts_weekly_id_id
+    }
+    ts_portal_map {
+        text column
+        text N
+        text Y
+        text n_0
+        text n_0_60
+        text n_2
+        text com
+        timestamp date_0
+        timestamp date_1
+        timestamp date_2
+        timestamp date_3
+        timestamp date_4
+        timestamp date_5
+        timestamp date_6
+        timestamp deactivation_date
+        varchar_255 email
+        integer id
+        text id_1
+        text INTERVAL_6_DAY
+        boolean is_active
+        boolean is_active_N
+        text modified_ts
+        varchar_255 name
+        varchar_255 project_name
+        timestamp start_date
+        timestamp start_date
+        numeric_18_2 total_minutes
+        text vms_foreign_str
+        text vms_foreign_str
+        text vms_secret_key
+        text vms_secret_key
+        text week_start
+    }
+    ts_weekly {
+        text distinct_ts_weekly_id_id
+    }
+    usertype_operation_map {
+    }
+    vContractorSkill {
+    }
+    vendormaster_insurance_coverage_type_map {
+    }
+    visa_status_type {
+    }
+    a ||--o{ com : "customer_id -> customer_id"
+    j ||--o{ oom : "office_id -> office_id"
+    ct ||--o{ j : "id -> contact_id"
+    a ||--o{ j : "id -> account_id"
+    ad ||--o{ c : "id -> address_id"
+    contractor_placement ||--o{ p : "id -> contractor_placement_id"
+    contractor_placement ||--o{ c : "contractor_id -> id"
+    b ||--o{ p : "profile_id -> id"
+    bty ||--o{ b : "id -> bill_unit_type_id"
+    pty ||--o{ p : "id -> pay_freq_type_id"
+    cpom ||--o{ contractor_placement : "contractor_placement_id -> id"
+    p ||--o{ a : "worksite_addr_id -> id"
+    ts_portal_map ||--o{ cp : "contractor_placement_id -> id"
+    ts ||--o{ cp : "mb_placement_id -> id"
+    cp ||--o{ w : "weekplan_id -> id"
+    cp ||--o{ p : "recent_profile_id -> id"
+    epm ||--o{ p : "profile_id -> id"
+    epm ||--o{ cca : "employee_id -> id"
+    fs ||--o{ finance_calendar : "week_start -> from_date"
+    fs ||--o{ office : "office_id -> id"
+    forecasting_growth ||--o{ office : "office_id -> id"
+    forecasting_hours ||--o{ finance_calendar : "month_num -> month_num"
+    forecasting_hours ||--o{ finance_calendar : "year_num -> year_num"
+    factweekly ||--o{ tsw : "ts_weekly_id -> id"
+    tsw ||--o{ tdti : "id -> ts_weekly_id"
+    tsw ||--o{ ts : "ts_weekly_status_id -> id"
+    tsw ||--o{ cp : "contractor_placement_id -> id"
+    cpm ||--o{ cp : "contractor_placement_id -> id"
+    tsd ||--o{ tsw : "ts_weekly_id -> id"
+    tsd ||--o{ ht : "hours_type_id -> id"
+    tsd ||--o{ ts_daily : "ts_weekly_id -> ts_weekly_id"
+    credential ||--o{ e : "created_by -> id"
+    currency_exchange ||--o{ ct : "currency_type_id -> id"
+    currency_exchange ||--o{ fc : "week_start -> from_date"
+    customer_endclient ||--o{ c1 : "customer_id -> id"
+    customer_endclient ||--o{ c2 : "endclient_id -> id"
+    customer_endclient_assignment_map ||--o{ at : "assignment_type_id -> id"
+    delivery_team ||--o{ e : "team_lead_id -> id"
+    e ||--o{ u : "usertype_id -> id"
+    employee_meeting_notes ||--o{ u : "user_id -> id"
+    employee_meeting_notes ||--o{ e : "employee_id -> id"
+    emst ||--o{ employee_meeting_notes : "id -> employee_meeting_notes_subject_type_id"
+    eom ||--o{ office : "office_id -> id"
+    eom ||--o{ e : "employee_id -> id"
+    office ||--o{ e : "id -> office_id"
+    ct ||--o{ e : "id -> company_unit_type_id"
+    b ||--o{ e : "id -> ebuddy_id"
+    u ||--o{ e : "id -> usertype_id"
+    u ||--o{ ufm : "id -> usertype_id"
+    f ||--o{ ufm : "id -> fn_area_id"
+    efm ||--o{ e : "employee_id -> id"
+    e ||--o{ est : "employee_shift_type_id -> id"
+    employee ||--o{ eomap : "id -> employee_id"
+    cp ||--o{ eop_processed : "id -> contractor_placement_id"
+    eop_processed ||--o{ states : "work_state_id -> id"
+    eop_processed ||--o{ eop_workflow_status_type : "eop_workflow_status_id -> id"
+    states ||--o{ ad : "name -> state"
+    cp ||--o{ equipment_tracking : "id -> contractor_placement_id"
+    cp ||--o{ pf : "id -> contractor_placement_id"
+    cp ||--o{ con : "contractor_id -> id"
+    cp ||--o{ pf : "recent_profile_id -> id"
+    pf ||--o{ ad : "worksite_addr_id -> id"
+    pf ||--o{ et : "employment_type_id -> id"
+    cp ||--o{ cust : "customer_id -> id"
+    epm ||--o{ pf : "profile_id -> id"
+    opm ||--o{ pf : "profile_id -> id"
+    atpt ||--o{ academy_batch : "id -> academy_training_program_type_id"
+    nam ||--o{ a : "id -> nam_id"
+    atm ||--o{ a : "account_id -> id"
+    atm ||--o{ at : "account_type_id -> id"
+    a ||--o{ adr : "billing_addr_id -> id"
+    a ||--o{ c : "customer_id -> id"
+    a ||--o{ e : "owner_id -> id"
+    a ||--o{ vt : "vms_id -> id"
+    a ||--o{ mt : "msp_id -> id"
+    c ||--o{ a : "address_id -> id"
+    a ||--o{ at : "address_type_id -> id"
+    cam ||--o{ a : "addrmaster_id -> id"
+    cam ||--o{ c : "custmaster_id -> id"
+    amc ||--o{ cp : "contractor_placement_id -> id"
+    cp ||--o{ cu : "customer_id -> id"
+    p ||--o{ cp : "contractor_placement_id -> id"
+    epm ||--o{ am : "employee_id -> id"
+    opm ||--o{ p : "profile_id -> id"
+    opm ||--o{ o : "office_id -> id"
+    o ||--o{ r : "region_id -> id"
+    fc ||--o{ cp : "date -> start_date"
+    jobreq ||--o{ jst : "jobreq_status_type_id -> id"
+    jobreq ||--o{ a : "account_id -> id"
+    j ||--o{ a : "account_id -> id"
+    candidate_activity ||--o{ j : "jobreq_id -> id"
+    candidate_note ||--o{ j : "jobreq_id -> id"
+    onb_demographic ||--o{ j : "jobreq_id -> id"
+    can ||--o{ onb_demographic : "id -> candidate_id"
+    opd ||--o{ onb_demographic : "demographic_id -> id"
+    opd ||--o{ c : "customer_id -> id"
+    oad ||--o{ onb_demographic : "demographic_id -> id"
+    cpom ||--o{ adhoc_oms_eop_pending : "oms_id -> WorkOrderID"
+    cp ||--o{ cpom : "id -> contractor_placement_id"
+    cp ||--o{ p : "id -> contractor_placement_id"
+    cp ||--o{ j : "jobreq_id -> id"
+    c_onb ||--o{ cp : "jobreq_id -> jobreq_id"
+    can ||--o{ c_onb : "id -> candidate_id"
+    c ||--o{ cp : "id -> customer_id"
+    ca ||--o{ e : "user_id -> id"
+    ca ||--o{ cat : "candidate_activity_type_id -> id"
+    cdrout ||--o{ e : "employee_id -> id"
+    employee_ijp_usage ||--o{ e : "employee_id -> id"
+    crinteltech_recruiter_activity ||--o{ e : "recruiter_id -> id"
+    employee ||--o{ ed : "id -> user_id"
+    eop_data ||--o{ ed : "contractor_placement_id -> contractor_placement_id"
+    ed ||--o{ ert : "reason_id -> id"
+    ed ||--o{ est : "status_id -> id"
+    cp ||--o{ candidate_placement_map : "id -> contractor_placement_id"
+    candidate ||--o{ candidate_placement_map : "id -> candidate_id"
+    candidate ||--o{ gld_test_invite : "id -> candidate_id"
+    cost_compare_data ||--o{ eom : "alt_empssn -> alt_empssn"
