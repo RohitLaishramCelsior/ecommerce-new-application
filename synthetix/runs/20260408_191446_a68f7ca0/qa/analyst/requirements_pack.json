@@ -2,7 +2,7 @@
   "artifact_type": "requirements_pack",
   "artifact_version": "2.0",
   "artifact_id": "REQPACK-20260408_191446_A68F7CA0",
-  "generated_at": "2026-04-08T13:46:34.836246+00:00",
+  "generated_at": "2026-04-10T06:38:43.995577+00:00",
   "generated_by": {
     "agent_name": "Analyst Agent",
     "persona": "Legacy Modernization Analyst",
@@ -19,7 +19,7 @@
     }
   },
   "project": {
-    "name": "PHP to TypeScript Modernization",
+    "name": "Legacy PHP to TypeScript Modernization",
     "work_item_id": "20260408_191446_a68f7ca0",
     "jurisdiction": [
       "GLOBAL"
@@ -51,8 +51,8 @@
     ],
     "constraints_from_user": [],
     "assumptions": [
-      "All legacy functionality must be preserved unless explicitly stated otherwise.",
-      "Docker is the preferred deployment method for consistency."
+      "The legacy system's functionality is fully understood and documented.",
+      "TypeScript is the preferred language for modernization."
     ]
   },
   "domain_mapping": {
@@ -114,7 +114,7 @@
     "functional": [
       {
         "id": "FR-001",
-        "title": "Convert PHP Routes to TypeScript",
+        "title": "Rewrite Routes in TypeScript",
         "priority": "P0",
         "acceptance": {
           "gherkin_feature_id": "BDD-001",
@@ -125,7 +125,7 @@
       },
       {
         "id": "FR-002",
-        "title": "Migrate Controllers to TypeScript",
+        "title": "Convert Controllers to TypeScript",
         "priority": "P0",
         "acceptance": {
           "gherkin_feature_id": "BDD-002",
@@ -136,7 +136,25 @@
       },
       {
         "id": "FR-005",
-        "title": "File Upload Handling",
+        "title": "Document Current Functionality",
+        "priority": "P1",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-007",
+        "title": "Run QA/Security Checks",
+        "priority": "P0",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-008",
+        "title": "Validate Requirements",
         "priority": "P0",
         "acceptance": {
           "gherkin_feature_id": "",
@@ -148,7 +166,7 @@
       {
         "id": "NFR-003",
         "category": "scalability",
-        "metric": "Support 2x current user load",
+        "metric": "Supports 2x current load",
         "verification_method": [
           "unit",
           "integration"
@@ -166,9 +184,9 @@
             "id": "BDD-001-SC-001",
             "name": "Convert PHP routes to TypeScript",
             "gherkin": [
-              "Given a PHP route",
+              "Given a legacy PHP route",
               "When it is converted to TypeScript",
-              "Then it should be accessible with the same endpoint and parameters"
+              "Then the routing logic should remain unchanged"
             ],
             "maps_to": [
               "FR-001"
@@ -184,9 +202,9 @@
             "id": "BDD-002-SC-001",
             "name": "Migrate PHP controllers to TypeScript",
             "gherkin": [
-              "Given a PHP controller",
-              "When it is rewritten in TypeScript",
-              "Then it should maintain the same logic and functionality"
+              "Given a legacy PHP controller",
+              "When it is migrated to TypeScript",
+              "Then the input/output contracts should be preserved"
             ],
             "maps_to": [
               "FR-002"
@@ -196,18 +214,18 @@
       },
       {
         "id": "BDD-003",
-        "title": "Session Management",
+        "title": "SQL Refactoring",
         "scenarios": [
           {
             "id": "BDD-003-SC-001",
-            "name": "Preserve session state",
+            "name": "Refactor SQL interactions to TypeScript",
             "gherkin": [
-              "Given a session state in PHP",
-              "When the application is migrated to TypeScript",
-              "Then the session state should remain consistent"
+              "Given a legacy SQL interaction",
+              "When it is refactored to TypeScript",
+              "Then it should prevent SQL injection vulnerabilities"
             ],
             "maps_to": [
-              "FR-004"
+              "FR-003"
             ]
           }
         ]
@@ -218,14 +236,14 @@
         "scenarios": [
           {
             "id": "BDD-004-SC-001",
-            "name": "Deploy application in Docker",
+            "name": "Deploy application using Docker",
             "gherkin": [
-              "Given a TypeScript application",
-              "When it is deployed in Docker",
-              "Then it should run successfully in a container"
+              "Given the modernized application",
+              "When it is deployed in a Docker container",
+              "Then it should run successfully without errors"
             ],
             "maps_to": [
-              "FR-007"
+              "FR-006"
             ]
           }
         ]
@@ -246,19 +264,19 @@
   ],
   "risks": [
     {
-      "description": "Potential performance degradation post-modernization.",
-      "impact": "medium",
-      "mitigation": "Conduct thorough performance testing and optimizations."
+      "description": "Potential for performance degradation during modernization.",
+      "impact": "high",
+      "mitigation": "Conduct thorough performance testing and optimization."
     },
     {
-      "description": "Security vulnerabilities during transition.",
-      "impact": "high",
-      "mitigation": "Implement security audits and apply best practices."
+      "description": "Security vulnerabilities may be introduced during code migration.",
+      "impact": "medium",
+      "mitigation": "Perform regular security audits and code reviews."
     }
   ],
   "out_of_scope": [
-    "Any changes to business logic not related to modernization.",
-    "Integration with external systems not currently part of the legacy system."
+    "Integration with external systems not currently part of the legacy system.",
+    "Major changes to business logic or workflows."
   ],
   "traceability": {
     "links": [
@@ -390,7 +408,7 @@
         "source_requirement_ids": [
           "FR-001"
         ],
-        "gherkin": "Feature: Route Conversion\nScenario: Convert PHP routes to TypeScript\nGiven a PHP route\nWhen it is converted to TypeScript\nThen it should be accessible with the same endpoint and parameters"
+        "gherkin": "Feature: Route Conversion\nScenario: Convert PHP routes to TypeScript\nGiven a legacy PHP route\nWhen it is converted to TypeScript\nThen the routing logic should remain unchanged"
       },
       {
         "id": "BDD-002",
@@ -398,23 +416,23 @@
         "source_requirement_ids": [
           "FR-002"
         ],
-        "gherkin": "Feature: Controller Migration\nScenario: Migrate PHP controllers to TypeScript\nGiven a PHP controller\nWhen it is rewritten in TypeScript\nThen it should maintain the same logic and functionality"
+        "gherkin": "Feature: Controller Migration\nScenario: Migrate PHP controllers to TypeScript\nGiven a legacy PHP controller\nWhen it is migrated to TypeScript\nThen the input/output contracts should be preserved"
       },
       {
         "id": "BDD-003",
-        "title": "Session Management",
+        "title": "SQL Refactoring",
         "source_requirement_ids": [
-          "FR-004"
+          "FR-003"
         ],
-        "gherkin": "Feature: Session Management\nScenario: Preserve session state\nGiven a session state in PHP\nWhen the application is migrated to TypeScript\nThen the session state should remain consistent"
+        "gherkin": "Feature: SQL Refactoring\nScenario: Refactor SQL interactions to TypeScript\nGiven a legacy SQL interaction\nWhen it is refactored to TypeScript\nThen it should prevent SQL injection vulnerabilities"
       },
       {
         "id": "BDD-004",
         "title": "Docker Deployment",
         "source_requirement_ids": [
-          "FR-007"
+          "FR-006"
         ],
-        "gherkin": "Feature: Docker Deployment\nScenario: Deploy application in Docker\nGiven a TypeScript application\nWhen it is deployed in Docker\nThen it should run successfully in a container"
+        "gherkin": "Feature: Docker Deployment\nScenario: Deploy application using Docker\nGiven the modernized application\nWhen it is deployed in a Docker container\nThen it should run successfully without errors"
       }
     ],
     "lint": {
@@ -429,13 +447,13 @@
       {
         "id": "NFR-003",
         "title": "Scalability",
-        "description": "The application should be scalable to handle increased load.",
+        "description": "Design the system to handle increased load without significant performance loss.",
         "category": "scalability",
-        "metric": "Support 2x current user load",
+        "metric": "Supports 2x current load",
         "acceptance_criteria": [
-          "Scalability tests confirm application can handle increased load.",
-          "No bottlenecks are identified during stress testing.",
-          "Resource usage remains efficient under load."
+          "Load tests confirm scalability targets are met.",
+          "System performance remains stable under load.",
+          "Scalability metrics are documented."
         ],
         "grounding": {
           "classification": "derived_from_legacy",
@@ -448,7 +466,6 @@
     {
       "requirement_id": "FR-001",
       "test_types": [
-        "contract",
         "integration",
         "unit"
       ],
@@ -473,6 +490,24 @@
         "unit"
       ],
       "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-007",
+      "test_types": [
+        "integration",
+        "security",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-008",
+      "test_types": [
+        "e2e",
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": []
     }
   ],
   "quality_gates": [
@@ -490,7 +525,7 @@
       "status": "FAIL",
       "message": "Checks minimum requirement volume, scenario coverage, and capability mapping presence.",
       "details": {
-        "functional_count": 3,
+        "functional_count": 5,
         "non_functional_count": 1,
         "min_functional": 6,
         "min_non_functional": 4,
@@ -546,7 +581,7 @@
       }
     }
   ],
-  "executive_summary": "This project aims to modernize a legacy PHP codebase to TypeScript using a modular-monolith architecture, ensuring backward compatibility and Docker deployment readiness.",
+  "executive_summary": "This project aims to modernize a legacy PHP codebase to TypeScript using a modular monolith architecture, ensuring backward compatibility and preparing for Docker deployment.",
   "legacy_code_inventory": {
     "summary": "Detected PHP legacy application with 90 controllers, 212 routes, 36 templates, 153 SQL statements, 9 session keys, and candidate domains: Contractor Placement, Onboarding, End of Placement / Offboarding, Credentialing and Compliance Requests.",
     "vb6_projects": [],
@@ -9535,13 +9570,13 @@
               }
             ],
             "recommended_service": "JobListingService",
-            "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+            "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors. It manages user access and prepares data for job requisitions.",
             "workflow_steps": [
               "Initialize controller with model and base URL",
-              "Check user permissions and gather report data",
-              "Retrieve OMS ID and prepare access token",
-              "Register user token for authentication",
-              "Execute SQL query to fetch job listing data"
+              "Check user access and permissions",
+              "Prepare OMS user ID and token",
+              "Register user token",
+              "Execute search query for job listings"
             ],
             "actions": [
               "search",
@@ -9570,12 +9605,12 @@
             ],
             "risk_flags": [
               "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
-              "High coupling with database and OMS system, potential security risks with token handling."
+              "The controller tightly couples search logic with user access management, increasing complexity and potential for errors."
             ],
             "migration_seams": [
-              "Decouple database interactions into a repository",
-              "Extract OMS token handling into a separate service",
-              "Isolate user permission logic into a policy class"
+              "Refactor search logic into a service class",
+              "Decouple user access management",
+              "Externalize OMS token handling"
             ],
             "strangler_candidate": false,
             "analysis_confidence": "HIGH",
@@ -9589,6 +9624,11 @@
             "estimated_loc": 3394,
             "candidate_domains": [
               {
+                "domain_id": "DOM-REPORTING-AND-DOCUMENTS",
+                "name": "Reporting and Documents",
+                "confidence": 0.72
+              },
+              {
                 "domain_id": "DOM-PLACEMENT",
                 "name": "Contractor Placement",
                 "confidence": 0.74
@@ -9597,19 +9637,14 @@
                 "domain_id": "DOM-OFFBOARDING",
                 "name": "End of Placement / Offboarding",
                 "confidence": 0.74
-              },
-              {
-                "domain_id": "DOM-ONBOARDING",
-                "name": "Onboarding",
-                "confidence": 0.74
               }
             ],
             "recommended_service": "RecruiterMetricsService",
-            "workflow_summary": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+            "workflow_summary": "Processes recruiter metrics, integrating data from various employee and candidate sources to generate reports.",
             "workflow_steps": [
               "Initialize controller with model and base URL",
-              "Define header for metrics display",
-              "Execute SQL queries to gather recruiter metrics"
+              "Define report header structure",
+              "Execute search and data aggregation"
             ],
             "actions": [
               "links",
@@ -9634,11 +9669,11 @@
             "include_targets": [],
             "risk_flags": [
               "SQL risk flags detected: string_concatenation.",
-              "Complex SQL queries embedded in controller, potential for performance bottlenecks."
+              "Complex data interactions and report generation logic are embedded within the controller, risking maintainability issues."
             ],
             "migration_seams": [
-              "Abstract metric calculations into a service layer",
-              "Separate header configuration into a UI component"
+              "Extract report generation logic into a dedicated service",
+              "Modularize data aggregation processes"
             ],
             "strangler_candidate": false,
             "analysis_confidence": "MEDIUM",
@@ -9658,11 +9693,11 @@
               }
             ],
             "recommended_service": "CcaTransferService",
-            "workflow_summary": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+            "workflow_summary": "Manages CCA transfer operations, including filtering and data retrieval for contractor placements.",
             "workflow_steps": [
               "Initialize controller with model and base URL",
-              "Validate and extract request data",
-              "Execute SQL query to fetch CCA transfer data"
+              "Validate request data",
+              "Execute search query for CCA transfers"
             ],
             "actions": [
               "links",
@@ -9684,11 +9719,11 @@
             "risk_flags": [
               "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
               "Session-coupled workflow state may hide business invariants.",
-              "Direct database access in controller, limited input validation."
+              "Validation and data retrieval are directly handled in the controller, which can complicate testing and maintenance."
             ],
             "migration_seams": [
-              "Move validation logic to a form request class",
-              "Encapsulate SQL operations in a repository"
+              "Isolate validation logic",
+              "Centralize data retrieval in a service"
             ],
             "strangler_candidate": false,
             "analysis_confidence": "MEDIUM",
@@ -9718,12 +9753,12 @@
               }
             ],
             "recommended_service": "ApApprovalTeamService",
-            "workflow_summary": "Manages AP approval teams, including creation and modification of team entities.",
+            "workflow_summary": "Handles AP approval team management, including creation, updates, and employee mapping.",
             "workflow_steps": [
               "Initialize controller with model and base URL",
-              "Handle form label generation and entity creation",
-              "Manage links and model retrieval for new and existing entities",
-              "Save employee mappings for approval teams"
+              "Manage form labels and links",
+              "Handle creation and updates of approval teams",
+              "Map employees to approval teams"
             ],
             "actions": [
               "getFormLabel",
@@ -9756,11 +9791,11 @@
             "risk_flags": [
               "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
               "Session-coupled workflow state may hide business invariants.",
-              "Complex entity management within controller, potential for data inconsistency."
+              "The controller manages multiple responsibilities, increasing the risk of errors and maintenance challenges."
             ],
             "migration_seams": [
-              "Extract employee mapping logic into a domain service",
-              "Centralize form label handling in a utility class"
+              "Separate employee mapping logic",
+              "Refactor form and link management"
             ],
             "strangler_candidate": false,
             "analysis_confidence": "HIGH",
@@ -9883,11 +9918,10 @@
           {
             "domain_id": "DOM-CONTRACTOR-PLACEMENT",
             "name": "Contractor Placement",
-            "recommended_service": "ContractorPlacementService",
+            "recommended_service": "JobListingService",
             "responsibilities": [
-              "Manage contractor job listings",
-              "Handle pre-placement activities",
-              "Coordinate with OMS for contractor data"
+              "Manage job listings and pre-placement activities",
+              "Handle contractor placement data"
             ],
             "hotspot_paths": [
               "Controller/JoblistingSearchController.php"
@@ -9895,39 +9929,37 @@
             "confidence": "HIGH"
           },
           {
-            "domain_id": "DOM-END-OF-PLACEMENT-OFFBOARDING",
-            "name": "End of Placement / Offboarding",
-            "recommended_service": "OffboardingService",
-            "responsibilities": [
-              "Manage end of placement processes",
-              "Track offboarding metrics and outcomes"
-            ],
-            "hotspot_paths": [
-              "Controller/RecruitermetricsSearchController.php"
-            ],
-            "confidence": "MEDIUM"
-          },
-          {
             "domain_id": "DOM-CREDENTIALING-AND-COMPLIANCE-REQUESTS",
             "name": "Credentialing and Compliance Requests",
-            "recommended_service": "ComplianceService",
+            "recommended_service": "CcaTransferService",
             "responsibilities": [
-              "Handle CCA transfers",
-              "Manage AP approval teams",
-              "Ensure compliance with credentialing processes"
+              "Manage CCA transfers and compliance requests",
+              "Handle approval team operations"
             ],
             "hotspot_paths": [
               "Controller/Cca_transferSearchController.php",
               "Controller/Ap_approval_teamEntityController.php"
             ],
             "confidence": "HIGH"
+          },
+          {
+            "domain_id": "DOM-REPORTING-AND-DOCUMENTS",
+            "name": "Reporting and Documents",
+            "recommended_service": "RecruiterMetricsService",
+            "responsibilities": [
+              "Generate and manage recruiter metrics reports",
+              "Aggregate data for reporting"
+            ],
+            "hotspot_paths": [
+              "Controller/RecruitermetricsSearchController.php"
+            ],
+            "confidence": "MEDIUM"
           }
         ],
         "cross_cutting_risks": [
-          "Direct database access in controllers",
-          "Complex SQL queries leading to performance issues",
-          "Security risks with token handling",
-          "Potential data inconsistency in entity management"
+          "Tight coupling of business logic in controllers",
+          "Lack of separation of concerns in data handling and validation",
+          "Potential for security vulnerabilities due to embedded access management"
         ],
         "blocking_questions": []
       },
@@ -10052,7 +10084,7 @@
             "uses_session_state": true,
             "recommended_service": "ApApprovalTeamService",
             "domain_name": "ApApprovalTeam",
-            "workflow_summary": "Manages AP approval teams, including creation and modification of team entities.",
+            "workflow_summary": "Handles AP approval team management, including creation, updates, and employee mapping.",
             "parse_mode": "token_parser",
             "workflow_spec_id": "PHP-HOTSPOT-004-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
@@ -10230,7 +10262,7 @@
             "uses_session_state": true,
             "recommended_service": "CcaTransferService",
             "domain_name": "CcaTransfer",
-            "workflow_summary": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+            "workflow_summary": "Manages CCA transfer operations, including filtering and data retrieval for contractor placements.",
             "parse_mode": "token_parser",
             "workflow_spec_id": "PHP-HOTSPOT-003-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
@@ -10378,7 +10410,7 @@
             "uses_session_state": false,
             "recommended_service": "RecruiterMetricsService",
             "domain_name": "RecruiterMetrics",
-            "workflow_summary": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+            "workflow_summary": "Processes recruiter metrics, integrating data from various employee and candidate sources to generate reports.",
             "parse_mode": "token_parser",
             "workflow_spec_id": "PHP-HOTSPOT-002-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
@@ -10485,7 +10517,7 @@
             "uses_session_state": false,
             "recommended_service": "JobListingService",
             "domain_name": "JobListing",
-            "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+            "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors. It manages user access and prepares data for job requisitions.",
             "parse_mode": "token_parser",
             "workflow_spec_id": "PHP-HOTSPOT-001-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
@@ -14513,7 +14545,7 @@
         "workflow_slices": [
           {
             "workflow_id": "PHP-WF-001",
-            "name": "AP Approval Team Initialization",
+            "name": "AP Approval Team Creation",
             "method": "ANY",
             "route_uri": "/pci/entity/ap_approval_team/new",
             "handler": "Ap_approval_teamSearchController",
@@ -14543,7 +14575,7 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Initializes the AP Approval Team search functionality within shared platform services."
+            "workflow_summary": "Handles the creation of new AP approval teams, managing shared platform services."
           },
           {
             "workflow_id": "PHP-WF-002",
@@ -14577,11 +14609,11 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Manages AP Approval Team entities and their interactions within shared platform services."
+            "workflow_summary": "Manages existing AP approval teams, integrating shared platform services."
           },
           {
             "workflow_id": "PHP-WF-003",
-            "name": "AP Invoice Search Initialization",
+            "name": "AP Invoice Search",
             "method": "ANY",
             "route_uri": "/pci/search/ap_invoice",
             "handler": "Ap_invoiceEntityController",
@@ -14611,11 +14643,11 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Initializes the search functionality for AP Invoices within shared platform services."
+            "workflow_summary": "Facilitates searching of AP invoices, leveraging shared platform services."
           },
           {
             "workflow_id": "PHP-WF-004",
-            "name": "AP Invoice Entity Management",
+            "name": "AP Invoice Management",
             "method": "ANY",
             "route_uri": "/pci/entity/ap_invoice",
             "handler": "Ap_invoiceEntityController",
@@ -14645,11 +14677,11 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Manages AP Invoice entities and their interactions within shared platform services."
+            "workflow_summary": "Manages AP invoices, utilizing shared platform services."
           },
           {
             "workflow_id": "PHP-WF-005",
-            "name": "Contractor Placement Invoice Search",
+            "name": "New AP Invoice Creation",
             "method": "ANY",
             "route_uri": "/pci/entity/ap_invoice/new",
             "handler": "Ap_invoiceSearchController",
@@ -14679,14 +14711,14 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Facilitates search and management of contractor placement invoices.",
+            "workflow_summary": "Orchestrates the creation of new AP invoices within contractor placement workflows.",
             "workflow_spec_id": "PHP-HOTSPOT-005-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
             "workflow_review_status": "review_required"
           },
           {
             "workflow_id": "PHP-WF-006",
-            "name": "Contractor Placement Invoice Management",
+            "name": "AP Invoice Operations",
             "method": "ANY",
             "route_uri": "/pci/entity/ap_invoice",
             "handler": "Ap_invoiceSearchController",
@@ -14716,7 +14748,7 @@
               "session_state",
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Manages contractor placement invoices and related workflows.",
+            "workflow_summary": "Handles various operations on AP invoices, supporting contractor placement workflows.",
             "workflow_spec_id": "PHP-HOTSPOT-005-WORKFLOW-SPEC",
             "workflow_spec_status": "partial",
             "workflow_review_status": "review_required"
@@ -14739,11 +14771,11 @@
             "risk_flags": [
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Manages archived contractor data within contractor placement workflows."
+            "workflow_summary": "Manages archived contractors within contractor placement workflows."
           },
           {
             "workflow_id": "PHP-WF-008",
-            "name": "Credential Entity Management",
+            "name": "Credential Management",
             "method": "ANY",
             "route_uri": "/pci/search/credential/new",
             "handler": "CredentialEntityController",
@@ -14759,7 +14791,7 @@
             "risk_flags": [
               "inline_sql_or_table_coupling"
             ],
-            "workflow_summary": "Manages credential entities within shared platform services."
+            "workflow_summary": "Manages credentials as part of shared platform services."
           },
           {
             "workflow_id": "PHP-WF-009",
@@ -14968,7 +15000,7 @@
             "recommended_service": "ApApprovalTeamService",
             "responsibilities": [
               "Manage AP approval teams",
-              "Create and modify team entities"
+              "Integrate with shared platform services"
             ],
             "workflow_ids": [
               "PHP-WF-001",
@@ -14978,14 +15010,16 @@
           },
           {
             "name": "AP Invoice Context",
-            "recommended_service": "PlatformService",
+            "recommended_service": "PlacementService",
             "responsibilities": [
-              "Search and manage AP invoices",
-              "Initialize invoice-related workflows"
+              "Manage AP invoices",
+              "Support contractor placement workflows"
             ],
             "workflow_ids": [
               "PHP-WF-003",
-              "PHP-WF-004"
+              "PHP-WF-004",
+              "PHP-WF-005",
+              "PHP-WF-006"
             ],
             "confidence": 0.85
           },
@@ -14993,21 +15027,22 @@
             "name": "Contractor Placement Context",
             "recommended_service": "PlacementService",
             "responsibilities": [
-              "Manage contractor placement invoices",
-              "Facilitate contractor placement workflows"
+              "Manage contractor placements",
+              "Handle archived contractors"
             ],
             "workflow_ids": [
               "PHP-WF-005",
               "PHP-WF-006",
               "PHP-WF-007"
             ],
-            "confidence": 0.95
+            "confidence": 0.9
           },
           {
             "name": "Credential Management Context",
             "recommended_service": "PlatformService",
             "responsibilities": [
-              "Manage credential entities"
+              "Manage credentials",
+              "Integrate with shared platform services"
             ],
             "workflow_ids": [
               "PHP-WF-008"
@@ -15036,7 +15071,7 @@
             "path": "Controller/JoblistingSearchController.php",
             "controller_name": "JoblistingSearchController",
             "workflow_name": "Joblisting Search Controller",
-            "business_purpose": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+            "business_purpose": "Handles job listing searches, focusing on pre-placement activities for contractors. It manages user access and prepares data for job requisitions.",
             "recommended_service": "JobListingService",
             "domain_name": "Contractor Placement",
             "reference_model": "structural_hotspot_seed",
@@ -15069,13 +15104,13 @@
               {
                 "step_id": "PHP-HOTSPOT-001-STEP-02",
                 "step_number": 2,
-                "name": "Check user permissions and gather report data",
-                "feature_name": "Check user permissions and gather report data",
-                "description": "Check user permissions and gather report data",
+                "name": "Check user access and permissions",
+                "feature_name": "Check user access and permissions",
+                "description": "Check user access and permissions",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Check user permissions and gather report data"
+                  "Check user access and permissions"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15085,13 +15120,13 @@
               {
                 "step_id": "PHP-HOTSPOT-001-STEP-03",
                 "step_number": 3,
-                "name": "Retrieve OMS ID and prepare access token",
-                "feature_name": "Retrieve OMS ID and prepare access token",
-                "description": "Retrieve OMS ID and prepare access token",
+                "name": "Prepare OMS user ID and token",
+                "feature_name": "Prepare OMS user ID and token",
+                "description": "Prepare OMS user ID and token",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Retrieve OMS ID and prepare access token"
+                  "Prepare OMS user ID and token"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15101,13 +15136,13 @@
               {
                 "step_id": "PHP-HOTSPOT-001-STEP-04",
                 "step_number": 4,
-                "name": "Register user token for authentication",
-                "feature_name": "Register user token for authentication",
-                "description": "Register user token for authentication",
+                "name": "Register user token",
+                "feature_name": "Register user token",
+                "description": "Register user token",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Register user token for authentication"
+                  "Register user token"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15117,13 +15152,13 @@
               {
                 "step_id": "PHP-HOTSPOT-001-STEP-05",
                 "step_number": 5,
-                "name": "Execute SQL query to fetch job listing data",
-                "feature_name": "Execute SQL query to fetch job listing data",
-                "description": "Execute SQL query to fetch job listing data",
+                "name": "Execute search query for job listings",
+                "feature_name": "Execute search query for job listings",
+                "description": "Execute search query for job listings",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Execute SQL query to fetch job listing data"
+                  "Execute search query for job listings"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15172,9 +15207,9 @@
             "path": "Controller/RecruitermetricsSearchController.php",
             "controller_name": "RecruitermetricsSearchController",
             "workflow_name": "Recruitermetrics Search Controller",
-            "business_purpose": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+            "business_purpose": "Processes recruiter metrics, integrating data from various employee and candidate sources to generate reports.",
             "recommended_service": "RecruiterMetricsService",
-            "domain_name": "Contractor Placement",
+            "domain_name": "Reporting and Documents",
             "reference_model": "structural_hotspot_seed",
             "primary_module_paths": [
               "Controller/RecruitermetricsSearchController.php"
@@ -15205,13 +15240,13 @@
               {
                 "step_id": "PHP-HOTSPOT-002-STEP-02",
                 "step_number": 2,
-                "name": "Define header for metrics display",
-                "feature_name": "Define header for metrics display",
-                "description": "Define header for metrics display",
+                "name": "Define report header structure",
+                "feature_name": "Define report header structure",
+                "description": "Define report header structure",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Define header for metrics display"
+                  "Define report header structure"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15221,13 +15256,13 @@
               {
                 "step_id": "PHP-HOTSPOT-002-STEP-03",
                 "step_number": 3,
-                "name": "Execute SQL queries to gather recruiter metrics",
-                "feature_name": "Execute SQL queries to gather recruiter metrics",
-                "description": "Execute SQL queries to gather recruiter metrics",
+                "name": "Execute search and data aggregation",
+                "feature_name": "Execute search and data aggregation",
+                "description": "Execute search and data aggregation",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Execute SQL queries to gather recruiter metrics"
+                  "Execute search and data aggregation"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15276,7 +15311,7 @@
             "path": "Controller/Cca_transferSearchController.php",
             "controller_name": "Cca_transferSearchController",
             "workflow_name": "Cca Transfer Search Controller",
-            "business_purpose": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+            "business_purpose": "Manages CCA transfer operations, including filtering and data retrieval for contractor placements.",
             "recommended_service": "CcaTransferService",
             "domain_name": "Credentialing and Compliance Requests",
             "reference_model": "structural_hotspot_seed",
@@ -15309,13 +15344,13 @@
               {
                 "step_id": "PHP-HOTSPOT-003-STEP-02",
                 "step_number": 2,
-                "name": "Validate and extract request data",
-                "feature_name": "Validate and extract request data",
-                "description": "Validate and extract request data",
+                "name": "Validate request data",
+                "feature_name": "Validate request data",
+                "description": "Validate request data",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Validate and extract request data"
+                  "Validate request data"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15325,13 +15360,13 @@
               {
                 "step_id": "PHP-HOTSPOT-003-STEP-03",
                 "step_number": 3,
-                "name": "Execute SQL query to fetch CCA transfer data",
-                "feature_name": "Execute SQL query to fetch CCA transfer data",
-                "description": "Execute SQL query to fetch CCA transfer data",
+                "name": "Execute search query for CCA transfers",
+                "feature_name": "Execute search query for CCA transfers",
+                "description": "Execute search query for CCA transfers",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Execute SQL query to fetch CCA transfer data"
+                  "Execute search query for CCA transfers"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15380,7 +15415,7 @@
             "path": "Controller/Ap_approval_teamEntityController.php",
             "controller_name": "Ap_approval_teamEntityController",
             "workflow_name": "Ap Approval Team Entity Controller",
-            "business_purpose": "Manages AP approval teams, including creation and modification of team entities.",
+            "business_purpose": "Handles AP approval team management, including creation, updates, and employee mapping.",
             "recommended_service": "ApApprovalTeamService",
             "domain_name": "Credentialing and Compliance Requests",
             "reference_model": "structural_hotspot_seed",
@@ -15413,13 +15448,13 @@
               {
                 "step_id": "PHP-HOTSPOT-004-STEP-02",
                 "step_number": 2,
-                "name": "Handle form label generation and entity creation",
-                "feature_name": "Handle form label generation and entity creation",
-                "description": "Handle form label generation and entity creation",
+                "name": "Manage form labels and links",
+                "feature_name": "Manage form labels and links",
+                "description": "Manage form labels and links",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Handle form label generation and entity creation"
+                  "Manage form labels and links"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15429,13 +15464,13 @@
               {
                 "step_id": "PHP-HOTSPOT-004-STEP-03",
                 "step_number": 3,
-                "name": "Manage links and model retrieval for new and existing entities",
-                "feature_name": "Manage links and model retrieval for new and existing entities",
-                "description": "Manage links and model retrieval for new and existing entities",
+                "name": "Handle creation and updates of approval teams",
+                "feature_name": "Handle creation and updates of approval teams",
+                "description": "Handle creation and updates of approval teams",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Manage links and model retrieval for new and existing entities"
+                  "Handle creation and updates of approval teams"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15445,13 +15480,13 @@
               {
                 "step_id": "PHP-HOTSPOT-004-STEP-04",
                 "step_number": 4,
-                "name": "Save employee mappings for approval teams",
-                "feature_name": "Save employee mappings for approval teams",
-                "description": "Save employee mappings for approval teams",
+                "name": "Map employees to approval teams",
+                "feature_name": "Map employees to approval teams",
+                "description": "Map employees to approval teams",
                 "entry_conditions": [],
                 "exit_conditions": [],
                 "business_flow": [
-                  "Save employee mappings for approval teams"
+                  "Map employees to approval teams"
                 ],
                 "fields": [],
                 "validations": [],
@@ -15928,13 +15963,13 @@
             }
           ],
           "recommended_service": "JobListingService",
-          "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors.",
+          "workflow_summary": "Handles job listing searches, focusing on pre-placement activities for contractors. It manages user access and prepares data for job requisitions.",
           "workflow_steps": [
             "Initialize controller with model and base URL",
-            "Check user permissions and gather report data",
-            "Retrieve OMS ID and prepare access token",
-            "Register user token for authentication",
-            "Execute SQL query to fetch job listing data"
+            "Check user access and permissions",
+            "Prepare OMS user ID and token",
+            "Register user token",
+            "Execute search query for job listings"
           ],
           "actions": [
             "search",
@@ -15963,12 +15998,12 @@
           ],
           "risk_flags": [
             "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
-            "High coupling with database and OMS system, potential security risks with token handling."
+            "The controller tightly couples search logic with user access management, increasing complexity and potential for errors."
           ],
           "migration_seams": [
-            "Decouple database interactions into a repository",
-            "Extract OMS token handling into a separate service",
-            "Isolate user permission logic into a policy class"
+            "Refactor search logic into a service class",
+            "Decouple user access management",
+            "Externalize OMS token handling"
           ],
           "strangler_candidate": false,
           "analysis_confidence": "HIGH",
@@ -15982,6 +16017,11 @@
           "estimated_loc": 3394,
           "candidate_domains": [
             {
+              "domain_id": "DOM-REPORTING-AND-DOCUMENTS",
+              "name": "Reporting and Documents",
+              "confidence": 0.72
+            },
+            {
               "domain_id": "DOM-PLACEMENT",
               "name": "Contractor Placement",
               "confidence": 0.74
@@ -15990,19 +16030,14 @@
               "domain_id": "DOM-OFFBOARDING",
               "name": "End of Placement / Offboarding",
               "confidence": 0.74
-            },
-            {
-              "domain_id": "DOM-ONBOARDING",
-              "name": "Onboarding",
-              "confidence": 0.74
             }
           ],
           "recommended_service": "RecruiterMetricsService",
-          "workflow_summary": "Manages recruiter metrics, providing insights into recruitment performance and placement outcomes.",
+          "workflow_summary": "Processes recruiter metrics, integrating data from various employee and candidate sources to generate reports.",
           "workflow_steps": [
             "Initialize controller with model and base URL",
-            "Define header for metrics display",
-            "Execute SQL queries to gather recruiter metrics"
+            "Define report header structure",
+            "Execute search and data aggregation"
           ],
           "actions": [
             "links",
@@ -16027,11 +16062,11 @@
           "include_targets": [],
           "risk_flags": [
             "SQL risk flags detected: string_concatenation.",
-            "Complex SQL queries embedded in controller, potential for performance bottlenecks."
+            "Complex data interactions and report generation logic are embedded within the controller, risking maintainability issues."
           ],
           "migration_seams": [
-            "Abstract metric calculations into a service layer",
-            "Separate header configuration into a UI component"
+            "Extract report generation logic into a dedicated service",
+            "Modularize data aggregation processes"
           ],
           "strangler_candidate": false,
           "analysis_confidence": "MEDIUM",
@@ -16051,11 +16086,11 @@
             }
           ],
           "recommended_service": "CcaTransferService",
-          "workflow_summary": "Facilitates CCA transfer operations, including searching and filtering based on CCA details.",
+          "workflow_summary": "Manages CCA transfer operations, including filtering and data retrieval for contractor placements.",
           "workflow_steps": [
             "Initialize controller with model and base URL",
-            "Validate and extract request data",
-            "Execute SQL query to fetch CCA transfer data"
+            "Validate request data",
+            "Execute search query for CCA transfers"
           ],
           "actions": [
             "links",
@@ -16077,11 +16112,11 @@
           "risk_flags": [
             "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
             "Session-coupled workflow state may hide business invariants.",
-            "Direct database access in controller, limited input validation."
+            "Validation and data retrieval are directly handled in the controller, which can complicate testing and maintenance."
           ],
           "migration_seams": [
-            "Move validation logic to a form request class",
-            "Encapsulate SQL operations in a repository"
+            "Isolate validation logic",
+            "Centralize data retrieval in a service"
           ],
           "strangler_candidate": false,
           "analysis_confidence": "MEDIUM",
@@ -16111,12 +16146,12 @@
             }
           ],
           "recommended_service": "ApApprovalTeamService",
-          "workflow_summary": "Manages AP approval teams, including creation and modification of team entities.",
+          "workflow_summary": "Handles AP approval team management, including creation, updates, and employee mapping.",
           "workflow_steps": [
             "Initialize controller with model and base URL",
-            "Handle form label generation and entity creation",
-            "Manage links and model retrieval for new and existing entities",
-            "Save employee mappings for approval teams"
+            "Manage form labels and links",
+            "Handle creation and updates of approval teams",
+            "Map employees to approval teams"
           ],
           "actions": [
             "getFormLabel",
@@ -16149,11 +16184,11 @@
           "risk_flags": [
             "SQL risk flags detected: string_concatenation, possible_unparameterized_query.",
             "Session-coupled workflow state may hide business invariants.",
-            "Complex entity management within controller, potential for data inconsistency."
+            "The controller manages multiple responsibilities, increasing the risk of errors and maintenance challenges."
           ],
           "migration_seams": [
-            "Extract employee mapping logic into a domain service",
-            "Centralize form label handling in a utility class"
+            "Separate employee mapping logic",
+            "Refactor form and link management"
           ],
           "strangler_candidate": false,
           "analysis_confidence": "HIGH",
