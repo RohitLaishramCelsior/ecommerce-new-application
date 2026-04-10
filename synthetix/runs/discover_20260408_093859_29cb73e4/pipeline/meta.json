@@ -1,0 +1,62 @@
+{
+  "run_id": "discover_20260408_093859_29cb73e4",
+  "created_at": "2026-04-08T09:41:13.744719+00:00",
+  "updated_at": "2026-04-10T08:30:15.263559+00:00",
+  "status": "failed",
+  "business_objectives": "Modernize the provided legacy codebase using Typescript. Document current functionality and acceptance criteria, design architecture, implement rewritten services, run QA/security checks, validate requirements, and deploy for local Docker testing.",
+  "config": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "temperature": 0.3,
+    "developer_parallel_agents": 5,
+    "max_retries": 2,
+    "live_deploy": false,
+    "deploy_output_dir": "./deploy_output",
+    "cluster_name": "agent-pipeline",
+    "namespace": "agent-app",
+    "human_approval": true,
+    "strict_security_mode": false,
+    "deployment_target": "local",
+    "research_stage_enabled": false,
+    "research_stage_mode": "FULL_PACKAGE",
+    "use_case": "code_modernization",
+    "project_state_mode": "brownfield",
+    "project_state_detected": "brownfield",
+    "team_id": "custom-team-0ed1921720",
+    "team_name": "Synthetix Modernization Team 2",
+    "pipeline_steps": [
+      {
+        "step_id": "step-analyst",
+        "position": 1,
+        "role_key": "analyst",
+        "stage": 1,
+        "agent_id": "analyst-modernization",
+        "enabled": true
+      },
+      {
+        "step_id": "step-planning",
+        "position": 2,
+        "role_key": "planning",
+        "stage": 2,
+        "agent_id": "planning-modernization",
+        "enabled": true
+      },
+      {
+        "step_id": "step-architect",
+        "position": 3,
+        "role_key": "architect",
+        "stage": 3,
+        "agent_id": "architect-modernization",
+        "enabled": true
+      },
+      {
+        "step_id": "step-module_scope_selection",
+        "position": 4,
+        "role_key": "module_scope_selection",
+        "stage": 4,
+        "agent_id": "module-scope-selection-gate",
+        "enabled": true
+      }
+    ]
+  }
+}
