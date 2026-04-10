@@ -1,7 +1,7 @@
 {
   "run_id": "20260408_191446_a68f7ca0",
-  "generated_at": "2026-04-09T09:50:16.708799+00:00",
-  "run_status": "failed",
+  "generated_at": "2026-04-10T06:44:16.667554+00:00",
+  "run_status": "running",
   "base_path": "synthetix/runs/20260408_191446_a68f7ca0",
   "owner": "RohitLaishramCelsior",
   "repository": "ecommerce-new-application",
@@ -13,10 +13,15 @@
     "qa"
   ],
   "attempted_files": 71,
-  "exported_files": 62,
-  "failed_files": 0,
+  "exported_files": 61,
+  "failed_files": 1,
   "skipped_files": 8,
-  "failed_samples": [],
+  "failed_samples": [
+    {
+      "repo_path": "synthetix/runs/20260408_191446_a68f7ca0/qa/docgen_exports/20260408t154631z/source_hotspot_report.json",
+      "reason": "http 409: is at b49146e5307ee7b206ac027aec5155862a565eeb but expected 385e05f5121d5551b715037e02d3c978a71b7a84"
+    }
+  ],
   "skipped_samples": [
     {
       "repo_path": "synthetix/runs/20260408_191446_a68f7ca0/pipeline/stage_0.json",
