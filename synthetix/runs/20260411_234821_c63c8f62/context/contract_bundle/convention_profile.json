@@ -1,0 +1,122 @@
+{
+  "header": {
+    "artifact_id": "8e0619bfed3640c6853b63b08ef9df8d",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-11T18:19:34.117591+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_dev",
+      "branch": "feature-rohit_dev",
+      "commit_sha": "f9bf26c2ecfb10688c77517a953196fb1a88d606",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260411_234821_c63c8f62",
+      "stage_id": "context_layer",
+      "task_id": "3538b9ce18d54b9a920139a6bc3a3a33"
+    },
+    "parents": [],
+    "digest": "sha256:3c055f38012db94136745a8b45ab62220edb9282b5a6c254c207af4f949a4edd",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260411_234821_c63c8f62",
+      "bundle_version": "20260411T181933Z_20260411_234821_c63c8f62"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use camelCase for variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use camelCase for variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "$maxTime"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "$max_time"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.7,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "title": "Implement try-catch blocks for error handling.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Implement try-catch blocks for error handling.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "try { ... } catch (Exception $e) { ... }"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "die();"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "Classes/attrs.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "TypeScript service template with error handling and logging.",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
