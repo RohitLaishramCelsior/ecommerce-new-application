@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rem-1",
+    "title": "Refactor File Access",
+    "problem_statement": "Direct file access without validation is a security risk.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential unauthorized file access leading to data breaches.",
+    "effort": "M",
+    "severity": "critical",
+    "dependencies": [],
+    "suggested_approach": "Implement file access validation and error handling.",
+    "success_criteria": [
+      "All file accesses are validated.",
+      "Error handling is implemented for file operations."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 10,
+        "evidence": "fopen('/data/root_02/data/gavlmb01-slow.log', 'r');"
+      }
+    ]
+  }
+]
