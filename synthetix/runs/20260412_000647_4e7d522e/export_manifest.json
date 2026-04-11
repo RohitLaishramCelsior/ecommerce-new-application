@@ -1,6 +1,6 @@
 {
   "run_id": "20260412_000647_4e7d522e",
-  "generated_at": "2026-04-11T18:40:57.352751+00:00",
+  "generated_at": "2026-04-11T18:41:30.957508+00:00",
   "run_status": "running",
   "base_path": "synthetix/runs/20260412_000647_4e7d522e",
   "owner": "RohitLaishramCelsior",
@@ -13,10 +13,19 @@
     "qa"
   ],
   "attempted_files": 21,
-  "exported_files": 17,
-  "failed_files": 0,
+  "exported_files": 15,
+  "failed_files": 2,
   "skipped_files": 3,
-  "failed_samples": [],
+  "failed_samples": [
+    {
+      "repo_path": "synthetix/runs/20260412_000647_4e7d522e/context/confidence_summary.json",
+      "reason": "http 409: is at 852fcbd36144da7fb35fb9310edfe4c4f2388a5d but expected 665693b3844fc93050300c353addc3b6ae163fe5"
+    },
+    {
+      "repo_path": "synthetix/runs/20260412_000647_4e7d522e/context/contract_bundle/context_bundle.json",
+      "reason": "http 409: is at d7b3590f3cdd219149c304d9008e6b45caa06886 but expected 852fcbd36144da7fb35fb9310edfe4c4f2388a5d"
+    }
+  ],
   "skipped_samples": [
     {
       "repo_path": "synthetix/runs/20260412_000647_4e7d522e/pipeline/stage_0.json",
