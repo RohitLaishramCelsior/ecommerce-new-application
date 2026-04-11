@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "summary": "The system consists of PHP-based components with a focus on support and domain services. The codebase includes scripts for handling slow queries and HTML generation, with dependencies on external JavaScript libraries.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for handling slow queries."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "HTML Generation",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "PHP script for generating HTML with JavaScript and CSS dependencies."
+        }
+      ]
+    },
+    {
+      "id": "node:external-jquery",
+      "type": "Component",
+      "name": "external-jquery",
+      "metadata": {
+        "inferred": true,
+        "inferred_from_edge": true
+      },
+      "confidence": 0.45,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 15,
+          "evidence": "inferred node from edge endpoint `external-jquery`"
+        }
+      ]
+    },
+    {
+      "id": "node:external-datatables",
+      "type": "Component",
+      "name": "external-datatables",
+      "metadata": {
+        "inferred": true,
+        "inferred_from_edge": true
+      },
+      "confidence": 0.45,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 19,
+          "evidence": "inferred node from edge endpoint `external-datatables`"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "USES_LIBRARY",
+      "from": "node-2",
+      "to": "node:external-jquery",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 15,
+          "evidence": "Uses jQuery from external CDN."
+        }
+      ]
+    },
+    {
+      "type": "USES_LIBRARY",
+      "from": "node-2",
+      "to": "node:external-datatables",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 19,
+          "evidence": "Uses DataTables from external CDN."
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
