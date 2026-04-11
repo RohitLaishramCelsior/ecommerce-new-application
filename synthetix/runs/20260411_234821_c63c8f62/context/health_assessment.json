@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The codebase has maintainability issues and lacks modern security practices.",
+  "scores": {
+    "maintainability": 50,
+    "security": 40,
+    "reliability": 60,
+    "testability": 30
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Direct file access without validation.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 10,
+          "evidence": "fopen('/data/root_02/data/gavlmb01-slow.log', 'r');"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Risk: Unvalidated File Access",
+      "description": "Direct file access without validation can lead to security vulnerabilities.",
+      "severity": "critical",
+      "confidence": 0.9
+    }
+  ]
+}
