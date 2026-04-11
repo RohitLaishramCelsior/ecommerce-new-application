@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows a basic PHP structure with some external dependencies. No formal conventions for error handling or logging are evident.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Variable naming convention."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use try-catch blocks for error handling.",
+      "confidence": 0.6,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "No error handling in slowquery.php"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Lack of error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Consider using consistent naming conventions.",
+    "Implement error handling using try-catch blocks."
+  ],
+  "scaffold_templates": [
+    "TypeScript module template",
+    "Dockerfile template for PHP applications"
+  ]
+}
