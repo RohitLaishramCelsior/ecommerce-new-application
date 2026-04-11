@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "summary": "Codebase lacks consistent error handling and modern coding conventions.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.7,
+      "examples": [
+        "$maxTime"
+      ],
+      "counterexamples": [
+        "$max_time"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 12,
+          "evidence": "$maxTime = 199;"
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Implement try-catch blocks for error handling.",
+      "confidence": 0.8,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "die();"
+      ],
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 50,
+          "evidence": "die(); //Ensure no more processing is done"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor to use consistent naming conventions.",
+    "Implement structured error handling."
+  ],
+  "scaffold_templates": [
+    "TypeScript service template with error handling and logging."
+  ]
+}
