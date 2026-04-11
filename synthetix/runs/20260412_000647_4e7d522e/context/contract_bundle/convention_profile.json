@@ -1,0 +1,131 @@
+{
+  "header": {
+    "artifact_id": "808ef35c3d5c4e95bd93910114099e9a",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-11T18:37:10.004742+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_dev",
+      "branch": "feature-rohit_dev",
+      "commit_sha": "f9bf26c2ecfb10688c77517a953196fb1a88d606",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260412_000647_4e7d522e",
+      "stage_id": "context_layer",
+      "task_id": "e5aaf1c2b81645389bf7291781400f09"
+    },
+    "parents": [],
+    "digest": "sha256:8aa4f886af6244fb192dcf1031ea0ead45727ea921c85e69e233b9f36ba1f707",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260412_000647_4e7d522e",
+      "bundle_version": "20260411T183709Z_20260412_000647_4e7d522e"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use camelCase for variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use camelCase for variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "$dbConnection"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "$db_connection"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "title": "Use try-catch blocks for error handling.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use try-catch blocks for error handling.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "try { ... } catch (Exception $e) { ... }"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "No error handling in slowquery.php"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.6,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "TypeScript module template",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    },
+    {
+      "id": "TPL-002",
+      "language": "generic",
+      "name": "Dockerfile template for PHP applications",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
