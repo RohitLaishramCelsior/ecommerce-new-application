@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "Health assessment of the legacy codebase, identifying key areas for improvement.",
+  "scores": {
+    "maintainability": 70,
+    "security": 60,
+    "reliability": 65,
+    "testability": 50
+  },
+  "hotspots": [
+    {
+      "scope": "agents/analyst.py",
+      "reason": "Complex logic with minimal comments.",
+      "severity": "medium",
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 20,
+          "evidence": "def complex_function()"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Vulnerability",
+      "description": "Potential SQL injection risk due to concatenated SQL strings.",
+      "severity": "high",
+      "confidence": 0.9
+    }
+  ]
+}
