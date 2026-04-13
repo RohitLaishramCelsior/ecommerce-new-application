@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "summary": "This profile outlines the coding conventions and practices observed in the legacy codebase.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "global $db_connection;"
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Check for file end before reading.",
+      "confidence": 0.9,
+      "examples": [
+        "if (feof($fptr))"
+      ],
+      "counterexamples": [],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 6,
+          "evidence": "if (feof($fptr))"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor to use camelCase consistently.",
+    "Ensure error handling is robust across file operations."
+  ],
+  "scaffold_templates": [
+    "TypeScript module template for PHP script conversion."
+  ]
+}
