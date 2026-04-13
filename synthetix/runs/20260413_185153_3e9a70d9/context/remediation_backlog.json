@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Script",
+    "problem_statement": "The slow query script uses global variables and lacks proper error handling.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Continued use of global variables may lead to maintainability issues and potential security risks.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor the script to remove global variables and implement structured error handling.",
+    "success_criteria": [
+      "No global variables used.",
+      "Structured error handling implemented."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Script analysis."
+      }
+    ]
+  }
+]
