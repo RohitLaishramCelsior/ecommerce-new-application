@@ -1,0 +1,28 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor PHP Scripts to C#",
+    "problem_statement": "The current PHP scripts are outdated and lack modern error handling and security practices.",
+    "scope": [
+      "bin/slowquery.php",
+      "Classes/attrs.php"
+    ],
+    "risk_if_unaddressed": "Continued security vulnerabilities and maintainability issues.",
+    "effort": "L",
+    "severity": "high",
+    "dependencies": [],
+    "suggested_approach": "Refactor the PHP scripts into C# using ASP.NET Core, ensuring proper error handling and security practices are implemented.",
+    "success_criteria": [
+      "All functionality is preserved in C#.",
+      "Security vulnerabilities are mitigated."
+    ],
+    "confidence": 0.85,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Legacy PHP script."
+      }
+    ]
+  }
+]
