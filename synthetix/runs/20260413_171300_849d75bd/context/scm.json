@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "summary": "This model represents the current state of the legacy codebase, focusing on PHP components and their interactions.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "chunk::php::support::1",
+          "line": 1,
+          "evidence": "component=Support and Domain Services type=php_support priority=2 estimated_loc=3852"
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "Slow Query Logger",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "<?php include(\"/data/app/src/init.php\");"
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "Component",
+      "name": "Release Info",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "branchinfo/release_info.php",
+          "line": 1,
+          "evidence": "Add to cron: 11 */2 * * * /usr/bin/php /data/app/src/sysmon.php"
+        }
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "Component",
+      "name": "HTML Attributes",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "<?php include (\"init.php\");"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "IMPORTS",
+      "from": "node-2",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "include(\"/data/app/src/init.php\");"
+        }
+      ]
+    },
+    {
+      "type": "IMPORTS",
+      "from": "node-4",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "include (\"init.php\");"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
