@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "summary": "Legacy codebase with PHP scripts lacks modern conventions for error handling, logging, and security.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "error_handling",
+      "rule": "Use try-catch blocks for error handling.",
+      "confidence": 0.8,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "No error handling in slowquery.php"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "No error handling present."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "logging",
+      "rule": "Implement structured logging.",
+      "confidence": 0.7,
+      "examples": [
+        "Use a logging library for structured logs."
+      ],
+      "counterexamples": [
+        "echo statements for output"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Uses echo for output."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor PHP scripts to use modern error handling and logging practices."
+  ],
+  "scaffold_templates": [
+    "Use .NET logging and exception handling templates."
+  ]
+}
