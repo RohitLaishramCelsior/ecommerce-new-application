@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Processor",
+    "problem_statement": "The slow query processor directly accesses log files without proper error handling or validation.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential security vulnerabilities and maintainability issues.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor to use a service layer with TypeScript and implement proper error handling.",
+    "success_criteria": [
+      "All file accesses are validated and errors are handled gracefully.",
+      "Code is refactored to TypeScript."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Direct file access without error handling."
+      }
+    ]
+  }
+]
