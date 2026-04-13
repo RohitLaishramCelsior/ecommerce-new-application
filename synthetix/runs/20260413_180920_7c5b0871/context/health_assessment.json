@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "Health assessment of the legacy PHP codebase with focus on modernization.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 55,
+    "testability": 45
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Direct file access and lack of error handling.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Direct file access without error handling."
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Risk: Direct File Access",
+      "description": "The code directly accesses files without proper validation or error handling, leading to potential security vulnerabilities.",
+      "severity": "high",
+      "confidence": 0.9
+    }
+  ]
+}
