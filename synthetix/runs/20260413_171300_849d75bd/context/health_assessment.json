@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The health assessment indicates areas of concern in maintainability and security.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 70,
+    "testability": 40
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Use of global variables and lack of error handling.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 2,
+          "evidence": "global $db_connection;"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Risk: Use of global variables",
+      "description": "Global variables can lead to security vulnerabilities due to unintended modifications.",
+      "severity": "high",
+      "confidence": 0.9
+    }
+  ]
+}
