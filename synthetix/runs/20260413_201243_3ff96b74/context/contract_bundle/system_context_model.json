@@ -1,0 +1,144 @@
+{
+  "header": {
+    "artifact_id": "5ac4007ed67d4c658f1a6e139404a31b",
+    "artifact_type": "system_context_model",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-13T14:43:22.208774+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260413_201243_3ff96b74",
+      "stage_id": "context_layer",
+      "task_id": "70498b996eed47c5a4cff05885744c05"
+    },
+    "parents": [],
+    "digest": "sha256:26ed43bfb22910d2c63a6ab2ae8f9606de1439e5694f9795e8a4e97655f5fe92",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260413_201243_3ff96b74",
+      "bundle_version": "20260413T144321Z_20260413_201243_3ff96b74"
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "node-1",
+        "type": "component",
+        "name": "Support and Domain Services",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "bin/slowquery.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "bin/slowquery.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.9,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "component",
+        "name": "HTML Document Generator",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "Classes/attrs.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "Classes/attrs.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.85,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:1",
+        "type": "depends_on",
+        "from": "node-1",
+        "to": "node-2",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "Classes/attrs.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      }
+    ],
+    "statistics": {
+      "node_count": 2,
+      "edge_count": 1,
+      "languages": []
+    }
+  },
+  "views": {
+    "c4": {
+      "context": [],
+      "container": [],
+      "component": [],
+      "code": []
+    }
+  },
+  "unknowns": [
+    {
+      "question": "Database schema details are not specified.",
+      "scope": "system",
+      "suggested_validation": "Trace and verify in staging",
+      "confidence": {
+        "score": 0.4,
+        "rationale": "unknown from SIL",
+        "signals": []
+      }
+    }
+  ]
+}
