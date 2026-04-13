@@ -1,0 +1,31 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor PHP to TypeScript",
+    "problem_statement": "Legacy PHP scripts need to be modernized to TypeScript for better maintainability and performance.",
+    "scope": [
+      "bin/slowquery.php",
+      "Classes/attrs.php"
+    ],
+    "risk_if_unaddressed": "Continued use of outdated technology leading to increased maintenance costs and security vulnerabilities.",
+    "effort": "L",
+    "severity": "high",
+    "dependencies": [
+      "node-1",
+      "node-3"
+    ],
+    "suggested_approach": "Convert PHP scripts to TypeScript, ensuring all functionalities are preserved and tested.",
+    "success_criteria": [
+      "All legacy functionalities are available in TypeScript.",
+      "No regression in performance or security."
+    ],
+    "confidence": 0.85,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Legacy PHP script identified for refactoring."
+      }
+    ]
+  }
+]
