@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "This profile identifies coding conventions and potential improvements for the legacy PHP codebase.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$maxTime"
+      ],
+      "counterexamples": [
+        "$max_time"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 10,
+          "evidence": "Variable naming inconsistency."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Ensure all file operations are error-checked.",
+      "confidence": 0.9,
+      "examples": [
+        "if ($fptr === false) { /* handle error */ }"
+      ],
+      "counterexamples": [
+        "$fptr = fopen(...)"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 18,
+          "evidence": "File operations without error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor variable names to camelCase.",
+    "Add error handling for file operations."
+  ],
+  "scaffold_templates": [
+    "TypeScript service template for log processing.",
+    "Dockerfile template for PHP applications."
+  ]
+}
