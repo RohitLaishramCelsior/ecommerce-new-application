@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "summary": "Legacy PHP codebase with various components and dependencies identified for modernization to TypeScript.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for processing slow query logs."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "Release Info",
+      "metadata": {},
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "branchinfo/release_info.php",
+          "line": 1,
+          "evidence": "Cron job setup and SQL table creation instructions."
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "Component",
+      "name": "HTML Document Builder",
+      "metadata": {},
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "PHP script for building HTML documents using HtmlTag class."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "IMPORTS",
+      "from": "node-1",
+      "to": "node-2",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Includes init.php which may link to other components."
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
