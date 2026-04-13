@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "summary": "The system consists of PHP-based support and domain services with a focus on slow query logging and HTML document generation. The modernization target is C# with a modular monolith architecture deployed in Docker.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for slow query logging."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "HTML Document Generator",
+      "metadata": {},
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "PHP script for generating HTML documents."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "USES_LIBRARY",
+      "from": "node-1",
+      "to": "node-2",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "HTML generation uses PHP classes."
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "Database schema details are not specified."
+  ]
+}
