@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor slowquery.php",
+    "problem_statement": "The script uses global variables and lacks error handling, leading to maintainability and security issues.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "High risk of security vulnerabilities and difficult maintenance.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [],
+    "suggested_approach": "Refactor to use local variables and add error handling. Convert to TypeScript.",
+    "success_criteria": [
+      "No global variables used.",
+      "Error handling implemented."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "global $db_connection;"
+      }
+    ]
+  }
+]
