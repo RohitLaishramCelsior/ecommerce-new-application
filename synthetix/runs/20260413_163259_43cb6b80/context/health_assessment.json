@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The legacy codebase has low maintainability and testability due to lack of modularity and error handling. Security and reliability are moderate.",
+  "scores": {
+    "maintainability": 40,
+    "security": 60,
+    "reliability": 50,
+    "testability": 30
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Lack of error handling and logging.",
+      "severity": "high",
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 6,
+          "evidence": "No error handling for file operations."
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Lack of Error Handling",
+      "description": "The absence of structured error handling can lead to unhandled exceptions and application crashes.",
+      "severity": "high",
+      "confidence": 0.9
+    }
+  ]
+}
