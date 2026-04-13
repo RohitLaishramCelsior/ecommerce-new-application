@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "Current conventions in the legacy PHP codebase include inconsistent naming and error handling practices.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.7,
+      "examples": [
+        "$maxTime"
+      ],
+      "counterexamples": [
+        "$max_time"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Variable naming in PHP script."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use try-catch for error handling.",
+      "confidence": 0.6,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "die();"
+      ],
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "Use of die() for error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor variable names to camelCase.",
+    "Replace die() with structured exception handling."
+  ],
+  "scaffold_templates": [
+    "Basic .NET service template",
+    "Dockerfile template for .NET applications"
+  ]
+}
