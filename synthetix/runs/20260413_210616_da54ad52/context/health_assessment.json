@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The legacy codebase has moderate maintainability and security risks due to outdated practices and lack of structured error handling.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 55,
+    "testability": 45
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Use of global variables and lack of error handling.",
+      "severity": "high",
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Global variable usage without encapsulation."
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security vulnerabilities due to lack of input validation",
+      "description": "The codebase lacks proper input validation which could lead to security vulnerabilities.",
+      "severity": "high",
+      "confidence": 0.85
+    }
+  ]
+}
