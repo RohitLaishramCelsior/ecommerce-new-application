@@ -1,0 +1,27 @@
+[
+  {
+    "id": "remediation:sql_injection",
+    "title": "Mitigate SQL Injection Risk",
+    "problem_statement": "Concatenated SQL strings pose a security risk.",
+    "scope": [
+      "agents/database_engineer.py"
+    ],
+    "risk_if_unaddressed": "High potential for data breaches.",
+    "effort": "M",
+    "severity": "critical",
+    "dependencies": [],
+    "suggested_approach": "Refactor to use parameterized queries.",
+    "success_criteria": [
+      "All SQL queries are parameterized.",
+      "No SQL injection vulnerabilities detected."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "agents/database_engineer.py",
+        "line": 45,
+        "evidence": "execute('SELECT * FROM users WHERE id=' + user_id)"
+      }
+    ]
+  }
+]
