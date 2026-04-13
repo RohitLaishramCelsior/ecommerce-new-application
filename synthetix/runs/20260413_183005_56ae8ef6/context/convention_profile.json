@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "summary": "Convention profile for the legacy codebase.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$camelCase"
+      ],
+      "counterexamples": [
+        "$snake_case"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "global $db_connection;"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Ensure consistent naming conventions across all files."
+  ],
+  "scaffold_templates": [
+    "Use TypeScript class templates for new modules."
+  ]
+}
