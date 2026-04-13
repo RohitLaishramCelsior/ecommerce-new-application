@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Implement Error Handling",
+    "problem_statement": "The PHP scripts lack proper error handling mechanisms.",
+    "scope": [
+      "bin/slowquery.php",
+      "Classes/attrs.php"
+    ],
+    "risk_if_unaddressed": "Uncaught errors may lead to application crashes.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [],
+    "suggested_approach": "Refactor scripts to include try-catch blocks and use a logging library.",
+    "success_criteria": [
+      "All scripts have structured error handling."
+    ],
+    "confidence": 0.8,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "No error handling present."
+      }
+    ]
+  }
+]
