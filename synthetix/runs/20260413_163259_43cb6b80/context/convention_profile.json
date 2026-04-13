@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows PHP conventions with minimal error handling and logging. Modernization will enforce TypeScript and Docker conventions.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Variable naming convention."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use try-catch blocks for error handling.",
+      "confidence": 0.7,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "if (feof($fptr)) { return false; }"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 6,
+          "evidence": "Lack of error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor variable names to camelCase.",
+    "Implement error handling using try-catch blocks."
+  ],
+  "scaffold_templates": [
+    "TypeScript service template",
+    "Dockerfile for Node.js application"
+  ]
+}
