@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "summary": "This model represents the legacy PHP codebase components and their interactions, focusing on modernization to TypeScript.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for slow query logging."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Script",
+      "name": "slowquery.php",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for slow query logging."
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "Script",
+      "name": "release_info.php",
+      "metadata": {},
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "branchinfo/release_info.php",
+          "line": 1,
+          "evidence": "Cron job setup instructions."
+        }
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "Class",
+      "name": "attrs.php",
+      "metadata": {},
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "HTML document generation with PHP."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "IMPORTS",
+      "from": "node-2",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Include init.php"
+        }
+      ]
+    },
+    {
+      "type": "IMPORTS",
+      "from": "node-4",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "Include init.php"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
