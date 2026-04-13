@@ -1,0 +1,131 @@
+{
+  "header": {
+    "artifact_id": "00a5a94771af497cac6b867f3d3d13c8",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-13T15:36:55.522344+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260413_210616_da54ad52",
+      "stage_id": "context_layer",
+      "task_id": "aa3fec5766d345c7945c92313c31e3ea"
+    },
+    "parents": [],
+    "digest": "sha256:982e10ee430237d6cc495fec6e97700e73491c83f0197e433d8709964233bb11",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260413_210616_da54ad52",
+      "bundle_version": "20260413T153655Z_20260413_210616_da54ad52"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use camelCase for variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use camelCase for variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "$maxTime"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "$max_time"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.7,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "title": "Use try-catch for error handling.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use try-catch for error handling.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "try { ... } catch (Exception $e) { ... }"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "die();"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "Classes/attrs.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.6,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "Basic .NET service template",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    },
+    {
+      "id": "TPL-002",
+      "language": "generic",
+      "name": "Dockerfile template for .NET applications",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
