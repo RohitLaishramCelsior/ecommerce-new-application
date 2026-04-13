@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Logger",
+    "problem_statement": "The Slow Query Logger uses global variables and lacks proper error handling.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential security vulnerabilities and maintainability issues.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor to use dependency injection and implement proper error handling with exceptions.",
+    "success_criteria": [
+      "No global variables used.",
+      "Proper error handling implemented."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 2,
+        "evidence": "global $db_connection;"
+      }
+    ]
+  }
+]
