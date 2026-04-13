@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor PHP scripts to .NET services",
+    "problem_statement": "The current PHP scripts are outdated and lack modern error handling and security practices.",
+    "scope": [
+      "bin/slowquery.php",
+      "Classes/attrs.php"
+    ],
+    "risk_if_unaddressed": "Continued use of outdated practices may lead to security breaches and maintainability issues.",
+    "effort": "L",
+    "severity": "high",
+    "dependencies": [
+      "node-1",
+      "node-2"
+    ],
+    "suggested_approach": "Refactor the PHP scripts into .NET services using a modular monolith architecture and implement structured error handling.",
+    "success_criteria": [
+      "All PHP scripts are successfully refactored to C#.",
+      "Error handling is implemented using try-catch blocks.",
+      "Security best practices are followed."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Legacy PHP script for slow query processing."
+      }
+    ]
+  }
+]
