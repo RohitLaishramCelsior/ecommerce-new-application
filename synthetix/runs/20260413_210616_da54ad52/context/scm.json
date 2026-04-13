@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "summary": "This context model represents a legacy PHP codebase targeted for modernization using .NET, Docker, and a modular monolith architecture.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for processing slow query logs."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "HTML Generation",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "PHP script for generating HTML with JavaScript and CSS links."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "DEPENDS_ON",
+      "from": "node-1",
+      "to": "node-2",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Includes init.php which may depend on HTML generation."
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "Database details are not specified."
+  ]
+}
