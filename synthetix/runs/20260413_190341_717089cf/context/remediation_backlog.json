@@ -1,0 +1,30 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor slowquery.php to TypeScript",
+    "problem_statement": "The slowquery.php script uses direct file access and lacks modern error handling.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential security vulnerabilities and maintainability issues.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Convert the PHP script to TypeScript, using asynchronous file operations and proper error handling.",
+    "success_criteria": [
+      "Script is rewritten in TypeScript.",
+      "File operations are secure and validated.",
+      "Error handling is robust."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Legacy PHP script for slow query logging."
+      }
+    ]
+  }
+]
