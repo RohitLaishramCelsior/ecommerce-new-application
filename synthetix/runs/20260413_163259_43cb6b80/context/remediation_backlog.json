@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Logger",
+    "problem_statement": "The slow query logger lacks error handling and uses outdated PHP conventions.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential application crashes and unhandled exceptions.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor the script to use TypeScript with proper error handling and logging.",
+    "success_criteria": [
+      "The script is rewritten in TypeScript.",
+      "Error handling is implemented using try-catch blocks."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 6,
+        "evidence": "Lack of error handling."
+      }
+    ]
+  }
+]
