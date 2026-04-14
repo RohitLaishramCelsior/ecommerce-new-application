@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "summary": "Legacy codebase lacks consistent naming conventions and modern error handling practices.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use PascalCase for class names.",
+      "confidence": 0.7,
+      "examples": [
+        "MyClass"
+      ],
+      "counterexamples": [
+        "my_class"
+      ],
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "Class names are not consistently using PascalCase."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use try-catch blocks for error handling.",
+      "confidence": 0.6,
+      "examples": [
+        "try { ... } catch (Exception e) { ... }"
+      ],
+      "counterexamples": [
+        "if (error) { ... }"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Lack of structured error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor to use consistent naming conventions.",
+    "Implement structured error handling using try-catch."
+  ],
+  "scaffold_templates": [
+    "C# class templates using PascalCase."
+  ]
+}
