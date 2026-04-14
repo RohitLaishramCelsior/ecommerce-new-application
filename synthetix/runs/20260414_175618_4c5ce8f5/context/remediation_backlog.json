@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Global Variables",
+    "problem_statement": "Global variables are used extensively, which can lead to hard-to-trace bugs and maintenance challenges.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Increased risk of bugs and reduced maintainability.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor to use dependency injection and local variables.",
+    "success_criteria": [
+      "Eliminate all global variables.",
+      "Improve code readability."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 3,
+        "evidence": "Global variable usage."
+      }
+    ]
+  }
+]
