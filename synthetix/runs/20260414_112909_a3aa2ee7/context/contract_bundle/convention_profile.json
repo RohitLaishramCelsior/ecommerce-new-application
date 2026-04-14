@@ -1,0 +1,122 @@
+{
+  "header": {
+    "artifact_id": "ffbfa3bc27244299a7c441f19bd4a80c",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-14T05:59:37.002226+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260414_112909_a3aa2ee7",
+      "stage_id": "context_layer",
+      "task_id": "f1d2da7a907348beb6c9b3f66af8fcdc"
+    },
+    "parents": [],
+    "digest": "sha256:639b97ce57d9774ce1ffd3821d66f7bf491a191771c6834dbc3e26e1542357b1",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260414_112909_a3aa2ee7",
+      "bundle_version": "20260414T055936Z_20260414_112909_a3aa2ee7"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use PascalCase for class names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use PascalCase for class names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "MyClass"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "my_class"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "Classes/attrs.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.7,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "title": "Use try-catch blocks for error handling.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use try-catch blocks for error handling.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "try { ... } catch (Exception e) { ... }"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "if (error) { ... }"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.6,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "C# class templates using PascalCase.",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
