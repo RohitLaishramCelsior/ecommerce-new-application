@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Processor",
+    "problem_statement": "The slow query processor script uses hardcoded paths and lacks proper error handling.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential security vulnerabilities and maintainability issues.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [],
+    "suggested_approach": "Refactor to use configuration files for paths and implement exception handling.",
+    "success_criteria": [
+      "Paths are configurable.",
+      "Exceptions replace die() calls."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Hardcoded path and error handling."
+      }
+    ]
+  }
+]
