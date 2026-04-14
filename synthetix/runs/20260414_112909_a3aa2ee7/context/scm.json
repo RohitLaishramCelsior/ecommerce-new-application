@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "summary": "Legacy PHP codebase with various components and dependencies identified for modernization to C# using a modular-monolith architecture.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for processing slow query logs."
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "File",
+      "name": "bin/slowquery.php",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "PHP script for processing slow query logs."
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "File",
+      "name": "branchinfo/release_info.php",
+      "metadata": {},
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "branchinfo/release_info.php",
+          "line": 1,
+          "evidence": "Cron job setup and SQL table creation."
+        }
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "File",
+      "name": "Classes/attrs.php",
+      "metadata": {},
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "HTML generation using PHP objects."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "DEPENDS_ON",
+      "from": "node-2",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Includes init.php which is part of Support and Domain Services."
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
