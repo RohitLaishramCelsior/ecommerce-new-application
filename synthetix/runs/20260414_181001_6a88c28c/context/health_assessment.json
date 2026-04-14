@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The legacy codebase has maintainability and security concerns due to outdated practices. Modernization will address these issues.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 65,
+    "testability": 55
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Lack of error handling and outdated practices.",
+      "severity": "high",
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "No try-catch blocks."
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Vulnerabilities",
+      "description": "Potential SQL injection and lack of input validation.",
+      "severity": "critical",
+      "confidence": 0.9
+    }
+  ]
+}
