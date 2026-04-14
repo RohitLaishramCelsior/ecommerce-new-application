@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows PHP conventions with some deviations in naming and structure. Modernization will align it with TypeScript and Docker standards.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use camelCase for variable names.",
+      "confidence": 0.8,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Variable naming in PHP."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Implement try-catch blocks for error handling.",
+      "confidence": 0.7,
+      "examples": [
+        "try { ... } catch (Exception $e) { ... }"
+      ],
+      "counterexamples": [
+        "No error handling in readUntilComment function."
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "Lack of error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor PHP scripts to TypeScript modules."
+  ],
+  "scaffold_templates": [
+    "TypeScript module template for log processing."
+  ]
+}
