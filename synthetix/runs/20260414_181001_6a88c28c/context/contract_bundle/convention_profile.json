@@ -1,0 +1,122 @@
+{
+  "header": {
+    "artifact_id": "5edc8fb0775441f594f558aa1d12bb23",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-14T12:40:37.169616+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260414_181001_6a88c28c",
+      "stage_id": "context_layer",
+      "task_id": "e27c43a96ac34a2eb1f02d65304a710c"
+    },
+    "parents": [],
+    "digest": "sha256:763da8a88911361bfdea08efb90c1f28f3d4fc2f594ca63745f015cbd72d43cb",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260414_181001_6a88c28c",
+      "bundle_version": "20260414T124036Z_20260414_181001_6a88c28c"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use camelCase for variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use camelCase for variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "$dbConnection"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "$db_connection"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "title": "Implement try-catch blocks for error handling.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Implement try-catch blocks for error handling.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "try { ... } catch (Exception $e) { ... }"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "No error handling in readUntilComment function."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.7,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "TypeScript module template for log processing.",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
