@@ -1,0 +1,133 @@
+{
+  "header": {
+    "artifact_id": "af87cb755abd429aa8e6010604cf170b",
+    "artifact_type": "system_context_model",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-14T11:12:25.992445+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260414_164142_b6f20f61",
+      "stage_id": "context_layer",
+      "task_id": "493198b207c348e2b65dae6adbc6b02d"
+    },
+    "parents": [],
+    "digest": "sha256:98eddba0f72b23a226494bb87f3d624f5a41a0eb241e8fd65f6a10c9e45d8931",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260414_164142_b6f20f61",
+      "bundle_version": "20260414T111225Z_20260414_164142_b6f20f61"
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "module:agents___init___py",
+        "type": "module",
+        "name": "agents/__init__.py",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "agents/__init__.py"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "agents/__init__.py"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "module:agents_analyst_py",
+        "type": "module",
+        "name": "agents/analyst.py",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "agents/analyst.py"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "agents/analyst.py"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:1",
+        "type": "imports",
+        "from": "module:agents___init___py",
+        "to": "module:agents_analyst_py",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "agents/__init__.py"
+          }
+        ],
+        "confidence": {
+          "score": 0.95,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      }
+    ],
+    "statistics": {
+      "node_count": 2,
+      "edge_count": 1,
+      "languages": []
+    }
+  },
+  "views": {
+    "c4": {
+      "context": [],
+      "container": [],
+      "component": [],
+      "code": []
+    }
+  },
+  "unknowns": []
+}
