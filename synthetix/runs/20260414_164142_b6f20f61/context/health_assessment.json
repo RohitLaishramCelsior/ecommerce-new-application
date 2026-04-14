@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The codebase is moderately maintainable with potential security and reliability concerns.",
+  "scores": {
+    "maintainability": 70,
+    "security": 60,
+    "reliability": 65,
+    "testability": 50
+  },
+  "hotspots": [
+    {
+      "scope": "agents/analyst.py",
+      "reason": "High import count without clear modular separation.",
+      "severity": "medium",
+      "confidence": 0.85,
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 12,
+          "evidence": "import json"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Security Risk in Dynamic Imports",
+      "description": "Dynamic imports could lead to security vulnerabilities if not handled properly.",
+      "severity": "high",
+      "confidence": 0.8
+    }
+  ]
+}
