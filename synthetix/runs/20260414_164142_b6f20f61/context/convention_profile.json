@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows Python conventions with some deviations in naming and import practices.",
+  "rules": [
+    {
+      "id": "rule-001",
+      "category": "naming",
+      "rule": "Modules should follow snake_case naming convention.",
+      "confidence": 0.9,
+      "examples": [
+        "agents_analyst_py"
+      ],
+      "counterexamples": [],
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 1,
+          "evidence": "module name"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Ensure all modules follow snake_case naming."
+  ],
+  "scaffold_templates": [
+    "TypeScript module template"
+  ]
+}
