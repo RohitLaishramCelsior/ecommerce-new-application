@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Refactor Slow Query Script",
+    "problem_statement": "The slow query script lacks error handling and uses outdated PHP practices.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Continued security vulnerabilities and maintainability issues.",
+    "effort": "M",
+    "severity": "high",
+    "dependencies": [
+      "node-1"
+    ],
+    "suggested_approach": "Refactor the script into a TypeScript module with proper error handling and logging.",
+    "success_criteria": [
+      "Script is converted to TypeScript.",
+      "Error handling is implemented."
+    ],
+    "confidence": 0.85,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "Outdated PHP script."
+      }
+    ]
+  }
+]
