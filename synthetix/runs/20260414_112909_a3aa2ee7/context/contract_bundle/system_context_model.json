@@ -1,0 +1,189 @@
+{
+  "header": {
+    "artifact_id": "d1a522a33d6f4c10aba4d2fae0309d3a",
+    "artifact_type": "system_context_model",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-14T05:59:37.002226+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-rohit_brd",
+      "branch": "feature-rohit_brd",
+      "commit_sha": "42eaf76bec3aabb2f77e87c24e74e905529929fe",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260414_112909_a3aa2ee7",
+      "stage_id": "context_layer",
+      "task_id": "f1d2da7a907348beb6c9b3f66af8fcdc"
+    },
+    "parents": [],
+    "digest": "sha256:9f8131bcee0db017541e20ae681575c184167dfb058e1750427e0981c2302325",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260414_112909_a3aa2ee7",
+      "bundle_version": "20260414T055936Z_20260414_112909_a3aa2ee7"
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "node-1",
+        "type": "component",
+        "name": "Support and Domain Services",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "bin/slowquery.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "bin/slowquery.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.9,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "component",
+        "name": "bin/slowquery.php",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "bin/slowquery.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "bin/slowquery.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.9,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-3",
+        "type": "component",
+        "name": "branchinfo/release_info.php",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "branchinfo/release_info.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "branchinfo/release_info.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      },
+      {
+        "id": "node-4",
+        "type": "component",
+        "name": "Classes/attrs.php",
+        "description": "",
+        "labels": {
+          "source": "sil"
+        },
+        "language": "",
+        "repo_paths": [
+          "Classes/attrs.php"
+        ],
+        "runtime": {},
+        "interfaces": [],
+        "data": {},
+        "attributes": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "Classes/attrs.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.85,
+          "rationale": "from SIL node extraction",
+          "signals": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:1",
+        "type": "depends_on",
+        "from": "node-2",
+        "to": "node-1",
+        "labels": {
+          "source": "sil"
+        },
+        "protocol": {},
+        "evidence": [
+          {
+            "kind": "file_span",
+            "file": "bin/slowquery.php"
+          }
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "from SIL edge extraction",
+          "signals": []
+        }
+      }
+    ],
+    "statistics": {
+      "node_count": 4,
+      "edge_count": 1,
+      "languages": []
+    }
+  },
+  "views": {
+    "c4": {
+      "context": [],
+      "container": [],
+      "component": [],
+      "code": []
+    }
+  },
+  "unknowns": []
+}
