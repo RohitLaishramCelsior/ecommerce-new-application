@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "summary": "Convention profile identifies coding standards and practices in the legacy codebase.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Variables should be camelCase.",
+      "confidence": 0.7,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 2,
+          "evidence": "Variable naming convention."
+        }
+      ]
+    },
+    {
+      "id": "rule-2",
+      "category": "error_handling",
+      "rule": "Use exceptions for error handling instead of die().",
+      "confidence": 0.8,
+      "examples": [
+        "throw new Exception('Error message');"
+      ],
+      "counterexamples": [
+        "die();"
+      ],
+      "provenance": [
+        {
+          "file": "Classes/attrs.php",
+          "line": 1,
+          "evidence": "Use of die() for error handling."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor variable names to camelCase.",
+    "Replace die() with exception handling."
+  ],
+  "scaffold_templates": [
+    "C# class templates for HTML generation."
+  ]
+}
