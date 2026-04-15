@@ -1,0 +1,50 @@
+{
+  "artifact": "executive_brief_v1",
+  "document_title": "VB6 Modernization Analysis Executive Brief",
+  "client_name": "Client",
+  "project_name": "VB6 Modernization Analysis",
+  "generated_at": "2026-04-15",
+  "scope_summary": "The current BRD is grounded in 0 LOC across 0 files from the selected PHP scope. Unless the scope lock explicitly states full-repository coverage, this document should not be interpreted as claiming that every legacy workflow was analyzed.",
+  "current_state_summary": "Legacy PHP custom_php application with 0 routes, 0 controllers, 0 analyzed model files, 0 templates/views, 0 extracted SQL statements, and 0 detected background job workflows.",
+  "target_state_summary": "Deliver a TypeScript-based target architecture with explicit services, route handling, and hardened security/data access behavior.",
+  "readiness": {
+    "qa_status": "FAIL",
+    "quality_gate_summary": "9/14 quality gates passing, 2 failing.",
+    "module_count": 0
+  },
+  "counts": {
+    "routes": 0,
+    "modules": 0,
+    "files": 0,
+    "loc": 0
+  },
+  "scope_filter_applied": false,
+  "later_phase_summary": {
+    "deferred_module_count": 0,
+    "excluded_module_count": 0,
+    "current_phase_scope_summary": {}
+  },
+  "blocking_decisions": [
+    "Q-SQL-001: SQL catalog is incomplete or absent and requires review before build commitments.",
+    "DEC-BDD-001 resolution plan: capture golden flows for the onboarding, contractor placement, and portal upload workflows before sprint planning is approved."
+  ],
+  "top_risks": [
+    {
+      "id": "RISK-001",
+      "severity": "HIGH",
+      "title": "Legacy error handling patterns detected",
+      "mitigation": ""
+    },
+    {
+      "id": "RISK-002",
+      "severity": "MEDIUM",
+      "title": "SQL risk flags for sql:1: select_star",
+      "mitigation": ""
+    }
+  ],
+  "recommended_phasing": [
+    "Deliver a TypeScript-based target architecture with explicit services, route handling, and hardened security/data access behavior.",
+    "Close blocking decisions and scope-lock assumptions before Build.",
+    "Use domain dossiers for sprint planning and module cards for implementation handoff."
+  ]
+}
