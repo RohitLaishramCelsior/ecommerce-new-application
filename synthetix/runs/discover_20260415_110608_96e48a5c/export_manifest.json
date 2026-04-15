@@ -1,0 +1,37 @@
+{
+  "run_id": "discover_20260415_110608_96e48a5c",
+  "generated_at": "2026-04-15T11:36:40.629581+00:00",
+  "run_status": "aborted",
+  "base_path": "synthetix/runs/discover_20260415_110608_96e48a5c",
+  "owner": "RohitLaishramCelsior",
+  "repository": "ecommerce-new-application",
+  "branch": "main",
+  "artifact_roots": [
+    "brd_test",
+    "context",
+    "deploy",
+    "live_review",
+    "pipeline",
+    "qa",
+    "research"
+  ],
+  "attempted_files": 21,
+  "exported_files": 17,
+  "failed_files": 0,
+  "skipped_files": 3,
+  "failed_samples": [],
+  "skipped_samples": [
+    {
+      "repo_path": "synthetix/runs/discover_20260415_110608_96e48a5c/pipeline/stage_0.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_110608_96e48a5c/pipeline/stage_1.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_110608_96e48a5c/pipeline/state.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    }
+  ]
+}
