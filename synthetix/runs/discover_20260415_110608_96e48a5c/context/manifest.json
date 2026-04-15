@@ -1,0 +1,29 @@
+{
+  "run_id": "discover_20260415_110608_96e48a5c",
+  "created_at": "2026-04-15T11:34:00.115981+00:00",
+  "repo": "synthetix",
+  "branch": "feature-synthetix-v2-rohit",
+  "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+  "version_id": "20260415T113359Z_discover_20260415_110608_96e48a5c",
+  "counts": {
+    "scm_nodes": 352,
+    "scm_edges": 791,
+    "cp_rules": 0,
+    "rb_items": 0
+  },
+  "artifacts": {
+    "scm": "scm.json",
+    "convention_profile": "convention_profile.json",
+    "health_assessment": "health_assessment.json",
+    "remediation_backlog": "remediation_backlog.json",
+    "confidence_summary": "confidence_summary.json",
+    "static_analysis": "static_analysis.json"
+  },
+  "delta": {
+    "status": "new_baseline",
+    "node_delta": 0,
+    "edge_delta": 0,
+    "rule_delta": 0,
+    "backlog_delta": 0
+  }
+}
