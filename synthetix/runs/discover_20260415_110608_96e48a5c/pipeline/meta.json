@@ -1,8 +1,8 @@
 {
   "run_id": "discover_20260415_110608_96e48a5c",
   "created_at": "2026-04-15T11:08:27.643765+00:00",
-  "updated_at": "2026-04-15T11:36:08.709360+00:00",
-  "status": "aborted",
+  "updated_at": "2026-04-15T11:38:06.436173+00:00",
+  "status": "waiting_approval",
   "business_objectives": "Modernize the provided legacy codebase using .NET | docker-local | modular-monolith. Document current functionality and acceptance criteria, design architecture, implement rewritten services, run QA/security checks, validate requirements, and deploy for local Docker testing.",
   "config": {
     "provider": "openai",
