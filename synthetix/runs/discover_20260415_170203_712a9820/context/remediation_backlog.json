@@ -1,8 +1,8 @@
 [
   {
-    "id": "remediation-1",
-    "title": "Parameterize SQL Queries",
-    "problem_statement": "Unparameterized SQL queries found in legacy PHP scripts.",
+    "id": "rb-1",
+    "title": "Refactor SQL Queries",
+    "problem_statement": "SQL queries are concatenated, leading to potential injection vulnerabilities.",
     "scope": [
       "bin/slowquery.php"
     ],
@@ -10,17 +10,17 @@
     "effort": "M",
     "severity": "critical",
     "dependencies": [],
-    "suggested_approach": "Refactor queries to use parameterized statements in C#.",
+    "suggested_approach": "Refactor to use parameterized queries in C#.",
     "success_criteria": [
-      "All queries are parameterized.",
-      "Security tests show no SQL injection vulnerabilities."
+      "All SQL queries are parameterized.",
+      "No SQL injection vulnerabilities detected."
     ],
     "confidence": 0.9,
     "provenance": [
       {
         "file": "bin/slowquery.php",
-        "line": 1,
-        "evidence": "Unparameterized SQL queries."
+        "line": 20,
+        "evidence": "Concatenated SQL query."
       }
     ]
   }
