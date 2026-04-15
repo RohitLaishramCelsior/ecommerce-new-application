@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "summary": "The legacy codebase has moderate security risks and maintainability challenges.",
+  "scores": {
+    "maintainability": 60,
+    "security": 50,
+    "reliability": 70,
+    "testability": 55
+  },
+  "hotspots": [
+    {
+      "scope": "bin/slowquery.php",
+      "reason": "Unparameterized SQL queries detected.",
+      "severity": "high",
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "possible_unparameterized_query"
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "SQL Injection Risk",
+      "description": "Unparameterized SQL queries can lead to SQL injection vulnerabilities.",
+      "severity": "critical",
+      "confidence": 0.8
+    }
+  ]
+}
