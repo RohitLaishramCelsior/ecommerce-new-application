@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows Python conventions with some deviations in naming and import practices.",
+  "rules": [
+    {
+      "id": "rule:naming_convention",
+      "category": "naming",
+      "rule": "Use snake_case for function and variable names.",
+      "confidence": 0.85,
+      "examples": [
+        "def my_function()"
+      ],
+      "counterexamples": [
+        "def MyFunction()"
+      ],
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 12,
+          "evidence": "def MyFunction()"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Use snake_case for all function names."
+  ],
+  "scaffold_templates": []
+}
