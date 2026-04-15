@@ -1,0 +1,97 @@
+{
+  "artifact_type": "source_schema_model",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-15T07:54:22.435557+00:00",
+    "run_id": "run_ac7536269a90",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "VB6-Modernization",
+      "version": "1.0.0",
+      "confidence": 0.95
+    },
+    "context_reference": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "extraction_tracks": {
+    "track_a": {
+      "enabled": false,
+      "route": "code_only",
+      "table_count": 0,
+      "relationship_count": 0
+    },
+    "track_b": {
+      "enabled": true,
+      "table_count": 2,
+      "query_count": 2
+    }
+  },
+  "summary": {
+    "tables": 2,
+    "columns": 0,
+    "relationships": 0,
+    "unknown_query_count": 0
+  },
+  "tables": [
+    {
+      "table_id": "src_tbl:2",
+      "name": "Transactions",
+      "primary_key_candidates": [],
+      "read_query_count": 0,
+      "write_query_count": 1,
+      "risk_flags": [],
+      "evidence_sql_ids": [
+        "sql:2"
+      ],
+      "columns": []
+    },
+    {
+      "table_id": "src_tbl:1",
+      "name": "Users",
+      "primary_key_candidates": [],
+      "read_query_count": 1,
+      "write_query_count": 0,
+      "risk_flags": [
+        "select_star"
+      ],
+      "evidence_sql_ids": [
+        "sql:1"
+      ],
+      "columns": []
+    }
+  ],
+  "relationships": [],
+  "artifact_id": "art_source_schema_model_0c876cf9bdc049e1",
+  "run_id": "run_ac7536269a90",
+  "generated_at": "2026-04-15T07:54:22.435557+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "VB6-Modernization",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "synthetix",
+    "branch": "feature-synthetix-ui-v2-bunty",
+    "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_3da08f4e3ccc4783",
+    "canonical_project": "LegacyApp",
+    "target_stack": {
+      "language": "Unknown",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
