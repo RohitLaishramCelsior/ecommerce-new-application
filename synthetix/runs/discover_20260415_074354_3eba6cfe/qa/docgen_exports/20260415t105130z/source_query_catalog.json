@@ -1,0 +1,83 @@
+{
+  "artifact_type": "source_query_catalog",
+  "artifact_version": "1.0",
+  "metadata": {
+    "generated_at": "2026-04-15T07:54:22.435557+00:00",
+    "run_id": "run_ac7536269a90",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "skill_pack": {
+      "id": "VB6-Modernization",
+      "version": "1.0.0",
+      "confidence": 0.95
+    },
+    "context_reference": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "queries": [
+    {
+      "query_id": "sql:1",
+      "kind": "select",
+      "raw": "SELECT * FROM Users",
+      "normalized": "SELECT * FROM Users",
+      "tables": [
+        "Users"
+      ],
+      "columns": [],
+      "risk_flags": [
+        "select_star"
+      ],
+      "usage_sites": []
+    },
+    {
+      "query_id": "sql:2",
+      "kind": "insert",
+      "raw": "INSERT INTO Transactions",
+      "normalized": "INSERT INTO Transactions",
+      "tables": [
+        "Transactions"
+      ],
+      "columns": [],
+      "risk_flags": [],
+      "usage_sites": [
+        {
+          "form": "Form1",
+          "procedure": "Button_Click",
+          "operation": "insert"
+        }
+      ]
+    }
+  ],
+  "artifact_id": "art_source_query_catalog_3603647954fa442a",
+  "run_id": "run_ac7536269a90",
+  "generated_at": "2026-04-15T07:54:22.435557+00:00",
+  "producer": {
+    "agent": "Analyst Agent",
+    "skill_pack": "VB6-Modernization",
+    "skill_version": "1.0.0"
+  },
+  "context": {
+    "repo": "synthetix",
+    "branch": "feature-synthetix-ui-v2-bunty",
+    "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+    "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_3da08f4e3ccc4783",
+    "canonical_project": "LegacyApp",
+    "target_stack": {
+      "language": "Unknown",
+      "ui": "Unknown",
+      "db": "Unknown"
+    }
+  }
+}
