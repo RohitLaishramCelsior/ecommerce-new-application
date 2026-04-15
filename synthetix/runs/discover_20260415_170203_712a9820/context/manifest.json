@@ -1,10 +1,10 @@
 {
   "run_id": "discover_20260415_170203_712a9820",
-  "created_at": "2026-04-15T18:39:54.086510+00:00",
+  "created_at": "2026-04-15T19:03:44.992674+00:00",
   "repo": "synthetix",
   "branch": "feature-synthetix-v2-rohit",
   "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
-  "version_id": "20260415T183953Z_discover_20260415_170203_712a9820",
+  "version_id": "20260415T190344Z_discover_20260415_170203_712a9820",
   "counts": {
     "scm_nodes": 2,
     "scm_edges": 1,
@@ -21,7 +21,7 @@
   },
   "delta": {
     "status": "updated",
-    "node_delta": -1,
+    "node_delta": 0,
     "edge_delta": 0,
     "rule_delta": 0,
     "backlog_delta": 0
