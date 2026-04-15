@@ -1,0 +1,26 @@
+[
+  {
+    "id": "rb-001",
+    "title": "Refactor complex functions",
+    "problem_statement": "Functions with multiple responsibilities are hard to maintain and test.",
+    "scope": [
+      "agents/analyst.py"
+    ],
+    "risk_if_unaddressed": "Increased maintenance cost and potential for bugs.",
+    "effort": "M",
+    "severity": "medium",
+    "dependencies": [],
+    "suggested_approach": "Refactor functions to adhere to single responsibility principle.",
+    "success_criteria": [
+      "Functions are refactored and covered by unit tests."
+    ],
+    "confidence": 0.85,
+    "provenance": [
+      {
+        "file": "agents/analyst.py",
+        "line": 20,
+        "evidence": "def complex_function()"
+      }
+    ]
+  }
+]
