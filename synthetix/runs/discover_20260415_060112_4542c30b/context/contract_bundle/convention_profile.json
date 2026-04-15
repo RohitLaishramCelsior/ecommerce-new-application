@@ -1,0 +1,76 @@
+{
+  "header": {
+    "artifact_id": "c67bb082567c42ffa5a13f51412b80c6",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-15T06:10:20.261340+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-synthetix-ui-v2-bunty",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "discover_20260415_060112_4542c30b",
+      "stage_id": "context_layer",
+      "task_id": "61fdaf0f14604a8ca144fb0d6b93c282"
+    },
+    "parents": [],
+    "digest": "sha256:5262af2d8ffe8fb147a8b9b5fd41d187540d6fdc25501cad6869788ab8a5f516",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "discover_20260415_060112_4542c30b",
+      "bundle_version": "20260415T061018Z_discover_20260415_060112_4542c30b"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule:naming_convention",
+      "category": "naming",
+      "title": "Use snake_case for function and variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use snake_case for function and variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "def my_function()"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "def MyFunction()"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "agents/analyst.py"
+        }
+      ],
+      "confidence": {
+        "score": 0.85,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [],
+  "overrides": []
+}
