@@ -1,0 +1,733 @@
+{
+  "artifact_type": "requirements_pack",
+  "artifact_version": "2.0",
+  "artifact_id": "REQPACK-DISCOVER_20260415_074354_3EBA6CFE",
+  "generated_at": "2026-04-15T07:54:22.435490+00:00",
+  "generated_by": {
+    "agent_name": "Analyst Agent",
+    "persona": "Legacy Modernization Analyst",
+    "persona_version": "1.0",
+    "requirements_pack_profile": "requirements-pack-v2-general",
+    "domain_pack": {
+      "id": "software-general-v1",
+      "version": "1.0.0",
+      "ontologies": [
+        "Capability Taxonomy"
+      ],
+      "standards": [],
+      "internal_playbooks": []
+    }
+  },
+  "project": {
+    "name": "Legacy Code Modernization",
+    "work_item_id": "discover_20260415_074354_3eba6cfe",
+    "jurisdiction": [
+      "GLOBAL"
+    ],
+    "regulatory_profile": [],
+    "domain_pack": {
+      "id": "software-general-v1",
+      "version": "1.0.0",
+      "ontologies": [
+        "Capability Taxonomy"
+      ],
+      "standards": [],
+      "internal_playbooks": []
+    }
+  },
+  "intake": {
+    "business_request_raw": "Build from Discover baseline",
+    "actors": [
+      "Business User"
+    ],
+    "channels": [
+      "Web"
+    ],
+    "data_elements": [
+      {
+        "name": "domainEntityId",
+        "classification": "INTERNAL"
+      }
+    ],
+    "constraints_from_user": [],
+    "assumptions": [
+      "Legacy systems will remain operational during modernization.",
+      "No new features will be added during the modernization phase."
+    ]
+  },
+  "domain_mapping": {
+    "capabilities": [],
+    "domain_invariants": [
+      {
+        "id": "INV-001",
+        "statement": "Define explicit error handling and observability requirements."
+      },
+      {
+        "id": "INV-002",
+        "statement": "Include measurable non-functional requirements."
+      },
+      {
+        "id": "INV-003",
+        "statement": "Map acceptance criteria to executable test types."
+      }
+    ],
+    "glossary": [
+      {
+        "term": "AuditEvent",
+        "definition": "AuditEvent entity in current domain scope.",
+        "synonyms": []
+      },
+      {
+        "term": "DomainEvent",
+        "definition": "DomainEvent entity in current domain scope.",
+        "synonyms": []
+      },
+      {
+        "term": "ServiceRequest",
+        "definition": "ServiceRequest entity in current domain scope.",
+        "synonyms": []
+      },
+      {
+        "term": "User",
+        "definition": "User entity in current domain scope.",
+        "synonyms": []
+      }
+    ]
+  },
+  "compliance": {
+    "controls_triggered": [],
+    "privacy": {
+      "pii_masking_rules": [],
+      "retention_days": 365,
+      "access_model": "least_privilege"
+    }
+  },
+  "requirements": {
+    "functional": [
+      {
+        "id": "FR-001",
+        "title": "Legacy Code Analysis",
+        "priority": "P0",
+        "acceptance": {
+          "gherkin_feature_id": "BDD-LEGACY-001",
+          "scenarios": [
+            "BDD-LEGACY-001-SC-001",
+            "FR-001-BDD-01-SC-001"
+          ]
+        }
+      },
+      {
+        "id": "FR-002",
+        "title": "Refactor Legacy Code",
+        "priority": "P0",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-003",
+        "title": "Backward Compatibility Testing",
+        "priority": "P0",
+        "acceptance": {
+          "gherkin_feature_id": "BDD-002",
+          "scenarios": [
+            "BDD-002-SC-001"
+          ]
+        }
+      },
+      {
+        "id": "FR-004",
+        "title": "Implement Error Handling",
+        "priority": "P1",
+        "acceptance": {
+          "gherkin_feature_id": "BDD-003",
+          "scenarios": [
+            "BDD-003-SC-001"
+          ]
+        }
+      },
+      {
+        "id": "FR-005",
+        "title": "Enhance Observability",
+        "priority": "P1",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-006",
+        "title": "Security Hardening",
+        "priority": "P0",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-007",
+        "title": "Performance Optimization",
+        "priority": "P1",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      },
+      {
+        "id": "FR-008",
+        "title": "User Documentation Update",
+        "priority": "P2",
+        "acceptance": {
+          "gherkin_feature_id": "",
+          "scenarios": []
+        }
+      }
+    ],
+    "non_functional": [
+      {
+        "id": "NFR-001",
+        "category": "performance",
+        "metric": "Response time < 200ms under 1000 concurrent users.",
+        "verification_method": [
+          "unit",
+          "integration"
+        ]
+      },
+      {
+        "id": "NFR-002",
+        "category": "security",
+        "metric": "No critical vulnerabilities in security scans.",
+        "verification_method": [
+          "unit",
+          "integration"
+        ]
+      },
+      {
+        "id": "NFR-003",
+        "category": "scalability",
+        "metric": "Support up to 5000 concurrent users.",
+        "verification_method": [
+          "unit",
+          "integration"
+        ]
+      },
+      {
+        "id": "NFR-004",
+        "category": "reliability",
+        "metric": "99.9% uptime.",
+        "verification_method": [
+          "unit",
+          "integration"
+        ]
+      },
+      {
+        "id": "NFR-005",
+        "category": "usability",
+        "metric": "User satisfaction score > 80%.",
+        "verification_method": [
+          "unit",
+          "integration"
+        ]
+      }
+    ]
+  },
+  "bdd": {
+    "features": [
+      {
+        "id": "BDD-002",
+        "title": "Backward Compatibility",
+        "scenarios": [
+          {
+            "id": "BDD-002-SC-001",
+            "name": "Ensure Compatibility",
+            "gherkin": [
+              "Given the modernized code is deployed",
+              "When existing integrations are tested",
+              "Then they should function without modification."
+            ],
+            "maps_to": [
+              "FR-003"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BDD-003",
+        "title": "Error Handling Implementation",
+        "scenarios": [
+          {
+            "id": "BDD-003-SC-001",
+            "name": "Implement Robust Error Handling",
+            "gherkin": [
+              "Given the modernized application",
+              "When an error occurs",
+              "Then it should be logged and a user-friendly message displayed."
+            ],
+            "maps_to": [
+              "FR-004"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BDD-LEGACY-001",
+        "title": "Form1 Click flow parity",
+        "scenarios": [
+          {
+            "id": "BDD-LEGACY-001-SC-001",
+            "name": "Button_Click preserves legacy business behavior",
+            "gherkin": [
+              "Given legacy form \"Form1\" control \"Button1\" handles event \"Click\"",
+              "And legacy handler \"Button_Click\" is triggered",
+              "When the modernization target executes \"Button_Click\"",
+              "Then the user-visible outcome matches legacy behavior",
+              "And data side effects preserve table contracts for Transactions",
+              "And traceability links include legacy form \"Form1\" and handler \"Button_Click\"",
+              "And SQL touchpoints are equivalent to legacy statement \"INSERT INTO Transactions\""
+            ],
+            "maps_to": [
+              "FR-001"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FR-001-BDD-01",
+        "title": "Legacy Code Analysis",
+        "scenarios": [
+          {
+            "id": "FR-001-BDD-01-SC-001",
+            "name": "FR-001-BDD-01 happy path",
+            "gherkin": [
+              "Given legacy behavior mapped to requirement FR-001 is identified",
+              "When a valid modernization request is submitted for legacy code analysis",
+              "Then the system returns the expected result and preserves legacy side-effect contracts"
+            ],
+            "maps_to": [
+              "FR-001"
+            ]
+          }
+        ]
+      }
+    ],
+    "lint": {
+      "gherkin_valid": true,
+      "missing_steps": []
+    }
+  },
+  "open_questions": [
+    {
+      "id": "Q-001",
+      "question": "Are there existing operational constraints or integration dependencies not listed?",
+      "owner": "Client",
+      "severity": "high"
+    },
+    {
+      "id": "Q-002",
+      "question": "What are target latency, throughput, and availability SLOs?",
+      "owner": "Client",
+      "severity": "high"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Potential for data loss during migration.",
+      "impact": "high",
+      "mitigation": "Implement thorough data backup and validation processes."
+    },
+    {
+      "description": "Compatibility issues with existing integrations.",
+      "impact": "medium",
+      "mitigation": "Conduct comprehensive integration testing."
+    },
+    {
+      "description": "Unexpected performance degradation post-modernization.",
+      "impact": "medium",
+      "mitigation": "Perform extensive performance testing and optimizations."
+    },
+    {
+      "description": "Security vulnerabilities introduced during refactoring.",
+      "impact": "high",
+      "mitigation": "Conduct security audits and apply patches promptly."
+    }
+  ],
+  "out_of_scope": [
+    "Introduction of new business features.",
+    "Major architectural changes not related to modernization."
+  ],
+  "traceability": {
+    "links": [
+      {
+        "from": "FR-001",
+        "to": "BDD-LEGACY-001",
+        "type": "verified_by"
+      },
+      {
+        "from": "FR-001",
+        "to": "FR-001-BDD-01",
+        "type": "verified_by"
+      },
+      {
+        "from": "FR-003",
+        "to": "BDD-002",
+        "type": "verified_by"
+      },
+      {
+        "from": "FR-004",
+        "to": "BDD-003",
+        "type": "verified_by"
+      }
+    ]
+  },
+  "conversation_audit": {
+    "thread_id": "THREAD-discover_20260415_074354_3eba6cfe",
+    "changes": []
+  },
+  "context_reference": {
+    "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+    "repo": "synthetix",
+    "branch": "feature-synthetix-ui-v2-bunty",
+    "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+    "scm_version": "1.0",
+    "cp_version": "1.0",
+    "ha_version": "1.0",
+    "source_language": "vb6",
+    "knowledge_snapshot_id": "kctx-693f39aa1367f03c",
+    "run_context_bundle_id": "runctx-7bd5d70fc4a4d524",
+    "source_version_ids": [],
+    "run_id": "discover_20260415_074354_3eba6cfe"
+  },
+  "schema_version": "2.0.0",
+  "domain_pack_ref": {
+    "id": "software-general-v1",
+    "name": "General Software Domain Pack",
+    "version": "1.0.0"
+  },
+  "analyst_dag_trace": [
+    {
+      "step": "normalize_requirement",
+      "status": "completed",
+      "details": "actors=0, actions=0, objects=0"
+    },
+    {
+      "step": "map_to_capabilities",
+      "status": "completed",
+      "details": "primary=0, alternatives=0"
+    },
+    {
+      "step": "retrieve_internal_patterns",
+      "status": "completed",
+      "details": "patterns=0, standards=0"
+    },
+    {
+      "step": "retrieve_compliance_constraints",
+      "status": "completed",
+      "details": "jurisdiction=GLOBAL, data_classification=INTERNAL, constraints=0"
+    },
+    {
+      "step": "synthesize_requirements_pack",
+      "status": "completed",
+      "details": "requirements_pack_ready=true, bdd_features=4"
+    },
+    {
+      "step": "run_quality_gates",
+      "status": "completed",
+      "details": "quality_gates=3, failed=1"
+    }
+  ],
+  "input_contract": {
+    "business_objective": "Build from Discover baseline",
+    "use_case": "code_modernization",
+    "jurisdiction": "GLOBAL",
+    "data_classification": [
+      "INTERNAL"
+    ]
+  },
+  "capability_mapping": {
+    "framework": "Capability Taxonomy",
+    "primary_capabilities": [],
+    "alternative_capabilities": [],
+    "confidence": 0.0
+  },
+  "domain_model_excerpt": {
+    "entities": [
+      "AuditEvent",
+      "DomainEvent",
+      "ServiceRequest",
+      "User"
+    ],
+    "lifecycle_states": [
+      "completed",
+      "failed",
+      "processed",
+      "requested",
+      "validated"
+    ],
+    "relationships": [
+      "LegacyInput contract must map deterministically to ModernizedOutput contract",
+      "ServiceRequest emits DomainEvent and AuditEvent"
+    ]
+  },
+  "regulatory_constraints_applied": [],
+  "standards_guidance": [],
+  "gold_patterns": [],
+  "non_negotiables": [
+    "Define explicit error handling and observability requirements.",
+    "Include measurable non-functional requirements.",
+    "Map acceptance criteria to executable test types."
+  ],
+  "bdd_contract": {
+    "features": [
+      {
+        "id": "BDD-002",
+        "title": "Backward Compatibility",
+        "source_requirement_ids": [
+          "FR-003"
+        ],
+        "gherkin": "Feature: Backward Compatibility\nScenario: Ensure Compatibility\nGiven the modernized code is deployed\nWhen existing integrations are tested\nThen they should function without modification."
+      },
+      {
+        "id": "BDD-003",
+        "title": "Error Handling Implementation",
+        "source_requirement_ids": [
+          "FR-004"
+        ],
+        "gherkin": "Feature: Error Handling\nScenario: Implement Robust Error Handling\nGiven the modernized application\nWhen an error occurs\nThen it should be logged and a user-friendly message displayed."
+      },
+      {
+        "id": "BDD-LEGACY-001",
+        "title": "Form1 Click flow parity",
+        "source_requirement_ids": [
+          "FR-001"
+        ],
+        "gherkin": "Feature: Form1 Click flow parity\n  Scenario: Button_Click preserves legacy business behavior\n    Given legacy form \"Form1\" control \"Button1\" handles event \"Click\"\n    And legacy handler \"Button_Click\" is triggered\n    When the modernization target executes \"Button_Click\"\n    Then the user-visible outcome matches legacy behavior\n    And data side effects preserve table contracts for Transactions\n    And traceability links include legacy form \"Form1\" and handler \"Button_Click\"\n    And SQL touchpoints are equivalent to legacy statement \"INSERT INTO Transactions\""
+      },
+      {
+        "id": "FR-001-BDD-01",
+        "title": "Legacy Code Analysis",
+        "source_requirement_ids": [
+          "FR-001"
+        ],
+        "gherkin": "Feature: Legacy Code Analysis\n  Scenario: FR-001-BDD-01 happy path\n    Given legacy behavior mapped to requirement FR-001 is identified\n    When a valid modernization request is submitted for legacy code analysis\n    Then the system returns the expected result and preserves legacy side-effect contracts"
+      }
+    ],
+    "lint": {
+      "pass": true,
+      "issues": [],
+      "scenario_count": 4
+    }
+  },
+  "non_functional_contract": {
+    "must": [
+      {
+        "id": "NFR-002",
+        "title": "Security",
+        "description": "Ensure the modernized application is secure against common threats.",
+        "category": "security",
+        "metric": "No critical vulnerabilities in security scans.",
+        "acceptance_criteria": [
+          "Security scans show no critical vulnerabilities.",
+          "Penetration testing confirms application security.",
+          "Security policies are reviewed and updated regularly."
+        ]
+      },
+      {
+        "id": "NFR-004",
+        "title": "Reliability",
+        "description": "The modernized application must be reliable and available.",
+        "category": "reliability",
+        "metric": "99.9% uptime.",
+        "acceptance_criteria": [
+          "Monitoring confirms uptime meets SLA requirements.",
+          "Failover mechanisms are tested and functional.",
+          "Incident response procedures are documented and tested."
+        ]
+      }
+    ],
+    "should": [
+      {
+        "id": "NFR-001",
+        "title": "Performance",
+        "description": "The modernized application must perform efficiently under load.",
+        "category": "performance",
+        "metric": "Response time < 200ms under 1000 concurrent users.",
+        "acceptance_criteria": [
+          "Load tests confirm response time under specified conditions.",
+          "Performance metrics are consistently monitored.",
+          "Bottlenecks identified are addressed and resolved."
+        ]
+      },
+      {
+        "id": "NFR-003",
+        "title": "Scalability",
+        "description": "The application must scale to accommodate increased load.",
+        "category": "scalability",
+        "metric": "Support up to 5000 concurrent users.",
+        "acceptance_criteria": [
+          "Scalability tests confirm application can handle increased load.",
+          "Infrastructure supports horizontal scaling.",
+          "No degradation in performance with increased load."
+        ]
+      },
+      {
+        "id": "NFR-005",
+        "title": "Usability",
+        "description": "The application must be user-friendly and intuitive.",
+        "category": "usability",
+        "metric": "User satisfaction score > 80%.",
+        "acceptance_criteria": [
+          "User feedback indicates high satisfaction.",
+          "Usability tests confirm intuitive design.",
+          "Documentation and help resources are accessible and clear."
+        ]
+      }
+    ]
+  },
+  "acceptance_test_mapping": [
+    {
+      "requirement_id": "FR-001",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": [
+        "BDD-LEGACY-001",
+        "FR-001-BDD-01"
+      ]
+    },
+    {
+      "requirement_id": "FR-002",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-003",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": [
+        "BDD-002"
+      ]
+    },
+    {
+      "requirement_id": "FR-004",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": [
+        "BDD-003"
+      ]
+    },
+    {
+      "requirement_id": "FR-005",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-006",
+      "test_types": [
+        "integration",
+        "security",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-007",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    },
+    {
+      "requirement_id": "FR-008",
+      "test_types": [
+        "integration",
+        "unit"
+      ],
+      "bdd_scenarios": []
+    }
+  ],
+  "quality_gates": [
+    {
+      "name": "gherkin_syntax",
+      "status": "PASS",
+      "message": "BDD syntax validation for Feature/Scenario/Given/When/Then.",
+      "details": {
+        "scenario_count": 4,
+        "issues": []
+      }
+    },
+    {
+      "name": "requirements_completeness",
+      "status": "FAIL",
+      "message": "Checks minimum requirement volume, scenario coverage, and capability mapping presence.",
+      "details": {
+        "functional_count": 8,
+        "non_functional_count": 5,
+        "min_functional": 6,
+        "min_non_functional": 4,
+        "scenario_count": 4,
+        "min_scenarios": 4,
+        "capability_count": 0
+      }
+    },
+    {
+      "name": "compliance_constraints_applied",
+      "status": "WARN",
+      "message": "Verifies that regulatory/software controls are linked to requirements when applicable.",
+      "details": {
+        "jurisdiction": "GLOBAL",
+        "data_classification": [
+          "INTERNAL"
+        ],
+        "constraints_count": 0
+      }
+    },
+    {
+      "name": "knowledge_snapshot_pinned",
+      "status": "PASS",
+      "message": "Run is pinned to immutable knowledge source snapshots.",
+      "details": {
+        "snapshot_id": "kctx-693f39aa1367f03c",
+        "source_count": 0
+      }
+    },
+    {
+      "name": "compliance_citation_grounding",
+      "status": "PASS",
+      "message": "Compliance controls have required citations.",
+      "details": {
+        "blocked": false,
+        "citation_required": true,
+        "enforce": false,
+        "source_count": 0,
+        "set_count": 0,
+        "controls_count": 0,
+        "missing_citations": [],
+        "assumptions_added": []
+      }
+    },
+    {
+      "name": "source_influenced_qa_mandatory",
+      "status": "PASS",
+      "message": "No active knowledge sources in run context snapshot.",
+      "details": {
+        "blocked": false,
+        "source_influenced": false,
+        "reason": "No active knowledge sources in run context snapshot."
+      }
+    }
+  ],
+  "executive_summary": "The project aims to modernize legacy code by leveraging the Discover baseline, ensuring backward compatibility and improved non-functional attributes."
+}
