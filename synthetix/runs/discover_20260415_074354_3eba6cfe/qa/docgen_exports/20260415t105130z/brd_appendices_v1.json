@@ -1,0 +1,74 @@
+{
+  "artifact": "brd_appendices_v1",
+  "dependencies_and_integrations": [
+    "custom_php"
+  ],
+  "issue_log": [
+    "Q-SQL-001: SQL catalog is incomplete or absent and requires review before build commitments.",
+    "DEC-BDD-001 resolution plan: capture golden flows for the onboarding, contractor placement, and portal upload workflows before sprint planning is approved."
+  ],
+  "process_map_inventory": [],
+  "data_entities": [],
+  "data_entities_note": "Data entities are derived from the available schema model and SQL touchpoints and should be confirmed against the target-state schema design.",
+  "model_inventory": [],
+  "model_inventory_note": "No explicit PHP model files were available in the analyzed artifact set; confirm whether model-layer extraction was intentionally out of scope.",
+  "report_inventory": [],
+  "report_inventory_note": "No explicit Report-layer files were available in the analyzed artifact set; confirm whether reporting extraction was intentionally out of scope.",
+  "view_inventory": [],
+  "view_inventory_note": "No explicit PHP views/templates were available in the analyzed artifact set; confirm whether presentation-layer extraction was intentionally out of scope.",
+  "controller_model_mappings": [],
+  "controller_view_mappings": [],
+  "expanded_view_families": [],
+  "owner_architecture_provenance": {},
+  "owner_architecture_crosswalk": [],
+  "owner_integration_inventory": [],
+  "owner_report_infrastructure_summary": {},
+  "owner_grouped_module_index": [],
+  "owner_grouped_module_inventory": [],
+  "owner_domain_summary": [],
+  "analysis_coverage": {
+    "available_hotspot_workflow_spec_count": 0,
+    "available_controller_hotspot_spec_count": 0,
+    "semantic_file_count": 0,
+    "model_inventory_count": 0,
+    "view_inventory_count": 0,
+    "report_inventory_count": 0,
+    "controller_model_mapping_count": 0,
+    "controller_view_mapping_count": 0,
+    "expanded_view_family_count": 0,
+    "owner_crosswalk_count": 0,
+    "owner_integration_inventory_count": 0,
+    "owner_grouped_module_count": 0
+  },
+  "inferred_roles": [],
+  "glossary": [
+    {
+      "term": "EOP",
+      "definition": "Operational workflow used to review pending, on-bench, and head-office processing items."
+    },
+    {
+      "term": "CCA",
+      "definition": "Compliance or credentialing review role referenced across staffing workflows."
+    },
+    {
+      "term": "HRA",
+      "definition": "Human-resources or onboarding review role involved in worker setup and validation."
+    },
+    {
+      "term": "AMCompliance",
+      "definition": "Compliance review context referenced by the legacy staffing platform."
+    },
+    {
+      "term": "Contractor Placement",
+      "definition": "Lifecycle workflow for creating, updating, reviewing, and comparing placement records."
+    },
+    {
+      "term": "Profile",
+      "definition": "Worker or placement profile data used in headcount, margin, and operational workflows."
+    },
+    {
+      "term": "Onb_replacement",
+      "definition": "Legacy onboarding replacement workflow coordinating compliance, checklist, and notification behavior."
+    }
+  ]
+}
