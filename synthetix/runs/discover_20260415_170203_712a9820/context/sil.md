@@ -4,7 +4,7 @@
 - Repo: `synthetix`
 - Branch: `feature-synthetix-v2-rohit`
 - Commit: `1a897ad4a128f8f34bed5254f37915350c5084d0`
-- Version: `20260415T183953Z_discover_20260415_170203_712a9820`
+- Version: `20260415T190344Z_discover_20260415_170203_712a9820`
 
 ## Artifact Counts
 - SCM nodes: 2
@@ -13,7 +13,7 @@
 - Remediation items: 1
 
 ## Delta
-- Node delta: -1
+- Node delta: 0
 - Edge delta: 0
 - Rule delta: 0
 - Backlog delta: 0
