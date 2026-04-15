@@ -1,0 +1,56 @@
+{
+  "bundle_id": "8594939f07bc4df7ba5c9c6f0f77f79e",
+  "created_at": "2026-04-15T07:53:45.667956+00:00",
+  "repo_ref": {
+    "provider": "other",
+    "repo_url": "synthetix",
+    "default_branch": "feature-synthetix-ui-v2-bunty",
+    "branch": "feature-synthetix-ui-v2-bunty",
+    "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+    "subpath": ""
+  },
+  "artifacts": [
+    {
+      "artifact_type": "system_context_model",
+      "artifact_id": "fad2d3c59a694462a3f257d1790b04ec",
+      "digest": "sha256:7e7b1c2608b665f9c4a3821961694718b39c416f5cee527f4a3111c9eeffb15e",
+      "uri": "system_context_model.json"
+    },
+    {
+      "artifact_type": "convention_profile",
+      "artifact_id": "a96f9586c8f744f98aa766060570ddb5",
+      "digest": "sha256:f33b085e705a5ba676215f924fd9f988928e0f3369d75b2c50f633cc6ef6b9ff",
+      "uri": "convention_profile.json"
+    },
+    {
+      "artifact_type": "health_assessment_bundle",
+      "artifact_id": "3a2d0dd7ef1b454598ad26dd7a43092e",
+      "digest": "sha256:f5db9ae0b627234c7b13edee8dc839a53cb595620d6bb78efc526f97ae8afb50",
+      "uri": "health_assessment_bundle.json"
+    }
+  ],
+  "policy_pack": {
+    "id": "brownfield-context-first",
+    "version": "1.0",
+    "labels": {
+      "governance": "enabled",
+      "hard_gates": "true"
+    }
+  },
+  "constraints": {
+    "require_context_bundle_for_downstream": true,
+    "immutable_artifacts": true,
+    "no_inplace_mutation": true
+  },
+  "run_context_bundle_ref": {
+    "bundle_id": "runctx-7bd5d70fc4a4d524",
+    "knowledge_snapshot_id": "kctx-693f39aa1367f03c",
+    "delivery_constitution_id": "const-f9b11d46f104",
+    "workspace": "default-workspace",
+    "project": "default-project"
+  },
+  "knowledge_snapshot": {
+    "source_version_ids": [],
+    "source_count": 0
+  }
+}
