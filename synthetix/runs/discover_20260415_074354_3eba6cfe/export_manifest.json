@@ -1,6 +1,6 @@
 {
   "run_id": "discover_20260415_074354_3eba6cfe",
-  "generated_at": "2026-04-15T07:55:13.896453+00:00",
+  "generated_at": "2026-04-15T10:54:42.558653+00:00",
   "run_status": "running",
   "base_path": "synthetix/runs/discover_20260415_074354_3eba6cfe",
   "owner": "RohitLaishramCelsior",
@@ -15,8 +15,8 @@
     "qa",
     "research"
   ],
-  "attempted_files": 27,
-  "exported_files": 24,
+  "attempted_files": 61,
+  "exported_files": 58,
   "failed_files": 0,
   "skipped_files": 2,
   "failed_samples": [],
