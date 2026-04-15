@@ -1,0 +1,36 @@
+{
+  "artifact": "brd_render_manifest_v1",
+  "template_ref": "JHA_PHP_BRD_v4",
+  "template_anchor_map_id": "jha_openanywhere_v1",
+  "rendered_sections": [
+    "cover",
+    "version_history",
+    "module_inventory",
+    "context",
+    "project_description",
+    "general_requirements",
+    "modules",
+    "appendices"
+  ],
+  "table_counts": [
+    {
+      "name": "module_inventory",
+      "rows": 0
+    },
+    {
+      "name": "module_dossiers",
+      "rows": 0
+    },
+    {
+      "name": "version_history",
+      "rows": 1
+    }
+  ],
+  "image_refs": [],
+  "placeholder_fill_status": "blocked_by_qa",
+  "docx_ref": "",
+  "pdf_ref": "",
+  "checksum": "c89038099b30dce75e61d583dc3908b1484722cd9174425876926b2e78633e2b",
+  "bundle_ref": "C:\\Users\\ROHITL~1.PYR\\AppData\\Local\\Temp\\docgen-discover_20260415_074354_3eba6cfe-7stu50ha\\output\\brd_bundle.json",
+  "render_error": "BRD rendering blocked by QA structural failures."
+}
