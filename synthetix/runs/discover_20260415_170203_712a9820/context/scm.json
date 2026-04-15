@@ -1,39 +1,39 @@
 {
   "version": "1.0",
-  "summary": "Legacy PHP codebase with various components and scripts, targeted for modernization to C# using a modular monolith architecture.",
+  "summary": "Legacy PHP system being modernized to C# with Docker and modular monolith architecture.",
   "nodes": [
     {
       "id": "node-1",
       "type": "Service",
-      "name": "SlowQueryService",
+      "name": "Support and Domain Services",
       "metadata": {},
       "confidence": 0.9,
       "provenance": [
         {
           "file": "bin/slowquery.php",
           "line": 1,
-          "evidence": "PHP script for processing slow query logs."
+          "evidence": "PHP service handling slow query logging."
         }
       ]
     },
     {
       "id": "node-2",
       "type": "Component",
-      "name": "HtmlTagComponent",
+      "name": "HTML Document Generator",
       "metadata": {},
       "confidence": 0.85,
       "provenance": [
         {
           "file": "Classes/attrs.php",
           "line": 1,
-          "evidence": "Component for generating HTML tags dynamically."
+          "evidence": "PHP component generating HTML documents."
         }
       ]
     }
   ],
   "edges": [
     {
-      "type": "DEPENDS_ON",
+      "type": "USES_LIBRARY",
       "from": "node-1",
       "to": "node-2",
       "directionality": "directed",
@@ -41,9 +41,9 @@
       "confidence": 0.8,
       "evidence": [
         {
-          "file": "bin/slowquery.php",
-          "line": 5,
-          "evidence": "Includes init.php which may use HtmlTagComponent."
+          "file": "Classes/attrs.php",
+          "line": 10,
+          "evidence": "HTML library usage in PHP."
         }
       ]
     }
