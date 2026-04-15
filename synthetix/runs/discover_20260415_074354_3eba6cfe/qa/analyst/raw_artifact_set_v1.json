@@ -1,0 +1,3683 @@
+{
+  "legacy_inventory": {
+    "artifact_type": "legacy_inventory",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      },
+      "source_language": "unknown",
+      "ecosystem": "VB6-Modernization"
+    },
+    "summary": {
+      "counts": {
+        "projects": 1,
+        "programs": 0,
+        "modules": 1,
+        "forms_or_screens": 1,
+        "forms_referenced": 0,
+        "forms_unmapped": 0,
+        "source_loc_total": 0,
+        "source_loc_forms": 0,
+        "source_loc_modules": 0,
+        "source_loc_classes": 0,
+        "source_files_scanned": 0,
+        "controls": 2,
+        "dependencies": 3,
+        "event_handlers": 1
+      },
+      "data_touchpoints": [
+        "Users",
+        "Transactions"
+      ],
+      "modernization_readiness": {
+        "score": 75,
+        "tier": "medium",
+        "recommended_strategy": "Phased UI Migration",
+        "required_actions": [
+          "Refactor error handling",
+          "Replace ADO with ORM"
+        ]
+      }
+    },
+    "projects": [
+      {
+        "project_id": "LegacyApp|LegacyApp.vbp",
+        "name": "LegacyApp",
+        "name_original": "LegacyApp",
+        "type": "Standard EXE",
+        "startup": "Main",
+        "file": "LegacyApp.vbp",
+        "source_loc_total": 0,
+        "source_loc_forms": 0,
+        "source_loc_modules": 0,
+        "source_loc_classes": 0,
+        "forms": [
+          "Form1",
+          "Form2"
+        ],
+        "member_files": [
+          "Module1.bas",
+          "Form1.frm",
+          "Form2.frm"
+        ],
+        "data_touchpoints": {
+          "tables": [
+            "Users",
+            "Transactions"
+          ],
+          "procedures": [
+            "GetUserData",
+            "SubmitTransaction"
+          ],
+          "input_signals": [
+            "UserInput"
+          ],
+          "output_signals": [
+            "DataOutput"
+          ]
+        },
+        "business_hypothesis": "Maintain existing functionality while modernizing.",
+        "capabilities": [
+          "Data Entry",
+          "Reporting"
+        ],
+        "members": [
+          {
+            "id": "LegacyApp:member:1",
+            "kind": "module",
+            "path": "Module1.bas",
+            "display_name": "Module1.bas",
+            "evidence": []
+          },
+          {
+            "id": "LegacyApp:member:2",
+            "kind": "form",
+            "path": "Form1.frm",
+            "display_name": "Form1.frm",
+            "evidence": []
+          },
+          {
+            "id": "LegacyApp:member:3",
+            "kind": "form",
+            "path": "Form2.frm",
+            "display_name": "Form2.frm",
+            "evidence": []
+          }
+        ],
+        "ui_assets": [
+          {
+            "id": "LegacyApp:ui:1",
+            "kind": "form",
+            "name": "Form1",
+            "controls_count": 0,
+            "event_handlers_count": 0
+          },
+          {
+            "id": "LegacyApp:ui:2",
+            "kind": "form",
+            "name": "Form2",
+            "controls_count": 0,
+            "event_handlers_count": 0
+          }
+        ],
+        "dependencies": [
+          "MSComctlLib"
+        ],
+        "file_coverage": {
+          "by_type": {},
+          "binary_companions": []
+        }
+      }
+    ],
+    "form_coverage": [
+      {
+        "form_name": "Form1",
+        "project_name": "",
+        "coverage_score": 1.0,
+        "confidence_score": 0.88,
+        "expected_handlers_count": 1,
+        "extracted_handlers_count": 1,
+        "explained_handlers_count": 1,
+        "sql_touched_count": 1,
+        "source_loc": 0,
+        "risk_count": 0
+      }
+    ],
+    "source_loc_by_file": [],
+    "artifact_id": "art_legacy_inventory_9b54bed8085e4fa4",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "repo_landscape": {
+    "artifact_type": "repo_landscape",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "projects": [
+      {
+        "id": "LegacyApp|LegacyApp.vbp",
+        "path": "LegacyApp.vbp",
+        "startup": "Main",
+        "counts": {
+          "forms": 2,
+          "members": 3,
+          "dependencies": 1
+        },
+        "dependencies": [
+          "MSComctlLib"
+        ],
+        "db_touchpoints": [
+          "Users",
+          "Transactions"
+        ],
+        "drift_signals": []
+      }
+    ],
+    "shared_artifacts": {
+      "shared_db_files": [],
+      "shared_modules": [
+        "form1.frm",
+        "form2.frm",
+        "module1.bas"
+      ],
+      "shared_dependencies": [
+        "mscomctllib"
+      ]
+    },
+    "artifact_id": "art_repo_landscape_a422765dc87f4031",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "scope_lock": {
+    "artifact_type": "scope_lock",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "decision": "root_only",
+    "rationale": "Single canonical project detected.",
+    "approver": "",
+    "approved_at": "",
+    "status": "LOCKED",
+    "resolved_blocking_decisions": [],
+    "build_guardrails": [],
+    "artifact_id": "art_scope_lock_0cc13ed3a9e14cdc",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "variant_inventory": {
+    "artifact_type": "variant_inventory",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "variants": [
+      {
+        "id": "LegacyApp|LegacyApp.vbp",
+        "name": "LegacyApp",
+        "forms": [
+          "Form1",
+          "Form2"
+        ],
+        "modules": [
+          "Module1.bas"
+        ],
+        "tables_touched": [
+          "Users",
+          "Transactions"
+        ],
+        "dependencies_summary": {
+          "total": 1,
+          "ocx": 0,
+          "dll": 0
+        }
+      }
+    ],
+    "artifact_id": "art_variant_inventory_2ade93aa8a63415d",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "dependency_inventory": {
+    "artifact_type": "dependency_inventory",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "dependencies": [
+      {
+        "dependency_id": "dep:1",
+        "name": "MSComctlLib",
+        "kind": "com_typelib",
+        "version": "",
+        "source": "legacy_inventory_scan",
+        "reference": "",
+        "guid": "",
+        "usage": {
+          "used_by": [],
+          "usage_sites": []
+        },
+        "surface": {
+          "prog_ids": [],
+          "class_ids": [],
+          "late_binding_sites": 0,
+          "callbyname_sites": 0
+        },
+        "risk": {
+          "tier": "medium",
+          "notes": "",
+          "recommended_action": "Assess replacement/interop strategy."
+        }
+      },
+      {
+        "dependency_id": "dep:2",
+        "name": "msado15.dll",
+        "kind": "dll",
+        "version": "",
+        "source": "legacy_inventory_scan",
+        "reference": "",
+        "guid": "",
+        "usage": {
+          "used_by": [],
+          "usage_sites": []
+        },
+        "surface": {
+          "prog_ids": [],
+          "class_ids": [],
+          "late_binding_sites": 0,
+          "callbyname_sites": 0
+        },
+        "risk": {
+          "tier": "medium",
+          "notes": "",
+          "recommended_action": "Assess replacement/interop strategy."
+        }
+      },
+      {
+        "dependency_id": "dep:3",
+        "name": "MSComctlLib.ocx",
+        "kind": "ocx",
+        "version": "",
+        "source": "legacy_inventory_scan",
+        "reference": "",
+        "guid": "",
+        "usage": {
+          "used_by": [],
+          "usage_sites": []
+        },
+        "surface": {
+          "prog_ids": [],
+          "class_ids": [],
+          "late_binding_sites": 0,
+          "callbyname_sites": 0
+        },
+        "risk": {
+          "tier": "medium",
+          "notes": "",
+          "recommended_action": "Assess replacement/interop strategy."
+        }
+      }
+    ],
+    "artifact_id": "art_dependency_inventory_e6f286d475344530",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "event_map": {
+    "artifact_type": "event_map",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "entries": [
+      {
+        "entry_id": "event:1",
+        "entry_kind": "ui_event",
+        "name": "Form1:Click",
+        "container": "Form1",
+        "source_file": "",
+        "line": 0,
+        "trigger": {
+          "control": "Button1",
+          "event": "Click"
+        },
+        "handler": {
+          "symbol": "Form1::Button_Click",
+          "evidence": []
+        },
+        "calls": [
+          "SubmitTransaction"
+        ],
+        "side_effects": {
+          "sql_ids": [
+            "sql:2"
+          ],
+          "tables_or_files": [
+            "Transactions"
+          ],
+          "writes": [
+            "Transactions"
+          ],
+          "reads": [
+            "Transactions"
+          ],
+          "messages": []
+        },
+        "risk_flags": []
+      }
+    ],
+    "artifact_id": "art_event_map_e21b00003fc84c64",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "sql_catalog": {
+    "artifact_type": "sql_catalog",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "statements": [
+      {
+        "sql_id": "sql:1",
+        "kind": "select",
+        "raw": "SELECT * FROM Users",
+        "normalized": "SELECT * FROM Users",
+        "tables": [
+          "Users"
+        ],
+        "columns": [],
+        "parameters": [],
+        "usage_sites": [],
+        "risk_flags": [
+          "select_star"
+        ]
+      },
+      {
+        "sql_id": "sql:2",
+        "kind": "insert",
+        "raw": "INSERT INTO Transactions",
+        "normalized": "INSERT INTO Transactions",
+        "tables": [
+          "Transactions"
+        ],
+        "columns": [],
+        "parameters": [],
+        "usage_sites": [
+          {
+            "type": "external_ref",
+            "external_ref": {
+              "ref": "Form1::Button_Click",
+              "description": "event/procedure usage site"
+            },
+            "confidence": 0.8
+          }
+        ],
+        "risk_flags": []
+      }
+    ],
+    "artifact_id": "art_sql_catalog_4056ae9788564ace",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "sql_map": {
+    "artifact_type": "sql_map",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "entries": [
+      {
+        "map_id": "sqlmap:1",
+        "entry_id": "event:1",
+        "form": "Form1",
+        "variant": "",
+        "form_base": "Form1",
+        "procedure": "Button_Click",
+        "sql_id": "sql:2",
+        "operation": "insert",
+        "tables": [
+          "Transactions"
+        ],
+        "risk_flags": [],
+        "usage_sites": [
+          "Form1::Button_Click"
+        ]
+      }
+    ],
+    "artifact_id": "art_sql_map_74afef94a22c4d45",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "data_access_map": {
+    "artifact_type": "data_access_map",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rows": [
+      {
+        "row_id": "dam:1:1",
+        "container": "Form1",
+        "handler": "Button_Click",
+        "operation": "INSERT",
+        "table": "Transactions",
+        "source_ref": "sql:2",
+        "line": ""
+      }
+    ],
+    "complete": true,
+    "coverage_score": 1.0,
+    "artifact_id": "art_data_access_map_faa2042cc8b14633",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "recordset_ops": {
+    "artifact_type": "recordset_ops",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "ops": [],
+    "artifact_id": "art_recordset_ops_ac1dd1f09d2546ea",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "procedure_summary": {
+    "artifact_type": "procedure_summary",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "procedures": [
+      {
+        "procedure_id": "proc:1",
+        "form": "Form1",
+        "procedure_name": "Button_Click",
+        "trigger": {
+          "control": "Button1",
+          "event": "Click"
+        },
+        "summary": "Button_Click orchestrates Click flow in Form1 with 1 SQL touchpoint(s).",
+        "inputs": [
+          "Button1",
+          "Click"
+        ],
+        "steps": [
+          "Triggered from Button1 Click.",
+          "Invokes procedures: SubmitTransaction.",
+          "Executes 1 SQL statement(s) affecting transactional state.",
+          "Runs in form context Form1."
+        ],
+        "sql_ids": [
+          "sql:2"
+        ],
+        "tables_touched": [
+          "Transactions"
+        ],
+        "data_mutations": [
+          "Transactions"
+        ],
+        "navigation_side_effects": [],
+        "validation_signals": [],
+        "risks": [],
+        "suggested_test_seeds": [
+          "Button_Click happy path",
+          "Button_Click invalid input path"
+        ],
+        "evidence": [
+          {
+            "type": "external_ref",
+            "external_ref": {
+              "ref": "Form1::Button_Click",
+              "description": "ui_event_map linkage"
+            },
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "artifact_id": "art_procedure_summary_ba9ebee3e5254fc1",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "form_dossier": {
+    "artifact_type": "form_dossier",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "dossiers": [
+      {
+        "dossier_id": "form_dossier:1",
+        "form_name": "Form1",
+        "display_name": "Form1 [Password Management]",
+        "project_name": "",
+        "form_type": "Login",
+        "status": "mapped",
+        "purpose": "Authentication and credential validation workflow.",
+        "controls": [
+          "TextBox1",
+          "Button1"
+        ],
+        "event_handlers": [
+          "Button_Click"
+        ],
+        "actions": [
+          {
+            "id": "form1:action:1",
+            "event_handler": "Form1::Button_Click",
+            "event": "Click",
+            "control": "Button1",
+            "sql_ids": [
+              "sql:2"
+            ],
+            "tables_touched": [
+              "Transactions"
+            ]
+          }
+        ],
+        "procedure_summaries": [
+          "Button_Click"
+        ],
+        "coverage": {
+          "expected_handlers_count": 1,
+          "extracted_handlers_count": 1,
+          "coverage_score": 1.0,
+          "confidence_score": 0.895
+        },
+        "source_loc": 0
+      }
+    ],
+    "artifact_id": "art_form_dossier_fa6ad173214d4b43",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "business_rule_catalog": {
+    "artifact_type": "business_rule_catalog",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rules": [
+      {
+        "rule_id": "BR-001",
+        "category": "input_validation",
+        "statement": "User input must be validated for format and length.",
+        "scope": {
+          "project_id": "",
+          "component_id": "User Login"
+        },
+        "evidence": [
+          {
+            "type": "external_ref",
+            "external_ref": {
+              "ref": "Form1.frm",
+              "description": "Legacy rule evidence"
+            },
+            "confidence": 0.9
+          }
+        ],
+        "confidence": 0.9,
+        "tags": []
+      }
+    ],
+    "artifact_id": "art_business_rule_catalog_50e9f53cdb0f4692",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "detector_findings": {
+    "artifact_type": "detector_findings",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "findings": [
+      {
+        "detector_id": "VB6-ERR-001",
+        "severity": "high",
+        "count": 3,
+        "summary": "Legacy error handling patterns detected",
+        "required_actions": [
+          "Refactor error handling"
+        ],
+        "evidence": [
+          {
+            "type": "external_ref",
+            "external_ref": {
+              "ref": "Legacy error handling patterns detected",
+              "description": "Detector evidence"
+            },
+            "confidence": 0.9
+          }
+        ]
+      }
+    ],
+    "profiles": {
+      "error_handling": {
+        "on_error_resume_next": 3,
+        "on_error_goto": 5,
+        "late_bound_com_calls": 2,
+        "default_instance_refs": 1,
+        "control_array_markers": 0,
+        "win32_declares": 1
+      }
+    },
+    "artifact_id": "art_detector_findings_f0fe192d83e34942",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "risk_register": {
+    "artifact_type": "risk_register",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "risks": [
+      {
+        "risk_id": "RISK-001",
+        "severity": "high",
+        "description": "Legacy error handling patterns detected",
+        "consequence": "Potential behavior or modernization risk.",
+        "evidence": [
+          {
+            "type": "external_ref",
+            "external_ref": {
+              "ref": "Legacy error handling patterns detected",
+              "description": "Detector evidence"
+            },
+            "confidence": 0.9
+          }
+        ],
+        "recommended_action": "Refactor error handling"
+      },
+      {
+        "risk_id": "RISK-002",
+        "severity": "medium",
+        "description": "SQL risk flags for sql:1: select_star",
+        "consequence": "Data integrity, security, or portability risk.",
+        "evidence": [],
+        "recommended_action": "Parameterize query and align dialect/validation rules before migration."
+      }
+    ],
+    "artifact_id": "art_risk_register_1bbdda7a51da4312",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "orphan_analysis": {
+    "artifact_type": "orphan_analysis",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "orphans": [],
+    "analysis": {
+      "startup_roots": [
+        "main"
+      ],
+      "reachable_forms": [
+        "main"
+      ],
+      "mapped_form_count": 2
+    },
+    "artifact_id": "art_orphan_analysis_09fd7e6887404856",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "project_metrics": {
+    "artifact_type": "project_metrics",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rows": [
+      {
+        "project": "LegacyApp",
+        "loc": 0,
+        "comment_lines": 0,
+        "comment_percentage": 0.0,
+        "types_count": 2,
+        "forms_count": 1,
+        "modules_count": 1,
+        "afferent_coupling": 0,
+        "efferent_coupling": 0,
+        "dependency_density": 0.0,
+        "avg_complexity": 1.0,
+        "max_complexity": 1,
+        "dead_code_candidates": 0,
+        "third_party_dependency_count": 3
+      }
+    ],
+    "artifact_id": "art_project_metrics_640a5b5cf6214fcb",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "static_forensics_layer": {
+    "artifact_type": "static_forensics_layer",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "scope": "discover_baseline",
+    "summary": {
+      "overall_status": "WARN",
+      "projects": 1,
+      "types": 2,
+      "type_dependency_edges": 0,
+      "runtime_dependency_edges": 0,
+      "dead_code_candidates": 1,
+      "quality_rules": 8,
+      "quality_violations": 0,
+      "trend_points": 1,
+      "loc_total": 0
+    },
+    "checks": [
+      {
+        "id": "sf_project_metrics",
+        "label": "Project metrics baseline",
+        "status": "pass",
+        "detail": "Rows=1"
+      },
+      {
+        "id": "sf_type_metrics",
+        "label": "Type metrics baseline",
+        "status": "pass",
+        "detail": "Rows=2"
+      },
+      {
+        "id": "sf_dependency_matrix",
+        "label": "Dependency matrix coverage",
+        "status": "warn",
+        "detail": "Type edges=0 | Runtime edges=0"
+      },
+      {
+        "id": "sf_dead_code",
+        "label": "Dead-code candidates",
+        "status": "pass",
+        "detail": "Candidates=1"
+      },
+      {
+        "id": "sf_quality_rules",
+        "label": "Quality rules loaded",
+        "status": "pass",
+        "detail": "Rules=8"
+      },
+      {
+        "id": "sf_violations",
+        "label": "Quality violations analyzed",
+        "status": "pass",
+        "detail": "Violations=0"
+      },
+      {
+        "id": "sf_trends",
+        "label": "Trend baseline",
+        "status": "pass",
+        "detail": "Snapshots=1 | LOC=0"
+      }
+    ],
+    "artifact_id": "art_static_forensics_layer_b9442568e5fa4416",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "type_metrics": {
+    "artifact_type": "type_metrics",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rows": [
+      {
+        "type_id": "type:1",
+        "project": "LegacyApp",
+        "type_name": "form1",
+        "kind": "form",
+        "loc": 0,
+        "comment_lines": 0,
+        "comment_percentage": 0.0,
+        "cyclomatic_complexity": 1,
+        "afferent_coupling": 0,
+        "efferent_coupling": 0,
+        "field_count": 2,
+        "method_count": 1,
+        "lack_of_cohesion": 0.0,
+        "dependency_count": 0,
+        "ui_control_count": 2,
+        "sql_touch_count": 1,
+        "table_touch_count": 1
+      },
+      {
+        "type_id": "type:2",
+        "project": "LegacyApp",
+        "type_name": "module1",
+        "kind": "module",
+        "loc": 0,
+        "comment_lines": 0,
+        "comment_percentage": 0.0,
+        "cyclomatic_complexity": 1,
+        "afferent_coupling": 0,
+        "efferent_coupling": 0,
+        "field_count": 0,
+        "method_count": 0,
+        "lack_of_cohesion": 0.0,
+        "dependency_count": 0,
+        "ui_control_count": 0,
+        "sql_touch_count": 0,
+        "table_touch_count": 0
+      }
+    ],
+    "artifact_id": "art_type_metrics_4b43be55d2014226",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "type_dependency_matrix": {
+    "artifact_type": "type_dependency_matrix",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "edges": [],
+    "artifact_id": "art_type_dependency_matrix_c9d369a1a8f44e26",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "runtime_dependency_matrix": {
+    "artifact_type": "runtime_dependency_matrix",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "edges": [],
+    "artifact_id": "art_runtime_dependency_matrix_53fd8d8a0cc14515",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "dead_code_report": {
+    "artifact_type": "dead_code_report",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "dead_type_candidates": 0,
+      "dead_method_candidates": 0,
+      "dead_field_candidates": 1
+    },
+    "probable_dead_types": [],
+    "probable_dead_methods": [],
+    "probable_dead_fields": [
+      {
+        "name": "TextBox1",
+        "form": "form1",
+        "project": "LegacyApp",
+        "reason": "Control not observed in event trigger map; verify designer-only/unused field.",
+        "confidence": 0.55
+      }
+    ],
+    "verify_needed": [
+      "VB6 event handlers are excluded from dead-method candidates unless corroborated by stronger evidence."
+    ],
+    "artifact_id": "art_dead_code_report_f76f4c1a74b343cc",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "third_party_usage": {
+    "artifact_type": "third_party_usage",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rows": [
+      {
+        "dependency": "MSComctlLib",
+        "kind": "com_typelib",
+        "forms_using_count": 0,
+        "methods_using_count": 0,
+        "runtime_critical": false,
+        "replaceability_score": 0.45,
+        "usage_intensity": 0.0,
+        "forms_sample": []
+      },
+      {
+        "dependency": "msado15.dll",
+        "kind": "dll",
+        "forms_using_count": 0,
+        "methods_using_count": 0,
+        "runtime_critical": false,
+        "replaceability_score": 0.62,
+        "usage_intensity": 0.0,
+        "forms_sample": []
+      },
+      {
+        "dependency": "MSComctlLib.ocx",
+        "kind": "ocx",
+        "forms_using_count": 0,
+        "methods_using_count": 0,
+        "runtime_critical": false,
+        "replaceability_score": 0.45,
+        "usage_intensity": 0.0,
+        "forms_sample": []
+      }
+    ],
+    "artifact_id": "art_third_party_usage_0bac9a19fc2a4c40",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "code_quality_rules": {
+    "artifact_type": "code_quality_rules",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rules": [
+      {
+        "rule_id": "CQ-R001",
+        "title": "High cyclomatic complexity",
+        "severity": "high",
+        "threshold": "cyclomatic_complexity > 15"
+      },
+      {
+        "rule_id": "CQ-R002",
+        "title": "High coupling",
+        "severity": "medium",
+        "threshold": "afferent_coupling + efferent_coupling > 12"
+      },
+      {
+        "rule_id": "CQ-R003",
+        "title": "Low cohesion",
+        "severity": "medium",
+        "threshold": "lack_of_cohesion > 0.9"
+      },
+      {
+        "rule_id": "CQ-R004",
+        "title": "Mega form / god module",
+        "severity": "high",
+        "threshold": "ui_control_count > 25 or method_count > 40"
+      },
+      {
+        "rule_id": "CQ-R005",
+        "title": "SQL string concatenation risk",
+        "severity": "high",
+        "threshold": "sql.risk_flags includes string_concatenation"
+      },
+      {
+        "rule_id": "CQ-R006",
+        "title": "Default form instance usage",
+        "severity": "medium",
+        "threshold": "detector/default_instance_refs > 0"
+      },
+      {
+        "rule_id": "CQ-R007",
+        "title": "Control array complexity",
+        "severity": "medium",
+        "threshold": "detector/control_array_index_markers > 0"
+      },
+      {
+        "rule_id": "CQ-R008",
+        "title": "Manual ID generation",
+        "severity": "medium",
+        "threshold": "query contains MAX(id)+1 style pattern"
+      }
+    ],
+    "artifact_id": "art_code_quality_rules_7985187e7ec94c62",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "quality_violation_report": {
+    "artifact_type": "quality_violation_report",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "total_violations": 0,
+      "critical_violations": 0
+    },
+    "violations": [],
+    "artifact_id": "art_quality_violation_report_362d006c9e574033",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "trend_snapshot": {
+    "artifact_type": "trend_snapshot",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "snapshot": {
+      "snapshot_id": "trend:2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "captured_at": "2026-04-15T07:54:22.446715+00:00",
+      "metrics": {
+        "loc_total": 0,
+        "max_complexity": 1,
+        "avg_complexity": 1.0,
+        "quality_violations": 0,
+        "critical_violations": 0,
+        "dead_code_volume": 1,
+        "activex_usage": 0,
+        "third_party_dependencies": 3,
+        "dependency_edges": 0,
+        "hotspot_count": 0
+      }
+    },
+    "artifact_id": "art_trend_snapshot_b9581c4c75854057",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "trend_series": {
+    "artifact_type": "trend_series",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "series": [
+      {
+        "snapshot_id": "trend:2026-04-15T07:54:22.446715+00:00",
+        "run_id": "discover_20260415_074354_3eba6cfe",
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "captured_at": "2026-04-15T07:54:22.446715+00:00",
+        "metrics": {
+          "loc_total": 0,
+          "max_complexity": 1,
+          "avg_complexity": 1.0,
+          "quality_violations": 0,
+          "critical_violations": 0,
+          "dead_code_volume": 1,
+          "activex_usage": 0,
+          "third_party_dependencies": 3,
+          "dependency_edges": 0,
+          "hotspot_count": 0
+        }
+      }
+    ],
+    "artifact_id": "art_trend_series_6d20091f6dc54be7",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "mdb_inventory": {
+    "artifact_type": "mdb_inventory",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "database_files_detected": 0,
+      "forms_with_db_refs": 0,
+      "module_refs": 0
+    },
+    "databases": [],
+    "artifact_id": "art_mdb_inventory_ca15a8f47c70438e",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "form_loc_profile": {
+    "artifact_type": "form_loc_profile",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "forms_discovered": 0,
+      "forms_active": 0,
+      "forms_orphan": 0,
+      "forms_loc_total": 0,
+      "designer_loc_total": 0,
+      "designer_loc_script_total": 0,
+      "designer_loc_definition_total": 0,
+      "designer_file_count": 0
+    },
+    "forms": [],
+    "designer_files": [],
+    "artifact_id": "art_form_loc_profile_271c7524d8bb458c",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "connection_string_variants": {
+    "artifact_type": "connection_string_variants",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "variant_count": 0,
+      "relative_path_risks": 0,
+      "embedded_credential_risks": 0
+    },
+    "variants": [],
+    "artifact_id": "art_connection_string_variants_9570861140424385",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "module_global_inventory": {
+    "artifact_type": "module_global_inventory",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "module_count": 0,
+      "global_candidates": 0,
+      "extraction_status": "partial_inferred"
+    },
+    "modules": [],
+    "globals": [],
+    "notes": [
+      "Global declarations are inferred from shared-module call sites because direct .bas declaration blocks are not yet emitted in legacy inventory payloads."
+    ],
+    "artifact_id": "art_module_global_inventory_67fde4c9264e4d40",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "dead_form_refs": {
+    "artifact_type": "dead_form_refs",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "unresolved_reference_count": 0,
+      "callers_impacted": 0
+    },
+    "references": [],
+    "artifact_id": "art_dead_form_refs_10a980e3c2104cac",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "dataenvironment_report_mapping": {
+    "artifact_type": "dataenvironment_report_mapping",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "dataenvironment_count": 0,
+      "report_object_count": 0,
+      "mapped_calls": 0
+    },
+    "designer_assets": {
+      "dataenvironments": [],
+      "reports": []
+    },
+    "mappings": [],
+    "artifact_id": "art_dataenvironment_report_mapping_8bd4f26bddde46da",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "static_risk_detectors": {
+    "artifact_type": "static_risk_detectors",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "detector_count": 4,
+      "findings_count": 0,
+      "high_findings": 0
+    },
+    "findings": [],
+    "artifact_id": "art_static_risk_detectors_13a2e8dda36d4189",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "delivery_constitution": {
+    "artifact_type": "delivery_constitution",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "principles": [
+      "Preserve critical legacy behavior first; modernization must prove functional equivalence.",
+      "Every modernization decision must map to explicit evidence (code, query, event, or rule).",
+      "No breaking change to data contracts without approved migration path and rollback evidence."
+    ],
+    "policy_context": {
+      "domain_pack_id": "software-general-v1",
+      "domain_pack_version": "1.0.0",
+      "governance_tier": ""
+    },
+    "sources": [
+      "legacy_inventory",
+      "convention_profile",
+      "domain_pack",
+      "memory_constraints"
+    ],
+    "artifact_id": "art_delivery_constitution_d34ee6cc669e4ce0",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_db_profile": {
+    "artifact_type": "source_db_profile",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "summary": {
+      "tables": 2,
+      "columns": 0,
+      "relationships": 0,
+      "queries": 2,
+      "unknown_queries": 0,
+      "dominant_query_kind": "select",
+      "hotspots": 2
+    },
+    "query_kind_distribution": {
+      "select": 1,
+      "insert": 1
+    },
+    "db_type_guess": "microsoft_access_or_ado",
+    "archaeology_route": "code_derived_sql_mining",
+    "artifact_id": "art_source_db_profile_a7d9a1c751c14a60",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_schema_model": {
+    "artifact_type": "source_schema_model",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "extraction_tracks": {
+      "track_a": {
+        "enabled": false,
+        "route": "code_only",
+        "table_count": 0,
+        "relationship_count": 0
+      },
+      "track_b": {
+        "enabled": true,
+        "table_count": 2,
+        "query_count": 2
+      }
+    },
+    "summary": {
+      "tables": 2,
+      "columns": 0,
+      "relationships": 0,
+      "unknown_query_count": 0
+    },
+    "tables": [
+      {
+        "table_id": "src_tbl:2",
+        "name": "Transactions",
+        "primary_key_candidates": [],
+        "read_query_count": 0,
+        "write_query_count": 1,
+        "risk_flags": [],
+        "evidence_sql_ids": [
+          "sql:2"
+        ],
+        "columns": []
+      },
+      {
+        "table_id": "src_tbl:1",
+        "name": "Users",
+        "primary_key_candidates": [],
+        "read_query_count": 1,
+        "write_query_count": 0,
+        "risk_flags": [
+          "select_star"
+        ],
+        "evidence_sql_ids": [
+          "sql:1"
+        ],
+        "columns": []
+      }
+    ],
+    "relationships": [],
+    "artifact_id": "art_source_schema_model_5fc87bcc185f440d",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_query_catalog": {
+    "artifact_type": "source_query_catalog",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "queries": [
+      {
+        "query_id": "sql:1",
+        "kind": "select",
+        "raw": "SELECT * FROM Users",
+        "normalized": "SELECT * FROM Users",
+        "tables": [
+          "Users"
+        ],
+        "columns": [],
+        "risk_flags": [
+          "select_star"
+        ],
+        "usage_sites": []
+      },
+      {
+        "query_id": "sql:2",
+        "kind": "insert",
+        "raw": "INSERT INTO Transactions",
+        "normalized": "INSERT INTO Transactions",
+        "tables": [
+          "Transactions"
+        ],
+        "columns": [],
+        "risk_flags": [],
+        "usage_sites": [
+          {
+            "form": "Form1",
+            "procedure": "Button_Click",
+            "operation": "insert"
+          }
+        ]
+      }
+    ],
+    "artifact_id": "art_source_query_catalog_67c6852dea5841b5",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_relationship_candidates": {
+    "artifact_type": "source_relationship_candidates",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "candidates": [],
+    "artifact_id": "art_source_relationship_candidates_52e92ce55515439c",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_data_dictionary": {
+    "artifact_type": "source_data_dictionary",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "rows": [],
+    "artifact_id": "art_source_data_dictionary_fc0ee34d8db846dc",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_data_dictionary_markdown": {
+    "artifact_type": "source_data_dictionary_markdown",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "markdown": "# Source Schema - Data Dictionary\n\n_Generated by Synthetix SourceSchemaAgent_\n\n**Total tables:** 0  \n**Total columns:** 0\n\n---\n",
+    "artifact_id": "art_source_data_dictionary_markdown_5b786ab326784554",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_erd": {
+    "artifact_type": "source_erd",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "format": "mermaid",
+    "mermaid": "erDiagram\n    Transactions {\n    }\n    Users {\n    }",
+    "artifact_id": "art_source_erd_d3e0c1d50c4544a8",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "source_hotspot_report": {
+    "artifact_type": "source_hotspot_report",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "hotspots": [
+      {
+        "table": "Users",
+        "reads": 1,
+        "writes": 0,
+        "risk_signals": 1,
+        "hotspot_score": 2.8,
+        "blast_radius": "low"
+      },
+      {
+        "table": "Transactions",
+        "reads": 0,
+        "writes": 1,
+        "risk_signals": 0,
+        "hotspot_score": 1.4,
+        "blast_radius": "low"
+      }
+    ],
+    "artifact_id": "art_source_hotspot_report_d792b26b5c4b48ad",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "variant_diff_report": {
+    "artifact_type": "variant_diff_report",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "project_count": 1,
+    "comparisons": [],
+    "decision_required": false,
+    "status": "PASS",
+    "decision_prompt": "Single project variant detected; no variant scope decision required.",
+    "schema_divergence": {
+      "detected": false,
+      "pairs": [],
+      "blocking_pairs": []
+    },
+    "artifact_id": "art_variant_diff_report_20dcfb5938764df3",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "reporting_model": {
+    "artifact_type": "reporting_model",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "data_environments": [],
+    "data_reports": [],
+    "report_entrypoints": [],
+    "mapping": {
+      "mapped_count": 0,
+      "unknown_data_environments": []
+    },
+    "connection_path_mismatches": [],
+    "status": "PASS",
+    "artifact_id": "art_reporting_model_88593f804c3e4f69",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "identity_access_model": {
+    "artifact_type": "identity_access_model",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "what_we_found": {
+      "auth_tables": [
+        "Users"
+      ],
+      "role_model_present": false,
+      "plaintext_credential_signal": false,
+      "draft_role_inventory": []
+    },
+    "what_we_did_not_find": [
+      "Explicit role/permission model in schema or queries."
+    ],
+    "questions_to_confirm": [
+      "Is this system single-user or multi-user under concurrent teller/ops usage?",
+      "What authorization model should be preserved or introduced during modernization?"
+    ],
+    "sensitive_query_samples": [],
+    "status": "WARN",
+    "artifact_id": "art_identity_access_model_8d4a21ad195344a2",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "discover_review_checklist": {
+    "artifact_type": "discover_review_checklist",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "run_id": "discover_20260415_074354_3eba6cfe",
+      "producer": {
+        "agent": "Analyst Agent",
+        "skill_pack": "VB6-Modernization",
+        "skill_version": "1.0.0"
+      },
+      "skill_pack": {
+        "id": "VB6-Modernization",
+        "version": "1.0.0",
+        "confidence": 0.95
+      },
+      "context_reference": {
+        "repo": "synthetix",
+        "branch": "feature-synthetix-ui-v2-bunty",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+        "version_id": "20260415T075345Z_discover_20260415_074354_3eba6cfe",
+        "target_stack": {
+          "language": "Unknown",
+          "ui": "Unknown",
+          "db": "Unknown"
+        }
+      }
+    },
+    "overall_status": "FAIL",
+    "checks": [
+      {
+        "id": "handler_inventory_completeness",
+        "title": "Handler Inventory Completeness",
+        "status": "PASS",
+        "detail": "All analyzed forms meet handler coverage threshold."
+      },
+      {
+        "id": "report_model_reconciled",
+        "title": "Report Model Reconciled",
+        "status": "PASS",
+        "detail": "Reporting model and entrypoints reconciled."
+      },
+      {
+        "id": "variant_resolution",
+        "title": "Variant Resolution",
+        "status": "PASS",
+        "detail": "Single project variant detected; no variant scope decision required."
+      },
+      {
+        "id": "variant_schema_divergence",
+        "title": "Variant Schema Divergence",
+        "status": "PASS",
+        "detail": "No cross-variant schema naming divergence detected."
+      },
+      {
+        "id": "key_safety_issues_identified",
+        "title": "Key Safety Issues Identified",
+        "status": "FAIL",
+        "detail": "No explicit SQL/credential safety signals detected in extracted artifacts. Detection is incomplete and blocks progression."
+      },
+      {
+        "id": "schema_key_verification",
+        "title": "Schema Key Verification",
+        "status": "PASS",
+        "detail": "No delete-by-customer transaction key hazard detected."
+      },
+      {
+        "id": "identity_access_model",
+        "title": "Identity & Access Model",
+        "status": "WARN",
+        "detail": "Role model or credential handling requires confirmation."
+      },
+      {
+        "id": "database_archaeology_ready",
+        "title": "Database Archaeology & Mapping Readiness",
+        "status": "WARN",
+        "detail": "DB QA detected blocking or warning issues in schema reconstruction/mapping."
+      }
+    ],
+    "low_coverage_forms": [],
+    "artifact_id": "art_discover_review_checklist_c83da8eb2564429d",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "artifact_index": {
+    "artifact_type": "artifact_index",
+    "artifact_version": "1.0",
+    "metadata": {
+      "generated_at": "2026-04-15T07:54:22.446715+00:00",
+      "context_reference": {
+        "repo": "synthetix",
+        "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0"
+      }
+    },
+    "artifacts": [
+      {
+        "type": "legacy_inventory",
+        "ref": "artifact://legacy_inventory/1.0/art_legacy_inventory_9b54bed8085e4fa4"
+      },
+      {
+        "type": "repo_landscape",
+        "ref": "artifact://repo_landscape/1.0/art_repo_landscape_a422765dc87f4031"
+      },
+      {
+        "type": "scope_lock",
+        "ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc"
+      },
+      {
+        "type": "variant_inventory",
+        "ref": "artifact://variant_inventory/1.0/art_variant_inventory_2ade93aa8a63415d"
+      },
+      {
+        "type": "dependency_inventory",
+        "ref": "artifact://dependency_inventory/1.0/art_dependency_inventory_e6f286d475344530"
+      },
+      {
+        "type": "event_map",
+        "ref": "artifact://event_map/1.0/art_event_map_e21b00003fc84c64"
+      },
+      {
+        "type": "sql_catalog",
+        "ref": "artifact://sql_catalog/1.0/art_sql_catalog_4056ae9788564ace"
+      },
+      {
+        "type": "sql_map",
+        "ref": "artifact://sql_map/1.0/art_sql_map_74afef94a22c4d45"
+      },
+      {
+        "type": "data_access_map",
+        "ref": "artifact://data_access_map/1.0/art_data_access_map_faa2042cc8b14633"
+      },
+      {
+        "type": "recordset_ops",
+        "ref": "artifact://recordset_ops/1.0/art_recordset_ops_ac1dd1f09d2546ea"
+      },
+      {
+        "type": "procedure_summary",
+        "ref": "artifact://procedure_summary/1.0/art_procedure_summary_ba9ebee3e5254fc1"
+      },
+      {
+        "type": "form_dossier",
+        "ref": "artifact://form_dossier/1.0/art_form_dossier_fa6ad173214d4b43"
+      },
+      {
+        "type": "business_rule_catalog",
+        "ref": "artifact://business_rule_catalog/1.0/art_business_rule_catalog_50e9f53cdb0f4692"
+      },
+      {
+        "type": "detector_findings",
+        "ref": "artifact://detector_findings/1.0/art_detector_findings_f0fe192d83e34942"
+      },
+      {
+        "type": "risk_register",
+        "ref": "artifact://risk_register/1.0/art_risk_register_1bbdda7a51da4312"
+      },
+      {
+        "type": "orphan_analysis",
+        "ref": "artifact://orphan_analysis/1.0/art_orphan_analysis_09fd7e6887404856"
+      },
+      {
+        "type": "project_metrics",
+        "ref": "artifact://project_metrics/1.0/art_project_metrics_640a5b5cf6214fcb"
+      },
+      {
+        "type": "static_forensics_layer",
+        "ref": "artifact://static_forensics_layer/1.0/art_static_forensics_layer_b9442568e5fa4416"
+      },
+      {
+        "type": "type_metrics",
+        "ref": "artifact://type_metrics/1.0/art_type_metrics_4b43be55d2014226"
+      },
+      {
+        "type": "type_dependency_matrix",
+        "ref": "artifact://type_dependency_matrix/1.0/art_type_dependency_matrix_c9d369a1a8f44e26"
+      },
+      {
+        "type": "runtime_dependency_matrix",
+        "ref": "artifact://runtime_dependency_matrix/1.0/art_runtime_dependency_matrix_53fd8d8a0cc14515"
+      },
+      {
+        "type": "dead_code_report",
+        "ref": "artifact://dead_code_report/1.0/art_dead_code_report_f76f4c1a74b343cc"
+      },
+      {
+        "type": "third_party_usage",
+        "ref": "artifact://third_party_usage/1.0/art_third_party_usage_0bac9a19fc2a4c40"
+      },
+      {
+        "type": "code_quality_rules",
+        "ref": "artifact://code_quality_rules/1.0/art_code_quality_rules_7985187e7ec94c62"
+      },
+      {
+        "type": "quality_violation_report",
+        "ref": "artifact://quality_violation_report/1.0/art_quality_violation_report_362d006c9e574033"
+      },
+      {
+        "type": "trend_snapshot",
+        "ref": "artifact://trend_snapshot/1.0/art_trend_snapshot_b9581c4c75854057"
+      },
+      {
+        "type": "trend_series",
+        "ref": "artifact://trend_series/1.0/art_trend_series_6d20091f6dc54be7"
+      },
+      {
+        "type": "mdb_inventory",
+        "ref": "artifact://mdb_inventory/1.0/art_mdb_inventory_ca15a8f47c70438e"
+      },
+      {
+        "type": "form_loc_profile",
+        "ref": "artifact://form_loc_profile/1.0/art_form_loc_profile_271c7524d8bb458c"
+      },
+      {
+        "type": "connection_string_variants",
+        "ref": "artifact://connection_string_variants/1.0/art_connection_string_variants_9570861140424385"
+      },
+      {
+        "type": "module_global_inventory",
+        "ref": "artifact://module_global_inventory/1.0/art_module_global_inventory_67fde4c9264e4d40"
+      },
+      {
+        "type": "dead_form_refs",
+        "ref": "artifact://dead_form_refs/1.0/art_dead_form_refs_10a980e3c2104cac"
+      },
+      {
+        "type": "dataenvironment_report_mapping",
+        "ref": "artifact://dataenvironment_report_mapping/1.0/art_dataenvironment_report_mapping_8bd4f26bddde46da"
+      },
+      {
+        "type": "static_risk_detectors",
+        "ref": "artifact://static_risk_detectors/1.0/art_static_risk_detectors_13a2e8dda36d4189"
+      },
+      {
+        "type": "delivery_constitution",
+        "ref": "artifact://delivery_constitution/1.0/art_delivery_constitution_d34ee6cc669e4ce0"
+      },
+      {
+        "type": "source_db_profile",
+        "ref": "artifact://source_db_profile/1.0/art_source_db_profile_a7d9a1c751c14a60"
+      },
+      {
+        "type": "source_schema_model",
+        "ref": "artifact://source_schema_model/1.0/art_source_schema_model_5fc87bcc185f440d"
+      },
+      {
+        "type": "source_query_catalog",
+        "ref": "artifact://source_query_catalog/1.0/art_source_query_catalog_67c6852dea5841b5"
+      },
+      {
+        "type": "source_relationship_candidates",
+        "ref": "artifact://source_relationship_candidates/1.0/art_source_relationship_candidates_52e92ce55515439c"
+      },
+      {
+        "type": "source_data_dictionary",
+        "ref": "artifact://source_data_dictionary/1.0/art_source_data_dictionary_fc0ee34d8db846dc"
+      },
+      {
+        "type": "source_data_dictionary_markdown",
+        "ref": "artifact://source_data_dictionary_markdown/1.0/art_source_data_dictionary_markdown_5b786ab326784554"
+      },
+      {
+        "type": "source_erd",
+        "ref": "artifact://source_erd/1.0/art_source_erd_d3e0c1d50c4544a8"
+      },
+      {
+        "type": "source_hotspot_report",
+        "ref": "artifact://source_hotspot_report/1.0/art_source_hotspot_report_d792b26b5c4b48ad"
+      },
+      {
+        "type": "variant_diff_report",
+        "ref": "artifact://variant_diff_report/1.0/art_variant_diff_report_20dcfb5938764df3"
+      },
+      {
+        "type": "reporting_model",
+        "ref": "artifact://reporting_model/1.0/art_reporting_model_88593f804c3e4f69"
+      },
+      {
+        "type": "identity_access_model",
+        "ref": "artifact://identity_access_model/1.0/art_identity_access_model_8d4a21ad195344a2"
+      },
+      {
+        "type": "discover_review_checklist",
+        "ref": "artifact://discover_review_checklist/1.0/art_discover_review_checklist_c83da8eb2564429d"
+      }
+    ],
+    "artifact_id": "art_artifact_index_bccf3934793842bd",
+    "run_id": "discover_20260415_074354_3eba6cfe",
+    "generated_at": "2026-04-15T07:54:22.446715+00:00",
+    "producer": {
+      "agent": "Analyst Agent",
+      "skill_pack": "VB6-Modernization",
+      "skill_version": "1.0.0"
+    },
+    "context": {
+      "repo": "synthetix",
+      "branch": "feature-synthetix-ui-v2-bunty",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "scope_lock_ref": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+      "canonical_project": "LegacyApp",
+      "target_stack": {
+        "language": "Unknown",
+        "ui": "Unknown",
+        "db": "Unknown"
+      }
+    }
+  },
+  "artifact_refs": {
+    "legacy_inventory": "artifact://legacy_inventory/1.0/art_legacy_inventory_9b54bed8085e4fa4",
+    "repo_landscape": "artifact://repo_landscape/1.0/art_repo_landscape_a422765dc87f4031",
+    "scope_lock": "artifact://scope_lock/1.0/art_scope_lock_0cc13ed3a9e14cdc",
+    "variant_inventory": "artifact://variant_inventory/1.0/art_variant_inventory_2ade93aa8a63415d",
+    "dependency_inventory": "artifact://dependency_inventory/1.0/art_dependency_inventory_e6f286d475344530",
+    "event_map": "artifact://event_map/1.0/art_event_map_e21b00003fc84c64",
+    "sql_catalog": "artifact://sql_catalog/1.0/art_sql_catalog_4056ae9788564ace",
+    "sql_map": "artifact://sql_map/1.0/art_sql_map_74afef94a22c4d45",
+    "data_access_map": "artifact://data_access_map/1.0/art_data_access_map_faa2042cc8b14633",
+    "recordset_ops": "artifact://recordset_ops/1.0/art_recordset_ops_ac1dd1f09d2546ea",
+    "procedure_summary": "artifact://procedure_summary/1.0/art_procedure_summary_ba9ebee3e5254fc1",
+    "form_dossier": "artifact://form_dossier/1.0/art_form_dossier_fa6ad173214d4b43",
+    "business_rule_catalog": "artifact://business_rule_catalog/1.0/art_business_rule_catalog_50e9f53cdb0f4692",
+    "detector_findings": "artifact://detector_findings/1.0/art_detector_findings_f0fe192d83e34942",
+    "risk_register": "artifact://risk_register/1.0/art_risk_register_1bbdda7a51da4312",
+    "orphan_analysis": "artifact://orphan_analysis/1.0/art_orphan_analysis_09fd7e6887404856",
+    "project_metrics": "artifact://project_metrics/1.0/art_project_metrics_640a5b5cf6214fcb",
+    "static_forensics_layer": "artifact://static_forensics_layer/1.0/art_static_forensics_layer_b9442568e5fa4416",
+    "type_metrics": "artifact://type_metrics/1.0/art_type_metrics_4b43be55d2014226",
+    "type_dependency_matrix": "artifact://type_dependency_matrix/1.0/art_type_dependency_matrix_c9d369a1a8f44e26",
+    "runtime_dependency_matrix": "artifact://runtime_dependency_matrix/1.0/art_runtime_dependency_matrix_53fd8d8a0cc14515",
+    "dead_code_report": "artifact://dead_code_report/1.0/art_dead_code_report_f76f4c1a74b343cc",
+    "third_party_usage": "artifact://third_party_usage/1.0/art_third_party_usage_0bac9a19fc2a4c40",
+    "code_quality_rules": "artifact://code_quality_rules/1.0/art_code_quality_rules_7985187e7ec94c62",
+    "quality_violation_report": "artifact://quality_violation_report/1.0/art_quality_violation_report_362d006c9e574033",
+    "trend_snapshot": "artifact://trend_snapshot/1.0/art_trend_snapshot_b9581c4c75854057",
+    "trend_series": "artifact://trend_series/1.0/art_trend_series_6d20091f6dc54be7",
+    "mdb_inventory": "artifact://mdb_inventory/1.0/art_mdb_inventory_ca15a8f47c70438e",
+    "form_loc_profile": "artifact://form_loc_profile/1.0/art_form_loc_profile_271c7524d8bb458c",
+    "connection_string_variants": "artifact://connection_string_variants/1.0/art_connection_string_variants_9570861140424385",
+    "module_global_inventory": "artifact://module_global_inventory/1.0/art_module_global_inventory_67fde4c9264e4d40",
+    "dead_form_refs": "artifact://dead_form_refs/1.0/art_dead_form_refs_10a980e3c2104cac",
+    "dataenvironment_report_mapping": "artifact://dataenvironment_report_mapping/1.0/art_dataenvironment_report_mapping_8bd4f26bddde46da",
+    "static_risk_detectors": "artifact://static_risk_detectors/1.0/art_static_risk_detectors_13a2e8dda36d4189",
+    "delivery_constitution": "artifact://delivery_constitution/1.0/art_delivery_constitution_d34ee6cc669e4ce0",
+    "source_db_profile": "artifact://source_db_profile/1.0/art_source_db_profile_a7d9a1c751c14a60",
+    "source_schema_model": "artifact://source_schema_model/1.0/art_source_schema_model_5fc87bcc185f440d",
+    "source_query_catalog": "artifact://source_query_catalog/1.0/art_source_query_catalog_67c6852dea5841b5",
+    "source_relationship_candidates": "artifact://source_relationship_candidates/1.0/art_source_relationship_candidates_52e92ce55515439c",
+    "source_data_dictionary": "artifact://source_data_dictionary/1.0/art_source_data_dictionary_fc0ee34d8db846dc",
+    "source_data_dictionary_markdown": "artifact://source_data_dictionary_markdown/1.0/art_source_data_dictionary_markdown_5b786ab326784554",
+    "source_erd": "artifact://source_erd/1.0/art_source_erd_d3e0c1d50c4544a8",
+    "source_hotspot_report": "artifact://source_hotspot_report/1.0/art_source_hotspot_report_d792b26b5c4b48ad",
+    "variant_diff_report": "artifact://variant_diff_report/1.0/art_variant_diff_report_20dcfb5938764df3",
+    "reporting_model": "artifact://reporting_model/1.0/art_reporting_model_88593f804c3e4f69",
+    "identity_access_model": "artifact://identity_access_model/1.0/art_identity_access_model_8d4a21ad195344a2",
+    "discover_review_checklist": "artifact://discover_review_checklist/1.0/art_discover_review_checklist_c83da8eb2564429d",
+    "artifact_index": "artifact://artifact_index/1.0/art_artifact_index_bccf3934793842bd"
+  },
+  "raw_compiler_version": "2.7.1"
+}
