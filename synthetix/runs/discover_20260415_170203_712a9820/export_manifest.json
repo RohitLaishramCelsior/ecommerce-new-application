@@ -1,0 +1,57 @@
+{
+  "run_id": "discover_20260415_170203_712a9820",
+  "generated_at": "2026-04-15T18:42:26.248377+00:00",
+  "run_status": "running",
+  "base_path": "synthetix/runs/discover_20260415_170203_712a9820",
+  "owner": "RohitLaishramCelsior",
+  "repository": "ecommerce-new-application",
+  "branch": "main",
+  "artifact_roots": [
+    "brd_test",
+    "context",
+    "deploy",
+    "live_review",
+    "pipeline",
+    "qa",
+    "research"
+  ],
+  "attempted_files": 27,
+  "exported_files": 18,
+  "failed_files": 0,
+  "skipped_files": 8,
+  "failed_samples": [],
+  "skipped_samples": [
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/pipeline/dag.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/pipeline/stage_0.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/pipeline/stage_1.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/pipeline/state.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/qa/analyst/analyst_output.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/qa/analyst/analyst_report_v2.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/qa/analyst/raw_artifact_set_v1.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    },
+    {
+      "repo_path": "synthetix/runs/discover_20260415_170203_712a9820/qa/analyst/requirements_pack.json",
+      "reason": "skipped: file exceeds 950000 bytes"
+    }
+  ]
+}
