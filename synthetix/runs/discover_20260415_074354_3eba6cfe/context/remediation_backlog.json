@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rb-001",
+    "title": "Improve Module Naming Conventions",
+    "problem_statement": "Inconsistent module naming conventions can lead to confusion and maintenance challenges.",
+    "scope": [
+      "agents/analyst.py",
+      "agents/architect.py"
+    ],
+    "risk_if_unaddressed": "Increased difficulty in maintaining and understanding codebase.",
+    "effort": "S",
+    "severity": "medium",
+    "dependencies": [],
+    "suggested_approach": "Refactor module names to adhere to snake_case convention.",
+    "success_criteria": [
+      "All modules use snake_case naming convention."
+    ],
+    "confidence": 0.9,
+    "provenance": [
+      {
+        "file": "agents/analyst.py",
+        "line": 1,
+        "evidence": "module naming"
+      }
+    ]
+  }
+]
