@@ -1,0 +1,36 @@
+{
+  "artifact": "brd_qa_report_v1",
+  "status": "FAIL",
+  "blocking_errors": [
+    "Module registry has no included modules.",
+    "Module dossiers are missing."
+  ],
+  "warnings": [
+    "Scope clarification reports 0 LOC across 0 files — LOC metrics may need refresh from a full Discover run.",
+    "Expected PHP modernization decision is missing from the issue log: DEC-INTEGRATION-GP-001.",
+    "Expected PHP modernization decision is missing from the issue log: DEC-INTEGRATION-SP-001.",
+    "Expected PHP modernization decision is missing from the issue log: DEC-SESSION-COUNTRY-001.",
+    "PHP BRD model inventory appendix is empty.",
+    "PHP BRD view/template inventory appendix is empty.",
+    "PHP BRD report inventory appendix is empty.",
+    "PHP BRD controller-to-model mapping appendix is empty.",
+    "PHP BRD controller-to-view mapping appendix is empty."
+  ],
+  "auto_fixes_applied": [],
+  "module_completeness_scores": [],
+  "render_checks": [
+    {
+      "check": "module_inventory_vs_sections",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "required_tables_present",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    }
+  ],
+  "approval_readiness": "BLOCKED"
+}
