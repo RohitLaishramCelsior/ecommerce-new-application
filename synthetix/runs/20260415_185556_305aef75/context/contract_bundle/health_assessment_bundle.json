@@ -1,0 +1,200 @@
+{
+  "header": {
+    "artifact_id": "c0f7e0be52604f9cbea8e59271d73383",
+    "artifact_type": "health_assessment_bundle",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-15T13:33:56.766648+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-synthetix-v2-rohit",
+      "branch": "feature-synthetix-v2-rohit",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "20260415_185556_305aef75",
+      "stage_id": "context_layer",
+      "task_id": "2327367ad07447dea3802df9f0ae05a5"
+    },
+    "parents": [],
+    "digest": "sha256:ae9a4018ae79fca38a95b0ca470eee81f5e6d0b439e9f1c45be460c554ce3b6b",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "20260415_185556_305aef75",
+      "bundle_version": "20260415T133356Z_20260415_185556_305aef75"
+    }
+  },
+  "summary": {
+    "overall_risk": {
+      "likelihood": 4,
+      "impact": 4,
+      "score": 16,
+      "tier": "high",
+      "rationale": "elevated risk posture"
+    },
+    "key_themes": [
+      "The legacy codebase has moderate security risks and maintainability challenges."
+    ],
+    "recommendation": "Prioritize P0/P1 remediation items and enforce convention gates in CI",
+    "notes": "Generated from SIL health assessment and remediation backlog"
+  },
+  "signals": {
+    "scores": {
+      "maintainability": 60,
+      "security": 50,
+      "reliability": 70,
+      "testability": 55
+    },
+    "finding_count": 2,
+    "backlog_count": 1
+  },
+  "findings": [
+    {
+      "id": "F-HOT-001",
+      "type": "hotspot",
+      "severity": "high",
+      "title": "Hotspot: bin/slowquery.php",
+      "description": "Unparameterized SQL queries detected.",
+      "risk": {
+        "likelihood": 4,
+        "impact": 4,
+        "score": 16,
+        "tier": "high",
+        "rationale": "hotspot severity"
+      },
+      "affected": {
+        "scm_node_ids": [
+          "bin/slowquery.php"
+        ],
+        "paths": [
+          "bin/slowquery.php"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "suggested_remediation": "Prioritize stabilization and targeted tests",
+      "effort": {
+        "tshirt": "M",
+        "hours_range": [
+          16,
+          40
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from hotspot analysis",
+        "signals": []
+      }
+    },
+    {
+      "id": "F-RSK-001",
+      "type": "operational_risk",
+      "severity": "critical",
+      "title": "SQL Injection Risk",
+      "description": "Unparameterized SQL queries can lead to SQL injection vulnerabilities.",
+      "risk": {
+        "likelihood": 5,
+        "impact": 5,
+        "score": 25,
+        "tier": "critical",
+        "rationale": "risk item severity"
+      },
+      "affected": {
+        "scm_node_ids": [],
+        "paths": []
+      },
+      "evidence": [],
+      "suggested_remediation": "Mitigate through targeted remediation plan",
+      "effort": {
+        "tshirt": "S",
+        "hours_range": [
+          6,
+          16
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "confidence": {
+        "score": 0.8,
+        "rationale": "from risk analysis",
+        "signals": []
+      }
+    }
+  ],
+  "backlog": [
+    {
+      "id": "rb-1",
+      "title": "Parameterize SQL Queries",
+      "priority": "P0",
+      "business_value": "Potential for SQL injection attacks.",
+      "risk": {
+        "likelihood": 5,
+        "impact": 5,
+        "score": 25,
+        "tier": "critical",
+        "rationale": "derived from backlog severity"
+      },
+      "effort": {
+        "tshirt": "M",
+        "hours_range": [
+          16,
+          40
+        ],
+        "confidence": {
+          "score": 0.8,
+          "rationale": "estimated from artifact metadata",
+          "signals": []
+        }
+      },
+      "linked_findings": [
+        "F-HOT-001"
+      ],
+      "scm_impact": {
+        "scm_node_ids": [
+          "node-2"
+        ],
+        "expected_edges_touched": []
+      },
+      "dependencies": [],
+      "plan": [
+        "Refactor the code to use parameterized queries"
+      ],
+      "acceptance_criteria": [
+        "All SQL queries are parameterized.",
+        "No SQL injection vulnerabilities detected."
+      ],
+      "owner_role": "Tech Lead",
+      "suggested_agent_roles": []
+    }
+  ],
+  "roadmap_options": {
+    "quick_wins": [
+      "rb-1"
+    ],
+    "stabilization": [],
+    "modernization": [
+      "rb-1"
+    ]
+  }
+}
