@@ -1,6 +1,6 @@
 {
-  "bundle_id": "f0fb1d425a2d401891454841c5a9aa44",
-  "created_at": "2026-04-15T18:39:55.357868+00:00",
+  "bundle_id": "a4893e45909f46daa0c99baa4428a1b0",
+  "created_at": "2026-04-15T19:03:45.035396+00:00",
   "repo_ref": {
     "provider": "other",
     "repo_url": "synthetix",
@@ -12,20 +12,20 @@
   "artifacts": [
     {
       "artifact_type": "system_context_model",
-      "artifact_id": "d4c2a6add8214016bb4d2e2d292c517b",
-      "digest": "sha256:099b82817f0ee96f1ea01d717f78057784ba9751de36209995ec55158fbbd7a1",
+      "artifact_id": "4e78d5349da244888a74b881f533037d",
+      "digest": "sha256:bf830c9b7595bd4f93e130692211ba4c90f8141794b045a0108cc844a644eb75",
       "uri": "system_context_model.json"
     },
     {
       "artifact_type": "convention_profile",
-      "artifact_id": "b0ab769228de4ed48466f23cbd4eab3c",
-      "digest": "sha256:b594509b445288de34c20f02056b8cbb7384f50cead86723f4190e1f54daf4af",
+      "artifact_id": "6b03c771153848b38455f5950e52a41a",
+      "digest": "sha256:bf9685b2754870c66119b96e10705e12825fb31ce97cebb0e42b894e7e3dd07b",
       "uri": "convention_profile.json"
     },
     {
       "artifact_type": "health_assessment_bundle",
-      "artifact_id": "45503fedf3d748d58b078d1a75a250dd",
-      "digest": "sha256:1da734066065dc0b48dc70749d9e567cb02cfb60e6e66daf10947265e02f17a3",
+      "artifact_id": "54c8c60dac0f4e24a8f75ae80544e70e",
+      "digest": "sha256:ff6c676f509ed000e3fcf83cf51c2ed186ff40b6deaf5a0a45edd68e91981b9b",
       "uri": "health_assessment_bundle.json"
     }
   ],
@@ -45,7 +45,7 @@
   "run_context_bundle_ref": {
     "bundle_id": "runctx-206981ab1fee31f8",
     "knowledge_snapshot_id": "kctx-bd9c0dfc77f506e2",
-    "delivery_constitution_id": "const-4aa059b58089",
+    "delivery_constitution_id": "const-1b8c5a50f0eb",
     "workspace": "default-workspace",
     "project": "default-project"
   },
