@@ -1,0 +1,27 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Parameterize SQL Queries",
+    "problem_statement": "Unparameterized SQL queries pose a security risk.",
+    "scope": [
+      "bin/slowquery.php"
+    ],
+    "risk_if_unaddressed": "Potential for SQL injection attacks.",
+    "effort": "M",
+    "severity": "critical",
+    "dependencies": [],
+    "suggested_approach": "Refactor the code to use parameterized queries.",
+    "success_criteria": [
+      "All SQL queries are parameterized.",
+      "No SQL injection vulnerabilities detected."
+    ],
+    "confidence": 0.8,
+    "provenance": [
+      {
+        "file": "bin/slowquery.php",
+        "line": 1,
+        "evidence": "possible_unparameterized_query"
+      }
+    ]
+  }
+]
