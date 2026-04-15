@@ -1,9 +1,9 @@
 {
   "header": {
-    "artifact_id": "d4c2a6add8214016bb4d2e2d292c517b",
+    "artifact_id": "4e78d5349da244888a74b881f533037d",
     "artifact_type": "system_context_model",
     "schema_version": "1.0.0",
-    "created_at": "2026-04-15T18:39:55.356955+00:00",
+    "created_at": "2026-04-15T19:03:45.034329+00:00",
     "repo_ref": {
       "provider": "other",
       "repo_url": "synthetix",
@@ -23,14 +23,14 @@
       ],
       "run_id": "discover_20260415_170203_712a9820",
       "stage_id": "context_layer",
-      "task_id": "cad319b2aa2d49d89777c2828bcc0bf1"
+      "task_id": "5bb0604c55d34a76bb47d976e3d433c0"
     },
     "parents": [],
-    "digest": "sha256:099b82817f0ee96f1ea01d717f78057784ba9751de36209995ec55158fbbd7a1",
+    "digest": "sha256:bf830c9b7595bd4f93e130692211ba4c90f8141794b045a0108cc844a644eb75",
     "labels": {
       "pipeline": "synthetix",
       "run_id": "discover_20260415_170203_712a9820",
-      "bundle_version": "20260415T183953Z_discover_20260415_170203_712a9820"
+      "bundle_version": "20260415T190344Z_discover_20260415_170203_712a9820"
     }
   },
   "graph": {
@@ -38,7 +38,7 @@
       {
         "id": "node-1",
         "type": "service",
-        "name": "SlowQueryService",
+        "name": "Support and Domain Services",
         "description": "",
         "labels": {
           "source": "sil"
@@ -66,7 +66,7 @@
       {
         "id": "node-2",
         "type": "component",
-        "name": "HtmlTagComponent",
+        "name": "HTML Document Generator",
         "description": "",
         "labels": {
           "source": "sil"
@@ -105,7 +105,7 @@
         "evidence": [
           {
             "kind": "file_span",
-            "file": "bin/slowquery.php"
+            "file": "Classes/attrs.php"
           }
         ],
         "confidence": {
