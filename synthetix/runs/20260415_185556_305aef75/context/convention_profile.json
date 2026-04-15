@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "summary": "The codebase follows a PHP-centric convention with potential security and maintainability issues.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "security",
+      "rule": "Avoid unparameterized SQL queries.",
+      "confidence": 0.8,
+      "examples": [
+        "SELECT * FROM users WHERE id = $id"
+      ],
+      "counterexamples": [
+        "SELECT * FROM users WHERE id = :id"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "possible_unparameterized_query"
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Use parameterized queries to prevent SQL injection."
+  ],
+  "scaffold_templates": [
+    "C# .Net Core Web API"
+  ]
+}
