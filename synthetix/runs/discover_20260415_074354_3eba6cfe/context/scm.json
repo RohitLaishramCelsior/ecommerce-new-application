@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "summary": "This context model represents the discovered components and their interactions within the repository.",
+  "nodes": [
+    {
+      "id": "module:agents_analyst_py",
+      "type": "Module",
+      "name": "agents.analyst",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 1,
+          "evidence": "module definition"
+        }
+      ]
+    },
+    {
+      "id": "module:agents_architect_py",
+      "type": "Module",
+      "name": "agents.architect",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "agents/architect.py",
+          "line": 1,
+          "evidence": "module definition"
+        }
+      ]
+    },
+    {
+      "id": "module:agents_planning_py",
+      "type": "Module",
+      "name": "agents.planning",
+      "metadata": {},
+      "confidence": 0.95,
+      "provenance": [
+        {
+          "file": "agents/planning.py",
+          "line": 1,
+          "evidence": "module definition"
+        }
+      ]
+    },
+    {
+      "id": "pkg:json",
+      "type": "Component",
+      "name": "json",
+      "metadata": {
+        "inferred": true,
+        "inferred_from_edge": true
+      },
+      "confidence": 0.45,
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 12,
+          "evidence": "inferred node from edge endpoint `pkg:json`"
+        }
+      ]
+    },
+    {
+      "id": "pkg:os",
+      "type": "Component",
+      "name": "os",
+      "metadata": {
+        "inferred": true,
+        "inferred_from_edge": true
+      },
+      "confidence": 0.45,
+      "provenance": [
+        {
+          "file": "agents/analyst.py",
+          "line": 13,
+          "evidence": "inferred node from edge endpoint `pkg:os`"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "IMPORTS",
+      "from": "module:agents_analyst_py",
+      "to": "pkg:json",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "agents/analyst.py",
+          "line": 12,
+          "evidence": "import json"
+        }
+      ]
+    },
+    {
+      "type": "IMPORTS",
+      "from": "module:agents_analyst_py",
+      "to": "pkg:os",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "agents/analyst.py",
+          "line": 13,
+          "evidence": "import os"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
