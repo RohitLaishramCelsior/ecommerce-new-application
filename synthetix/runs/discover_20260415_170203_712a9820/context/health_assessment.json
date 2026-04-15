@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "summary": "The codebase has maintainability and security issues due to legacy PHP practices.",
+  "summary": "Assessment of legacy system health prior to modernization.",
   "scores": {
     "maintainability": 60,
     "security": 50,
@@ -10,14 +10,14 @@
   "hotspots": [
     {
       "scope": "bin/slowquery.php",
-      "reason": "Unparameterized SQL queries detected.",
+      "reason": "Potential for SQL injection due to concatenated SQL queries.",
       "severity": "high",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "provenance": [
         {
           "file": "bin/slowquery.php",
-          "line": 1,
-          "evidence": "Possible SQL injection risk."
+          "line": 20,
+          "evidence": "Concatenated SQL query."
         }
       ]
     }
@@ -25,9 +25,9 @@
   "risks": [
     {
       "title": "SQL Injection Risk",
-      "description": "Unparameterized queries in PHP scripts pose a security risk.",
+      "description": "Concatenated SQL queries pose a risk of SQL injection attacks.",
       "severity": "critical",
-      "confidence": 0.9
+      "confidence": 0.95
     }
   ]
 }
