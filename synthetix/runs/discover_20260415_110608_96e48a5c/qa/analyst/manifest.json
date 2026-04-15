@@ -1,0 +1,10 @@
+{
+  "run_id": "discover_20260415_110608_96e48a5c",
+  "generated_at": "2026-04-15T11:37:15.657425+00:00",
+  "files": [
+    "analyst_output.json",
+    "analyst_report_v2.json",
+    "requirements_pack.json",
+    "raw_artifact_set_v1.json"
+  ]
+}
