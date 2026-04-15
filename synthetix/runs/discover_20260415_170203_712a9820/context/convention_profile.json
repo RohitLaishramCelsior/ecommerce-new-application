@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "summary": "Legacy PHP codebase with inconsistent naming and error handling conventions.",
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "rule": "Use consistent camelCase for variable names.",
+      "confidence": 0.7,
+      "examples": [
+        "$dbConnection"
+      ],
+      "counterexamples": [
+        "$db_connection"
+      ],
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 3,
+          "evidence": "Variable naming inconsistency."
+        }
+      ]
+    }
+  ],
+  "lint_recommendations": [
+    "Refactor variable names to camelCase."
+  ],
+  "scaffold_templates": [
+    "C# class templates for services and components."
+  ]
+}
