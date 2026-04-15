@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "summary": "The repository contains a legacy PHP codebase with various components and dependencies, targeted for modernization to a .Net modular monolith architecture with Docker deployment.",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "Component",
+      "name": "Support and Domain Services",
+      "metadata": {},
+      "confidence": 0.9,
+      "provenance": [
+        {
+          "file": "chunk::php::support::1",
+          "line": 1,
+          "evidence": "component=Support and Domain Services type=php_support priority=2 estimated_loc=3852"
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "Component",
+      "name": "Slow Query Logger",
+      "metadata": {},
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "include(\"/data/app/src/init.php\");"
+        }
+      ]
+    },
+    {
+      "id": "node-3",
+      "type": "Component",
+      "name": "Release Info Cron Job",
+      "metadata": {},
+      "confidence": 0.8,
+      "provenance": [
+        {
+          "file": "branchinfo/release_info.php",
+          "line": 1,
+          "evidence": "Add to cron: 11 */2 * * * /usr/bin/php /data/app/src/sysmon.php"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "IMPORTS",
+      "from": "node-2",
+      "to": "node-1",
+      "directionality": "directed",
+      "protocol_metadata": {},
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "bin/slowquery.php",
+          "line": 1,
+          "evidence": "include(\"/data/app/src/init.php\");"
+        }
+      ]
+    }
+  ],
+  "unknowns": []
+}
