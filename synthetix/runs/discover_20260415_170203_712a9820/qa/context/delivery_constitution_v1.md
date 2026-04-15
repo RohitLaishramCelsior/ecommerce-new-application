@@ -1,6 +1,6 @@
 # Delivery Constitution
 
-- Constitution ID: const-4aa059b58089
+- Constitution ID: const-1b8c5a50f0eb
 - Run ID: discover_20260415_170203_712a9820
 - Workspace/Project: default-workspace / default-project
 - Use Case: code_modernization
