@@ -1,0 +1,86 @@
+{
+  "header": {
+    "artifact_id": "b0ab769228de4ed48466f23cbd4eab3c",
+    "artifact_type": "convention_profile",
+    "schema_version": "1.0.0",
+    "created_at": "2026-04-15T18:39:55.357251+00:00",
+    "repo_ref": {
+      "provider": "other",
+      "repo_url": "synthetix",
+      "default_branch": "feature-synthetix-v2-rohit",
+      "branch": "feature-synthetix-v2-rohit",
+      "commit_sha": "1a897ad4a128f8f34bed5254f37915350c5084d0",
+      "subpath": ""
+    },
+    "generated_by": {
+      "agent_name": "System Intelligence Layer",
+      "agent_version": "1.0.0",
+      "model": "gpt-4o",
+      "tooling": [
+        "repo_scan",
+        "context_vault",
+        "context_graph"
+      ],
+      "run_id": "discover_20260415_170203_712a9820",
+      "stage_id": "context_layer",
+      "task_id": "cad319b2aa2d49d89777c2828bcc0bf1"
+    },
+    "parents": [],
+    "digest": "sha256:b594509b445288de34c20f02056b8cbb7384f50cead86723f4190e1f54daf4af",
+    "labels": {
+      "pipeline": "synthetix",
+      "run_id": "discover_20260415_170203_712a9820",
+      "bundle_version": "20260415T183953Z_discover_20260415_170203_712a9820"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "category": "naming",
+      "title": "Use consistent camelCase for variable names.",
+      "scope": {
+        "languages": [],
+        "file_globs": [],
+        "scm_node_ids": [],
+        "applies_to": "all"
+      },
+      "statement": "Use consistent camelCase for variable names.",
+      "detection": {},
+      "enforcement": {},
+      "examples": [
+        {
+          "file": "$dbConnection"
+        }
+      ],
+      "counterexamples": [
+        {
+          "file": "$db_connection"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "file_span",
+          "file": "bin/slowquery.php"
+        }
+      ],
+      "confidence": {
+        "score": 0.7,
+        "rationale": "from convention extraction",
+        "signals": []
+      },
+      "exceptions": []
+    }
+  ],
+  "templates": [
+    {
+      "id": "TPL-001",
+      "language": "generic",
+      "name": "C# class templates for services and components.",
+      "description": "generated scaffold template",
+      "file_path_template": "",
+      "parameters": [],
+      "content_snippet": ""
+    }
+  ],
+  "overrides": []
+}
